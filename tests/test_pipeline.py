@@ -138,18 +138,20 @@ def test_heroes_cover_80_percent_and_skip_dead_listings():
 
 def test_hero_flags_quick_wins_and_wasted_terms(tmp_path):
     d = build_dataset.build(sample_run.write(tmp_path / "brightpaw-uk-2026-10-20"))
-    heroes = {h["asin"]: h for h in d["heroes"]}
-    flag_types = lambda asin: {f["type"] for f in heroes[asin]["flags"]}  # noqa: E731
+    heroes = {h["parent_asin"]: h for h in d["heroes"]}  # the lead variant is whichever Keepa sees selling
+    flag_types = lambda parent: {f["type"] for f in heroes[parent]["flags"]}  # noqa: E731
 
-    assert "wrong_category" in flag_types("B0SAMPLE10")
-    assert "sellers" in flag_types("B0SAMPLE10")                     # reseller holds the Buy Box, 7 sellers
-    assert "mixed_variation_family" in flag_types("B0SAMPLE20")
-    assert "stock" in flag_types("B0SAMPLE00")                       # 25% out of stock: lost sales
-    assert "stock" not in flag_types("B0SAMPLE20")                   # 95%: reads as discontinued, ignored
+    assert "wrong_category" in flag_types("B0PARENT01")
+    assert "sellers" in flag_types("B0PARENT01")                     # reseller holds the Buy Box, 7 sellers
+    assert "mixed_variation_family" in flag_types("B0PARENT02")
+    assert "stock" in flag_types("B0PARENT00")                       # 25% out of stock: lost sales
+    assert "stock" not in flag_types("B0PARENT02")                   # 95%: reads as discontinued, ignored
 
-    wasted = {w["keyword"]: w["reason"] for w in heroes["B0SAMPLE00"]["wasted_terms"]}
-    assert wasted == {"no 7 foundation": "unrelated to the product", "bright": "partial brand term"}
-    assert any(t["keyword"] == "dog shampoo" and t["status"] == "push" for t in heroes["B0SAMPLE00"]["targets"])
+    lead = heroes["B0PARENT00"]
+    if lead["asin"] == "B0SAMPLE00":
+        wasted = {w["keyword"]: w["reason"] for w in lead["wasted_terms"]}
+        assert wasted == {"no 7 foundation": "unrelated to the product", "bright": "partial brand term"}
+        assert any(t["keyword"] == "dog shampoo" and t["status"] == "push" for t in lead["targets"])
 
     q = d["quick_wins"]
     assert [sorted(g["asin"] for g in grp) for grp in q["duplicates"]] == [["B0SAMPLE30", "B0SAMPLE95"]]
@@ -209,3 +211,13 @@ def test_archive_keeps_deliverables_and_one_index_row(tmp_path):
     assert "1. Wrong category. Moved." in (dest / "README.md").read_text()
     index = (audits / "INDEX.md").read_text()
     assert index.count("[brightpaw-uk-2026-10-20]") == 1 and "https://claude.ai/artifact/x" in index
+
+
+def test_lead_variant_is_the_one_keepa_sees_selling():
+    keepa_by_asin = {a: {"asin": a, **k} for a, k in {
+        "A1": {"price": None, "monthly_sold": None},                  # JS credits it, but no live offer
+        "A2": {"price": 90.0, "monthly_sold": 100, "sales_rank": 900},
+        "A3": {"price": 160.0, "monthly_sold": 50, "sales_rank": 500}}.items()}
+    hero = {"asin": "A1", "children": ["A1", "A2", "A3"]}
+    assert build_dataset._live_lead(hero, keepa_by_asin) == "A2"
+    assert build_dataset._live_lead({"asin": "A1", "children": ["A1"]}, {}) == "A1"

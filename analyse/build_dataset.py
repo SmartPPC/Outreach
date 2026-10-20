@@ -490,10 +490,18 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
     fams = checks.families(catalog)
     sov_by_kw = {s["keyword"]: s for s in sov}
     out = []
+    owners = [p.get("buy_box_owner") for p in catalog if checks.is_live(p) and p.get("buy_box_owner")]
+    top_owner = max(set(owners), key=owners.count) if owners else None
+    # One seller holding the Buy Box across nearly the whole range is the brand's own account.
+    brand_seller = top_owner if owners and owners.count(top_owner) / len(owners) >= 0.8 else None
     for h in heroes:
+        family_asins = [h["asin"], *h["children"]]
+        h = {**h, "asin": _live_lead(h, keepa_by_asin)}
         js, kp = by_asin.get(h["asin"], {}), keepa_by_asin.get(h["asin"], {})
         p = {**js, **{k: v for k, v in kp.items() if v not in (None, [], "")}}
         p["price"] = js.get("price") or kp.get("price")
+        p["rating"] = kp.get("rating") or js.get("rating")
+        p["review_count"] = kp.get("review_count") or js.get("reviews")
         title = p.get("title") or ""
         leaf = (kp.get("category_path") or [None])[-1] or js.get("category")
         flags = []
@@ -501,13 +509,14 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
             flags.append({"type": "wrong_category", "detail": f"{mm['product_type']} listed under {mm['category']}"})
         if mixed := checks.mixed_family(fams.get(h["parent_asin"], [])):
             flags.append({"type": "mixed_variation_family", "detail": "variation family mixes " + ", ".join(mixed)})
-        flags += [{"type": "sellers", "detail": d} for d in checks.seller_flags(p, brand)]
+        flags += [{"type": "sellers", "detail": d} for d in checks.seller_flags(p, brand, brand_seller)]
         if s := checks.stock_flag(p):
             flags.append({"type": "stock", "detail": s})
         if s := checks.price_flag(p):
             flags.append({"type": "price", "detail": s})
 
-        kws = merge_keywords(per_asin_kw.get(h["asin"], []))
+        # keywords were pulled for one variant with include_variants, so they describe the family
+        kws = merge_keywords([r for a in family_asins for r in per_asin_kw.get(a, [])])
         wasted = checks.wasted_terms(title, brand, kws)
         wasted_set = {w["keyword"] for w in wasted}
         targets = []
@@ -538,6 +547,15 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
             "sponsored_terms": sum(1 for k in kws if k.get("sponsored_rank")),
         })
     return out
+
+
+def _live_lead(hero: dict, keepa_by_asin: dict) -> str:
+    """Jungle Scout repeats family sales on every child, so it can't say which variant really sells.
+    Prefer a child Keepa sees with a live offer: most bought last month, then best sales rank."""
+    live = [keepa_by_asin[a] for a in hero["children"] if a in keepa_by_asin and keepa_by_asin[a].get("price")]
+    if not live:
+        return hero["asin"]
+    return max(live, key=lambda k: (k.get("monthly_sold") or 0, -(k.get("sales_rank") or 1e9)))["asin"]
 
 
 def _quick_wins(catalog: list[dict], brand: str) -> dict:

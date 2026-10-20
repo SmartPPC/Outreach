@@ -22,8 +22,10 @@ def check_listing(p: dict) -> dict:
         "a_plus": (GOOD if p.get("has_aplus") else FAIL,
                    f"A+ with {p.get('aplus_modules', 0)} modules" if p.get("has_aplus") else "no A+"),
         "title": (GOOD if 80 <= title_len <= 200 else WARN, f"{title_len} chars"),
-        "bullets": (_band(p.get("bullet_count"), 5, 3), f"{p.get('bullet_count', 0)} bullets"),
-        "bullet_depth": (_band(p.get("bullet_avg_len"), 120, 70), f"avg {p.get('bullet_avg_len', 0)} chars"),
+        "bullets": (_band(p.get("bullet_count"), 5, 3),
+                    f"{p['bullet_count']} bullets" if p.get("bullet_count") is not None else "bullets not captured"),
+        "bullet_depth": (_band(p.get("bullet_avg_len"), 120, 70),
+                         f"avg {p['bullet_avg_len']} chars" if p.get("bullet_avg_len") is not None else "not captured"),
         "rating": (_band(p.get("rating"), 4.3, 4.0), f"{p.get('rating') or '–'}★"),
         "reviews": (_band(p.get("review_count"), 100, 20), f"{p.get('review_count') or 0} reviews"),
     }

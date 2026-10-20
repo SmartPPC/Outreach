@@ -110,7 +110,8 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
            revenue_share=focus["hero_revenue_share"])
 
     if catalog_rows and has_keepa and heroes:
-        products = guarded(log, "keepa.heroes", lambda: keepa.fetch_products(heroes, mp, budget), []) or []
+        variants = list(dict.fromkeys(a for h in focus["heroes"] for a in [h["asin"], *h["children"][:5]]))[:40]
+        products = guarded(log, "keepa.heroes", lambda: keepa.fetch_products(variants, mp, budget), []) or []
         log.ok("keepa.heroes", fetched=len(products), waited_min=keepa.waited_minutes())
     elif not has_keepa:
         log.skip("keepa", "KEEPA_KEY not set")

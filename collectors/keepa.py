@@ -189,8 +189,8 @@ def parse_product(p: dict) -> dict:
         "video_count": len(p.get("videos") or []),
         "has_aplus": bool(p.get("aPlus")),
         "aplus_modules": len(p.get("aPlus") or []),
-        "bullet_count": len(features),
-        "bullet_avg_len": round(sum(len(f) for f in features) / len(features)) if features else 0,
+        "bullet_count": len(features) if p.get("features") is not None else None,
+        "bullet_avg_len": round(sum(len(f) for f in features) / len(features)) if features else None,
         "title_len": len(p.get("title") or ""),
         "description_len": len(p.get("description") or ""),
         "variation_count": len(p.get("variations") or []),
@@ -199,7 +199,8 @@ def parse_product(p: dict) -> dict:
         "is_sns": bool(p.get("isSNS")),
         "list_price": stats_current[CSV_LIST_PRICE] / 100 if len(stats_current) > CSV_LIST_PRICE and (stats_current[CSV_LIST_PRICE] or 0) > 0 else None,
         "offer_count": stats_current[CSV_COUNT_NEW] if len(stats_current) > CSV_COUNT_NEW and (stats_current[CSV_COUNT_NEW] or -1) >= 0 else None,
-        "oos_pct_90": next((v for v in oos90[:2] if v is not None and v >= 0), None),
+        # index 1 = all new offers; index 0 (Amazon itself) is meaningless for brands selling 3P
+        "oos_pct_90": next((v for v in (oos90[1:2] + oos90[:1]) if v is not None and v >= 0), None),
         "avg_price_90": (stats.get("avg90") or [None, None])[1] / 100 if len(stats.get("avg90") or []) > 1 and (stats["avg90"][1] or 0) > 0 else None,
         "brand_store": p.get("brandStoreName") or p.get("brandStoreUrl"),
         "history": {

@@ -97,7 +97,7 @@ def family_revenue(children: list[dict]) -> float:
     units at each child's own price. Count the family once when it does."""
     revs = [c.get("revenue_30d") or 0 for c in children]
     units = [c.get("units_30d") or 0 for c in children]
-    near_same_units = min(units) > 0 and max(units) <= min(units) * 1.1
+    near_same_units = min(units) > 0 and max(units) <= min(units) * 1.15
     if len(children) > 1 and (len(set(revs)) == 1 or near_same_units):
         return sum(revs) / len(revs)
     return sum(revs)
@@ -148,10 +148,10 @@ def mixed_family(children: list[dict]) -> list[str] | None:
     return types if len(types) > 1 else None
 
 
-def seller_flags(p: dict, brand: str) -> list[str]:
+def seller_flags(p: dict, brand: str, brand_seller: str | None = None) -> list[str]:
     flags = []
     owner = p.get("buy_box_owner") or ""
-    if owner and "amazon" not in owner.lower() and norm(brand)[:6] not in norm(owner):
+    if owner and owner != brand_seller and "amazon" not in owner.lower() and norm(brand)[:6] not in norm(owner):
         flags.append(f"Buy Box held by {owner}")
     sellers = p.get("sellers") or p.get("offer_count")
     if sellers and sellers >= CROWDED_SELLERS:
