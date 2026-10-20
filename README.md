@@ -41,6 +41,17 @@ python run_audit.py "<url | ASIN | brand>" --job-ad job.txt   # → runs/<slug>/
 python -m analyse.render runs/<slug>                          # → audit.html, evidence.md
 ```
 
+## Finding contacts
+Each audit researches the companies behind the brand: the brand, the company that runs its website, and
+its Amazon seller. It then looks for the most direct contact:
+- emails published on the brand's site, or found by web search
+- Companies House people for active UK companies with an exact name match
+- one-click LinkedIn searches for each company
+- with an Apollo.io key: people currently in founder, ecommerce, Amazon and marketing roles, with
+  LinkedIn profiles and verified work emails for the top 3 (each verified email uses 1 Apollo credit)
+
+Contacts are saved with the audit and never appear on the shareable audit page.
+
 ## Where audits are saved
 Each run works in `runs/<brand>-<marketplace>-<date>/`, which is temporary and not committed. When an
 audit is finished, the skill saves it to `audits/<brand>-<marketplace>-<date>/` and adds it to

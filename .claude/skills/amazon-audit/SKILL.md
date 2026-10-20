@@ -125,15 +125,25 @@ Follow `templates/email.md` exactly:
 Don't include a link or an attachment, and leave out jargon (no "SP", "ACoS", "exact match", "variation family"). If there's a job ad, echo its wording in the opening line.
 
 ### 8. Pick who to send it to
-Read `contacts.json`. It lists what the brand publishes on its own site: emails (each tagged personal,
-business, role or generic, with the page it came from), named founders and directors, and company details.
-- **To:** a named person's address if one is published. Otherwise a business inbox (`wholesale@`, `trade@`,
+Read `contacts.json`. The research step covers every company behind the brand: the brand itself, the
+company named on its website (e.g. "operated by HBL Ventures LLC") and its Amazon seller account. It holds:
+- **`emails`:** addresses published on the brand's site or found by web search, each tagged personal,
+  business, role or generic, with its source.
+- **`apollo.people`:** when `APOLLO_API_KEY` is set, people currently in founder, ecommerce, Amazon or
+  marketing roles at any of those companies, with LinkedIn profiles. The top 3 have a verified work email.
+- **`companies_house`:** exact-name, active UK companies and the people listed on them. Dissolved
+  namesakes are ignored.
+- **`linkedin_searches`:** one-click LinkedIn people searches per company, for the user to open while logged in.
+
+Who to pick:
+- **To:** a verified Apollo email for the best-ranked person (founder or owner, then ecommerce or Amazon,
+  then marketing), or a named person's published address. Otherwise a business inbox (`wholesale@`, `trade@`,
   `partnerships@`, `marketing@`). Only fall back to `hello@`/`info@` when nothing better exists, and never
   use complaints@, legal@, privacy@ or vip@.
 - **Suggested addresses** only exist when a published personal address revealed the format. Pass them on
   with "unverified, check before sending". Never make up an address yourself.
-- **If `only_generic` is true:** tell the user and suggest they look up the founder or ecommerce/Amazon lead
-  on LinkedIn, starting from any names or the company name found.
+- **If `only_generic` is true:** tell the user, and give them the LinkedIn search links for each company name.
+- **Never** recommend someone whose Apollo title or employer doesn't match one of the brand's companies.
 - **Never** put contact details in `findings.json` or the audit page, because it gets shared with the prospect.
 
 ### 9. Save the audit

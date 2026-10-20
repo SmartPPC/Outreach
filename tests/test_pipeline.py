@@ -282,3 +282,30 @@ def test_org_names_and_linkedin_links():
     assert [o["name"] for o in orgs] == ["BESQUE", "HBL Ventures LLC"]   # Amazon as seller isn't an org lead
     links = contacts.linkedin_links(orgs)
     assert len(links) == 8 and links[0]["url"].startswith("https://www.linkedin.com/search/results/people/?keywords=")
+
+
+def test_apollo_parsing_ranking_and_exact_org_match():
+    from collectors import apollo
+    people = apollo.parse_people({"people": [
+        {"id": "1", "name": "Sam Lee", "title": "Social Media Executive", "organization": {"name": "Besque"}},
+        {"id": "2", "name": "Ana Cruz", "title": "Head of Ecommerce", "organization": {"name": "Besque"},
+         "linkedin_url": "https://linkedin.com/in/ana"},
+        {"id": "3", "name": "Joe Hart", "title": "Co-Founder & CEO", "organization": {"name": "HBL Ventures"}}]})
+    assert [p["name"] for p in people] == ["Joe Hart", "Ana Cruz", "Sam Lee"]
+    orgs = apollo.parse_orgs({"organizations": [{"id": "a", "name": "HBL Ventures LLC", "primary_domain": "besque.co"},
+                                                {"id": "b", "name": "HBL Ventures Partners"}]}, "HBL Ventures")
+    assert [o["id"] for o in orgs] == ["a"]
+
+
+def test_apollo_enriches_only_the_top_people(monkeypatch):
+    from collectors import apollo
+    from collectors.common import Budget
+    monkeypatch.setattr(apollo, "find_orgs", lambda name, budget: [])
+    monkeypatch.setattr(apollo, "search_people", lambda budget, domains=None, org_ids=None: [
+        {"id": str(i), "name": f"P{i}", "title": t, "rank": apollo.rank(t), "email": None}
+        for i, t in enumerate(["Founder", "Ecommerce Manager", "Marketing Lead", "Intern"])])
+    calls = []
+    monkeypatch.setattr(apollo, "enrich", lambda pid, budget: calls.append(pid) or
+                        {"email": f"p{pid}@besque.co", "email_status": "verified"})
+    out = apollo.people_for([], "besque.co", Budget(), enrich_top=2)
+    assert calls == ["0", "1"] and out["people"][0]["email"] == "p0@besque.co"

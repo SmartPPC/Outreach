@@ -83,6 +83,8 @@ class Budget:
         "dataforseo": float(os.environ.get("APA_BUDGET_D4S", 40)),
         "spapi": float(os.environ.get("APA_BUDGET_SPAPI", 60)),
         "ads": float(os.environ.get("APA_BUDGET_ADS", 20)),
+        "apollo_search": float(os.environ.get("APA_BUDGET_APOLLO_SEARCH", 10)),
+        "apollo_credits": float(os.environ.get("APA_BUDGET_APOLLO_CREDITS", 3)),
     })
     used: dict[str, float] = field(default_factory=dict)
 

@@ -9,7 +9,7 @@ from __future__ import annotations
 import re
 import urllib.parse
 
-from . import dataforseo
+from . import apollo, dataforseo
 from .common import Budget
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
@@ -255,5 +255,13 @@ def research(brand: str, marketplace: str, budget: Budget, contacts: dict, selle
     contacts["organisations"] = orgs
     contacts["companies_house"] = [c for o in uk for c in companies_house(o["name"], budget)] if marketplace == "uk" else []
     contacts["linkedin_profiles"] = mentions["linkedin_profiles"]
+    if apollo.configured():
+        result = apollo.people_for(orgs, contacts.get("domain"), budget)
+        contacts["apollo"] = result
+        verified = next((p for p in result["people"] if p.get("email") and p.get("email_status") == "verified"), None)
+        if verified:
+            contacts["recommended_to"] = verified["email"]
+            contacts["recommended_person"] = f'{verified["name"]}, {verified.get("title") or ""}'.strip(", ")
+            contacts["only_generic"] = False
     contacts["linkedin_searches"] = linkedin_links(orgs)
     return contacts

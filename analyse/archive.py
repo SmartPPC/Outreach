@@ -28,7 +28,15 @@ def email_points(email: str) -> list[str]:
 def contact_lines(c: dict) -> list[str]:
     if not c or not c.get("website"):
         return ["- No contacts collected (pass --website)."]
-    lines = [f"- **Recommended To:** {c.get('recommended_to') or '–'}"]
+    lines = [f"- **Recommended To:** {c.get('recommended_to') or '–'}"
+             + (f" ({c['recommended_person']})" if c.get("recommended_person") else "")]
+    for p in ((c.get("apollo") or {}).get("people") or [])[:8]:
+        email = f", {p['email']} ({p.get('email_status')})" if p.get("email") else ""
+        lines.append(f"- {p['name']}: {p.get('title') or '–'} at {p.get('organisation') or '–'}"
+                     f"{email}{', ' + p['linkedin'] if p.get('linkedin') else ''}")
+    for co in c.get("companies_house") or []:
+        lines.append(f"- Companies House: {co['name']} ({co['number']}), people listed: "
+                     f"{', '.join(co.get('people') or []) or '–'} {co.get('url', '')}".rstrip())
     lines += [f"- {e['email']} ({e['type']}, from {e['source']})" for e in c.get("emails", [])]
     lines += [f"- {p['name']}: {p['role']} (from {p['source']})" for p in c.get("people", [])]
     lines += [f"- Suggested: {s['email']} for {s['name']} ({s['status']})" for s in c.get("suggested", [])]
@@ -36,7 +44,8 @@ def contact_lines(c: dict) -> list[str]:
     if co.get("name") or co.get("number"):
         lines.append(f"- Company: {co.get('name') or '–'} {('(' + co['number'] + ')') if co.get('number') else ''}".rstrip())
     if c.get("only_generic"):
-        lines.append("- Only shared inboxes are published; find the founder or ecommerce lead on LinkedIn.")
+        lines.append("- Only shared inboxes found; check LinkedIn:")
+        lines += [f"  - [{l['org']} {l['role']}]({l['url']})" for l in (c.get("linkedin_searches") or [])[:8]]
     return lines
 
 
