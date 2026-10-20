@@ -183,7 +183,7 @@ def parse_product(p: dict) -> dict:
         "price": price_cents / 100 if price_cents else None,
         "monthly_sold": p.get("monthlySold"),
         "sales_rank": _last(bsr),
-        "rating": _last(rating),
+        "rating": round(_last(rating), 1) if rating else None,
         "review_count": int(_last(reviews)) if reviews else None,
         "image_count": _image_count(p),
         "video_count": len(p.get("videos") or []),

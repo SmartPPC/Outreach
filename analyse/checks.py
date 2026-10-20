@@ -64,6 +64,11 @@ def tokens(s: str | None) -> set[str]:
     return {t for t in re.findall(r"[a-z0-9]+", (s or "").lower()) if len(t) > 2 and t not in STOPWORDS}
 
 
+def stems(s: str | None) -> set[str]:
+    """Crude stemming so 'cleansing' matches 'cleanser' and 'facial' matches 'facials'."""
+    return {t[:5] for t in tokens(s)}
+
+
 def product_type(title: str | None) -> str | None:
     t = (title or "").lower()
     for name, _ in PRODUCT_TYPES:
@@ -222,7 +227,7 @@ def clutter(live: list[dict], brand: str) -> list[dict]:
 
 def wasted_terms(hero_title: str, brand: str, keywords: list[dict]) -> list[dict]:
     """Terms the hero is sponsored on but has no organic relevance to: auto/broad drift."""
-    title_toks = tokens(hero_title)
+    title_stems = stems(hero_title) - stems(brand)  # "facialist" must not make "facial oil" relevant
     brand_toks = tokens(brand)
     out = []
     for k in keywords:
@@ -231,7 +236,7 @@ def wasted_terms(hero_title: str, brand: str, keywords: list[dict]) -> list[dict
         kt = tokens(k["keyword"])
         nk, nb = norm(k["keyword"]), norm(brand)
         partial_brand = bool(nk) and nk != nb and ((kt and kt <= brand_toks) or nb.startswith(nk))
-        if partial_brand or not (kt & title_toks):
+        if partial_brand or not (stems(k["keyword"]) & title_stems):
             out.append({"keyword": k["keyword"], "volume": k.get("volume"), "sponsored_rank": k["sponsored_rank"],
                         "reason": "partial brand term" if partial_brand else "unrelated to the product"})
     return sorted(out, key=lambda r: r.get("volume") or 0, reverse=True)

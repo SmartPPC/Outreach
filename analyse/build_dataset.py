@@ -511,8 +511,10 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
         wasted = checks.wasted_terms(title, brand, kws)
         wasted_set = {w["keyword"] for w in wasted}
         targets = []
+        title_stems = checks.stems(title) - checks.stems(brand)
         for kw in kws:
-            if kw["keyword"] in wasted_set:
+            # skip wasted terms, and terms that belong to a sibling in the family (e.g. "face oil" on a balm)
+            if kw["keyword"] in wasted_set or not (checks.stems(kw["keyword"]) & title_stems):
                 continue
             tier = _tier(kw, brand, competitor_names, None)
             status = _status(kw)
