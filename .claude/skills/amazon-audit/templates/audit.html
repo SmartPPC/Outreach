@@ -1,0 +1,190 @@
+<title>{{TITLE}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the five recommendations lead, evidence sections follow in the order the email cites them. */
+:root {
+  --bg: #f6f1e7;
+  --paper: #fffdf8;
+  --ink: #1a1a18;
+  --ink-soft: #4a4842;
+  --muted: #7d7a72;
+  --rule: #d9d2c3;
+  --accent: #d85a30;
+  --accent-soft: #f3d9cc;
+  --bar: #4a4842;
+  --s0: #d85a30; --s1: #2a78d6; --s2: #1baf7a; --s3: #c98500; --s4: #6250d6; --s5: #e87ba4;
+  --good: #0a7d0a; --warn: #a86a00; --fail: #c03434;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+    --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+    --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+    --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+  --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+  --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+  --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 56px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
+h3 { font-size: 17px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow, .tag, .stat-label, th, .tick, small { font-family: var(--mono); }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+section { display: grid; gap: 20px; min-width: 0; }
+section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 14px; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
+
+/* Recommendations: numbered because they are in priority order */
+.points { list-style: none; counter-reset: pt; margin: 0; padding: 0; display: grid; gap: 14px; }
+.point { counter-increment: pt; display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 14px; padding: 20px 20px 18px 16px; }
+.point::before { content: counter(pt); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); text-align: center; }
+.point-body { display: grid; gap: 8px; min-width: 0; }
+.tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.quote { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--ink-soft); font-size: 15px; }
+details summary { cursor: pointer; color: var(--ink-soft); font-size: 14px; }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14px; display: grid; gap: 4px; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.stat { background: var(--paper); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.stat-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat-note { font-size: 13px; color: var(--muted); }
+
+/* Charts */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.two > * { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.chart { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--bar); }
+.chart .bar:hover { fill: var(--accent); }
+.chart .grid { stroke: var(--rule); stroke-dasharray: 2 4; }
+.chart .axis { stroke: var(--muted); }
+.chart .tick { fill: var(--muted); font-size: 11px; }
+.empty { color: var(--muted); font-style: italic; }
+.hbars { display: grid; gap: 8px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 160px) 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.hbar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; background: var(--rule); border-radius: 5px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+.hbar.mine { font-weight: 600; }
+.hbar.mine .hbar-fill { background: var(--accent); }
+.hbar-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.stack { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; }
+.seg, .sw { background: var(--s0); }
+.s1 { background: var(--s1); } .s2 { background: var(--s2); } .s3 { background: var(--s3); } .s4 { background: var(--s4); } .s5 { background: var(--s5); }
+.legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend small { color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.budget-total { font-family: var(--serif); font-size: 26px; }
+
+/* Tables */
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child > * { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+table.content td { white-space: nowrap; }
+table.content th[scope="row"] { text-transform: none; letter-spacing: 0; color: var(--ink); font-size: 13px; min-width: 180px; }
+table.content th[scope="row"] small { display: block; color: var(--muted); font-family: var(--sans); white-space: normal; }
+.chip { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; color: var(--paper); }
+.chip.good { background: var(--good); } .chip.warn { background: var(--warn); } .chip.fail { background: var(--fail); }
+.kw-status { font-size: 13px; color: var(--ink-soft); }
+.kw-status.push, .kw-status.brand_defence_gap { color: var(--accent); font-weight: 600; }
+.attackers { padding-left: 18px; margin: 0; display: grid; gap: 6px; }
+.attackers small { display: block; color: var(--muted); font-family: var(--sans); }
+ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
+</style>
+
+<main class="page">
+  <div class="hero">
+    <span class="eyebrow">Smart PPC · Amazon audit</span>
+    <h1>{{BRAND}}</h1>
+    <div class="meta"><span>{{MARKET}}</span><span>Prepared {{DATE}}</span></div>
+    <p class="headline">{{HEADLINE}}</p>
+  </div>
+
+  <section>
+    <header><span class="eyebrow">Priorities</span><h2>What I would do first</h2></header>
+    <ol class="points">{{POINTS}}</ol>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Snapshot</span><h2>The business today</h2></header>
+    <div class="stats">{{STATS}}</div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Catalogue</span><h2>Size and growth</h2><p>{{CATALOGUE_NOTE}}</p></header>
+    <div class="two">
+      <div><h3>New ASINs per quarter</h3>{{LAUNCH_CHART}}</div>
+      <div><h3>Estimated monthly revenue, top sellers</h3>{{REVENUE_CHART}}</div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Content quality</h2><p>{{CONTENT_NOTE}}</p></header>
+    {{CONTENT_TABLE}}
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Advertising</span><h2>Keyword map and where to spend</h2><p>{{AD_SUMMARY}}</p></header>
+    <div class="two">
+      <div><h3>Keywords by tier</h3><div class="scroll">{{TIER_TABLE}}</div></div>
+      <div><h3>Indicative monthly budget</h3><span class="budget-total">{{BUDGET_TOTAL}}</span>{{BUDGET_CHART}}</div>
+    </div>
+    <h3>Focus keywords</h3>
+    {{KEYWORD_TABLE}}
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Competitors</span><h2>Who is taking the clicks</h2></header>
+    <div class="two">
+      <div><h3>Share of voice across category searches</h3>{{SOV_CHART}}</div>
+      <div><h3>Ads on their brand name</h3>{{ATTACKERS}}</div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Amazon Marketing Cloud</span><h2>Path to purchase and repeat buying</h2></header>
+    {{AMC}}
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Method</span><h2>How this was put together</h2></header>
+    <div class="method">{{METHOD}}</div>
+  </section>
+
+  <footer>Smart PPC · smartppc.ai</footer>
+</main>

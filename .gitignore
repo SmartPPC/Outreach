@@ -1,0 +1,6 @@
+.env
+runs/
+amc_instances.json
+benchmarks/*.json
+__pycache__/
+.pytest_cache/
