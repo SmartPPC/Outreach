@@ -135,6 +135,17 @@ company named on its website (e.g. "operated by HBL Ventures LLC") and its Amazo
   namesakes are ignored.
 - **`linkedin_searches`:** one-click LinkedIn people searches per company, for the user to open while logged in.
 
+**If the Apollo.io connector is enabled in this session** (tools named like `apollo_search_people`,
+`apollo_search_organizations` and `apollo_enrich_person`), use it when `contacts.json` has no `apollo` section:
+1. For each name in `contacts.organisations`, plus the brand's domain, run `apollo_search_organizations` and
+   keep exact name or domain matches only.
+2. Run `apollo_search_people` on those organisations with titles founder, owner, CEO, ecommerce, Amazon,
+   marketplace and marketing. Rank them in that order and only keep people whose *current* employer is one of
+   the matched organisations.
+3. Run `apollo_enrich_person` on the top 3 at most (each uses an Apollo credit) to get verified work emails.
+4. Add the results to `contacts.json` under `apollo.people` (name, title, organisation, linkedin, email,
+   email_status), then save the audit as usual.
+
 Who to pick:
 - **To:** a verified Apollo email for the best-ranked person (founder or owner, then ecommerce or Amazon,
   then marketing), or a named person's published address. Otherwise a business inbox (`wholesale@`, `trade@`,
