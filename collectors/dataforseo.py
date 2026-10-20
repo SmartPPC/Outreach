@@ -92,3 +92,36 @@ def parse_ranked(resp: dict) -> list[dict]:
             "source": "dataforseo",
         })
     return rows
+
+
+def page_text(url: str, budget: Budget) -> dict | None:
+    """Fetch and parse any web page through DataForSEO (our network can't reach brand sites directly).
+    Returns {"url", "text", "links"} or None when the page doesn't exist."""
+    budget.spend("dataforseo", 0.1)  # ~$0.00015 a page; counted as a tenth of a search task
+    resp = http_json("POST", f"{BASE}/on_page/content_parsing/live", headers=_headers(), body=[{"url": url}])
+    return parse_page(url, resp)
+
+
+def parse_page(url: str, resp: dict) -> dict | None:
+    task = (resp.get("tasks") or [{}])[0]
+    item = ((task.get("result") or [{}])[0].get("items") or [None])[0]
+    if not item or (item.get("status_code") or 0) >= 400:
+        return None
+    texts, links = [], []
+
+    def walk(node):
+        if isinstance(node, dict):
+            if isinstance(node.get("text"), str):
+                texts.append(node["text"])
+            for u in node.get("urls") or []:
+                if isinstance(u, dict) and u.get("url"):
+                    links.append({"url": u["url"], "text": u.get("anchor_text") or ""})
+            for v in node.values():
+                if isinstance(v, (dict, list)):
+                    walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+
+    walk(item.get("page_content") or {})
+    return {"url": url, "text": "\n".join(texts), "links": links}

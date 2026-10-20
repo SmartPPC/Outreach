@@ -39,7 +39,7 @@ Pass that file with `--job-ad`. If the marketplace isn't obvious from the URL, a
 Always run the pipeline. Don't hand-pull data, except to fill a step that failed in `collect_log.json`. If you
 do fill a gap by hand, say so in `evidence.md`.
 ```bash
-python run_audit.py "<input>" [--marketplace uk|us] [--job-ad /path/job.txt]
+python run_audit.py "<input>" [--marketplace uk|us] [--job-ad /path/job.txt] [--website https://brand.com]
 ```
 This prints the run directory. Check `collect_log.json` in it:
 - If Keepa was skipped there is no ASIN map. Stop and tell the user which key is missing.
@@ -124,7 +124,19 @@ Follow `templates/email.md` exactly:
 
 Don't include a link or an attachment, and leave out jargon (no "SP", "ACoS", "exact match", "variation family"). If there's a job ad, echo its wording in the opening line.
 
-### 8. Save the audit
+### 8. Pick who to send it to
+Read `contacts.json`. It lists what the brand publishes on its own site: emails (each tagged personal,
+business, role or generic, with the page it came from), named founders and directors, and company details.
+- **To:** a named person's address if one is published. Otherwise a business inbox (`wholesale@`, `trade@`,
+  `partnerships@`, `marketing@`). Only fall back to `hello@`/`info@` when nothing better exists, and never
+  use complaints@, legal@, privacy@ or vip@.
+- **Suggested addresses** only exist when a published personal address revealed the format. Pass them on
+  with "unverified, check before sending". Never make up an address yourself.
+- **If `only_generic` is true:** tell the user and suggest they look up the founder or ecommerce/Amazon lead
+  on LinkedIn, starting from any names or the company name found.
+- **Never** put contact details in `findings.json` or the audit page, because it gets shared with the prospect.
+
+### 9. Save the audit
 `runs/` is temporary and isn't committed, so save every finished audit into the repo:
 ```bash
 python -m analyse.archive runs/<slug> --link <published audit page URL>
@@ -132,9 +144,11 @@ git add audits && git commit -m "Audit: <Brand> (<uk|us>)" && git push -u origin
 ```
 This copies the email, audit page, findings and evidence into `audits/<slug>/`, writes a README for the folder and adds a row to `audits/INDEX.md`.
 
-### 9. Reply to the user
+### 10. Reply to the user
 Include:
 - the email text, ready to paste
 - the audit link, noting it's for the follow-up and is private until shared
+- who to send it to: the recommended To address and its source page, any names found, and whether a
+  LinkedIn lookup is needed
 - where it's saved (`audits/<slug>/`)
 - one line listing any data gaps, e.g. "no Jungle Scout key, so keyword and sales sections are thin"

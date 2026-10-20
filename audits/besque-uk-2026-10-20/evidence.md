@@ -97,6 +97,12 @@ The Unscented Magic Body Oil (18 reviews) and Luxury Shower Oil (28 reviews) mak
       "step": "ads.bids",
       "status": "skipped",
       "reason": "Ads API not configured; using Jungle Scout PPC bids"
+    },
+    {
+      "step": "contacts",
+      "status": "ok",
+      "website": "https://besque.co",
+      "emails": 4
     }
   ],
   "budget": {
@@ -109,7 +115,7 @@ The Unscented Magic Body Oil (18 reviews) and Luxury Shower Oil (28 reviews) mak
       "limit": 60.0
     },
     "dataforseo": {
-      "used": 10,
+      "used": 11.099999999999996,
       "limit": 40.0
     },
     "spapi": {
@@ -121,6 +127,6 @@ The Unscented Magic Body Oil (18 reviews) and Luxury Shower Oil (28 reviews) mak
       "limit": 20.0
     }
   },
-  "collected_at": "2026-10-20T19:27:54.128560+00:00"
+  "collected_at": "2026-10-20T20:10:35.031361+00:00"
 }
 ```

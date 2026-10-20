@@ -13,4 +13,6 @@ A bit about me: I run Smart PPC, a UK-based Amazon consultancy that combines han
 
 I've put together a more detailed report, product by product, with exactly what I'd change. Happy to send it across free of charge if it's useful.
 
+If this isn't relevant, just let me know and I won't follow up.
+
 <Signature>

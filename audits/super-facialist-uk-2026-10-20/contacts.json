@@ -1,0 +1,31 @@
+{
+  "website": "https://superfacialist.co.uk",
+  "domain": "superfacialist.co.uk",
+  "pages_checked": [
+    "https://superfacialist.co.uk/",
+    "https://superfacialist.co.uk/pages/contact",
+    "https://superfacialist.co.uk/pages/about-us",
+    "https://superfacialist.co.uk/policies/terms-of-service",
+    "https://superfacialist.co.uk/policies/privacy-policy",
+    "https://www.superfacialist.co.uk/pages/about-us",
+    "https://www.superfacialist.co.uk/pages/contact",
+    "https://www.superfacialist.co.uk/blogs/news/how-to-safely-introduce-acids-into-your-skincare-routine"
+  ],
+  "emails": [
+    {
+      "email": "info@superfacialist.co.uk",
+      "type": "generic",
+      "source": "https://superfacialist.co.uk/pages/contact",
+      "on_domain": true
+    }
+  ],
+  "people": [],
+  "company": {
+    "name": "The Brand Architekts Limited",
+    "number": "06315241"
+  },
+  "email_format": null,
+  "suggested": [],
+  "recommended_to": "info@superfacialist.co.uk",
+  "only_generic": true
+}

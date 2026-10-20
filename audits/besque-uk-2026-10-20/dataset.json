@@ -4,7 +4,7 @@
     "marketplace": "uk",
     "domain": "amazon.co.uk",
     "currency": "\u00a3",
-    "input": "https://www.amazon.co.uk/stores/BESQUE/page/FCF281A2-C3AA-48F9-8A1C-4B5315F2CBB5?lp_asin=B0DJH54BLF&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto",
+    "input": "https://www.amazon.co.uk/stores/BESQUE/page/FCF281A2-C3AA-48F9-8A1C-4B5315F2CBB5?lp_asin=B0DJH54BLF",
     "seller_name": null,
     "landing_asin": "B0DJH54BLF"
   },
@@ -60,6 +60,12 @@
         "step": "ads.bids",
         "status": "skipped",
         "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": "https://besque.co",
+        "emails": 4
       }
     ],
     "budget": {
@@ -72,7 +78,7 @@
         "limit": 60.0
       },
       "dataforseo": {
-        "used": 10,
+        "used": 11.099999999999996,
         "limit": 40.0
       },
       "spapi": {
@@ -84,7 +90,7 @@
         "limit": 20.0
       }
     },
-    "collected_at": "2026-10-20T19:27:54.128560+00:00"
+    "collected_at": "2026-10-20T20:10:35.031361+00:00"
   },
   "focus": {
     "total_asins": 40,

@@ -24,6 +24,8 @@ A bit about me: I run Smart PPC, a UK-based Amazon consultancy that combines han
 I've put together a more detailed report, product by product, with exactly what I'd change. Happy to
 send it across free of charge if it's useful.
 
+If this isn't relevant, just let me know and I won't follow up.
+
 <Signature>
 
 ---
@@ -45,6 +47,8 @@ A bit about me: I run Smart PPC, a UK-based Amazon consultancy that combines han
 
 I've put together a more detailed report, product by product, with exactly what I'd change. Happy to send it across free of charge if it's useful.
 
+If this isn't relevant, just let me know and I won't follow up.
+
 <Signature>
 
 ---
@@ -56,4 +60,5 @@ I've put together a more detailed report, product by product, with exactly what 
 - Hedge estimates ("looks like", "roughly"). Never say we've seen their account.
 - Never: links or attachments, "guaranteed", client names, criticism of their agency or staff.
 - Keep the Smart PPC paragraph word for word, unless the user changes the offer, price or slot count.
+- Always end with the opt-out line before the signature (UK business email rules, PECR).
 - Don't mention discontinued, out-of-stock or tiny products.

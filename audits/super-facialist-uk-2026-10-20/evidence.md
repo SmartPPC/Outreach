@@ -54,7 +54,7 @@ The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cr
     {
       "step": "keepa.token",
       "status": "ok",
-      "tokens_left": 12,
+      "tokens_left": 41,
       "per_minute": 1
     },
     {
@@ -67,12 +67,12 @@ The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cr
       "status": "ok",
       "live": 34,
       "hero_families": 5,
-      "revenue_share": 0.82
+      "revenue_share": 0.85
     },
     {
       "step": "keepa.heroes",
       "status": "ok",
-      "fetched": 5,
+      "fetched": 10,
       "waited_min": 0.0
     },
     {
@@ -84,7 +84,7 @@ The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cr
       "step": "keywords",
       "status": "ok",
       "heroes": 5,
-      "keywords": 366
+      "keywords": 280
     },
     {
       "step": "js.sov",
@@ -94,17 +94,23 @@ The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cr
     {
       "step": "d4s.serp",
       "status": "ok",
-      "keywords": 11
+      "keywords": 10
     },
     {
       "step": "ads.bids",
       "status": "skipped",
       "reason": "Ads API not configured; using Jungle Scout PPC bids"
+    },
+    {
+      "step": "contacts",
+      "status": "ok",
+      "website": "https://superfacialist.co.uk",
+      "emails": 1
     }
   ],
   "budget": {
     "keepa": {
-      "used": 10,
+      "used": 20,
       "limit": 400.0
     },
     "junglescout": {
@@ -112,7 +118,7 @@ The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cr
       "limit": 60.0
     },
     "dataforseo": {
-      "used": 11,
+      "used": 11.399999999999995,
       "limit": 40.0
     },
     "spapi": {
@@ -124,6 +130,6 @@ The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cr
       "limit": 20.0
     }
   },
-  "collected_at": "2026-10-20T17:52:37.197565+00:00"
+  "collected_at": "2026-10-20T20:11:06.447373+00:00"
 }
 ```

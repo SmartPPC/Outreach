@@ -14,7 +14,7 @@
       {
         "step": "keepa.token",
         "status": "ok",
-        "tokens_left": 12,
+        "tokens_left": 41,
         "per_minute": 1
       },
       {
@@ -27,12 +27,12 @@
         "status": "ok",
         "live": 34,
         "hero_families": 5,
-        "revenue_share": 0.82
+        "revenue_share": 0.85
       },
       {
         "step": "keepa.heroes",
         "status": "ok",
-        "fetched": 5,
+        "fetched": 10,
         "waited_min": 0.0
       },
       {
@@ -44,7 +44,7 @@
         "step": "keywords",
         "status": "ok",
         "heroes": 5,
-        "keywords": 366
+        "keywords": 280
       },
       {
         "step": "js.sov",
@@ -54,17 +54,23 @@
       {
         "step": "d4s.serp",
         "status": "ok",
-        "keywords": 11
+        "keywords": 10
       },
       {
         "step": "ads.bids",
         "status": "skipped",
         "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": "https://superfacialist.co.uk",
+        "emails": 1
       }
     ],
     "budget": {
       "keepa": {
-        "used": 10,
+        "used": 20,
         "limit": 400.0
       },
       "junglescout": {
@@ -72,7 +78,7 @@
         "limit": 60.0
       },
       "dataforseo": {
-        "used": 11,
+        "used": 11.399999999999995,
         "limit": 40.0
       },
       "spapi": {
@@ -84,15 +90,15 @@
         "limit": 20.0
       }
     },
-    "collected_at": "2026-10-20T17:52:37.197565+00:00"
+    "collected_at": "2026-10-20T20:11:06.447373+00:00"
   },
   "focus": {
     "total_asins": 104,
     "live_asins": 34,
     "families": 20,
     "hero_families": 5,
-    "hero_revenue_share": 0.82,
-    "est_monthly_revenue": 119791
+    "hero_revenue_share": 0.85,
+    "est_monthly_revenue": 111133
   },
   "heroes": [
     {
@@ -326,6 +332,15 @@
           "cpc": null
         },
         {
+          "keyword": "face oil",
+          "tier": "core",
+          "status": "push",
+          "volume": 7294,
+          "organic_rank": 19,
+          "sponsored_rank": null,
+          "cpc": 0.89
+        },
+        {
           "keyword": "rosehip oil for face",
           "tier": "long_tail",
           "status": "push",
@@ -335,38 +350,29 @@
           "cpc": null
         },
         {
-          "keyword": "makeup remover balm",
-          "tier": "category",
+          "keyword": "face oils for women",
+          "tier": "long_tail",
           "status": "push",
-          "volume": 2048,
+          "volume": 2758,
           "organic_rank": 27,
           "sponsored_rank": null,
           "cpc": null
         },
         {
-          "keyword": "waterproof makeup remover",
-          "tier": "category",
-          "status": "push",
-          "volume": 1810,
-          "organic_rank": 38,
+          "keyword": "facial oil",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 2692,
+          "organic_rank": 4,
           "sponsored_rank": null,
-          "cpc": null
+          "cpc": 0.23
         },
         {
-          "keyword": "cream cleanser",
+          "keyword": "makeup remover balm",
           "tier": "category",
           "status": "push",
-          "volume": 1643,
-          "organic_rank": 30,
-          "sponsored_rank": null,
-          "cpc": null
-        },
-        {
-          "keyword": "elemis cleanser",
-          "tier": "category",
-          "status": "push",
-          "volume": 1293,
-          "organic_rank": 57,
+          "volume": 2048,
+          "organic_rank": 27,
           "sponsored_rank": null,
           "cpc": null
         }
@@ -409,15 +415,15 @@
           "reason": "unrelated to the product"
         },
         {
-          "keyword": "organic rose water",
-          "volume": 1103,
-          "sponsored_rank": 20,
-          "reason": "unrelated to the product"
-        },
-        {
           "keyword": "micellar water simple",
           "volume": 1059,
           "sponsored_rank": 17,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "simple too",
+          "volume": 1033,
+          "sponsored_rank": 20,
           "reason": "unrelated to the product"
         }
       ],
@@ -702,30 +708,30 @@
       "sponsored_terms": 15
     },
     {
-      "asin": "B0CSPJHQRC",
-      "parent_asin": "B0D9LRH3ZN",
-      "title": "Super Facialist Vegan Collagen Overnight Resync Night Cream, 50ml",
-      "family_revenue_30d": 11543,
-      "family_size": 4,
-      "units_30d": 196,
-      "price": 20.0,
-      "list_price": 12.5,
+      "asin": "B07K1XJ9YG",
+      "parent_asin": "B0DXL3QL78",
+      "title": "Super Facialist Vitamin C Brightening Face Moisturiser, Vegan, 75ml",
+      "family_revenue_30d": 7976,
+      "family_size": 2,
+      "units_30d": 197,
+      "price": 16.93,
+      "list_price": 17.0,
       "sellers": 17,
       "buy_box_owner": "Amazon",
-      "category": "Creams",
-      "product_type": "night cream",
-      "rating": 4.6,
-      "reviews": 50,
+      "category": "Day Care",
+      "product_type": "moisturiser",
+      "rating": 4.3,
+      "reviews": 612,
       "content": {
-        "score": 81,
+        "score": 94,
         "checks": {
           "images": {
             "status": "good",
-            "detail": "9 images"
+            "detail": "7 images"
           },
           "video": {
             "status": "good",
-            "detail": "5 videos"
+            "detail": "9 videos"
           },
           "a_plus": {
             "status": "good",
@@ -733,96 +739,37 @@
           },
           "title": {
             "status": "warn",
-            "detail": "65 chars"
+            "detail": "67 chars"
           },
           "bullets": {
             "status": "good",
             "detail": "5 bullets"
           },
           "bullet_depth": {
-            "status": "warn",
-            "detail": "avg 98 chars"
+            "status": "good",
+            "detail": "avg 149 chars"
           },
           "rating": {
             "status": "good",
-            "detail": "4.6\u2605"
+            "detail": "4.3\u2605"
           },
           "reviews": {
-            "status": "warn",
-            "detail": "50 reviews"
+            "status": "good",
+            "detail": "612 reviews"
           }
         }
       },
       "flags": [
         {
-          "type": "mixed_variation_family",
-          "detail": "variation family mixes cleanser, moisturiser, night cream, serum"
+          "type": "wrong_category",
+          "detail": "moisturiser listed under Day Care"
         },
         {
           "type": "sellers",
           "detail": "17 sellers on the listing"
-        },
-        {
-          "type": "sellers",
-          "detail": "selling above list price (20.00 vs 12.50)"
         }
       ],
-      "targets": [
-        {
-          "keyword": "day cream",
-          "tier": "category",
-          "status": "push",
-          "volume": 6417,
-          "organic_rank": 21,
-          "sponsored_rank": null,
-          "cpc": 0.31
-        },
-        {
-          "keyword": "collagen serum",
-          "tier": "category",
-          "status": "push",
-          "volume": 2324,
-          "organic_rank": 58,
-          "sponsored_rank": null,
-          "cpc": 0.4
-        },
-        {
-          "keyword": "collagen serum for face",
-          "tier": "long_tail",
-          "status": "push",
-          "volume": 1265,
-          "organic_rank": 50,
-          "sponsored_rank": null,
-          "cpc": null
-        },
-        {
-          "keyword": "collagen night cream",
-          "tier": "category",
-          "status": "push",
-          "volume": 740,
-          "organic_rank": 36,
-          "sponsored_rank": null,
-          "cpc": null
-        },
-        {
-          "keyword": "collagen face wash",
-          "tier": "long_tail",
-          "status": "organic_top_unprotected",
-          "volume": 464,
-          "organic_rank": 4,
-          "sponsored_rank": null,
-          "cpc": null
-        },
-        {
-          "keyword": "collagen gel for skin",
-          "tier": "long_tail",
-          "status": "push",
-          "volume": 450,
-          "organic_rank": 31,
-          "sponsored_rank": null,
-          "cpc": null
-        }
-      ],
+      "targets": [],
       "wasted_terms": [],
       "sponsored_terms": 0
     }
@@ -882,10 +829,10 @@
   },
   "asin_map": {
     "discovered": 104,
-    "fetched": 5,
+    "fetched": 10,
     "parents": 5,
     "categories": {
-      "Beauty": 5
+      "Beauty": 10
     },
     "asins": [
       {
@@ -941,45 +888,111 @@
         "est_monthly_revenue": 4200
       },
       {
-        "asin": "B0CSPJHQRC",
-        "parent_asin": "B0D9LRH3ZN",
-        "title": "Super Facialist Vegan Collagen Overnight Resync Night Cream, 50ml",
-        "price": 20.0,
-        "rating": 4.6,
-        "review_count": 50,
+        "asin": "B00IEU6OF8",
+        "parent_asin": "B0F8R55N8X",
+        "title": "Superfacialist Rose Miracle Makeover Facial Oil 30Ml",
+        "price": 16.0,
+        "rating": 4.7,
+        "review_count": 340,
+        "monthly_sold": 200,
+        "sales_rank": 4846.0,
+        "listed_since": "2015-01-30",
+        "root_category": "Beauty",
+        "est_monthly_revenue": 3200
+      },
+      {
+        "asin": "B07K1XJ9YG",
+        "parent_asin": "B0DXL3QL78",
+        "title": "Super Facialist Vitamin C Brightening Face Moisturiser, Vegan, 75ml",
+        "price": 17.0,
+        "rating": 4.3,
+        "review_count": 612,
+        "monthly_sold": 100,
+        "sales_rank": 18737.0,
+        "listed_since": "2018-10-30",
+        "root_category": "Beauty",
+        "est_monthly_revenue": 1700
+      },
+      {
+        "asin": "B0FCMY4FW4",
+        "parent_asin": "B0H2BDYNF4",
+        "title": "Super Facialist Salicylic Acid Exfoliating Toner, AHA and BHA",
+        "price": 10.0,
+        "rating": 4.2,
+        "review_count": 12,
         "monthly_sold": null,
-        "sales_rank": 17125.0,
-        "listed_since": "2024-01-18",
+        "sales_rank": 2326.0,
+        "listed_since": "2025-06-10",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B07JZTWS5N",
+        "parent_asin": "B0F8R55N8X",
+        "title": "Super Facialist Rosehip Hydrate SPF15 Face Moisturiser Day Cream, 75ml",
+        "price": 26.99,
+        "rating": 4.5,
+        "review_count": 423,
+        "monthly_sold": null,
+        "sales_rank": 4846.0,
+        "listed_since": "2015-11-06",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0CVLG5BZ6",
+        "parent_asin": "B0F8R55N8X",
+        "title": "Super Facialist Rosehip Overnight Resync Night Cream, Shea Butter, 50ml",
+        "price": 19.95,
+        "rating": 4.3,
+        "review_count": 58,
+        "monthly_sold": null,
+        "sales_rank": 4846.0,
+        "listed_since": "2024-02-13",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0DXL3QL78",
+        "parent_asin": "B0DXL3QL78",
+        "title": "Super Facialist - Vitamin C + Brighten Skin Renew Cleansing Oil",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 18737.0,
+        "listed_since": "2021-08-12",
         "root_category": "Beauty",
         "est_monthly_revenue": null
       }
     ]
   },
   "catalogue": {
-    "asin_count": 5,
+    "asin_count": 10,
     "launches_by_quarter": {
       "2024-Q1": 1,
-      "2024-Q2": 1
+      "2024-Q2": 1,
+      "2025-Q2": 1
     },
     "launches_last_12m": 0,
     "revenue_monthly_top_parents": {},
     "revenue_yoy_pct_last_3m": null,
-    "est_monthly_revenue_keepa": 37910,
-    "top3_revenue_share": 0.89,
+    "est_monthly_revenue_keepa": 42810,
+    "top3_revenue_share": 0.79,
     "bsr_trend_top_parents": {
       "median_bsr_now": 2735.0,
-      "median_bsr_year_ago": 1299.0,
+      "median_bsr_year_ago": 727.0,
       "improved": false,
-      "change_pct": 111
+      "change_pct": 276
     },
     "reviews_gained_12m": 0
   },
   "content": {
     "summary": {
-      "avg_score_top_parents": 91,
-      "share_under_7_images": 0.0,
-      "share_no_video": 0.0,
-      "share_no_aplus": 0.0,
+      "avg_score_top_parents": 86,
+      "share_under_7_images": 0.1,
+      "share_no_video": 0.1,
+      "share_no_aplus": 0.1,
       "share_under_5_bullets": 0.0,
       "share_rating_below_4_2": 0.0,
       "has_brand_store": true
@@ -1142,41 +1155,41 @@
         }
       },
       {
-        "asin": "B0CSPJHQRC",
-        "title": "Super Facialist Vegan Collagen Overnight Resync Night Cream, 50ml",
-        "score": 81,
+        "asin": "B0DXL3QL78",
+        "title": "Super Facialist - Vitamin C + Brighten Skin Renew Cleansing Oil",
+        "score": 56,
         "checks": {
           "images": {
             "status": "good",
-            "detail": "9 images"
+            "detail": "7 images"
           },
           "video": {
-            "status": "good",
-            "detail": "5 videos"
+            "status": "fail",
+            "detail": "0 videos"
           },
           "a_plus": {
-            "status": "good",
-            "detail": "A+ with 1 modules"
+            "status": "fail",
+            "detail": "no A+"
           },
           "title": {
             "status": "warn",
-            "detail": "65 chars"
+            "detail": "63 chars"
           },
           "bullets": {
             "status": "good",
             "detail": "5 bullets"
           },
           "bullet_depth": {
-            "status": "warn",
-            "detail": "avg 98 chars"
+            "status": "good",
+            "detail": "avg 149 chars"
           },
           "rating": {
-            "status": "good",
-            "detail": "4.6\u2605"
+            "status": "warn",
+            "detail": "\u2013\u2605"
           },
           "reviews": {
             "status": "warn",
-            "detail": "50 reviews"
+            "detail": "0 reviews"
           }
         }
       }
@@ -1323,86 +1336,9 @@
         "brand_guess": "Organic Face",
         "title": "Organic Face Cream & Face Moisturiser: Natural Moisturiser Face Women & Men - Face Cream W",
         "position": 10
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0DNJMQFHK",
-        "brand_guess": "Ultime8 Sublime",
-        "title": "Ultime8 Sublime Beauty Cleansing Oil, A Luxurious Tsubaki Infused Makeup Remover & Hydrati",
-        "position": 2
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0C3D41GCX",
-        "brand_guess": "Cleansing Face",
-        "title": "Cleansing Face Milk with Aloe Vera + Oat Powder 120ml - Cleansing, Repairing + Nourishing ",
-        "position": 3
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0H6XFDTX4",
-        "brand_guess": "Cleanse &",
-        "title": "Cleanse & Glow Brightening Cleansing Balm, 100ml",
-        "position": 13
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0CC9694ZF",
-        "brand_guess": "Skin Therapy",
-        "title": "Skin Therapy - Multi-perfecting night Serum with 17 Super Ingredients - Suitable for all s",
-        "position": 14
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B08QV3JQ8H",
-        "brand_guess": "[PKY] Pyunkang",
-        "title": "[PKY] Pyunkang Yul Low pH Cleansing Water, Makeup Remover & Face Cleanser with Witch Hazel",
-        "position": 16
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0GDQYZRTS",
-        "brand_guess": "PLANTIFIQUE Korean",
-        "title": "PLANTIFIQUE Korean Cleansing Balm, Makeup Remover with Ceramides, 50ml/40g | Removes Water",
-        "position": 26
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B08H6PHF2N",
-        "brand_guess": "Advanced Snail",
-        "title": "Advanced Snail Mucin Gel Cleanser, 5.07 Fl Oz / 150 mL | Rich Daily Deep Cleansing Gel for",
-        "position": 27
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B09ZRVSHS1",
-        "brand_guess": "Centella Cleansing",
-        "title": "Centella Cleansing - Makeup Remover Oil for Face with Centella Asiatica - All Skin Types -",
-        "position": 28
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0H12H8F7Z",
-        "brand_guess": "Moisture Daily",
-        "title": "Moisture Daily Cleansing Gel, Barrier-Boosting - 145ml",
-        "position": 29
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0FH7K9H4S",
-        "brand_guess": "Very Rose",
-        "title": "Very Rose Delicate Cleansing Oil 150ml",
-        "position": 30
-      },
-      {
-        "keyword": "super facialist cleansing oil",
-        "asin": "B0DPJR1N27",
-        "brand_guess": "Cleansing Oil",
-        "title": "Cleansing Oil Zero Pore Blackhead",
-        "position": 35
       }
     ],
-    "prospect_sponsored_on_own_brand": true,
+    "prospect_sponsored_on_own_brand": false,
     "positioning_page1": {
       "our_median_price": 14,
       "competitor_median_price": 10.95,
@@ -1493,16 +1429,6 @@
         "priority": 24661
       },
       {
-        "keyword": "day cream",
-        "tier": "core",
-        "volume": 6417,
-        "organic_rank": 21,
-        "sponsored_rank": null,
-        "cpc": 0.31,
-        "status": "push",
-        "priority": 20700
-      },
-      {
         "keyword": "super",
         "tier": "category",
         "volume": 12490,
@@ -1563,6 +1489,16 @@
         "priority": 12944
       },
       {
+        "keyword": "rosehip oil",
+        "tier": "core",
+        "volume": 7768,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "missing",
+        "priority": 12265
+      },
+      {
         "keyword": "caudalie",
         "tier": "competitor",
         "volume": 13832,
@@ -1593,16 +1529,6 @@
         "priority": 10551
       },
       {
-        "keyword": "collagen cream",
-        "tier": "core",
-        "volume": 3943,
-        "organic_rank": 96,
-        "sponsored_rank": null,
-        "cpc": 0.24,
-        "status": "missing",
-        "priority": 9858
-      },
-      {
         "keyword": "aveeno face wash",
         "tier": "category",
         "volume": 3481,
@@ -1631,16 +1557,6 @@
         "cpc": 0.23,
         "status": "sponsored_only",
         "priority": 9423
-      },
-      {
-        "keyword": "rosehip oil",
-        "tier": "category",
-        "volume": 7768,
-        "organic_rank": 114,
-        "sponsored_rank": null,
-        "cpc": 0.38,
-        "status": "missing",
-        "priority": 8586
       },
       {
         "keyword": "facewash",
@@ -1686,7 +1602,7 @@
         "keyword": "facial cleanser",
         "tier": "category",
         "volume": 7989,
-        "organic_rank": 25,
+        "organic_rank": 30,
         "sponsored_rank": null,
         "cpc": 0.75,
         "status": "push",
@@ -1743,6 +1659,16 @@
         "priority": 6380
       },
       {
+        "keyword": "glycolic acid toner",
+        "tier": "core",
+        "volume": 1233,
+        "organic_rank": 52,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "push",
+        "priority": 6165
+      },
+      {
         "keyword": "facial oil",
         "tier": "core",
         "volume": 2692,
@@ -1751,16 +1677,6 @@
         "cpc": 0.23,
         "status": "organic_top_unprotected",
         "priority": 5852
-      },
-      {
-        "keyword": "collagen serum",
-        "tier": "core",
-        "volume": 2324,
-        "organic_rank": 58,
-        "sponsored_rank": null,
-        "cpc": 0.4,
-        "status": "push",
-        "priority": 5810
       },
       {
         "keyword": "neutrogena face wash",
@@ -1833,6 +1749,16 @@
         "priority": 5087
       },
       {
+        "keyword": "facial toner",
+        "tier": "core",
+        "volume": 1973,
+        "organic_rank": 115,
+        "sponsored_rank": null,
+        "cpc": 0.24,
+        "status": "missing",
+        "priority": 4932
+      },
+      {
         "keyword": "cleansing milk",
         "tier": "category",
         "volume": 2910,
@@ -1861,16 +1787,6 @@
         "cpc": 0.16,
         "status": "missing",
         "priority": 4500
-      },
-      {
-        "keyword": "glycolic acid toner",
-        "tier": "category",
-        "volume": 1233,
-        "organic_rank": 52,
-        "sponsored_rank": null,
-        "cpc": 0.19,
-        "status": "push",
-        "priority": 4315
       },
       {
         "keyword": "clarins cleanser",
@@ -1953,6 +1869,16 @@
         "priority": 3593
       },
       {
+        "keyword": "decleor",
+        "tier": "core",
+        "volume": 1617,
+        "organic_rank": 108,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 3593
+      },
+      {
         "keyword": "japanese skincare",
         "tier": "category",
         "volume": 1796,
@@ -1981,16 +1907,6 @@
         "cpc": null,
         "status": "push",
         "priority": 3484
-      },
-      {
-        "keyword": "facial toner",
-        "tier": "category",
-        "volume": 1973,
-        "organic_rank": 115,
-        "sponsored_rank": null,
-        "cpc": 0.24,
-        "status": "missing",
-        "priority": 3453
       },
       {
         "keyword": "face soap",
@@ -2043,6 +1959,16 @@
         "priority": 2755
       },
       {
+        "keyword": "pixi glow tonic",
+        "tier": "core",
+        "volume": 1536,
+        "organic_rank": 126,
+        "sponsored_rank": null,
+        "cpc": 0.34,
+        "status": "missing",
+        "priority": 2711
+      },
+      {
         "keyword": "exfoliating scrub",
         "tier": "category",
         "volume": 1260,
@@ -2071,16 +1997,6 @@
         "cpc": null,
         "status": "sponsored_only",
         "priority": 2544
-      },
-      {
-        "keyword": "decleor",
-        "tier": "category",
-        "volume": 1617,
-        "organic_rank": 108,
-        "sponsored_rank": null,
-        "cpc": 0.27,
-        "status": "missing",
-        "priority": 2515
       },
       {
         "keyword": "face oil",
@@ -2193,6 +2109,16 @@
         "priority": 2270
       },
       {
+        "keyword": "nuxe oil",
+        "tier": "core",
+        "volume": 750,
+        "organic_rank": 78,
+        "sponsored_rank": null,
+        "cpc": 0.16,
+        "status": "missing",
+        "priority": 2250
+      },
+      {
         "keyword": "anua cleanser",
         "tier": "category",
         "volume": 3198,
@@ -2223,16 +2149,6 @@
         "priority": 2201
       },
       {
-        "keyword": "vegan collagen",
-        "tier": "core",
-        "volume": 4561,
-        "organic_rank": 144,
-        "sponsored_rank": null,
-        "cpc": 1.26,
-        "status": "missing",
-        "priority": 2172
-      },
-      {
         "keyword": "oil cleanser",
         "tier": "core",
         "volume": 13048,
@@ -2251,16 +2167,6 @@
         "cpc": 0.48,
         "status": "sponsored_support",
         "priority": 2114
-      },
-      {
-        "keyword": "collagen face cream",
-        "tier": "core",
-        "volume": 3486,
-        "organic_rank": 136,
-        "sponsored_rank": null,
-        "cpc": null,
-        "status": "missing",
-        "priority": 2092
       },
       {
         "keyword": "mens face scrub",
@@ -2333,16 +2239,6 @@
         "priority": 1965
       },
       {
-        "keyword": "pixi glow tonic",
-        "tier": "category",
-        "volume": 1536,
-        "organic_rank": 126,
-        "sponsored_rank": null,
-        "cpc": 0.34,
-        "status": "missing",
-        "priority": 1897
-      },
-      {
         "keyword": "super facialist",
         "tier": "brand",
         "volume": 1895,
@@ -2403,6 +2299,16 @@
         "priority": 1747
       },
       {
+        "keyword": "squalane oil",
+        "tier": "core",
+        "volume": 2809,
+        "organic_rank": 124,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1685
+      },
+      {
         "keyword": "cerave face wash",
         "tier": "competitor",
         "volume": 9173,
@@ -2423,16 +2329,6 @@
         "priority": 1578
       },
       {
-        "keyword": "nuxe oil",
-        "tier": "category",
-        "volume": 750,
-        "organic_rank": 78,
-        "sponsored_rank": null,
-        "cpc": 0.16,
-        "status": "missing",
-        "priority": 1575
-      },
-      {
         "keyword": "salicylic acid face wash",
         "tier": "long_tail",
         "volume": 10435,
@@ -2451,6 +2347,16 @@
         "cpc": null,
         "status": "push",
         "priority": 1544
+      },
+      {
+        "keyword": "organic rosehip oil",
+        "tier": "core",
+        "volume": 952,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "missing",
+        "priority": 1503
       },
       {
         "keyword": "colour remover",
@@ -2523,6 +2429,16 @@
         "priority": 1352
       },
       {
+        "keyword": "rosehip seed oil",
+        "tier": "core",
+        "volume": 1294,
+        "organic_rank": 91,
+        "sponsored_rank": null,
+        "cpc": 0.59,
+        "status": "missing",
+        "priority": 1316
+      },
+      {
         "keyword": "olay face wash",
         "tier": "core",
         "volume": 1290,
@@ -2531,6 +2447,16 @@
         "cpc": null,
         "status": "push",
         "priority": 1290
+      },
+      {
+        "keyword": "dermaplaning oil",
+        "tier": "core",
+        "volume": 1254,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1254
       },
       {
         "keyword": "biore",
@@ -2551,16 +2477,6 @@
         "cpc": null,
         "status": "push",
         "priority": 1229
-      },
-      {
-        "keyword": "night face cream",
-        "tier": "core",
-        "volume": 2023,
-        "organic_rank": 110,
-        "sponsored_rank": null,
-        "cpc": null,
-        "status": "missing",
-        "priority": 1214
       },
       {
         "keyword": "dhc deep cleansing oil",
@@ -2623,16 +2539,6 @@
         "priority": 1182
       },
       {
-        "keyword": "squalane oil",
-        "tier": "category",
-        "volume": 2809,
-        "organic_rank": 124,
-        "sponsored_rank": null,
-        "cpc": null,
-        "status": "missing",
-        "priority": 1180
-      },
-      {
         "keyword": "face wash korean",
         "tier": "category",
         "volume": 1675,
@@ -2641,16 +2547,6 @@
         "cpc": null,
         "status": "push",
         "priority": 1172
-      },
-      {
-        "keyword": "avene tolerance",
-        "tier": "category",
-        "volume": 725,
-        "organic_rank": 78,
-        "sponsored_rank": null,
-        "cpc": 0.26,
-        "status": "missing",
-        "priority": 1171
       },
       {
         "keyword": "cream cleanser",
@@ -2671,6 +2567,16 @@
         "cpc": null,
         "status": "sponsored_only",
         "priority": 1144
+      },
+      {
+        "keyword": "exfoliating toner",
+        "tier": "core",
+        "volume": 1137,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1137
       },
       {
         "keyword": "garnier micellar cleansing water",
@@ -2703,16 +2609,6 @@
         "priority": 1091
       },
       {
-        "keyword": "fair and lovely cream",
-        "tier": "long_tail",
-        "volume": 1050,
-        "organic_rank": 130,
-        "sponsored_rank": null,
-        "cpc": 0.29,
-        "status": "missing",
-        "priority": 1086
-      },
-      {
         "keyword": "elemis gift sets for women",
         "tier": "long_tail",
         "volume": 3586,
@@ -2721,16 +2617,6 @@
         "cpc": null,
         "status": "missing",
         "priority": 1076
-      },
-      {
-        "keyword": "organic rosehip oil",
-        "tier": "category",
-        "volume": 952,
-        "organic_rank": 80,
-        "sponsored_rank": null,
-        "cpc": 0.38,
-        "status": "missing",
-        "priority": 1052
       },
       {
         "keyword": "nothora",
@@ -2781,16 +2667,6 @@
         "cpc": null,
         "status": "push",
         "priority": 999
-      },
-      {
-        "keyword": "gel cleanser",
-        "tier": "category",
-        "volume": 806,
-        "organic_rank": 108,
-        "sponsored_rank": null,
-        "cpc": 0.34,
-        "status": "missing",
-        "priority": 996
       },
       {
         "keyword": "clearasil face wash",
@@ -2883,16 +2759,6 @@
         "priority": 938
       },
       {
-        "keyword": "noxema",
-        "tier": "long_tail",
-        "volume": 450,
-        "organic_rank": 15,
-        "sponsored_rank": null,
-        "cpc": 0.24,
-        "status": "push",
-        "priority": 938
-      },
-      {
         "keyword": "ordinary face wash",
         "tier": "category",
         "volume": 1328,
@@ -2911,33 +2777,103 @@
         "cpc": null,
         "status": "missing",
         "priority": 923
+      },
+      {
+        "keyword": "acnecide face wash",
+        "tier": "core",
+        "volume": 3024,
+        "organic_rank": 34,
+        "sponsored_rank": 13,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 907
+      },
+      {
+        "keyword": "elemis cleanser",
+        "tier": "category",
+        "volume": 1293,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 905
+      },
+      {
+        "keyword": "cerave blemish control cleanser",
+        "tier": "competitor",
+        "volume": 7503,
+        "organic_rank": 61,
+        "sponsored_rank": 7,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 900
+      },
+      {
+        "keyword": "claudia winkleman",
+        "tier": "category",
+        "volume": 3190,
+        "organic_rank": null,
+        "sponsored_rank": 18,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 893
+      },
+      {
+        "keyword": "face wash for dry skin",
+        "tier": "long_tail",
+        "volume": 1779,
+        "organic_rank": 22,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 890
+      },
+      {
+        "keyword": "eye make up remover",
+        "tier": "long_tail",
+        "volume": 2884,
+        "organic_rank": 108,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 865
+      },
+      {
+        "keyword": "wonder skin",
+        "tier": "core",
+        "volume": 859,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 859
       }
     ],
     "tiers": {
       "category": {
-        "keywords": 146,
-        "volume": 572093,
-        "gaps": 127
-      },
-      "core": {
-        "keywords": 50,
-        "volume": 188472,
-        "gaps": 24
-      },
-      "competitor": {
-        "keywords": 48,
-        "volume": 197680,
-        "gaps": 37
-      },
-      "long_tail": {
-        "keywords": 116,
-        "volume": 190685,
+        "keywords": 120,
+        "volume": 536190,
         "gaps": 101
       },
+      "core": {
+        "keywords": 51,
+        "volume": 186518,
+        "gaps": 25
+      },
+      "competitor": {
+        "keywords": 40,
+        "volume": 191853,
+        "gaps": 29
+      },
+      "long_tail": {
+        "keywords": 67,
+        "volume": 163497,
+        "gaps": 54
+      },
       "brand": {
-        "keywords": 6,
-        "volume": 4260,
-        "gaps": 4
+        "keywords": 2,
+        "volume": 2521,
+        "gaps": 1
       }
     },
     "focus_keywords": [
@@ -3002,16 +2938,6 @@
         "priority": 24661
       },
       {
-        "keyword": "day cream",
-        "tier": "core",
-        "volume": 6417,
-        "organic_rank": 21,
-        "sponsored_rank": null,
-        "cpc": 0.31,
-        "status": "push",
-        "priority": 20700
-      },
-      {
         "keyword": "eye makeup remover",
         "tier": "category",
         "volume": 9797,
@@ -3042,6 +2968,16 @@
         "priority": 12944
       },
       {
+        "keyword": "rosehip oil",
+        "tier": "core",
+        "volume": 7768,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "missing",
+        "priority": 12265
+      },
+      {
         "keyword": "avene",
         "tier": "category",
         "volume": 5240,
@@ -3062,16 +2998,6 @@
         "priority": 10551
       },
       {
-        "keyword": "collagen cream",
-        "tier": "core",
-        "volume": 3943,
-        "organic_rank": 96,
-        "sponsored_rank": null,
-        "cpc": 0.24,
-        "status": "missing",
-        "priority": 9858
-      },
-      {
         "keyword": "aveeno face wash",
         "tier": "category",
         "volume": 3481,
@@ -3090,16 +3016,6 @@
         "cpc": 0.19,
         "status": "push",
         "priority": 9719
-      },
-      {
-        "keyword": "rosehip oil",
-        "tier": "category",
-        "volume": 7768,
-        "organic_rank": 114,
-        "sponsored_rank": null,
-        "cpc": 0.38,
-        "status": "missing",
-        "priority": 8586
       },
       {
         "keyword": "facewash",
@@ -3140,21 +3056,41 @@
         "cpc": 0.19,
         "status": "missing",
         "priority": 7512
+      },
+      {
+        "keyword": "facial cleanser",
+        "tier": "category",
+        "volume": 7989,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 0.75,
+        "status": "push",
+        "priority": 7456
+      },
+      {
+        "keyword": "cetaphil cleanser",
+        "tier": "category",
+        "volume": 3390,
+        "organic_rank": 70,
+        "sponsored_rank": null,
+        "cpc": 0.14,
+        "status": "missing",
+        "priority": 7119
       }
     ],
     "budget": {
       "monthly_by_tier": {
-        "category": 1217,
-        "core": 70,
+        "category": 1259,
+        "core": 71,
         "long_tail": 23
       },
       "monthly_by_ad_type": {
-        "SP": 673,
-        "SB": 318,
-        "SBV": 318,
-        "SD (remarketing/retention)": 231
+        "SP": 695,
+        "SB": 329,
+        "SBV": 329,
+        "SD (remarketing/retention)": 239
       },
-      "monthly_total": 1541,
+      "monthly_total": 1591,
       "assumptions": {
         "clicks_per_search": 0.12,
         "target_sponsored_sov": {
@@ -3191,7 +3127,7 @@
       }
     },
     "repeat_signals": {
-      "sns_share": 1.0,
+      "sns_share": 0.7,
       "multipack_share": 0.0,
       "consumable_category": true,
       "likelihood": "high"

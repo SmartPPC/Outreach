@@ -221,3 +221,47 @@ def test_lead_variant_is_the_one_keepa_sees_selling():
     hero = {"asin": "A1", "children": ["A1", "A2", "A3"]}
     assert build_dataset._live_lead(hero, keepa_by_asin) == "A2"
     assert build_dataset._live_lead({"asin": "A1", "children": ["A1"]}, {}) == "A1"
+
+
+# --- contacts ---------------------------------------------------------------------------------------
+
+PAGE = """Our Story. Brightpaw was founded by Jane Holloway in 2019.
+Jane Holloway, Founder. Tom Reeve - Director.
+SHIP RIGHTS OVER the goods remain ours.
+For trade enquiries email wholesale@brightpaw.co.uk or jane.holloway@brightpaw.co.uk.
+Customer care: hello@brightpaw.co.uk, complaints@brightpaw.co.uk.
+This website is operated by Brightpaw Trading Ltd, company number 12345678."""
+
+
+def test_contact_extraction_and_ranking():
+    from collectors import contacts
+    x = contacts.extract(PAGE)
+    assert set(x["people"]) == {"Jane Holloway", "Tom Reeve"}            # all-caps text isn't a name
+    assert x["company_number"] == "12345678" and x["company_name"] == "Brightpaw Trading Ltd"
+    people = x["people"]
+    assert contacts.classify("jane.holloway@brightpaw.co.uk", people) == "personal"
+    assert contacts.classify("wholesale@brightpaw.co.uk", people) == "business"
+    assert contacts.classify("complaints@brightpaw.co.uk", people) == "generic"
+    assert contacts._generic_rank("hello@x.co") < contacts._generic_rank("complaints@x.co")
+
+
+def test_suggested_addresses_only_from_a_published_format():
+    from collectors import contacts
+    people = {"Jane Holloway": "founder", "Tom Reeve": "director"}
+    fmt = contacts.email_format(["jane.holloway@brightpaw.co.uk"], people, "brightpaw.co.uk")
+    assert fmt == "{first}.{last}"
+    sugg = contacts.suggest(people, fmt, "brightpaw.co.uk", {"jane.holloway@brightpaw.co.uk"})
+    assert sugg == [{"name": "Tom Reeve", "email": "tom.reeve@brightpaw.co.uk",
+                     "status": "unverified guess, check before sending"}]
+    assert contacts.email_format(["hello@brightpaw.co.uk"], people, "brightpaw.co.uk") is None
+    assert contacts.suggest(people, None, "brightpaw.co.uk", set()) == []
+
+
+def test_contacts_never_reach_the_shared_audit_page(tmp_path):
+    run = sample_run.write(tmp_path / "brightpaw-uk-2026-10-20")
+    (run / "contacts.json").write_text(json.dumps({"website": "https://brightpaw.co.uk",
+                                                   "emails": [{"email": "jane@brightpaw.co.uk", "type": "personal",
+                                                               "source": "x", "on_domain": True}]}))
+    (run / "dataset.json").write_text(json.dumps(build_dataset.build(run)))
+    html_path, _ = render.render(run)
+    assert "jane@brightpaw.co.uk" not in html_path.read_text()

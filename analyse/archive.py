@@ -15,13 +15,29 @@ from pathlib import Path
 from collectors.common import ROOT, read_json
 
 AUDITS_DIR = ROOT / "audits"
-DELIVERABLES = ["email.md", "audit.html", "findings.json", "evidence.md", "dataset.json", "input.json", "job_ad.txt"]
+DELIVERABLES = ["email.md", "audit.html", "findings.json", "evidence.md", "dataset.json", "input.json", "job_ad.txt",
+                "contacts.json"]
 INDEX_HEADER = ("# Audits\n\n| Date | Brand | Marketplace | Est. revenue /mo | Audit page | Folder |\n"
                 "|---|---|---|---|---|---|\n")
 
 
 def email_points(email: str) -> list[str]:
     return [re.sub(r"\*\*", "", m) for m in re.findall(r"^\s*\d\.\s+(.+)$", email, re.M)]
+
+
+def contact_lines(c: dict) -> list[str]:
+    if not c or not c.get("website"):
+        return ["- No contacts collected (pass --website)."]
+    lines = [f"- **Recommended To:** {c.get('recommended_to') or '–'}"]
+    lines += [f"- {e['email']} ({e['type']}, from {e['source']})" for e in c.get("emails", [])]
+    lines += [f"- {p['name']}: {p['role']} (from {p['source']})" for p in c.get("people", [])]
+    lines += [f"- Suggested: {s['email']} for {s['name']} ({s['status']})" for s in c.get("suggested", [])]
+    co = c.get("company") or {}
+    if co.get("name") or co.get("number"):
+        lines.append(f"- Company: {co.get('name') or '–'} {('(' + co['number'] + ')') if co.get('number') else ''}".rstrip())
+    if c.get("only_generic"):
+        lines.append("- Only shared inboxes are published; find the founder or ecommerce lead on LinkedIn.")
+    return lines
 
 
 def archive(run: Path, link: str | None = None, audits_dir: Path = AUDITS_DIR) -> Path:
@@ -53,6 +69,10 @@ def archive(run: Path, link: str | None = None, audits_dir: Path = AUDITS_DIR) -
         "## Email points",
         "",
         *[f"{i}. {pt}" for i, pt in enumerate(email_points(email), 1)],
+        "",
+        "## Contacts",
+        "",
+        *contact_lines(read_json(run / "contacts.json", {})),
         "",
         "## Data gaps",
         "",

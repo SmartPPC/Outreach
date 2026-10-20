@@ -15,7 +15,7 @@ import traceback
 from pathlib import Path
 
 from analyse import build_dataset, checks
-from collectors import ads_bench, catalog, dataforseo, junglescout, keepa
+from collectors import ads_bench, catalog, contacts, dataforseo, junglescout, keepa
 from collectors.common import Budget, BudgetExceeded, env, load_env, run_dir, write_json
 from collectors.resolve import resolve, slug_for
 
@@ -50,7 +50,7 @@ def guarded(log: Log, step: str, fn, default=None):
 
 
 def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_asins: int, top_n: int,
-            n_category_terms: int) -> Path:
+            n_category_terms: int, website: str | None = None) -> Path:
     load_env()
     budget, log = Budget(), Log()
     target = resolve(raw_input, marketplace)
@@ -168,6 +168,14 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
     else:
         log.skip("ads.bids", "Ads API not configured; using Jungle Scout PPC bids")
 
+    # 5. Contacts published on the brand's own site (kept out of the shareable audit page)
+    if dataforseo.configured() and target.get("brand"):
+        found = guarded(log, "contacts", lambda: contacts.find_contacts(target["brand"], budget, website), {}) or {}
+        write_json(out / "contacts.json", found)
+        log.ok("contacts", website=found.get("website"), emails=len(found.get("emails") or []))
+    else:
+        log.skip("contacts", "DataForSEO not configured")
+
     write_json(out / "input.json", target)
     write_json(out / "collect_log.json", {"steps": log.steps, "budget": budget.report(),
                                           "collected_at": dt.datetime.now(dt.UTC).isoformat()})
@@ -185,6 +193,7 @@ def main() -> None:
     ap.add_argument("--max-asins", type=int, default=150, help="cap on ASINs pulled from Keepa (cost control)")
     ap.add_argument("--top-n", type=int, default=12, help="max best-seller families analysed in depth")
     ap.add_argument("--category-terms", type=int, default=12)
+    ap.add_argument("--website", help="brand website for contact finding (otherwise <brand>.co.uk/.com/.co is tried)")
     ap.add_argument("--rebuild", type=Path, help="skip collection; rebuild dataset.json for an existing run dir")
     args = ap.parse_args()
 
@@ -194,7 +203,7 @@ def main() -> None:
         return
     if not args.input:
         ap.error("input is required unless --rebuild is given")
-    collect(args.input, args.marketplace, args.job_ad, args.max_asins, args.top_n, args.category_terms)
+    collect(args.input, args.marketplace, args.job_ad, args.max_asins, args.top_n, args.category_terms, args.website)
 
 
 if __name__ == "__main__":

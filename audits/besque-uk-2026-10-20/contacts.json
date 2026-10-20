@@ -1,0 +1,45 @@
+{
+  "website": "https://besque.co",
+  "domain": "besque.co",
+  "pages_checked": [
+    "https://besque.co/",
+    "https://besque.co/pages/contact",
+    "https://besque.co/policies/terms-of-service",
+    "https://besque.co/policies/privacy-policy"
+  ],
+  "emails": [
+    {
+      "email": "hello@besque.co",
+      "type": "generic",
+      "source": "https://besque.co/policies/terms-of-service",
+      "on_domain": true
+    },
+    {
+      "email": "complaints@besque.co",
+      "type": "generic",
+      "source": "https://besque.co/policies/terms-of-service",
+      "on_domain": true
+    },
+    {
+      "email": "vip@besque.co",
+      "type": "generic",
+      "source": "https://besque.co/policies/terms-of-service",
+      "on_domain": true
+    },
+    {
+      "email": "legal@besque.com",
+      "type": "generic",
+      "source": "https://besque.co/policies/terms-of-service",
+      "on_domain": false
+    }
+  ],
+  "people": [],
+  "company": {
+    "name": "HBL Ventures LLC",
+    "number": null
+  },
+  "email_format": null,
+  "suggested": [],
+  "recommended_to": "hello@besque.co",
+  "only_generic": true
+}
