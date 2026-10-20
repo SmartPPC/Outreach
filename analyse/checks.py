@@ -88,10 +88,13 @@ def families(products: list[dict]) -> dict[str, list[dict]]:
 
 
 def family_revenue(children: list[dict]) -> float:
-    """Jungle Scout often repeats the parent's total on every child. Count it once when it does."""
+    """Jungle Scout often repeats the parent's totals on every child: the same revenue, or the same
+    units at each child's own price. Count the family once when it does."""
     revs = [c.get("revenue_30d") or 0 for c in children]
-    if len(revs) > 1 and len(set(revs)) == 1:
-        return revs[0]
+    units = [c.get("units_30d") or 0 for c in children]
+    near_same_units = min(units) > 0 and max(units) <= min(units) * 1.1
+    if len(children) > 1 and (len(set(revs)) == 1 or near_same_units):
+        return sum(revs) / len(revs)
     return sum(revs)
 
 

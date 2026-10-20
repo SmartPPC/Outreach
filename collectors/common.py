@@ -1,6 +1,7 @@
 """Shared plumbing for collectors: config, HTTP with caching, per-run budget, run-dir IO."""
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import os
@@ -134,7 +135,10 @@ def http_json(
         req = urllib.request.Request(url, data=data, headers=headers, method=method)
         try:
             with urllib.request.urlopen(req, timeout=90) as resp:
-                text = resp.read().decode()
+                raw = resp.read()
+                if raw[:2] == b"\x1f\x8b":  # Keepa gzips every response, asked or not
+                    raw = gzip.decompress(raw)
+                text = raw.decode()
                 result = json.loads(text) if text else {}
                 break
         except urllib.error.HTTPError as e:

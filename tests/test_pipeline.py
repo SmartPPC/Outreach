@@ -183,3 +183,12 @@ def test_keepa_gives_up_past_max_wait(monkeypatch):
     monkeypatch.setattr(keepa, "MAX_WAIT_S", 60)
     with pytest.raises(RuntimeError, match="APA_KEEPA_MAX_WAIT_MIN"):
         keepa._wait_for(10)
+
+
+def test_family_revenue_counts_repeated_parent_units_once():
+    from analyse import checks
+    kids = [{"units_30d": 879, "revenue_30d": 879 * price} for price in (12.0, 16.0, 20.0)]
+    assert checks.family_revenue(kids) == 879 * 16.0
+    near = [{"units_30d": u, "revenue_30d": r} for u, r in ((879, 26370), (879, 17580), (830, 13280), (882, 12348))]
+    assert round(checks.family_revenue(near)) == 17394
+    assert checks.family_revenue([{"units_30d": 10, "revenue_30d": 100}, {"units_30d": 5, "revenue_30d": 50}]) == 150
