@@ -119,6 +119,7 @@ Follow `templates/email.md` exactly:
 - **Subject:** the single most surprising finding.
 - **Opening:** one line that's generous about what's working.
 - **Exactly 4 numbered points,** taken from the top of `findings.json`. Each is a bold one-sentence headline plus one plain-English sentence, with a single number where it helps.
+- **About Smart PPC:** the fixed paragraph from the template: what Smart PPC is, 1 freelance slot, full account management (stock, content, ads, NPD strategy) at £950/month, no fixed contracts.
 - **Close:** offer the detailed report free of charge.
 
 Don't include a link or an attachment, and leave out jargon (no "SP", "ACoS", "exact match", "variation family"). If there's a job ad, echo its wording in the opening line.

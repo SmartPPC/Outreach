@@ -1,7 +1,7 @@
 # Outreach email template
 
-The first email names four quick, specific wins and offers the detailed report (the audit page) free of
-charge. It has no link and no attachment. A reply asking for the report is the warm lead.
+The first email names four quick, specific wins, introduces Smart PPC and the open freelance slot,
+and offers the detailed report (the audit page) free of charge. It has no link and no attachment. A reply asking for the report is the warm lead.
 
 ---
 
@@ -18,6 +18,8 @@ best-sellers have great listings">, but four things stood out:
 3. **<Issue headline>.** <One sentence, e.g. "It ranks #36 for 'face cleanser' (22,000 searches a month)
    with no ads behind it.">
 4. **<Issue headline>.** <One sentence.>
+
+A bit about me: I run Smart PPC, a UK-based Amazon consultancy that combines hands-on account management with AI-powered tools to grow brands on Amazon. I currently have 1 slot available to work with a brand on a freelance basis, fully managing their Amazon account (stock, content, ads and new product development strategy) for £950 a month, with no fixed contracts.
 
 I've put together a more detailed report, product by product, with exactly what I'd change. Happy to
 send it across free of charge if it's useful.
@@ -39,6 +41,8 @@ I took a quick look at Super Facialist on Amazon UK. Your best-sellers have grea
 3. **Your Vitamin C Cleansing Oil is missing big searches.** It ranks #36 for "face cleanser" (22,000 searches a month) with no ads behind it.
 4. **Your Salicylic Face Wash isn't advertised on "face wash"**, which gets 82,000 searches a month and where it already ranks.
 
+A bit about me: I run Smart PPC, a UK-based Amazon consultancy that combines hands-on account management with AI-powered tools to grow brands on Amazon. I currently have 1 slot available to work with a brand on a freelance basis, fully managing their Amazon account (stock, content, ads and new product development strategy) for £950 a month, with no fixed contracts.
+
 I've put together a more detailed report, product by product, with exactly what I'd change. Happy to send it across free of charge if it's useful.
 
 <Signature>
@@ -51,4 +55,5 @@ I've put together a more detailed report, product by product, with exactly what 
 - Each point has at most one number, rounded and written out (22,000, not 22k).
 - Hedge estimates ("looks like", "roughly"). Never say we've seen their account.
 - Never: links or attachments, "guaranteed", client names, criticism of their agency or staff.
+- Keep the Smart PPC paragraph word for word, unless the user changes the offer, price or slot count.
 - Don't mention discontinued, out-of-stock or tiny products.
