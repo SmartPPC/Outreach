@@ -6,7 +6,7 @@ description: Audit a prospect's Amazon business from the outside and draft a con
 # Amazon prospect audit
 
 Turns a brand, store URL or ASIN (plus an optional job advert) into:
-- `runs/<slug>/email.md`: a short outreach email with up to 5 points
+- `runs/<slug>/email.md`: a brief outreach email with 4 plain-English points, offering the detailed report free of charge
 - `runs/<slug>/audit.html`: a one-page visual audit, published as a private artifact link
 - `runs/<slug>/evidence.md`: the data behind every claim, for the follow-up call
 
@@ -107,17 +107,24 @@ Keep the top 5, ordered by revenue at stake. Every point names a best-seller, ex
 ```bash
 python -m analyse.render runs/<slug>
 ```
-Publish `runs/<slug>/audit.html` as a private Artifact if the Artifact tool is available:
+The audit page is the "detailed report" the email offers. It's held back for the follow-up, never
+linked or attached in the first email. Publish `runs/<slug>/audit.html` as a private Artifact if the Artifact tool is available:
 - icon `chart`
 - description "Outside-in Amazon audit for <brand>"
 
 Otherwise give the user the file path.
 
 ### 7. Write `email.md`
-Follow `templates/email.md`. Keep it under 150 words, use the prospect's own language from the job ad, and pick 3–5 bullets, each with one number. End with a soft call to action and a link placeholder for the audit page.
+Follow `templates/email.md` exactly:
+- **Subject:** the single most surprising finding.
+- **Opening:** one line that's generous about what's working.
+- **Exactly 4 numbered points,** taken from the top of `findings.json`. Each is a bold one-sentence headline plus one plain-English sentence, with a single number where it helps.
+- **Close:** offer the detailed report free of charge.
+
+Don't include a link or an attachment, and leave out jargon (no "SP", "ACoS", "exact match", "variation family"). If there's a job ad, echo its wording in the opening line.
 
 ### 8. Reply to the user
 Include:
-- the email text
-- the audit link
+- the email text, ready to paste
+- the audit link, noting it's for the follow-up and is private until shared
 - one line listing any data gaps, e.g. "no Jungle Scout key, so keyword and sales sections are thin"
