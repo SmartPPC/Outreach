@@ -162,3 +162,98 @@ def find_contacts(brand: str, budget: Budget, website: str | None = None, max_pa
         "recommended_to": best["email"] if best else None,
         "only_generic": bool(emails) and all(e["type"] in ("generic", "role") for e in emails if e["on_domain"]),
     }
+
+
+# --- research beyond the brand's own site ------------------------------------------------------------
+
+CH = "https://find-and-update.company-information.service.gov.uk"
+CH_RESULT_RE = re.compile(r"(?P<number>[A-Z]{0,2}\d{6,8}) - (?P<status>Incorporated on [^\n]+|Dissolved on [^\n]+)\n"
+                          r"(?P<address>[^\n]+)\n(?P<name>[^\n]+)")
+OFFICER_RE = re.compile(r"^([A-Z][A-Z'\-]+(?: [A-Z][A-Z'\-]+)*, [A-Z][a-z]+(?: [A-Z][a-z]+)*)$", re.M)
+LINKEDIN_ROLES = ["founder", "ecommerce", "amazon", "marketing"]
+
+
+def org_names(brand: str, site_company: str | None, seller: str | None) -> list[dict]:
+    """Every name the business trades or registers under: brand, website operator, Amazon seller."""
+    out, seen = [], set()
+    for name, kind in ((brand, "brand"), (site_company, "website operator"), (seller, "Amazon seller")):
+        if name and "amazon" not in name.lower() and norm_key(name) not in seen:
+            seen.add(norm_key(name))
+            out.append({"name": name, "kind": kind})
+    return out
+
+
+def norm_key(name: str) -> str:
+    return re.sub(r"\b(ltd|limited|llc|llp|inc|plc|co)\b|[^a-z0-9]", "", (name or "").lower())
+
+
+def parse_ch_search(text: str, wanted: str) -> list[dict]:
+    """Companies House search results that match the name exactly (ignoring Ltd/punctuation)."""
+    out = []
+    for m in CH_RESULT_RE.finditer(text):
+        if norm_key(m["name"]) == norm_key(wanted):
+            out.append({"number": m["number"], "name": m["name"].strip(), "address": m["address"].strip(),
+                        "active": m["status"].startswith("Incorporated"), "status": m["status"].strip()})
+    return out
+
+
+def companies_house(name: str, budget: Budget) -> list[dict]:
+    """Active UK companies with this exact name, with the people listed on their officers page."""
+    page = dataforseo.page_text(f"{CH}/search/companies?q={urllib.parse.quote_plus(name)}", budget)
+    matches = [c for c in parse_ch_search((page or {}).get("text", ""), name) if c["active"]]
+    for c in matches[:2]:
+        officers = dataforseo.page_text(f"{CH}/company/{c['number']}/officers", budget)
+        c["people"] = sorted(set(OFFICER_RE.findall((officers or {}).get("text", ""))))
+        c["url"] = f"{CH}/company/{c['number']}/officers"
+    return matches[:2]
+
+
+def linkedin_links(orgs: list[dict]) -> list[dict]:
+    """One-click LinkedIn people searches; open them while logged in (LinkedIn needs a login)."""
+    links = []
+    for org in orgs:
+        for role in LINKEDIN_ROLES:
+            q = f'"{org["name"]}" {role}'
+            links.append({"org": org["name"], "role": role,
+                          "url": "https://www.linkedin.com/search/results/people/?keywords=" + urllib.parse.quote(q)})
+    return links
+
+
+def web_mentions(brand: str, marketplace: str, budget: Budget, domain: str | None) -> dict:
+    """One Google search for the brand: picks up addresses published elsewhere (Instagram bios,
+    press pages), plus any LinkedIn profiles that happen to show up."""
+    results = dataforseo.google(f'"{brand}" email OR contact OR founder', marketplace, budget)
+    emails, profiles = {}, []
+    root = (domain or "").split(".")[0]
+    for r in results:
+        for e in EMAIL_RE.findall(r["title"] + " " + r["description"]):
+            e = e.strip(".").lower()
+            if root and root in e.split("@")[1]:
+                emails.setdefault(e, r["url"])
+        if "linkedin.com/in/" in r["url"]:
+            name, _, headline = r["title"].partition(" - ")
+            profiles.append({"name": name.strip(), "headline": headline.replace("| LinkedIn", "").strip(" -|"),
+                             "url": r["url"]})
+    return {"emails": emails, "linkedin_profiles": profiles}
+
+
+def research(brand: str, marketplace: str, budget: Budget, contacts: dict, seller: str | None) -> dict:
+    orgs = org_names(brand, (contacts.get("company") or {}).get("name"), seller)
+    mentions = web_mentions(brand, marketplace, budget, contacts.get("domain"))
+    known = {e["email"] for e in contacts.get("emails", [])}
+    for e, src in mentions["emails"].items():
+        if e not in known:
+            contacts.setdefault("emails", []).append({"email": e, "type": classify(e, {}), "source": src,
+                                                      "on_domain": False, "found_via": "web search"})
+    order = {"personal": 0, "business": 1, "role": 2, "generic": 3}
+    contacts["emails"] = sorted(contacts.get("emails", []), key=lambda r: (order[r["type"]], _generic_rank(r["email"])))
+    best = next((e for e in contacts["emails"] if e["type"] in ("personal", "business")), None)
+    if best:
+        contacts["recommended_to"] = best["email"]
+        contacts["only_generic"] = False
+    uk = [o for o in orgs if o["kind"] != "brand" or marketplace == "uk"]
+    contacts["organisations"] = orgs
+    contacts["companies_house"] = [c for o in uk for c in companies_house(o["name"], budget)] if marketplace == "uk" else []
+    contacts["linkedin_profiles"] = mentions["linkedin_profiles"]
+    contacts["linkedin_searches"] = linkedin_links(orgs)
+    return contacts

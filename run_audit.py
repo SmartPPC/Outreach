@@ -171,6 +171,10 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
     # 5. Contacts published on the brand's own site (kept out of the shareable audit page)
     if dataforseo.configured() and target.get("brand"):
         found = guarded(log, "contacts", lambda: contacts.find_contacts(target["brand"], budget, website), {}) or {}
+        owners = [r.get("buy_box_owner") for r in catalog_rows if r.get("buy_box_owner")]
+        seller = max(set(owners), key=owners.count) if owners else None
+        found = guarded(log, "contacts.research",
+                        lambda: contacts.research(target["brand"], mp, budget, found, seller), found) or found
         write_json(out / "contacts.json", found)
         log.ok("contacts", website=found.get("website"), emails=len(found.get("emails") or []))
     else:

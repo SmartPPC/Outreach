@@ -265,3 +265,20 @@ def test_contacts_never_reach_the_shared_audit_page(tmp_path):
     (run / "dataset.json").write_text(json.dumps(build_dataset.build(run)))
     html_path, _ = render.render(run)
     assert "jane@brightpaw.co.uk" not in html_path.read_text()
+
+
+def test_companies_house_keeps_exact_active_matches_only():
+    from collectors import contacts
+    text = ("13185686 - Dissolved on 11 April 2023\n99 Gainsborough Crescent, Eastbourne, BN23 7NL\nVANETTI LTD\n"
+            "12345678 - Incorporated on 2 March 2021\n86 Paul St, London, EC2A 4NE\nVANETTI LIMITED\n"
+            "87654321 - Incorporated on 1 May 2020\n1 High St, Leeds\nVANETTI HOLDINGS LTD\n")
+    found = contacts.parse_ch_search(text, "vanetti")
+    assert [(c["number"], c["active"]) for c in found] == [("13185686", False), ("12345678", True)]
+
+
+def test_org_names_and_linkedin_links():
+    from collectors import contacts
+    orgs = contacts.org_names("BESQUE", "HBL Ventures LLC", "Amazon")
+    assert [o["name"] for o in orgs] == ["BESQUE", "HBL Ventures LLC"]   # Amazon as seller isn't an org lead
+    links = contacts.linkedin_links(orgs)
+    assert len(links) == 8 and links[0]["url"].startswith("https://www.linkedin.com/search/results/people/?keywords=")

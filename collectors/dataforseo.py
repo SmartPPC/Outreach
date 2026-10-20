@@ -125,3 +125,15 @@ def parse_page(url: str, resp: dict) -> dict | None:
 
     walk(item.get("page_content") or {})
     return {"url": url, "text": "\n".join(texts), "links": links}
+
+
+def google(query: str, marketplace: str, budget: Budget, depth: int = 20) -> list[dict]:
+    """Google results for a query (about $0.01 each): [{"title", "url", "description"}]."""
+    mp = MARKETPLACES[marketplace]
+    budget.spend("dataforseo")
+    resp = http_json("POST", f"{BASE}/serp/google/organic/live/regular", headers=_headers(), body=[{
+        "keyword": query, "location_code": mp["d4s_location"], "language_code": "en", "depth": depth}])
+    task = (resp.get("tasks") or [{}])[0]
+    items = ((task.get("result") or [{}])[0] or {}).get("items") or []
+    return [{"title": i.get("title") or "", "url": i.get("url") or "", "description": i.get("description") or ""}
+            for i in items if i.get("type") == "organic"]
