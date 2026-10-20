@@ -1,0 +1,207 @@
+<title>Super Facialist Amazon Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the five recommendations lead, evidence sections follow in the order the email cites them. */
+:root {
+  --bg: #f6f1e7;
+  --paper: #fffdf8;
+  --ink: #1a1a18;
+  --ink-soft: #4a4842;
+  --muted: #7d7a72;
+  --rule: #d9d2c3;
+  --accent: #d85a30;
+  --accent-soft: #f3d9cc;
+  --bar: #4a4842;
+  --s0: #d85a30; --s1: #2a78d6; --s2: #1baf7a; --s3: #c98500; --s4: #6250d6; --s5: #e87ba4;
+  --good: #0a7d0a; --warn: #a86a00; --fail: #c03434;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+    --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+    --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+    --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+  --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+  --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+  --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 56px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
+h3 { font-size: 17px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow, .tag, .stat-label, th, .tick, small { font-family: var(--mono); }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+section { display: grid; gap: 20px; min-width: 0; }
+section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 14px; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
+
+/* Recommendations: numbered because they are in priority order */
+.points { list-style: none; counter-reset: pt; margin: 0; padding: 0; display: grid; gap: 14px; }
+.point { counter-increment: pt; display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 14px; padding: 20px 20px 18px 16px; }
+.point::before { content: counter(pt); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); text-align: center; }
+.point-body { display: grid; gap: 8px; min-width: 0; }
+.tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.quote { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--ink-soft); font-size: 15px; }
+details summary { cursor: pointer; color: var(--ink-soft); font-size: 14px; }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14px; display: grid; gap: 4px; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.stat { background: var(--paper); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.stat-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat-note { font-size: 13px; color: var(--muted); }
+
+/* Charts */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.two > * { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.chart { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--bar); }
+.chart .bar:hover { fill: var(--accent); }
+.chart .grid { stroke: var(--rule); stroke-dasharray: 2 4; }
+.chart .axis { stroke: var(--muted); }
+.chart .tick { fill: var(--muted); font-size: 11px; }
+.empty { color: var(--muted); font-style: italic; }
+.hbars { display: grid; gap: 8px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 160px) 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.hbar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; background: var(--rule); border-radius: 5px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+.hbar.mine { font-weight: 600; }
+.hbar.mine .hbar-fill { background: var(--accent); }
+.hbar-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.stack { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; }
+.seg, .sw { background: var(--s0); }
+.s1 { background: var(--s1); } .s2 { background: var(--s2); } .s3 { background: var(--s3); } .s4 { background: var(--s4); } .s5 { background: var(--s5); }
+.legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend small { color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.budget-total { font-family: var(--serif); font-size: 26px; }
+
+/* Tables */
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child > * { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+table.content td { white-space: nowrap; }
+table.content th[scope="row"] { text-transform: none; letter-spacing: 0; color: var(--ink); font-size: 13px; min-width: 180px; }
+table.content th[scope="row"] small { display: block; color: var(--muted); font-family: var(--sans); white-space: normal; }
+.chip { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; color: var(--paper); }
+.chip.good { background: var(--good); } .chip.warn { background: var(--warn); } .chip.fail { background: var(--fail); }
+.kw-status { font-size: 13px; color: var(--ink-soft); }
+.kw-status.push, .kw-status.brand_defence_gap { color: var(--accent); font-weight: 600; }
+.attackers { padding-left: 18px; margin: 0; display: grid; gap: 6px; }
+.attackers small { display: block; color: var(--muted); font-family: var(--sans); }
+ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.hero-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px; align-content: start; min-width: 0; }
+.hero-card header { display: grid; gap: 4px; }
+.hero-card header a { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.hero-meta { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.hero-card h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); }
+.hero-card ul { padding-left: 0; list-style: none; font-size: 14px; gap: 4px; }
+.hero-card ul small, .quick small { display: block; color: var(--muted); }
+.hero-card p { font-size: 14px; }
+.hero-card .action { font-weight: 600; border-left: 2px solid var(--accent); padding-left: 10px; }
+.flags li { display: flex; gap: 8px; align-items: baseline; }
+.quick { font-size: 14px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
+</style>
+
+<main class="page">
+  <div class="hero">
+    <span class="eyebrow">Smart PPC · Amazon audit</span>
+    <h1>Super Facialist</h1>
+    <div class="meta"><span>amazon.co.uk</span><span>Prepared 2026-10-20</span></div>
+    <p class="headline">Super Facialist&#x27;s best-sellers already have strong listings. The upside is in where the ad budget goes, and in a Rosehip range that&#x27;s set up in a way that holds its cleansing balm back.</p>
+  </div>
+
+  <section>
+    <header><span class="eyebrow">Priorities</span><h2>What I would do first</h2></header>
+    <ol class="points"><li class="point"><div class="point-body"><span class="tag">catalogue</span><h3>Rosehip Cleansing Balm: move it out of Day Care and give it its own variation family</h3><p>The balm (part of a ~£17k/mo family) is listed under Moisturisers › Day Care and shares one variation family with a day cream, night cream and facial oil, so it competes against moisturisers rather than other cleansing balms. Moving it to Cleansing Balms and splitting the family by product type is the single biggest fix for the product the Brand Store leads with.</p><details><summary>What we saw</summary><ul><li>B0D6BWBYY2 category leaf: Day Care (Keepa)</li><li>Parent B0F8R55N8X live children: Cleansing Balm, SPF15 Day Cream, Overnight Night Cream, Rose Miracle Facial Oil</li><li>Family revenue ~£17,394/mo; balm 882 units/mo at £14 (Jungle Scout)</li><li>11 sellers on the balm listing; Amazon holds the Buy Box</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Stop paying for &#x27;super&#x27; and unrelated searches across all best-sellers</h3><p>Every best-seller has a sponsored ranking on &#x27;super&#x27; (12.5k searches/mo, sponsored #1 for the Cleansing Oil), and each one also shows ads on terms with nothing to do with it, from &#x27;claudia winkleman&#x27; and &#x27;no 7 foundation&#x27; on the balm to &#x27;claritin&#x27; on the blemish wash. That looks like auto or broad campaigns drifting. Negatives plus a search-term review would free budget for the terms below.</p><details><summary>What we saw</summary><ul><li>&#x27;super&#x27; (12,490/mo): sponsored #1 Cleansing Oil, #2 Salicylic Wash, #4 Micro Polish, #10 Cleansing Balm</li><li>Cleansing Balm sponsored on: st eval, bare anatomy rosemary and rice water spray, claudia winkleman, no 7 foundation, witch hazel liquid</li><li>Cleansing Oil sponsored on: bioderma micellar water, garnier micellar water, isoclean, nothora</li><li>Salicylic Face Wash sponsored on: sudosalve, claritin, mario badescu</li><li>Source: Jungle Scout keywords by ASIN, sponsored rank with no organic rank</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Vitamin C Cleansing Oil: take the hero into generic cleanser searches</h3><p>The Cleansing Oil is the engine (~£39.7k/mo, 5,300 reviews, 4.5★) and already ranks on page 2–3 for big generic terms with no ad support: &#x27;face cleanser&#x27; (22k/mo, organic #36) and &#x27;facial cleanser&#x27; (8k/mo, #30). Exact-match Sponsored Products at the top of search on those terms is the quickest way to grow its best product.</p><details><summary>What we saw</summary><ul><li>B00KZYWQLM: 5,315 units/mo, £7.47 (Jungle Scout), 4.5★ from 5,303 reviews</li><li>face cleanser: 22,136/mo, organic #36, no sponsored rank, CPC ~£0.96</li><li>facial cleanser: 7,989/mo, organic #30, no sponsored rank, CPC ~£0.75</li><li>Selling at £7.47 against a £12 list price (38% off), so check the discount is funded</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Salicylic Blemish Face Wash: advertise on &#x27;face wash&#x27; and acne terms</h3><p>This ~£12.9k/mo family has 2,000+ reviews but is sponsored on only 15 terms, some of them unrelated. It ranks organically for &#x27;face wash&#x27; (82k/mo, #45), &#x27;salicylic acid&#x27; (36k/mo, #48) and &#x27;acne face wash&#x27; (#25) with no ads, at low CPCs (~£0.24–0.54).</p><details><summary>What we saw</summary><ul><li>B07K1Z7Q7V: 1,592 units/mo at £6.30, 4.4★ from 2,065 reviews</li><li>face wash: 82,259/mo, organic #45, CPC ~£0.39</li><li>salicylic acid: 36,360/mo, organic #48, CPC ~£0.24</li><li>acne face wash: 4,093/mo, organic #25, CPC ~£0.54</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">catalogue</span><h3>Quick wins: tidy two more mixed families and the night cream&#x27;s resellers</h3><p>The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cream shares one with a cleanser, moisturiser and serum. The night cream has 17 sellers and is selling at £20 against a £12.50 list price, which points to reseller pricing to rein in through Brand Registry.</p><details><summary>What we saw</summary><ul><li>Parent B0H2BDYNF4: face wash + toner</li><li>Parent B0D9LRH3ZN: night cream + cleanser + moisturiser + serum</li><li>B0CSPJHQRC: 17 sellers, £20.00 vs £12.50 list (Keepa)</li><li>B00IEU6OF8 titled &#x27;Superfacialist…&#x27; rather than &#x27;Super Facialist&#x27;</li></ul></details></div></li></ol>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Snapshot</span><h2>The business today</h2></header>
+    <div class="stats"><div class="stat"><span class="stat-label">ASINs listed</span><span class="stat-value">104</span><span class="stat-note">34 live and selling</span></div><div class="stat"><span class="stat-label">Best-sellers</span><span class="stat-value">5</span><span class="stat-note">product families making 82% of revenue</span></div><div class="stat"><span class="stat-label">Est. monthly revenue</span><span class="stat-value">£119,791</span><span class="stat-note">Jungle Scout 30-day estimate</span></div><div class="stat"><span class="stat-label">Sponsored coverage</span><span class="stat-value">37%</span><span class="stat-note">of their top 30 keywords</span></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Best-sellers</span><h2>Where the money is</h2>
+      <p>The products below make most of the revenue, so every recommendation starts here.</p></header>
+    <div class="heroes"><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B00KZYWQLM">B00KZYWQLM</a><h3>Super Facialist Vitamin C Cleansing Oil, Makeup Remover Face Wash, 200ml</h3><span class="hero-meta">£39,703/mo · 5,315 units · £7.47 · 4.5★ (5,303)</span></header><p class="action">Exact-match SP on &#x27;face cleanser&#x27; and &#x27;facial cleanser&#x27;; negative &#x27;super&#x27; and the micellar-water terms.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> discounted 38% off list (7.47 vs 12.00)</li></ul></div><div><h4>Push</h4><ul><li>“face cleanser” <small>22,136/mo · organic #36 · £0.96 CPC</small></li><li>“facial cleanser” <small>7,989/mo · organic #30 · £0.75 CPC</small></li><li>“makeup remover wipes” <small>7,976/mo · organic #59 · £0.16 CPC</small></li></ul></div><div><h4>Cut</h4><p>“super”, “bioderma micellar water”, “isoclean”, “garnier micellar water”, “nothora”</p></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0D6BWBYY2">B0D6BWBYY2</a><h3>Super Facialist Rosehip Meltaway Cleansing Balm, Makeup Remover, 100ml</h3><span class="hero-meta">£17,394/mo · 882 units · £14.00 · 4.5★ (177)</span></header><p class="action">Move to Cleansing Balms and split it out of the Rosehip &#x27;Style&#x27; family, then cut the unrelated sponsored terms.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> cleansing balm listed under Day Care</li><li><span class="chip warn" title="Issue">!</span> variation family mixes cleanser, cleansing balm, day cream, facial oil, night cream, scrub</li><li><span class="chip warn" title="Issue">!</span> 11 sellers on the listing</li></ul></div><div><h4>Push</h4><ul><li>“elemis cleansing balm” <small>9,115/mo · organic #29</small></li><li>“rosehip oil for face” <small>4,154/mo · organic #30</small></li><li>“makeup remover balm” <small>2,048/mo · organic #27</small></li></ul></div><div><h4>Cut</h4><p>“super”, “st eval”, “bare anatomy rosemary and rice water spray”, “claudia winkleman”, “no 7 foundation”</p></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B014MI41AU">B014MI41AU</a><h3>Super Facialist Vitamin C Brighten Micro Polish Face Wash, Vegan, 125ml</h3><span class="hero-meta">£16,630/mo · 3,326 units · £5.00 · 4.4★ (1,509)</span></header><p class="action">Test SP on &#x27;face wash women&#x27; (organic #27) and &#x27;face exfoliator&#x27; (#26); check the 50% discount is deliberate.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> discounted 50% off list (5.00 vs 10.00)</li></ul></div><div><h4>Push</h4><ul><li>“face wash women” <small>10,686/mo · organic #27 · £0.29 CPC</small></li><li>“exfoliating face wash” <small>9,781/mo · organic #35</small></li><li>“face exfoliator” <small>8,876/mo · organic #26 · £0.48 CPC</small></li></ul></div><div><h4>Cut</h4><p>“super”, “manyo cleansing oil”</p></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B07K1Z7Q7V">B07K1Z7Q7V</a><h3>Super Facialist Salicylic Acid Blemish Cleansing Face Wash, 150ml</h3><span class="hero-meta">£12,880/mo · 1,592 units · £6.30 · 4.4★ (2,065)</span></header><p class="action">Advertise on &#x27;face wash&#x27;, &#x27;salicylic acid&#x27; and &#x27;acne face wash&#x27;; separate it from the toner.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> variation family mixes face wash, scrub, toner</li></ul></div><div><h4>Push</h4><ul><li>“face wash” <small>82,259/mo · organic #45 · £0.39 CPC</small></li><li>“salicylic acid” <small>36,360/mo · organic #48 · £0.24 CPC</small></li><li>“salicylic acid cleanser” <small>4,977/mo · organic #22</small></li></ul></div><div><h4>Cut</h4><p>“super”, “sudosalve”, “nov”, “claritin”, “mario badescu”</p></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0CSPJHQRC">B0CSPJHQRC</a><h3>Super Facialist Vegan Collagen Overnight Resync Night Cream, 50ml</h3><span class="hero-meta">£11,543/mo · 196 units · £20.00 · 4.6★ (50)</span></header><p class="action">Bring reseller pricing back to list via Brand Registry, then split the family by product type.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> variation family mixes cleanser, moisturiser, night cream, serum</li><li><span class="chip warn" title="Issue">!</span> 17 sellers on the listing</li><li><span class="chip warn" title="Issue">!</span> selling above list price (20.00 vs 12.50)</li></ul></div><div><h4>Push</h4><ul><li>“day cream” <small>6,417/mo · organic #21 · £0.31 CPC</small></li><li>“collagen serum” <small>2,324/mo · organic #58 · £0.40 CPC</small></li><li>“collagen serum for face” <small>1,265/mo · organic #50</small></li></ul></div></article></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Quick wins</span><h2>Catalogue tidy-up</h2></header>
+    <ul class="quick"><li>Variation family B0F8R55N8X mixes cleansing balm, day cream, facial oil, night cream</li><li>Variation family B0H2BDYNF4 mixes face wash, toner</li><li>Variation family B0D9LRH3ZN mixes cleanser, moisturiser, night cream, serum</li><li>B00IEU6OF8: brand name spelled inconsistently <small>Superfacialist Rose Miracle Makeover Facial Oil 30Ml</small></li></ul>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Content on the best-sellers</h2><p>Content isn&#x27;t the problem: every best-seller has 7–9 images, video and A+. The Vegan Collagen Night Cream has the thinnest bullets and only 50 reviews.</p></header>
+    <div class="scroll"><table class="content"><thead><tr><th>Listing</th><th>Score</th><th>Images</th><th>Video</th><th>A Plus</th><th>Title</th><th>Bullets</th><th>Bullet Depth</th><th>Rating</th><th>Reviews</th></tr></thead><tbody><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B00KZYWQLM">B00KZYWQLM</a><small>Super Facialist Vitamin C Cleansing Oil, Makeup Remover Face</small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 9 images</td><td><span class="chip good" title="Good">✓</span> 10 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 72 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 153 chars</td><td><span class="chip good" title="Good">✓</span> 4.5★</td><td><span class="chip good" title="Good">✓</span> 5306 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0D6BWBYY2">B0D6BWBYY2</a><small>Super Facialist Rosehip Meltaway Cleansing Balm, Makeup Remo</small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 8 images</td><td><span class="chip good" title="Good">✓</span> 11 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 70 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 159 chars</td><td><span class="chip good" title="Good">✓</span> 4.5★</td><td><span class="chip good" title="Good">✓</span> 177 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B014MI41AU">B014MI41AU</a><small>Super Facialist Vitamin C Brighten Micro Polish Face Wash, V</small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip good" title="Good">✓</span> 5 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 71 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 168 chars</td><td><span class="chip good" title="Good">✓</span> 4.4★</td><td><span class="chip good" title="Good">✓</span> 1510 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B07K1Z7Q7V">B07K1Z7Q7V</a><small>Super Facialist Salicylic Acid Blemish Cleansing Face Wash, </small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip good" title="Good">✓</span> 2 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 65 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 147 chars</td><td><span class="chip good" title="Good">✓</span> 4.4★</td><td><span class="chip good" title="Good">✓</span> 2065 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0CSPJHQRC">B0CSPJHQRC</a><small>Super Facialist Vegan Collagen Overnight Resync Night Cream,</small></th><td class="num">81</td><td><span class="chip good" title="Good">✓</span> 9 images</td><td><span class="chip good" title="Good">✓</span> 5 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 65 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip warn" title="Needs work">!</span> avg 98 chars</td><td><span class="chip good" title="Good">✓</span> 4.6★</td><td><span class="chip warn" title="Needs work">!</span> 50 reviews</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Advertising</span><h2>Keyword map and where to spend</h2><p>Fund the generic cleanser and face-wash terms where the best-sellers already rank on page 2–3, paid for by cutting &#x27;super&#x27; and the unrelated terms. An indicative £1.2k–1.9k a month covers the focus terms below.</p></header>
+    <div class="two">
+      <div><h3>Keywords by tier</h3><div class="scroll"><table><thead><tr><th>Tier</th><th class="num">Keywords</th><th class="num">Searches/mo</th><th class="num">Gaps</th></tr></thead><tbody><tr><td>Category</td><td class="num">146</td><td class="num">572,093</td><td class="num">127</td></tr><tr><td>Core</td><td class="num">50</td><td class="num">188,472</td><td class="num">24</td></tr><tr><td>Competitor</td><td class="num">48</td><td class="num">197,680</td><td class="num">37</td></tr><tr><td>Long-tail</td><td class="num">116</td><td class="num">190,685</td><td class="num">101</td></tr><tr><td>Brand</td><td class="num">6</td><td class="num">4,260</td><td class="num">4</td></tr></tbody></table></div></div>
+      <div><h3>Indicative monthly budget</h3><span class="budget-total">£1,541</span><div class="stack"><span class="seg s0" style="flex:673" title="SP: £673"></span><span class="seg s1" style="flex:318" title="SB: £318"></span><span class="seg s2" style="flex:318" title="SBV: £318"></span><span class="seg s3" style="flex:231" title="SD (remarketing/retention): £231"></span></div><ul class="legend"><li><span class="sw s0"></span>SP <b>£673</b> <small>44%</small></li><li><span class="sw s1"></span>SB <b>£318</b> <small>21%</small></li><li><span class="sw s2"></span>SBV <b>£318</b> <small>21%</small></li><li><span class="sw s3"></span>SD (remarketing/retention) <b>£231</b> <small>15%</small></li></ul></div>
+    </div>
+    <h3>Focus keywords</h3>
+    <div class="scroll"><table><thead><tr><th>Keyword</th><th>Tier</th><th class="num">Searches/mo</th><th class="num">Organic</th><th class="num">Sponsored</th><th class="num">CPC</th><th>Status</th></tr></thead><tbody><tr><td>face wash</td><td>Category</td><td class="num">82,259</td><td class="num">45</td><td class="num">–</td><td class="num">£0.39</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>salicylic acid</td><td>Category</td><td class="num">36,360</td><td class="num">48</td><td class="num">–</td><td class="num">£0.24</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>cleanser</td><td>Category</td><td class="num">29,446</td><td class="num">68</td><td class="num">–</td><td class="num">£0.33</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>makeup remover wipes</td><td>Category</td><td class="num">7,976</td><td class="num">59</td><td class="num">–</td><td class="num">£0.16</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>face wash women</td><td>Category</td><td class="num">10,686</td><td class="num">27</td><td class="num">–</td><td class="num">£0.29</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>nip and fab</td><td>Category</td><td class="num">18,202</td><td class="num">114</td><td class="num">–</td><td class="num">£0.31</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>day cream</td><td>Core</td><td class="num">6,417</td><td class="num">21</td><td class="num">–</td><td class="num">£0.31</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>eye makeup remover</td><td>Category</td><td class="num">9,797</td><td class="num">72</td><td class="num">–</td><td class="num">£0.24</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>face cleanser</td><td>Category</td><td class="num">22,136</td><td class="num">36</td><td class="num">–</td><td class="num">£0.96</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>face exfoliator</td><td>Category</td><td class="num">8,876</td><td class="num">26</td><td class="num">–</td><td class="num">£0.48</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>avene</td><td>Category</td><td class="num">5,240</td><td class="num">133</td><td class="num">–</td><td class="num">£0.17</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>la roche posay cleanser</td><td>Long-tail</td><td class="num">7,034</td><td class="num">115</td><td class="num">–</td><td class="num">£0.18</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>collagen cream</td><td>Core</td><td class="num">3,943</td><td class="num">96</td><td class="num">–</td><td class="num">£0.24</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>aveeno face wash</td><td>Category</td><td class="num">3,481</td><td class="num">57</td><td class="num">–</td><td class="num">£0.25</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>gentle cleanser</td><td>Category</td><td class="num">2,777</td><td class="num">57</td><td class="num">–</td><td class="num">£0.19</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>rosehip oil</td><td>Category</td><td class="num">7,768</td><td class="num">114</td><td class="num">–</td><td class="num">£0.38</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>facewash</td><td>Category</td><td class="num">5,756</td><td class="num">90</td><td class="num">–</td><td class="num">£0.30</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>ordinary salicylic acid</td><td>Category</td><td class="num">2,712</td><td class="num">42</td><td class="num">–</td><td class="num">£0.24</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>face wash men</td><td>Category</td><td class="num">9,216</td><td class="num">105</td><td class="num">–</td><td class="num">£0.51</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>exfoliating</td><td>Category</td><td class="num">3,577</td><td class="num">97</td><td class="num">–</td><td class="num">£0.19</td><td><span class="kw-status missing">Not visible</span></td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Competitors</span><h2>Who is taking the clicks</h2></header>
+    <div class="two">
+      <div><h3>Share of voice across category searches</h3><div class="hbars"><div class="hbar"><span class="hbar-label">CeraVe</span><span class="hbar-track"><span class="hbar-fill" style="width:100.0%" title="CeraVe: 16%"></span></span><span class="hbar-value">16%</span></div><div class="hbar"><span class="hbar-label">Simple</span><span class="hbar-track"><span class="hbar-fill" style="width:77.9%" title="Simple: 13%"></span></span><span class="hbar-value">13%</span></div><div class="hbar"><span class="hbar-label">Nip+Fab</span><span class="hbar-track"><span class="hbar-fill" style="width:54.6%" title="Nip+Fab: 9%"></span></span><span class="hbar-value">9%</span></div><div class="hbar"><span class="hbar-label">Caudalie</span><span class="hbar-track"><span class="hbar-fill" style="width:50.9%" title="Caudalie: 8%"></span></span><span class="hbar-value">8%</span></div><div class="hbar"><span class="hbar-label">Garnier</span><span class="hbar-track"><span class="hbar-fill" style="width:49.1%" title="Garnier: 8%"></span></span><span class="hbar-value">8%</span></div><div class="hbar"><span class="hbar-label">The Ordinary</span><span class="hbar-track"><span class="hbar-fill" style="width:40.5%" title="The Ordinary: 7%"></span></span><span class="hbar-value">7%</span></div><div class="hbar"><span class="hbar-label">PAULA&#x27;S CHOICE</span><span class="hbar-track"><span class="hbar-fill" style="width:25.2%" title="PAULA&#x27;S CHOICE: 4%"></span></span><span class="hbar-value">4%</span></div><div class="hbar"><span class="hbar-label">Neutrogena</span><span class="hbar-track"><span class="hbar-fill" style="width:22.7%" title="Neutrogena: 4%"></span></span><span class="hbar-value">4%</span></div></div></div>
+      <div><h3>Ads on their brand name</h3><ul class="attackers"><li><b>Organic Face</b> sponsored at position 15 on “super facialist”<small>Organic Face Cream &amp; Face Moisturiser: Natural Moisturiser Face Women &amp; Men - Face Cream W</small></li><li><b>Clean Skin</b> sponsored at position 50 on “super facialist”<small>Clean Skin Club Clean Towels XL®, 100% USDA Biobased Face Towel, Disposable Face Towelette</small></li><li><b>Organic Face</b> sponsored at position 10 on “superfacialist”<small>Organic Face Cream &amp; Face Moisturiser: Natural Moisturiser Face Women &amp; Men - Face Cream W</small></li><li><b>Ultime8 Sublime</b> sponsored at position 2 on “super facialist cleansing oil”<small>Ultime8 Sublime Beauty Cleansing Oil, A Luxurious Tsubaki Infused Makeup Remover &amp; Hydrati</small></li><li><b>Cleansing Face</b> sponsored at position 3 on “super facialist cleansing oil”<small>Cleansing Face Milk with Aloe Vera + Oat Powder 120ml - Cleansing, Repairing + Nourishing </small></li><li><b>Cleanse &amp;</b> sponsored at position 13 on “super facialist cleansing oil”<small>Cleanse &amp; Glow Brightening Cleansing Balm, 100ml</small></li><li><b>Skin Therapy</b> sponsored at position 14 on “super facialist cleansing oil”<small>Skin Therapy - Multi-perfecting night Serum with 17 Super Ingredients - Suitable for all s</small></li><li><b>[PKY] Pyunkang</b> sponsored at position 16 on “super facialist cleansing oil”<small>[PKY] Pyunkang Yul Low pH Cleansing Water, Makeup Remover &amp; Face Cleanser with Witch Hazel</small></li></ul><p>They do appear in their own brand-term ads.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Amazon Marketing Cloud</span><h2>Path to purchase and repeat buying</h2></header>
+    <p>Repeat-purchase signals: high (Subscribe &amp; Save on 100% of ASINs, multipacks 0%, consumable category).</p><div class="two"><div><h3>What we expect AMC to show</h3><ul><li>Every live product offers Subscribe &amp; Save in a consumable category, so repeat buyers are probably a large share of Cleansing Oil revenue.</li><li>Searches for &#x27;super facialist cleansing oil&#x27; show more than ten competitor ads, so some shoppers looking for the brand are likely buying a rival&#x27;s cleanser instead.</li></ul></div><div><h3>Questions we would answer in week one</h3><ol><li>How many Cleansing Oil buyers come back, and after how many days?</li><li>What share of ad-driven sales are new-to-brand on generic cleanser terms versus brand terms?</li><li>Which product do new customers buy first, and what do they buy next?</li><li>How many shoppers who search the brand name end up buying another brand?</li></ol></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Method</span><h2>How this was put together</h2></header>
+    <div class="method"><p>Built from public marketplace data (Keepa, Jungle Scout, DataForSEO, Amazon catalogue and bid recommendations) on 2026-10-20. We have not seen this brand's Seller Central or advertising account, so spend and budget figures are estimates.</p><p>Budget model: search volume × 12% of searches producing an ad click × target sponsored share of voice by tier × CPC benchmark, plus 15% for remarketing.</p><details><summary>Data gaps in this run</summary><ul><li>spapi.items: SP-API not configured</li><li>ads.bids: Ads API not configured; using Jungle Scout PPC bids</li></ul></details></div>
+  </section>
+
+  <footer>Smart PPC · smartppc.ai</footer>
+</main>

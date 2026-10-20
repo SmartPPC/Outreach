@@ -124,8 +124,17 @@ Follow `templates/email.md` exactly:
 
 Don't include a link or an attachment, and leave out jargon (no "SP", "ACoS", "exact match", "variation family"). If there's a job ad, echo its wording in the opening line.
 
-### 8. Reply to the user
+### 8. Save the audit
+`runs/` is temporary and isn't committed, so save every finished audit into the repo:
+```bash
+python -m analyse.archive runs/<slug> --link <published audit page URL>
+git add audits && git commit -m "Audit: <Brand> (<uk|us>)" && git push -u origin <current branch>
+```
+This copies the email, audit page, findings and evidence into `audits/<slug>/`, writes a README for the folder and adds a row to `audits/INDEX.md`.
+
+### 9. Reply to the user
 Include:
 - the email text, ready to paste
 - the audit link, noting it's for the follow-up and is private until shared
+- where it's saved (`audits/<slug>/`)
 - one line listing any data gaps, e.g. "no Jungle Scout key, so keyword and sales sections are thin"

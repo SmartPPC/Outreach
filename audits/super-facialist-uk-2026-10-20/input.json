@@ -1,0 +1,10 @@
+{
+  "input": "https://www.amazon.co.uk/stores/SuperFacialist/page/4DCB54EE-A8CD-4785-9118-273A1D6CBDD4?lp_asin=B0D6BWBYY2",
+  "brand": "Super Facialist",
+  "seller_id": null,
+  "store_page_id": "4DCB54EE-A8CD-4785-9118-273A1D6CBDD4",
+  "seed_asins": [
+    "B0D6BWBYY2"
+  ],
+  "marketplace": "uk"
+}

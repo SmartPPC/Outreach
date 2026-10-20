@@ -192,3 +192,20 @@ def test_family_revenue_counts_repeated_parent_units_once():
     near = [{"units_30d": u, "revenue_30d": r} for u, r in ((879, 26370), (879, 17580), (830, 13280), (882, 12348))]
     assert round(checks.family_revenue(near)) == 17394
     assert checks.family_revenue([{"units_30d": 10, "revenue_30d": 100}, {"units_30d": 5, "revenue_30d": 50}]) == 150
+
+
+def test_archive_keeps_deliverables_and_one_index_row(tmp_path):
+    from analyse import archive
+    run = sample_run.write(tmp_path / "runs" / "brightpaw-uk-2026-10-20")
+    (run / "dataset.json").write_text(json.dumps(build_dataset.build(run)))
+    render.render(run)
+    (run / "email.md").write_text("Hi,\n\n1. **Wrong category.** Moved.\n2. **Wasted ads.** Cut.\n")
+    audits = tmp_path / "audits"
+    dest = archive.archive(run, "https://claude.ai/artifact/x", audits)
+    archive.archive(run, "https://claude.ai/artifact/x", audits)  # re-archive must not duplicate
+
+    assert {"email.md", "audit.html", "findings.json", "evidence.md", "dataset.json", "README.md"} <= {p.name for p in dest.iterdir()}
+    assert not (dest / "keepa_products.json").exists() and not (dest / "js_catalog.json").exists()
+    assert "1. Wrong category. Moved." in (dest / "README.md").read_text()
+    index = (audits / "INDEX.md").read_text()
+    assert index.count("[brightpaw-uk-2026-10-20]") == 1 and "https://claude.ai/artifact/x" in index

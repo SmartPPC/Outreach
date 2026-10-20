@@ -41,6 +41,15 @@ python run_audit.py "<url | ASIN | brand>" --job-ad job.txt   # → runs/<slug>/
 python -m analyse.render runs/<slug>                          # → audit.html, evidence.md
 ```
 
+## Where audits are saved
+Each run works in `runs/<brand>-<marketplace>-<date>/`, which is temporary and not committed. When an
+audit is finished, the skill saves it to `audits/<brand>-<marketplace>-<date>/` and adds it to
+`audits/INDEX.md`, the running list of every prospect audited. Each saved folder holds:
+- `email.md`: the outreach script
+- `audit.html`: the detailed report (open it in a browser, or use its published link)
+- `evidence.md`: the data behind each claim
+- a `README.md` summary
+
 ## What it can and can't see
 | Area | Source | Notes |
 |---|---|---|
