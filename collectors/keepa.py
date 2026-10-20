@@ -6,14 +6,23 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import math
+import time
 
-from .common import MARKETPLACES, Budget, chunks, env, http_json
+from .common import MARKETPLACES, Budget, env, http_json
 
 BASE = "https://api.keepa.com"
 KEEPA_EPOCH_OFFSET_MIN = 21564000
 
 # csv history indices
-CSV_AMAZON, CSV_NEW, CSV_SALES_RANK, CSV_RATING, CSV_REVIEWS = 0, 1, 3, 16, 17
+CSV_AMAZON, CSV_NEW, CSV_SALES_RANK, CSV_LIST_PRICE, CSV_COUNT_NEW, CSV_RATING, CSV_REVIEWS = 0, 1, 3, 4, 11, 16, 17
+TOKENS_PER_PRODUCT = 2  # base product + rating data
+
+# Token pacing. Keepa refills at a fixed rate per minute (1/min on the smallest plan), so instead of
+# failing when the bucket is empty we wait for it. Clock functions are swappable for tests.
+_sleep, _now = time.sleep, time.time
+_state: dict = {"left": None, "rate": None, "refill_in_ms": None, "waited_s": 0.0}
+MAX_WAIT_S = float(env("APA_KEEPA_MAX_WAIT_MIN") or 45) * 60
 
 
 def keepa_time(minutes: int | None) -> dt.datetime | None:
@@ -29,13 +38,54 @@ def _key() -> str:
     return key
 
 
+def _remember(resp: dict) -> None:
+    for src, dst in (("tokensLeft", "left"), ("refillRate", "rate"), ("refillIn", "refill_in_ms")):
+        if resp.get(src) is not None:
+            _state[dst] = resp[src]
+
+
+def token_status() -> dict:
+    """Free call: current balance and refill rate."""
+    _remember(http_json("GET", f"{BASE}/token", params={"key": _key()}, cache=False))
+    return dict(_state)
+
+
+def _wait_for(tokens: float) -> None:
+    left, rate = _state["left"], _state["rate"] or 1
+    if left is None or left >= tokens:
+        return
+    refills = math.ceil((tokens - left) / rate)
+    wait = (_state["refill_in_ms"] or 60_000) / 1000 + max(0, refills - 1) * 60 + 1
+    if _state["waited_s"] + wait > MAX_WAIT_S:
+        raise RuntimeError(f"Keepa needs {tokens - left:.0f} more tokens; waiting would exceed "
+                           f"{MAX_WAIT_S / 60:.0f} min (APA_KEEPA_MAX_WAIT_MIN)")
+    print(f"    … waiting {wait / 60:.1f} min for Keepa tokens ({left}/{tokens:.0f})", flush=True)
+    _sleep(wait)
+    _state["waited_s"] += wait
+    _state["left"] = left + refills * rate
+
+
 def _call(path: str, params: dict, budget: Budget, estimate: float):
     budget.spend("keepa", estimate)
-    resp = http_json("GET", f"{BASE}/{path}", params={"key": _key(), **params})
-    consumed = resp.get("tokensConsumed")
-    if consumed is not None and consumed > estimate:
-        budget.spend("keepa", consumed - estimate)
-    return resp
+    for _ in range(5):
+        _wait_for(estimate)
+        try:
+            resp = http_json("GET", f"{BASE}/{path}", params={"key": _key(), **params}, retries=1)
+        except RuntimeError as e:
+            if "-> 429" not in str(e):
+                raise
+            _state["left"] = min(_state["left"] or 0, 0)  # bucket empty; wait a refill and retry
+            continue
+        _remember(resp)
+        consumed = resp.get("tokensConsumed")
+        if consumed is not None and consumed > estimate:
+            budget.spend("keepa", consumed - estimate)
+        return resp
+    raise RuntimeError("Keepa kept returning 429 (out of tokens)")
+
+
+def waited_minutes() -> float:
+    return round(_state["waited_s"] / 60, 1)
 
 
 def discover_by_brand(brand: str, marketplace: str, budget: Budget, per_page: int = 500) -> list[str]:
@@ -53,9 +103,12 @@ def discover_by_seller(seller_id: str, marketplace: str, budget: Budget) -> dict
     return {"seller_name": seller.get("sellerName"), "asins": seller.get("asinList") or []}
 
 
-def fetch_products(asins: list[str], marketplace: str, budget: Budget, history_days: int = 730) -> list[dict]:
-    out = []
-    for batch in chunks(asins, 100):
+def fetch_products(asins: list[str], marketplace: str, budget: Budget, history_days: int = 400) -> list[dict]:
+    """Batches sized to the tokens on hand, so a small plan trickles through instead of failing."""
+    out, todo = [], list(asins)
+    while todo:
+        affordable = int((_state["left"] or 0) // TOKENS_PER_PRODUCT) if _state["left"] is not None else 100
+        batch, todo = todo[:max(1, min(100, affordable))], todo[max(1, min(100, affordable)):]
         resp = _call("product", {
             "domain": MARKETPLACES[marketplace]["keepa_domain"],
             "asin": ",".join(batch),
@@ -65,7 +118,7 @@ def fetch_products(asins: list[str], marketplace: str, budget: Budget, history_d
             "days": history_days,
             "videos": 1,
             "aplus": 1,
-        }, budget, estimate=len(batch) * 2)
+        }, budget, estimate=len(batch) * TOKENS_PER_PRODUCT)
         out.extend(parse_product(p) for p in resp.get("products") or [])
     return out
 
@@ -103,7 +156,9 @@ def _image_count(p: dict) -> int:
 
 def parse_product(p: dict) -> dict:
     csv = p.get("csv") or []
-    stats_current = (p.get("stats") or {}).get("current") or []
+    stats = p.get("stats") or {}
+    stats_current = stats.get("current") or []
+    oos90 = stats.get("outOfStockPercentage90") or []
     price_cents = None
     for idx in (CSV_AMAZON, CSV_NEW):
         if len(stats_current) > idx and stats_current[idx] and stats_current[idx] > 0:
@@ -142,6 +197,10 @@ def parse_product(p: dict) -> dict:
         "variation_dimensions": sorted({a.get("dimension") for v in p.get("variations") or []
                                         for a in v.get("attributes") or [] if a.get("dimension")}),
         "is_sns": bool(p.get("isSNS")),
+        "list_price": stats_current[CSV_LIST_PRICE] / 100 if len(stats_current) > CSV_LIST_PRICE and (stats_current[CSV_LIST_PRICE] or 0) > 0 else None,
+        "offer_count": stats_current[CSV_COUNT_NEW] if len(stats_current) > CSV_COUNT_NEW and (stats_current[CSV_COUNT_NEW] or -1) >= 0 else None,
+        "oos_pct_90": next((v for v in oos90[:2] if v is not None and v >= 0), None),
+        "avg_price_90": (stats.get("avg90") or [None, None])[1] / 100 if len(stats.get("avg90") or []) > 1 and (stats["avg90"][1] or 0) > 0 else None,
         "brand_store": p.get("brandStoreName") or p.get("brandStoreUrl"),
         "history": {
             "bsr_monthly": _monthly_last(bsr),

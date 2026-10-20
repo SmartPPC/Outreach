@@ -116,3 +116,70 @@ def test_build_and_render(tmp_path):
     page = html_path.read_text()
     assert "{{" not in page and "Brightpaw" in page and "Defend the Brightpaw brand search" in page
     assert "Pawsome" in md_path.read_text() or "Defend" in md_path.read_text()
+
+
+# --- v2: best-seller focus, checks, Keepa pacing --------------------------------------------------
+
+def test_store_url_landing_asin_and_brand_spacing():
+    t = resolve("https://www.amazon.co.uk/stores/SuperFacialist/page/4DCB54EE-A8CD-4785-9118-273A1D6CBDD4"
+                "?lp_asin=B0D6BWBYY2&ref_=ast_bln")
+    assert t["brand"] == "Super Facialist" and t["seed_asins"] == ["B0D6BWBYY2"] and t["marketplace"] == "uk"
+    assert build_dataset._has_brand("Superfacialist Rose Miracle Makeover Facial Oil", "Super Facialist")
+
+
+def test_heroes_cover_80_percent_and_skip_dead_listings():
+    from analyse import checks
+    focus = checks.select_heroes(sample_run.js_catalog())
+    assert [h["parent_asin"] for h in focus["heroes"]] == ["B0PARENT00", "B0PARENT01", "B0PARENT02"]
+    assert focus["heroes"][0]["revenue_30d"] == 30000  # repeated parent total counted once
+    assert focus["hero_revenue_share"] >= 0.8
+    assert focus["live_asins"] == focus["total_asins"] - 5
+
+
+def test_hero_flags_quick_wins_and_wasted_terms(tmp_path):
+    d = build_dataset.build(sample_run.write(tmp_path / "brightpaw-uk-2026-10-20"))
+    heroes = {h["asin"]: h for h in d["heroes"]}
+    flag_types = lambda asin: {f["type"] for f in heroes[asin]["flags"]}  # noqa: E731
+
+    assert "wrong_category" in flag_types("B0SAMPLE10")
+    assert "sellers" in flag_types("B0SAMPLE10")                     # reseller holds the Buy Box, 7 sellers
+    assert "mixed_variation_family" in flag_types("B0SAMPLE20")
+    assert "stock" in flag_types("B0SAMPLE00")                       # 25% out of stock: lost sales
+    assert "stock" not in flag_types("B0SAMPLE20")                   # 95%: reads as discontinued, ignored
+
+    wasted = {w["keyword"]: w["reason"] for w in heroes["B0SAMPLE00"]["wasted_terms"]}
+    assert wasted == {"no 7 foundation": "unrelated to the product", "bright": "partial brand term"}
+    assert any(t["keyword"] == "dog shampoo" and t["status"] == "push" for t in heroes["B0SAMPLE00"]["targets"])
+
+    q = d["quick_wins"]
+    assert [sorted(g["asin"] for g in grp) for grp in q["duplicates"]] == [["B0SAMPLE30", "B0SAMPLE95"]]
+    assert {c["asin"] for c in q["clutter"]} == {"B0SAMPLE96", "B0SAMPLE97"}
+    surfaced = json.dumps([d["heroes"], d["quick_wins"]])
+    assert "B0DEAD" not in surfaced
+
+
+def test_keepa_waits_for_tokens_instead_of_failing(monkeypatch):
+    slept = []
+    monkeypatch.setattr(keepa, "_sleep", slept.append)
+    monkeypatch.setattr(keepa, "_state", {"left": 1, "rate": 1, "refill_in_ms": 30_000, "waited_s": 0.0})
+    calls = []
+
+    def fake_http(method, url, params=None, **kw):
+        calls.append(params["asin"])
+        return {"products": [], "tokensLeft": 0, "refillRate": 1, "refillIn": 60_000, "tokensConsumed": 2}
+
+    monkeypatch.setattr(keepa, "http_json", fake_http)
+    monkeypatch.setenv("KEEPA_KEY", "k")
+    from collectors.common import Budget
+    keepa.fetch_products(["B01", "B02"], "uk", Budget())
+    assert calls == ["B01", "B02"]          # one ASIN per call while the bucket is nearly empty
+    assert slept and sum(slept) < 10 * 60    # waited for refills rather than raising
+
+
+def test_keepa_gives_up_past_max_wait(monkeypatch):
+    import pytest
+    monkeypatch.setattr(keepa, "_sleep", lambda s: None)
+    monkeypatch.setattr(keepa, "_state", {"left": 0, "rate": 1, "refill_in_ms": 60_000, "waited_s": 0.0})
+    monkeypatch.setattr(keepa, "MAX_WAIT_S", 60)
+    with pytest.raises(RuntimeError, match="APA_KEEPA_MAX_WAIT_MIN"):
+        keepa._wait_for(10)

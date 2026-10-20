@@ -37,9 +37,12 @@ def resolve(raw: str, marketplace: str | None = None) -> dict:
 
         if m := URL_ASIN_RE.search(parts.path):
             target["seed_asins"].append(m.group(1).upper())
+        if query.get("lp_asin"):  # brand store links carry the product the shopper came from
+            target["seed_asins"].append(query["lp_asin"].upper())
         if m := STORE_RE.search(parts.path):
             if m.group(1):
-                target["brand"] = urllib.parse.unquote_plus(m.group(1)).replace("-", " ")
+                slug = urllib.parse.unquote_plus(m.group(1)).replace("-", " ")
+                target["brand"] = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", slug)  # SuperFacialist -> Super Facialist
             target["store_page_id"] = m.group(2)
         for key in ("seller", "me"):
             if query.get(key):

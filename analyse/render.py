@@ -48,34 +48,6 @@ def num(v) -> str:
 
 # --- charts --------------------------------------------------------------------------------------
 
-def bar_chart(data: dict[str, float], fmt=num, height: int = 180) -> str:
-    """Vertical bars, one series. Labels every other bar when crowded."""
-    if not data:
-        return '<p class="empty">No dated launches found.</p>'
-    items = list(data.items())
-    w, pad_l, pad_b, pad_t = 640, 36, 28, 16
-    plot_w, plot_h = w - pad_l - 8, height - pad_b - pad_t
-    top = max(v for _, v in items) or 1
-    step = plot_w / len(items)
-    bar_w = max(4, min(36, step - 6))
-    label_every = 1 if len(items) <= 12 else 2
-    parts = [f'<svg viewBox="0 0 {w} {height}" role="img" class="chart">']
-    for frac in (0.5, 1.0):
-        y = pad_t + plot_h * (1 - frac)
-        parts.append(f'<line x1="{pad_l}" x2="{w - 8}" y1="{y:.1f}" y2="{y:.1f}" class="grid"/>'
-                     f'<text x="{pad_l - 6}" y="{y + 4:.1f}" class="tick" text-anchor="end">{e(fmt(top * frac))}</text>')
-    for i, (label, v) in enumerate(items):
-        x = pad_l + i * step + (step - bar_w) / 2
-        h = plot_h * v / top
-        y = pad_t + plot_h - h
-        parts.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="{max(h, 1):.1f}" rx="3" class="bar">'
-                     f'<title>{e(label)}: {e(fmt(v))}</title></rect>')
-        if i % label_every == 0:
-            parts.append(f'<text x="{x + bar_w / 2:.1f}" y="{height - 8}" class="tick" text-anchor="middle">{e(label)}</text>')
-    parts.append(f'<line x1="{pad_l}" x2="{w - 8}" y1="{pad_t + plot_h}" y2="{pad_t + plot_h}" class="axis"/></svg>')
-    return "".join(parts)
-
-
 def hbars(rows: list[tuple[str, float, bool]], fmt=pct) -> str:
     """Horizontal bars for share of voice. Highlighted row = the prospect."""
     if not rows:
@@ -116,16 +88,56 @@ def points_html(findings: dict) -> str:
 
 def stats_html(d: dict) -> str:
     cur = d["prospect"]["currency"]
-    cat, content, ads = d["catalogue"], d["content"]["summary"], d["ads_observed"]
+    f, ads = d.get("focus") or {}, d["ads_observed"]
     tiles = [
-        ("ASINs found", num(d["asin_map"]["discovered"]), f'{num(d["asin_map"]["parents"])} parent listings checked'),
-        ("Launched in last 12 months", num(cat["launches_last_12m"]), "new ASINs"),
-        ("Est. monthly revenue", money(cat["est_monthly_revenue_keepa"], cur), "lower bound, from 'bought in past month'"),
-        ("Listing score", f'{content["avg_score_top_parents"] or "–"}/100', "average of top sellers"),
+        ("ASINs listed", num(f.get("total_asins")), f'{num(f.get("live_asins"))} live and selling'),
+        ("Best-sellers", num(f.get("hero_families")), f'product families making {pct(f.get("hero_revenue_share"))} of revenue'),
+        ("Est. monthly revenue", money(f.get("est_monthly_revenue"), cur), "Jungle Scout 30-day estimate"),
         ("Sponsored coverage", pct(ads["sponsored_coverage"]), "of their top 30 keywords"),
     ]
     return "".join(f'<div class="stat"><span class="stat-label">{e(a)}</span><span class="stat-value">{e(b)}</span>'
                    f'<span class="stat-note">{e(c)}</span></div>' for a, b, c in tiles)
+
+
+def heroes_html(d: dict, findings: dict) -> str:
+    """One card per best-seller: what it earns, what's wrong, what to do."""
+    cur, domain = d["prospect"]["currency"], d["prospect"]["domain"]
+    actions = findings.get("hero_actions") or {}
+    cards = []
+    for h in d.get("heroes", []):
+        flags = "".join(f'<li><span class="chip warn" title="Issue">!</span> {e(fl["detail"])}</li>' for fl in h["flags"])
+        targets = "".join(
+            f'<li>“{e(t["keyword"])}” <small>{num(t["volume"])}/mo · organic #{e(t["organic_rank"] or "–")}'
+            f'{" · " + money(t["cpc"], cur) + " CPC" if t["cpc"] else ""}</small></li>' for t in h["targets"][:3])
+        wasted = ", ".join(f'“{e(w["keyword"])}”' for w in h["wasted_terms"][:5])
+        action = f'<p class="action">{e(actions[h["asin"]])}</p>' if actions.get(h["asin"]) else ""
+        meta = " · ".join(x for x in (
+            f'{money(h["family_revenue_30d"], cur)}/mo' if h.get("family_revenue_30d") else "",
+            f'{num(h["units_30d"])} units' if h.get("units_30d") else "",
+            money(h["price"], cur) if h.get("price") else "",
+            f'{h["rating"]}★ ({num(h["reviews"])})' if h.get("rating") else "") if x)
+        cards.append(
+            f'<article class="hero-card"><header><a href="https://www.{e(domain)}/dp/{e(h["asin"])}">{e(h["asin"])}</a>'
+            f'<h3>{e((h["title"] or "")[:90])}</h3><span class="hero-meta">{e(meta)}</span></header>{action}'
+            + (f'<div><h4>Fix</h4><ul class="flags">{flags}</ul></div>' if flags else "")
+            + (f'<div><h4>Push</h4><ul>{targets}</ul></div>' if targets else "")
+            + (f'<div><h4>Cut</h4><p>{wasted}</p></div>' if wasted else "")
+            + "</article>")
+    return "".join(cards) or '<p class="empty">No best-seller data in this run.</p>'
+
+
+def quick_wins_html(d: dict) -> str:
+    q = d.get("quick_wins") or {}
+    items = []
+    for group in q.get("duplicates", [])[:6]:
+        items.append("Duplicate listings: " + " / ".join(f'{e(g["asin"])}' for g in group)
+                     + f' <small>{e(group[0]["title"])}</small>')
+    for m in q.get("mixed_families", [])[:3]:
+        items.append(f'Variation family {e(m["parent_asin"])} mixes {e(", ".join(m["product_types"]))}')
+    for c in q.get("clutter", [])[:6]:
+        items.append(f'{e(c["asin"])}: {e(c["issue"])} <small>{e(c["title"])}</small>')
+    return f'<ul class="quick">{"".join(f"<li>{i}</li>" for i in items)}</ul>' if items else \
+        '<p class="empty">No duplicate or untidy listings found among live products.</p>'
 
 
 def content_table(d: dict) -> str:
@@ -220,7 +232,6 @@ def render(run: Path) -> tuple[Path, Path]:
     if not d or not findings:
         raise SystemExit(f"{run} needs dataset.json and findings.json")
     cur = d["prospect"]["currency"]
-    cat = d["catalogue"]
     budget = d["strategy"]["budget"]
     sov = d["competitors"]["share_of_voice"][:8]
     slots = {
@@ -231,11 +242,8 @@ def render(run: Path) -> tuple[Path, Path]:
         "HEADLINE": e(findings.get("headline", "")),
         "POINTS": points_html(findings),
         "STATS": stats_html(d),
-        "LAUNCH_CHART": bar_chart(cat["launches_by_quarter"]),
-        "REVENUE_CHART": bar_chart({m[2:]: v for m, v in cat["revenue_monthly_top_parents"].items()},
-                                   fmt=lambda v: money(v, cur)) if cat["revenue_monthly_top_parents"] else
-        '<p class="empty">No sales history available for this run.</p>',
-        "CATALOGUE_NOTE": e(findings.get("catalogue_note", "")),
+        "HEROES": heroes_html(d, findings),
+        "QUICK_WINS": quick_wins_html(d),
         "CONTENT_TABLE": content_table(d),
         "CONTENT_NOTE": e(findings.get("content_note", "")),
         "AD_SUMMARY": e(findings.get("ad_strategy_summary", "")),

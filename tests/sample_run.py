@@ -35,7 +35,8 @@ def products() -> list[dict]:
             out.append({
                 "asin": asin, "parent_asin": f"B0PARENT{i:02d}" if i < 3 else asin,
                 "title": f"{BRAND} {line} {['250ml', '500ml', 'Pack of 2'][v]} – Natural Oatmeal Formula for Sensitive Skin",
-                "brand": BRAND, "category_path": ["Pet Supplies", "Dogs", "Grooming"], "root_category": "Pet Supplies",
+                "brand": BRAND, "category_path": ["Pet Supplies", "Dogs", "Grooming", LEAVES.get(i, "Grooming")],
+                "root_category": "Pet Supplies",
                 "listed_since": listed.isoformat(), "price": round(rnd.uniform(9, 24), 2),
                 "monthly_sold": rnd.choice([None, 50, 100, 200, 400, 1000]) if i < 6 else None,
                 "sales_rank": bsr0, "rating": round(rnd.uniform(3.8, 4.7), 1), "review_count": rnd.randint(5, 2400),
@@ -44,11 +45,53 @@ def products() -> list[dict]:
                 "bullet_avg_len": rnd.randint(60, 200), "title_len": 90, "description_len": 300,
                 "variation_count": 3 if i < 3 else 0, "variation_dimensions": ["Size"] if i < 3 else [],
                 "is_sns": i < 4, "brand_store": "Brightpaw",
+                "list_price": 19.99, "offer_count": 2, "oos_pct_90": {0: 25, 2: 95}.get(i, 0),
                 "history": {"bsr_monthly": {m: bsr0 * (1 + 0.02 * (14 - k)) for k, m in enumerate(months)},
                             "reviews_monthly": {m: 10 * k for k, m in enumerate(months)}},
                 "source": "keepa",
             })
     return out
+
+
+# Category leaf per product line; line 1 (puppy shampoo) is deliberately in the wrong category.
+LEAVES = {0: "Shampoos & Conditioners", 1: "Dental Care", 2: "Shampoos & Conditioners", 6: "Shampoos & Conditioners"}
+
+
+def js_catalog() -> list[dict]:
+    """Jungle Scout-style catalogue: 3 best-seller families, a long tail, a duplicate, clutter and dead ASINs."""
+    rows = []
+
+    def row(asin, parent, title, revenue, units, **kw):
+        rows.append({"asin": asin, "parent_asin": parent, "title": title, "brand": BRAND, "category": "Pet Supplies",
+                     "price": 14.99, "units_30d": units, "revenue_30d": revenue, "sellers": kw.get("sellers", 1),
+                     "buy_box_owner": kw.get("owner", "Amazon"), "available": kw.get("available", True),
+                     "rating": 4.4, "reviews": kw.get("reviews", 500), "source": "junglescout"})
+
+    for v in range(3):  # parent-level totals repeated on every child (a Jungle Scout quirk)
+        row(f"B0SAMPLE0{v}", "B0PARENT00", f"{BRAND} Dog Shampoo {['250ml', '500ml', 'Pack of 2'][v]} – Oatmeal",
+            30000, 2000, reviews=900 - v)
+    for v, rev in enumerate((12000, 8000, 4000)):
+        row(f"B0SAMPLE1{v}", "B0PARENT01", f"{BRAND} Puppy Shampoo {['250ml', '500ml', 'Pack of 2'][v]} – Tearless",
+            rev, rev // 15, owner="PetDeals UK", sellers=7)
+    for v, (title, rev) in enumerate((("Dog Shampoo 2-in-1 with Conditioner", 6000), ("Dog Conditioner Detangling", 5000),
+                                      ("Dog Conditioner Travel Size", 1000))):
+        row(f"B0SAMPLE2{v}", "B0PARENT02", f"{BRAND} {title}", rev, rev // 15)
+    for i, rev in enumerate((3000, 2000, 1500, 1000, 500, 300, 100), start=3):
+        row(f"B0SAMPLE{i}0", f"B0SAMPLE{i}0", f"{BRAND} {['Dog Ear Cleaner 100ml – Gentle Formula', 'Dog Dental Spray', 'Cat Shampoo', 'Dog Dry Shampoo', 'Dog Wipes', 'Dog Cologne', 'Paw Balm'][i - 3]}",
+            rev, rev // 15)
+    row("B0SAMPLE95", "B0SAMPLE95", f"{BRAND} Dog Ear Cleaner 100ml – Gentle Formula", 400, 25)
+    row("B0SAMPLE96", "B0SAMPLE96", BRAND, 200, 12)
+    row("B0SAMPLE97", "B0SAMPLE97", "Hundeshampoo mit Hafer für empfindliche Haut", 150, 9)
+    for i in range(5):
+        row(f"B0DEAD000{i}", f"B0DEAD000{i}", f"{BRAND} Discontinued Dog Shampoo {i}", 0, 0, available=False, sellers=0)
+    return rows
+
+
+def keywords_by_asin() -> dict:
+    wasted = [{"keyword": "no 7 foundation", "volume": 9000, "organic_rank": None, "sponsored_rank": 5},
+              {"keyword": "bright", "volume": 12000, "organic_rank": None, "sponsored_rank": 3}]
+    return {"B0SAMPLE00": [{**k, "asin": "B0SAMPLE00"} for k in keywords() + wasted],
+            "B0SAMPLE10": [{**k, "asin": "B0SAMPLE10"} for k in keywords()[:4]]}
 
 
 def keywords() -> list[dict]:
@@ -95,6 +138,7 @@ def serps() -> dict:
 def findings() -> dict:
     return {
         "headline": "Brightpaw already ranks on page one for its biggest terms, but rivals own the ad slots above it, including on its own brand name.",
+        "hero_actions": {"B0SAMPLE00": "Defend the brand term and push 'dog shampoo' from #14 to the top of page."},
         "points": [
             {"category": "advertising", "title": "Defend the Brightpaw brand search",
              "detail": "Pawsome and Furlux both run sponsored ads on 'brightpaw' searches and Brightpaw has no ad there. A brand SP + SB campaign costs pennies per click and keeps those shoppers.",
@@ -127,6 +171,7 @@ def write(run: Path) -> Path:
     files = {
         "input.json": {"input": BRAND, "brand": BRAND, "marketplace": "uk", "seed_asins": [], "seller_id": None},
         "keepa_products.json": {"discovered": len(prods) + 4, "products": prods},
+        "js_catalog.json": js_catalog(), "keywords_by_asin.json": keywords_by_asin(),
         "js_sales.json": sales, "keywords.json": keywords(), "js_sov.json": sov(), "serps.json": serps(),
         "collect_log.json": {"steps": [{"step": "spapi.items", "status": "skipped", "reason": "SP-API not configured"}]},
         "findings.json": findings(),

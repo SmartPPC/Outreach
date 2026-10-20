@@ -123,6 +123,20 @@ table.content th[scope="row"] small { display: block; color: var(--muted); font-
 ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 .method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
 footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.hero-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px; align-content: start; min-width: 0; }
+.hero-card header { display: grid; gap: 4px; }
+.hero-card header a { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.hero-meta { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.hero-card h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); }
+.hero-card ul { padding-left: 0; list-style: none; font-size: 14px; gap: 4px; }
+.hero-card ul small, .quick small { display: block; color: var(--muted); }
+.hero-card p { font-size: 14px; }
+.hero-card .action { font-weight: 600; border-left: 2px solid var(--accent); padding-left: 10px; }
+.flags li { display: flex; gap: 8px; align-items: baseline; }
+.quick { font-size: 14px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
 </style>
@@ -146,15 +160,18 @@ footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
   </section>
 
   <section>
-    <header><span class="eyebrow">Catalogue</span><h2>Size and growth</h2><p>{{CATALOGUE_NOTE}}</p></header>
-    <div class="two">
-      <div><h3>New ASINs per quarter</h3>{{LAUNCH_CHART}}</div>
-      <div><h3>Estimated monthly revenue, top sellers</h3>{{REVENUE_CHART}}</div>
-    </div>
+    <header><span class="eyebrow">Best-sellers</span><h2>Where the money is</h2>
+      <p>The products below make most of the revenue, so every recommendation starts here.</p></header>
+    <div class="heroes">{{HEROES}}</div>
   </section>
 
   <section>
-    <header><span class="eyebrow">Listings</span><h2>Content quality</h2><p>{{CONTENT_NOTE}}</p></header>
+    <header><span class="eyebrow">Quick wins</span><h2>Catalogue tidy-up</h2></header>
+    {{QUICK_WINS}}
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Content on the best-sellers</h2><p>{{CONTENT_NOTE}}</p></header>
     {{CONTENT_TABLE}}
   </section>
 

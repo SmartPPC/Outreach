@@ -5,6 +5,8 @@ Docs: https://developer.junglescout.com/api
 from __future__ import annotations
 
 import datetime as dt
+import re
+import urllib.parse
 from collections import defaultdict
 
 from .common import MARKETPLACES, Budget, chunks, env, http_json, proxy_auth
@@ -25,6 +27,59 @@ def _headers() -> dict:
     if env("JS_KEY") and env("JS_KEY_NAME"):
         headers["Authorization"] = f"{env('JS_KEY_NAME')}:{env('JS_KEY')}"
     return headers
+
+
+def norm_brand(s: str | None) -> str:
+    """'Super Facialist', 'SuperFacialist', 'super-facialist' all compare equal."""
+    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def product_database(brand: str, marketplace: str, budget: Budget, max_pages: int = 5) -> list[dict]:
+    """Every ASIN Jungle Scout knows for the brand, with 30-day sales, sellers and Buy Box owner.
+    One call per 100 products, so it is the cheap way to map a whole catalogue."""
+    rows, cursor = [], None
+    for _ in range(max_pages):
+        budget.spend("junglescout")
+        params = {"marketplace": MARKETPLACES[marketplace]["js"], "sort": "-revenue", "page[size]": 100}
+        if cursor:
+            params["page[cursor]"] = cursor
+        resp = http_json("POST", f"{BASE}/product_database_query", headers=_headers(), params=params, body={
+            "data": {"type": "product_database_query", "attributes": {
+                "include_keywords": [brand], "exclude_unavailable_products": False}}})
+        rows += parse_products(resp)
+        nxt = (resp.get("links") or {}).get("next")
+        cursor = dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(nxt).query)).get("page[cursor]") if nxt else None
+        if not cursor:
+            break
+    want = norm_brand(brand)
+    return [r for r in rows if want and (want in norm_brand(r["brand"]) or want in norm_brand(r["title"]))]
+
+
+def parse_products(resp: dict) -> list[dict]:
+    rows = []
+    for item in resp.get("data") or []:
+        a = item.get("attributes") or {}
+        asin = (item.get("id") or "").split("/")[-1]
+        rows.append({
+            "asin": asin,
+            "parent_asin": a.get("parent_asin") or asin,
+            "title": a.get("title") or "",
+            "brand": a.get("brand"),
+            "category": a.get("category"),
+            "price": a.get("price"),
+            "units_30d": a.get("approximate_30_day_units_sold"),
+            "revenue_30d": a.get("approximate_30_day_revenue"),
+            "sellers": a.get("number_of_sellers"),
+            "buy_box_owner": a.get("buy_box_owner"),
+            "seller_type": a.get("seller_type"),
+            "rating": a.get("rating"),
+            "reviews": a.get("reviews"),
+            "listing_quality": a.get("listing_quality_score"),
+            "available": a.get("is_available"),
+            "date_first_available": a.get("date_first_available"),
+            "source": "junglescout",
+        })
+    return rows
 
 
 def sales_estimates(asin: str, marketplace: str, budget: Budget, months: int = 12) -> dict:
@@ -49,6 +104,11 @@ def parse_sales(resp: dict) -> dict:
             m["units"] += units
             m["revenue"] += units * price
     return {k: {"units": round(v["units"]), "revenue": round(v["revenue"], 2)} for k, v in sorted(monthly.items())}
+
+
+def keywords_for_asin(asin: str, marketplace: str, budget: Budget, per_page: int = 100) -> list[dict]:
+    """Keywords for one hero ASIN, tagged with it, so ranks and wasted terms are per product."""
+    return [{**row, "asin": asin} for row in keywords_by_asin([asin], marketplace, budget, per_page)]
 
 
 def keywords_by_asin(asins: list[str], marketplace: str, budget: Budget, per_page: int = 100,

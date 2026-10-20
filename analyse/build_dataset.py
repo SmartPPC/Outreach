@@ -13,6 +13,7 @@ from pathlib import Path
 
 from collectors.common import MARKETPLACES, ROOT, RUNS_DIR, read_json
 
+from . import checks
 from .rubric import check_listing
 
 # --- assumptions (surfaced on the audit page) -------------------------------------------------
@@ -200,8 +201,14 @@ def _content(products: list[dict], top_asins: list[str], catalog_items: list[dic
     }
 
 
+def _has_brand(text: str | None, brand: str) -> bool:
+    """Spacing/case-insensitive: 'Superfacialist' matches brand 'Super Facialist'."""
+    b = checks.norm(brand)
+    return bool(b) and b in checks.norm(text)
+
+
 def _is_ours(item: dict, our_asins: set[str], brand: str) -> bool:
-    return item.get("asin") in our_asins or (brand and brand in (item.get("title") or "").lower())
+    return item.get("asin") in our_asins or _has_brand(item.get("title"), brand)
 
 
 def _guess_brand(title: str) -> str:
@@ -211,7 +218,7 @@ def _guess_brand(title: str) -> str:
 
 def _competitors(sov: list[dict], serps: dict, brand: str, our_asins: set[str], prev_sov: list[dict] | None) -> dict:
     agg: dict[str, dict] = defaultdict(lambda: {"sov": 0.0, "sponsored_sov": 0.0, "keywords": 0})
-    category_sov = [s for s in sov if not brand or brand not in s["keyword"]]
+    category_sov = [s for s in sov if not _has_brand(s["keyword"], brand)]
     for s in category_sov:
         for b in s["brands"]:
             a = agg[b["brand"] or "unknown"]
@@ -222,7 +229,7 @@ def _competitors(sov: list[dict], serps: dict, brand: str, our_asins: set[str], 
     table = sorted(({"brand": k, "avg_sov": round(v["sov"] / n, 3), "avg_sponsored_sov": round(v["sponsored_sov"] / n, 3),
                      "keywords_present": v["keywords"]} for k, v in agg.items()), key=lambda r: r["avg_sov"], reverse=True)
     for r in table:
-        r["is_prospect"] = bool(brand) and brand in (r["brand"] or "").lower()
+        r["is_prospect"] = _has_brand(r["brand"], brand)
 
     sov_change = None
     if prev_sov:
@@ -271,7 +278,7 @@ def _frac(v) -> float:
 
 def _tier(kw: dict, brand: str, competitor_names: set[str], relevancy_cut: float | None) -> str:
     k = kw["keyword"]
-    if brand and brand in k:
+    if _has_brand(k, brand):
         return "brand"
     if any(c in k for c in competitor_names):
         return "competitor"
@@ -387,7 +394,7 @@ def _observed_ads(keywords: list[dict], sov: list[dict], brand: str, bids: dict)
     sov_by_kw = {s["keyword"]: s for s in sov}
     low = high = 0.0
     for s in sov:
-        mine = [b for b in s["brands"] if brand and brand in (b["brand"] or "").lower()]
+        mine = [b for b in s["brands"] if _has_brand(b["brand"], brand)]
         cpc = _cpc({"keyword": s["keyword"]}, bids, sov_by_kw)
         if mine and s.get("volume_30d") and cpc:
             share = _frac(mine[0]["sponsored_sov"])
@@ -428,31 +435,114 @@ def build(run: Path) -> dict:
     mp = MARKETPLACES[target.get("marketplace", "us")]
     kp = read_json(run / "keepa_products.json", {"discovered": 0, "products": []})
     products = kp["products"]
-    brand = (target.get("brand") or "").lower()
-    our_asins = {p["asin"] for p in products} | set(target.get("seed_asins") or [])
+    brand = target.get("brand") or ""
+    catalog = read_json(run / "js_catalog.json") or catalog_from_keepa(products)
+    our_asins = {p["asin"] for p in catalog} | {p["asin"] for p in products} | set(target.get("seed_asins") or [])
     js_sales = read_json(run / "js_sales.json", {})
     keywords = read_json(run / "keywords.json", [])
+    per_asin_kw = read_json(run / "keywords_by_asin.json", {})
     sov = read_json(run / "js_sov.json", [])
     serps = read_json(run / "serps.json", {})
     bids = read_json(run / "ads_bids.json", {})
-    top = list(js_sales) or top_parents(products, 10)
+
+    focus = checks.select_heroes(catalog)
+    top = [h["asin"] for h in focus["heroes"]] or list(js_sales) or top_parents(products, 10)
 
     competitors = _competitors(sov, serps, brand, our_asins, _previous_sov(run))
     competitor_names = {r["brand"].lower() for r in competitors["share_of_voice"]
                         if r["brand"] and not r["is_prospect"] and len(r["brand"]) >= 3}
     attacked = {a["keyword"] for a in competitors["brand_term_attackers"]}
+    strategy = _strategy(keywords, sov, bids, brand, competitor_names, attacked, products)
 
     return {
         "prospect": {"brand": target.get("brand"), "marketplace": target.get("marketplace"), "domain": mp["domain"],
-                     "currency": mp["currency"], "input": target.get("input"), "seller_name": target.get("seller_name")},
+                     "currency": mp["currency"], "input": target.get("input"), "seller_name": target.get("seller_name"),
+                     "landing_asin": (target.get("seed_asins") or [None])[0]},
         "generated": dt.date.today().isoformat(),
         "coverage": read_json(run / "collect_log.json", {}),
+        "focus": {k: v for k, v in focus.items() if k != "heroes"},
+        "heroes": _heroes(focus["heroes"], catalog, products, per_asin_kw, brand, competitor_names, attacked, bids, sov),
+        "quick_wins": _quick_wins(catalog, brand),
         "asin_map": _asin_map(products, kp["discovered"]),
         "catalogue": _catalogue(products, js_sales, top),
         "content": _content(products, top, read_json(run / "catalog.json", [])),
         "ads_observed": _observed_ads(keywords, sov, brand, bids),
         "competitors": competitors,
-        "strategy": _strategy(keywords, sov, bids, brand, competitor_names, attacked, products),
+        "strategy": strategy,
         "amc_benchmark": _amc_benchmark(products),
         "job_ad_present": (run / "job_ad.txt").exists(),
     }
+
+
+def catalog_from_keepa(products: list[dict]) -> list[dict]:
+    """Fallback catalogue when Jungle Scout isn't available: Keepa's 'bought in past month' as units."""
+    return [{"asin": p["asin"], "parent_asin": p.get("parent_asin") or p["asin"], "title": p.get("title"),
+             "brand": p.get("brand"), "category": p.get("root_category"), "price": p.get("price"),
+             "units_30d": p.get("monthly_sold"), "revenue_30d": (p.get("monthly_sold") or 0) * (p.get("price") or 0),
+             "sellers": p.get("offer_count"), "available": p.get("price") is not None,
+             "rating": p.get("rating"), "reviews": p.get("review_count"), "source": "keepa"} for p in products]
+
+
+def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_asin_kw: dict, brand: str,
+            competitor_names: set[str], attacked: set[str], bids: dict, sov: list[dict]) -> list[dict]:
+    by_asin = {p["asin"]: p for p in catalog}
+    keepa_by_asin = {p["asin"]: p for p in products}
+    fams = checks.families(catalog)
+    sov_by_kw = {s["keyword"]: s for s in sov}
+    out = []
+    for h in heroes:
+        js, kp = by_asin.get(h["asin"], {}), keepa_by_asin.get(h["asin"], {})
+        p = {**js, **{k: v for k, v in kp.items() if v not in (None, [], "")}}
+        p["price"] = js.get("price") or kp.get("price")
+        title = p.get("title") or ""
+        leaf = (kp.get("category_path") or [None])[-1] or js.get("category")
+        flags = []
+        if mm := checks.category_mismatch(title, leaf):
+            flags.append({"type": "wrong_category", "detail": f"{mm['product_type']} listed under {mm['category']}"})
+        if mixed := checks.mixed_family(fams.get(h["parent_asin"], [])):
+            flags.append({"type": "mixed_variation_family", "detail": "variation family mixes " + ", ".join(mixed)})
+        flags += [{"type": "sellers", "detail": d} for d in checks.seller_flags(p, brand)]
+        if s := checks.stock_flag(p):
+            flags.append({"type": "stock", "detail": s})
+        if s := checks.price_flag(p):
+            flags.append({"type": "price", "detail": s})
+
+        kws = merge_keywords(per_asin_kw.get(h["asin"], []))
+        wasted = checks.wasted_terms(title, brand, kws)
+        wasted_set = {w["keyword"] for w in wasted}
+        targets = []
+        for kw in kws:
+            if kw["keyword"] in wasted_set:
+                continue
+            tier = _tier(kw, brand, competitor_names, None)
+            status = _status(kw)
+            if tier == "brand" and kw["keyword"] in attacked and status in {"organic_top_unprotected", "missing"}:
+                status = "brand_defence_gap"
+            if status in {"push", "brand_defence_gap", "organic_top_unprotected"} and tier != "competitor":
+                cpc = _cpc(kw, bids, sov_by_kw)
+                targets.append({"keyword": kw["keyword"], "tier": tier, "status": status, "volume": kw.get("volume"),
+                                "organic_rank": kw.get("organic_rank"), "sponsored_rank": kw.get("sponsored_rank"),
+                                "cpc": round(cpc, 2) if cpc else None})
+        targets.sort(key=lambda t: t["volume"] or 0, reverse=True)
+        out.append({
+            "asin": h["asin"], "parent_asin": h["parent_asin"], "title": title,
+            "family_revenue_30d": h["revenue_30d"], "family_size": len(h["children"]),
+            "units_30d": p.get("units_30d") or p.get("monthly_sold"), "price": p.get("price"),
+            "list_price": p.get("list_price"), "sellers": p.get("sellers") or p.get("offer_count"),
+            "buy_box_owner": p.get("buy_box_owner"), "category": leaf, "product_type": checks.product_type(title),
+            "rating": p.get("rating"), "reviews": p.get("reviews") or p.get("review_count"),
+            "content": check_listing(p) if kp else None,
+            "flags": flags, "targets": targets[:6], "wasted_terms": wasted[:8],
+            "sponsored_terms": sum(1 for k in kws if k.get("sponsored_rank")),
+        })
+    return out
+
+
+def _quick_wins(catalog: list[dict], brand: str) -> dict:
+    live = [p for p in catalog if checks.is_live(p)]
+    mixed = []
+    for parent, kids in checks.families(live).items():
+        if types := checks.mixed_family(kids):
+            mixed.append({"parent_asin": parent, "product_types": types, "children": [k["asin"] for k in kids]})
+    return {"duplicates": checks.duplicates(live, brand), "clutter": checks.clutter(live, brand),
+            "mixed_families": mixed}

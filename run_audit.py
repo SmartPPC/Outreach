@@ -14,7 +14,7 @@ import sys
 import traceback
 from pathlib import Path
 
-from analyse import build_dataset
+from analyse import build_dataset, checks
 from collectors import ads_bench, catalog, dataforseo, junglescout, keepa
 from collectors.common import Budget, BudgetExceeded, env, load_env, run_dir, write_json
 from collectors.resolve import resolve, slug_for
@@ -56,6 +56,10 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
     target = resolve(raw_input, marketplace)
     mp = target["marketplace"]
     has_keepa = bool(env("KEEPA_KEY"))
+    if has_keepa:
+        status = guarded(log, "keepa.token", keepa.token_status, {})
+        if status:
+            log.ok("keepa.token", tokens_left=status.get("left"), per_minute=status.get("rate"))
 
     # Brand unknown (ASIN or seller input): read it off a seed ASIN.
     if not target["brand"] and target["seed_asins"] and has_keepa:
@@ -65,66 +69,81 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
 
     out = run_dir(slug_for(target, dt.date.today().isoformat()))
     print(f"→ {target.get('brand') or target['input']} on {mp}  ({out})")
-    write_json(out / "input.json", target)
     if job_ad:
         shutil.copy(job_ad, out / "job_ad.txt")
 
-    # 1. ASIN map
-    asins: list[str] = list(target["seed_asins"])
-    if has_keepa:
-        if target["brand"]:
-            found = guarded(log, "keepa.brand", lambda: keepa.discover_by_brand(target["brand"], mp, budget), [])
-            asins += found
-            log.ok("keepa.brand", asins=len(found))
-        if target["seller_id"]:
-            seller = guarded(log, "keepa.seller", lambda: keepa.discover_by_seller(target["seller_id"], mp, budget), {})
+    # 1. Catalogue. Jungle Scout maps the whole range cheaply; Keepa (token-limited) is kept for the
+    #    best-sellers that make ~80% of revenue.
+    catalog_rows: list[dict] = []
+    if junglescout.configured() and target["brand"]:
+        catalog_rows = guarded(log, "js.catalog", lambda: junglescout.product_database(target["brand"], mp, budget), []) or []
+        write_json(out / "js_catalog.json", catalog_rows)
+        log.ok("js.catalog", asins=len(catalog_rows))
+        brands = [r["brand"] for r in catalog_rows if r.get("brand")]
+        if brands:  # canonical spelling, e.g. store slug "SuperFacialist" -> "Super Facialist"
+            target["brand"] = max(set(brands), key=brands.count)
+    write_json(out / "input.json", target)
+
+    products: list[dict] = []
+    if catalog_rows:
+        discovered = len(catalog_rows)
+        focus = checks.select_heroes(catalog_rows, max_families=top_n)
+    else:
+        log.skip("js.catalog", "Jungle Scout unavailable; mapping the catalogue with Keepa (slow on small plans)")
+        asins: list[str] = list(target["seed_asins"])
+        if has_keepa and target["brand"]:
+            asins += guarded(log, "keepa.brand", lambda: keepa.discover_by_brand(target["brand"], mp, budget), []) or []
+        if has_keepa and target["seller_id"]:
+            seller = guarded(log, "keepa.seller", lambda: keepa.discover_by_seller(target["seller_id"], mp, budget), {}) or {}
             asins += seller.get("asins", [])
             target["seller_name"] = seller.get("seller_name")
-    else:
-        log.skip("keepa", "KEEPA_KEY not set")
-    if catalog.configured() and target["brand"]:
-        found = guarded(log, "spapi.search", lambda: catalog.search_brand(target["brand"], mp, budget), [])
-        asins += found
-        log.ok("spapi.search", asins=len(found))
-    asins = list(dict.fromkeys(asins))
-    discovered = len(asins)
+        if catalog.configured() and target["brand"]:
+            asins += guarded(log, "spapi.search", lambda: catalog.search_brand(target["brand"], mp, budget), []) or []
+        asins = list(dict.fromkeys(asins))
+        discovered = len(asins)
+        if has_keepa and asins:
+            products = guarded(log, "keepa.products", lambda: keepa.fetch_products(asins[:max_asins], mp, budget), []) or []
+        focus = checks.select_heroes(build_dataset.catalog_from_keepa(products), max_families=top_n)
 
-    products = []
-    if has_keepa and asins:
-        products = guarded(log, "keepa.products", lambda: keepa.fetch_products(asins[:max_asins], mp, budget), [])
-        log.ok("keepa.products", fetched=len(products), discovered=discovered)
+    heroes = [h["asin"] for h in focus["heroes"]] or target["seed_asins"][:1]
+    log.ok("focus", live=focus["live_asins"], hero_families=focus["hero_families"],
+           revenue_share=focus["hero_revenue_share"])
+
+    if catalog_rows and has_keepa and heroes:
+        products = guarded(log, "keepa.heroes", lambda: keepa.fetch_products(heroes, mp, budget), []) or []
+        log.ok("keepa.heroes", fetched=len(products), waited_min=keepa.waited_minutes())
+    elif not has_keepa:
+        log.skip("keepa", "KEEPA_KEY not set")
     write_json(out / "keepa_products.json", {"discovered": discovered, "products": products})
 
-    top = build_dataset.top_parents(products, top_n) or target["seed_asins"][:top_n]
-
-    if catalog.configured() and top:
-        items = guarded(log, "spapi.items", lambda: catalog.get_items(top, mp, budget), [])
+    if catalog.configured() and heroes:
+        items = guarded(log, "spapi.items", lambda: catalog.get_items(heroes, mp, budget), [])
         write_json(out / "catalog.json", items)
     else:
         log.skip("spapi.items", "SP-API not configured" if not catalog.configured() else "no ASINs")
 
-    # 2. Sales + keywords
-    keywords: list[dict] = []
-    if junglescout.configured() and top:
-        sales = {}
-        for asin in top:
-            sales[asin] = guarded(log, f"js.sales.{asin}", lambda a=asin: junglescout.sales_estimates(a, mp, budget), {})
-        write_json(out / "js_sales.json", sales)
-        keywords = guarded(log, "js.keywords", lambda: junglescout.keywords_by_asin(top, mp, budget), []) or []
-        log.ok("js.keywords", keywords=len(keywords))
-    elif dataforseo.configured() and top:
-        log.skip("junglescout", "JS_KEY / JS_KEY_NAME not set; using DataForSEO ranked keywords")
-        for asin in top[:5]:
-            keywords += guarded(log, f"d4s.ranked.{asin}", lambda a=asin: dataforseo.ranked_keywords(a, mp, budget), []) or []
+    # 2. Keywords per best-seller (ranks, sponsored terms, wasted spend)
+    per_asin: dict[str, list[dict]] = {}
+    if junglescout.configured():
+        for asin in heroes:
+            per_asin[asin] = guarded(log, f"js.keywords.{asin}",
+                                     lambda a=asin: junglescout.keywords_for_asin(a, mp, budget), []) or []
+    elif dataforseo.configured():
+        for asin in heroes[:5]:
+            per_asin[asin] = [{**r, "asin": asin} for r in guarded(
+                log, f"d4s.ranked.{asin}", lambda a=asin: dataforseo.ranked_keywords(a, mp, budget), []) or []]
     else:
         log.skip("keywords", "no Jungle Scout or DataForSEO credentials")
-    keywords = build_dataset.merge_keywords(keywords)
+    write_json(out / "keywords_by_asin.json", per_asin)
+    keywords = build_dataset.merge_keywords([r for rows in per_asin.values() for r in rows])
     write_json(out / "keywords.json", keywords)
+    log.ok("keywords", heroes=len(per_asin), keywords=len(keywords))
 
     brand = (target.get("brand") or "").lower()
-    brand_terms = [brand] if brand else []
-    brand_terms += [k["keyword"] for k in keywords if brand and brand in k["keyword"] and k["keyword"] != brand][:2]
-    category_terms = [k["keyword"] for k in keywords if not brand or brand not in k["keyword"]][:n_category_terms]
+    brand_terms = list(dict.fromkeys(t for t in (brand, brand.replace(" ", "")) if t))
+    brand_terms += [k["keyword"] for k in keywords
+                    if build_dataset._has_brand(k["keyword"], brand) and k["keyword"] not in brand_terms][:1]
+    category_terms = [k["keyword"] for k in keywords if not build_dataset._has_brand(k["keyword"], brand)][:n_category_terms]
 
     # 3. Share of voice + live SERPs
     if junglescout.configured():
@@ -148,6 +167,7 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
     else:
         log.skip("ads.bids", "Ads API not configured; using Jungle Scout PPC bids")
 
+    write_json(out / "input.json", target)
     write_json(out / "collect_log.json", {"steps": log.steps, "budget": budget.report(),
                                           "collected_at": dt.datetime.now(dt.UTC).isoformat()})
     dataset = build_dataset.build(out)
@@ -162,7 +182,7 @@ def main() -> None:
     ap.add_argument("--marketplace", choices=["us", "uk"], help="override; otherwise taken from the URL (default us)")
     ap.add_argument("--job-ad", type=Path, help="text file with the job advert")
     ap.add_argument("--max-asins", type=int, default=150, help="cap on ASINs pulled from Keepa (cost control)")
-    ap.add_argument("--top-n", type=int, default=10, help="parents that get sales + keyword analysis")
+    ap.add_argument("--top-n", type=int, default=12, help="max best-seller families analysed in depth")
     ap.add_argument("--category-terms", type=int, default=12)
     ap.add_argument("--rebuild", type=Path, help="skip collection; rebuild dataset.json for an existing run dir")
     args = ap.parse_args()
