@@ -18,6 +18,18 @@ python -m pytest       # offline tests, no keys needed
 ```
 Python 3.11+ is required. There are no third-party dependencies at runtime; `pytest` is only needed for the tests.
 
+### Cloud sessions
+Store keys on the cloud environment rather than in the repo:
+| Provider | How | Host |
+|---|---|---|
+| Keepa | environment variable `KEEPA_KEY` (key travels in the URL), plus `api.keepa.com` in Allowed domains | `api.keepa.com` |
+| Jungle Scout | network secret, custom header `Authorization`, no prefix, value `KEYNAME:KEY` | `developer.junglescout.com` |
+| DataForSEO | network secret, Username and password | `api.dataforseo.com` |
+| SP-API / Ads API | environment variables (`SPAPI_*`, `ADS_*`), plus their hosts in Allowed domains | see `collectors/common.py` |
+
+For providers on network secrets, set `APA_PROXY_AUTH=junglescout,dataforseo` as an environment variable so the
+collectors call them without a local key.
+
 ## Use
 In Claude Code, from this repo:
 > audit https://www.amazon.co.uk/stores/Acme/page/… (here's their job ad: …)

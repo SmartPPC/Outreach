@@ -7,17 +7,19 @@ from __future__ import annotations
 import base64
 import time
 
-from .common import MARKETPLACES, Budget, env, http_json
+from .common import MARKETPLACES, Budget, env, http_json, proxy_auth
 
 BASE = "https://api.dataforseo.com/v3"
 TASK_READY, TASK_PENDING = 20000, {40601, 40602}
 
 
 def configured() -> bool:
-    return bool(env("DATAFORSEO_LOGIN") and env("DATAFORSEO_PASSWORD"))
+    return bool(env("DATAFORSEO_LOGIN") and env("DATAFORSEO_PASSWORD")) or proxy_auth("dataforseo")
 
 
 def _headers() -> dict:
+    if not env("DATAFORSEO_LOGIN"):
+        return {}
     token = base64.b64encode(f"{env('DATAFORSEO_LOGIN')}:{env('DATAFORSEO_PASSWORD')}".encode()).decode()
     return {"Authorization": f"Basic {token}"}
 

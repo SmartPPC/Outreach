@@ -7,22 +7,24 @@ from __future__ import annotations
 import datetime as dt
 from collections import defaultdict
 
-from .common import MARKETPLACES, Budget, chunks, env, http_json
+from .common import MARKETPLACES, Budget, chunks, env, http_json, proxy_auth
 
 BASE = "https://developer.junglescout.com/api"
 
 
 def configured() -> bool:
-    return bool(env("JS_KEY") and env("JS_KEY_NAME"))
+    return bool(env("JS_KEY") and env("JS_KEY_NAME")) or proxy_auth("junglescout")
 
 
 def _headers() -> dict:
-    return {
-        "Authorization": f"{env('JS_KEY_NAME')}:{env('JS_KEY')}",
+    headers = {
         "X_API_Type": "junglescout",
         "Accept": "application/vnd.junglescout.v1+json",
         "Content-Type": "application/vnd.api+json",
     }
+    if env("JS_KEY") and env("JS_KEY_NAME"):
+        headers["Authorization"] = f"{env('JS_KEY_NAME')}:{env('JS_KEY')}"
+    return headers
 
 
 def sales_estimates(asin: str, marketplace: str, budget: Budget, months: int = 12) -> dict:

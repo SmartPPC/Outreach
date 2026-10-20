@@ -62,6 +62,12 @@ def env(name: str) -> str | None:
     return value or None
 
 
+def proxy_auth(provider: str) -> bool:
+    """True when the cloud environment's agent proxy adds this provider's credentials (a network
+    secret), so the session has no key of its own. Set APA_PROXY_AUTH=junglescout,dataforseo."""
+    return provider in {p.strip().lower() for p in (env("APA_PROXY_AUTH") or "").split(",")}
+
+
 class BudgetExceeded(RuntimeError):
     pass
 

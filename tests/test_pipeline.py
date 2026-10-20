@@ -69,6 +69,18 @@ def test_dataforseo_and_ads_parsers():
     assert bids["dog shampoo"] == {"low": 0.9, "suggested": 1.2, "high": 1.6}
 
 
+def test_proxy_auth_enables_provider_without_local_keys(monkeypatch):
+    for k in ("JS_KEY", "JS_KEY_NAME", "DATAFORSEO_LOGIN", "DATAFORSEO_PASSWORD", "APA_PROXY_AUTH"):
+        monkeypatch.delenv(k, raising=False)
+    assert not junglescout.configured() and not dataforseo.configured()
+    monkeypatch.setenv("APA_PROXY_AUTH", "junglescout, dataforseo")
+    assert junglescout.configured() and dataforseo.configured()
+    assert "Authorization" not in junglescout._headers() and dataforseo._headers() == {}
+    monkeypatch.setenv("JS_KEY_NAME", "n")
+    monkeypatch.setenv("JS_KEY", "k")
+    assert junglescout._headers()["Authorization"] == "n:k"
+
+
 def test_merge_keywords_keeps_best_rank():
     merged = build_dataset.merge_keywords([
         {"keyword": "Dog Shampoo", "volume": 10, "organic_rank": 20, "sponsored_rank": None},
