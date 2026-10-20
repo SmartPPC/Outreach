@@ -1,0 +1,10 @@
+{
+  "input": "https://www.amazon.co.uk/stores/BESQUE/page/FCF281A2-C3AA-48F9-8A1C-4B5315F2CBB5?lp_asin=B0DJH54BLF&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto",
+  "brand": "Besque",
+  "seller_id": null,
+  "store_page_id": "FCF281A2-C3AA-48F9-8A1C-4B5315F2CBB5",
+  "seed_asins": [
+    "B0DJH54BLF"
+  ],
+  "marketplace": "uk"
+}

@@ -1,0 +1,79 @@
+{
+  "headline": "BESQUE is essentially a one-product brand, and that product is losing ground: the Original Magic Body Oil's sales rank has slipped from about 5,400 in July to about 17,000, while the ad spend sits on generic searches where a £50 oil struggles to compete.",
+  "points": [
+    {
+      "category": "catalogue",
+      "title": "Original Magic Body Oil: act on the sales slide now",
+      "detail": "The body oil family (~£18k/mo, about 77% of revenue) has gone from a Beauty sales rank of ~5,400 in July to ~17,000 now, and is about 2x worse than a year ago, even though reviews keep growing. With one product carrying the brand, that slide is the main risk.",
+      "evidence": [
+        "B0DJH54BLF monthly sales rank (Keepa): Jul 2026 5,393; Aug 8,559; Sep 13,772; Oct 17,010 (Oct 2025: 8,243)",
+        "Family ~198 units/mo at £50 (Jungle Scout, parent-level); Keepa shows 100+ bought last month on the single",
+        "Family revenue ~£17,948 of ~£23,321 brand total (77%)",
+        "Reviews 93 -> 1,011 over 13 months (Keepa)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Defend the BESQUE brand searches from a lookalike",
+      "detail": "A £9.99 'Magic Firming Body Oil' (3.6★) buys the ad slot on 'besque' searches, and BESQUE runs no ads on its own name or on 'besque magic body oil'. Brand-term ads are cheap and stop shoppers who are looking for you from buying a copy.",
+      "evidence": [
+        "'besque': lookalike 'Magic Firming Body Oil, Compact Body Oil, Magic Luxury Body Oil…' sponsored at #4, £9.99, 3.6★ (DataForSEO, Amazon UK)",
+        "Same product organic #6 on 'besque magic body oil'",
+        "No BESQUE sponsored placement on either brand search"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Move ad spend from generic 'body oil' to firming and crepey-skin searches",
+      "detail": "On 'body oil' (27k/mo) BESQUE sits at organic #27 and sponsored #38, against page-one rivals at ~£9.50 and 4.6★, so a £50 oil struggles to convert there. The premium fits shoppers looking for firming results: 'body oil for women' (4.3k/mo, organic #16, no ads), 'firming body oil' (#34) and rival premium firming oils like Nord Body (3.7k/mo).",
+      "evidence": [
+        "body oil: 27,417/mo, organic #27, sponsored #38 (Jungle Scout); page-one median £9.49 and 4.6★ vs BESQUE £50 and 3.9★",
+        "body oil for women: 4,276/mo, organic #16, no sponsored rank",
+        "firming body oil: 850/mo, organic #34; body oil for crepey skin: 1,105/mo, organic #31 (already sponsored #4)",
+        "nord body multi peptide body oil: 3,701/mo, organic #65; cellu overnight firming oil: 3,319/mo, organic #62",
+        "Sponsored on 51 terms in total, including 'body care' at ~£2.00 CPC"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "content",
+      "title": "Lift the 3.9★ rating before scaling spend",
+      "detail": "With over 1,000 reviews at 3.9★ against a 4.6★ page-one norm, the rating is the brake on a £50 price point. The listing itself is strong (7 videos, A+, 5 detailed bullets), so the work is in the review drivers: what the low-star reviews say, inserts and expectation-setting in the copy.",
+      "evidence": [
+        "B0DJH54BLF: 3.9★ from 1,011 reviews (Keepa); variants 3.7–3.8★ (Jungle Scout)",
+        "Page-one 'body oil' competitor median rating 4.6★",
+        "Listing: 8 images, 7 videos, A+, 5 bullets averaging 218 characters"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "catalogue",
+      "title": "Give the new launches a proper start",
+      "detail": "The Unscented Magic Body Oil (18 reviews) and Luxury Shower Oil (28 reviews) make about £3k a month each. The shower oil already pays for a #15 ad slot on 'shower oil' (11.6k/mo) against established brands. A launch plan with Vine reviews and tighter ads would reduce the reliance on one product.",
+      "evidence": [
+        "Unscented family ~£2,950/mo, 4.1★ from 18 reviews",
+        "Shower Oil family ~£2,700/mo, 4.0★ from 28 reviews",
+        "shower oil: 11,566/mo; BESQUE sponsored #15, organic #83; ads above from Uriage, L'Occitane, Nuxe, SVR"
+      ],
+      "job_ad_quote": null
+    }
+  ],
+  "hero_actions": {
+    "B0DJH54BLF": "Brand-term ads on 'besque' and 'besque magic body oil', then move generic 'body oil' spend to firming and crepey-skin searches.",
+    "B0FKC87JSM": "Launch support: Vine reviews, plus ads on 'magic luxury body oil' and unscented and sensitive-skin searches."
+  },
+  "content_note": "The hero listing is well built (8 images, 7 videos, A+, detailed bullets). The constraint is the 3.9★ rating, not the content.",
+  "ad_strategy_summary": "Defend the brand name first, then shift budget from generic 'body oil' (where a £50 oil competes with £4–17 products) to firming, crepey-skin and premium-competitor searches where the price makes sense.",
+  "amc_hypotheses": [
+    "The body oil offers Subscribe & Save, so repeat buyers are likely a meaningful share of revenue, and keeping them matters while new-customer sales slow.",
+    "With a lookalike advertising on the brand name, some shoppers who search 'besque' probably end up buying the £9.99 copy."
+  ],
+  "amc_questions": [
+    "How many Magic Body Oil buyers reorder, and how soon?",
+    "Is the sales slide coming from fewer new customers, or fewer repeat orders?",
+    "Which searches and ad types bring in buyers who later reorder?",
+    "How many shoppers who search the brand name buy another product instead?"
+  ]
+}

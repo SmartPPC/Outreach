@@ -517,10 +517,13 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
 
         # keywords were pulled for one variant with include_variants, so they describe the family
         kws = merge_keywords([r for a in family_asins for r in per_asin_kw.get(a, [])])
-        wasted = checks.wasted_terms(title, brand, kws)
+        # judge relevance against every title in the family: variants often word the same product differently
+        family_text = " ".join(filter(None, [title] + [by_asin.get(a, {}).get("title") for a in family_asins]
+                                      + [keepa_by_asin.get(a, {}).get("title") for a in family_asins]))
+        wasted = checks.wasted_terms(family_text, brand, kws)
         wasted_set = {w["keyword"] for w in wasted}
         targets = []
-        title_stems = checks.stems(title) - checks.stems(brand)
+        title_stems = checks.stems(family_text) - checks.stems(brand)
         for kw in kws:
             # skip wasted terms, and terms that belong to a sibling in the family (e.g. "face oil" on a balm)
             if kw["keyword"] in wasted_set or not (checks.stems(kw["keyword"]) & title_stems):

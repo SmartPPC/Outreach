@@ -1,0 +1,2049 @@
+{
+  "prospect": {
+    "brand": "Besque",
+    "marketplace": "uk",
+    "domain": "amazon.co.uk",
+    "currency": "\u00a3",
+    "input": "https://www.amazon.co.uk/stores/BESQUE/page/FCF281A2-C3AA-48F9-8A1C-4B5315F2CBB5?lp_asin=B0DJH54BLF&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto",
+    "seller_name": null,
+    "landing_asin": "B0DJH54BLF"
+  },
+  "generated": "2026-10-20",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 60,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 40
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 24,
+        "hero_families": 2,
+        "revenue_share": 0.9
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 8,
+        "waited_min": 0.0
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 2,
+        "keywords": 104
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 10
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 16,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 16,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 10,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      }
+    },
+    "collected_at": "2026-10-20T19:27:54.128560+00:00"
+  },
+  "focus": {
+    "total_asins": 40,
+    "live_asins": 24,
+    "families": 12,
+    "hero_families": 2,
+    "hero_revenue_share": 0.9,
+    "est_monthly_revenue": 23321
+  },
+  "heroes": [
+    {
+      "asin": "B0DJH54BLF",
+      "parent_asin": "B0DK46D47Y",
+      "title": "Besque Original Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+      "family_revenue_30d": 17948,
+      "family_size": 4,
+      "units_30d": 198,
+      "price": 50.0,
+      "list_price": 50.99,
+      "sellers": 1,
+      "buy_box_owner": "vanetti",
+      "category": "Oils",
+      "product_type": null,
+      "rating": 3.9,
+      "reviews": 994,
+      "content": {
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "7 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "70 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 218 chars"
+          },
+          "rating": {
+            "status": "fail",
+            "detail": "3.9\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1011 reviews"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "body oil for women",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4276,
+          "organic_rank": 16,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "goda silk body oil",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 1287,
+          "organic_rank": 40,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "firming body oil",
+          "tier": "category",
+          "status": "push",
+          "volume": 850,
+          "organic_rank": 34,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "dry body oil",
+          "tier": "category",
+          "status": "push",
+          "volume": 792,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "body oul",
+          "tier": "category",
+          "status": "push",
+          "volume": 681,
+          "organic_rank": 38,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "besque magic body oil",
+          "tier": "brand",
+          "status": "brand_defence_gap",
+          "volume": 472,
+          "organic_rank": 1,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "glora",
+          "volume": 450,
+          "sponsored_rank": 1,
+          "reason": "unrelated to the product"
+        }
+      ],
+      "sponsored_terms": 51
+    },
+    {
+      "asin": "B0FKC87JSM",
+      "parent_asin": "B0FKQBPQJK",
+      "title": "Besque Unscented Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+      "family_revenue_30d": 2950,
+      "family_size": 4,
+      "units_30d": 7,
+      "price": 160.0,
+      "list_price": null,
+      "sellers": 1,
+      "buy_box_owner": "vanetti",
+      "category": "Oils",
+      "product_type": null,
+      "rating": 4.1,
+      "reviews": 14,
+      "content": {
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "9 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "71 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 242 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.1\u2605"
+          },
+          "reviews": {
+            "status": "fail",
+            "detail": "18 reviews"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "besque magic body oil",
+          "tier": "brand",
+          "status": "brand_defence_gap",
+          "volume": 472,
+          "organic_rank": 4,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "crepey skin repair treatment",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 24,
+          "sponsored_rank": null,
+          "cpc": 0.72
+        },
+        {
+          "keyword": "magic luxury body oil",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 16,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magic oil",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 19,
+          "sponsored_rank": null,
+          "cpc": 0.34
+        },
+        {
+          "keyword": "magic oil for sagging skin",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 20,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "osea body oil",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 313,
+          "organic_rank": 48,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 7
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [],
+    "clutter": [],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 40,
+    "fetched": 8,
+    "parents": 2,
+    "categories": {
+      "Beauty": 8
+    },
+    "asins": [
+      {
+        "asin": "B0DJH54BLF",
+        "parent_asin": "B0DK46D47Y",
+        "title": "Besque Original Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+        "price": 50.0,
+        "rating": 3.9,
+        "review_count": 1011,
+        "monthly_sold": 100,
+        "sales_rank": 17010.0,
+        "listed_since": "2024-09-12",
+        "root_category": "Beauty",
+        "est_monthly_revenue": 5000
+      },
+      {
+        "asin": "B0DK46D47Y",
+        "parent_asin": "B0DK46D47Y",
+        "title": "Besque Magic Body Oil, 100ml, Plumps, Tightens, Firms and Hydrates Skin, For Arms, Chest, Thighs and Tums, Suitable for Full Body Use",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 17009.0,
+        "listed_since": "2024-10-15",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0DGTZV1C8",
+        "parent_asin": "B0DK46D47Y",
+        "title": "Besque Original Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+        "price": 160.0,
+        "rating": 3.9,
+        "review_count": 1011,
+        "monthly_sold": null,
+        "sales_rank": 17010.0,
+        "listed_since": "2024-09-13",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0DM5HKN7K",
+        "parent_asin": "B0DK46D47Y",
+        "title": "Besque Original Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+        "price": 90.0,
+        "rating": 3.8,
+        "review_count": 986,
+        "monthly_sold": null,
+        "sales_rank": 17010.0,
+        "listed_since": "2024-09-12",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0FKBWW27W",
+        "parent_asin": "B0FKQBPQJK",
+        "title": "Besque Unscented Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+        "price": 50.0,
+        "rating": 4.1,
+        "review_count": 18,
+        "monthly_sold": null,
+        "sales_rank": 95255.0,
+        "listed_since": "2025-07-31",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0FKC87JSM",
+        "parent_asin": "B0FKQBPQJK",
+        "title": "Besque Unscented Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+        "price": 160.0,
+        "rating": 4.1,
+        "review_count": 18,
+        "monthly_sold": null,
+        "sales_rank": 95255.0,
+        "listed_since": "2025-07-31",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0FKBXNKV8",
+        "parent_asin": "B0FKQBPQJK",
+        "title": "Besque Unscented Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+        "price": 90.0,
+        "rating": 4.1,
+        "review_count": 18,
+        "monthly_sold": null,
+        "sales_rank": 95255.0,
+        "listed_since": "2025-07-31",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0FKQBPQJK",
+        "parent_asin": "B0FKQBPQJK",
+        "title": "Besque Magic Luxury Body Oil, Unscented 100ml, Natural Hydrating Body Oil for Women That Plumps, Tightens And Firms Skin With Natural Ingredients, Sweet Almond and Rosehip (parent)",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 95255.0,
+        "listed_since": "2025-07-31",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 8,
+    "launches_by_quarter": {
+      "2024-Q3": 3,
+      "2024-Q4": 1,
+      "2025-Q3": 4
+    },
+    "launches_last_12m": 0,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 5000,
+    "top3_revenue_share": 1.0,
+    "bsr_trend_top_parents": {
+      "median_bsr_now": 42019.5,
+      "median_bsr_year_ago": 64630.0,
+      "improved": true,
+      "change_pct": -35
+    },
+    "reviews_gained_12m": 2675
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 62,
+      "share_under_7_images": 0.0,
+      "share_no_video": 0.25,
+      "share_no_aplus": 0.25,
+      "share_under_5_bullets": 0.25,
+      "share_rating_below_4_2": 0.75,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B0DK46D47Y",
+        "title": "Besque Magic Body Oil, 100ml, Plumps, Tightens, Firms and Hydrates Skin, For Arms, Chest, Thighs and Tums, Suitable for Full Body Use",
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "133 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0FKBWW27W",
+        "title": "Besque Unscented Magic Body Oil - Hydrating Body Oils for Women - 100ml",
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "9 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "71 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 243 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.1\u2605"
+          },
+          "reviews": {
+            "status": "fail",
+            "detail": "18 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 12,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.4,
+    "est_monthly_spend_on_sampled_terms": {
+      "low": 61,
+      "high": 152
+    },
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "Aveeno",
+        "avg_sov": 0.171,
+        "avg_sponsored_sov": 0.185,
+        "keywords_present": 11,
+        "is_prospect": false
+      },
+      {
+        "brand": "Vaseline",
+        "avg_sov": 0.092,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "Nuxe",
+        "avg_sov": 0.083,
+        "avg_sponsored_sov": 0.083,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Naissance",
+        "avg_sov": 0.05,
+        "avg_sponsored_sov": 0.029,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "The Body Shop",
+        "avg_sov": 0.032,
+        "avg_sponsored_sov": 0.066,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "WALLZON",
+        "avg_sov": 0.031,
+        "avg_sponsored_sov": 0.054,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Handcraft Blends",
+        "avg_sov": 0.027,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "Pure World",
+        "avg_sov": 0.027,
+        "avg_sponsored_sov": 0.009,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "WELEDA",
+        "avg_sov": 0.025,
+        "avg_sponsored_sov": 0.028,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "Uriage",
+        "avg_sov": 0.024,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Twinsun",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Lmuwecno",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "Emshipy",
+        "avg_sov": 0.02,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "Generic",
+        "avg_sov": 0.019,
+        "avg_sponsored_sov": 0.001,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "Bio-Oil",
+        "avg_sov": 0.017,
+        "avg_sponsored_sov": 0.015,
+        "keywords_present": 10,
+        "is_prospect": false
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [
+      {
+        "keyword": "besque",
+        "asin": "B0F1ZYLSJZ",
+        "brand_guess": "Magic Firming",
+        "title": "Magic Firming Body Oil,Compact Body Oil,Magic Luxury Bo-dy Oil,Skin Tightening Oil for Wom",
+        "position": 4
+      },
+      {
+        "keyword": "besque",
+        "asin": "B0CGRZW9GZ",
+        "brand_guess": "THICK FIBER",
+        "title": "THICK FIBER Root Touch Up & Hairline Powder with Brush 4g \u2013 Covers Grey Roots & Thinning H",
+        "position": 50
+      },
+      {
+        "keyword": "besque magic body oil",
+        "asin": "B0F1ZYLSJZ",
+        "brand_guess": "Magic Firming",
+        "title": "Magic Firming Body Oil,Compact Body Oil,Magic Luxury Bo-dy Oil,Skin Tightening Oil for Wom",
+        "position": 12
+      },
+      {
+        "keyword": "besque magic body oil",
+        "asin": "B0FSKN2PDT",
+        "brand_guess": "Astaxanthin 12mg,",
+        "title": "Astaxanthin 12mg, 120 Softgels, Max Strength Antioxidant, High Absorption for Eye & Skin, ",
+        "position": 50
+      }
+    ],
+    "prospect_sponsored_on_own_brand": false,
+    "positioning_page1": {
+      "our_median_price": 50,
+      "competitor_median_price": 9.49,
+      "our_median_rating": 3.9,
+      "competitor_median_rating": 4.6
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "body oil",
+        "tier": "core",
+        "volume": 27417,
+        "organic_rank": 27,
+        "sponsored_rank": 38,
+        "cpc": 0.63,
+        "status": "sponsored_support",
+        "priority": 13056
+      },
+      {
+        "keyword": "almond oil",
+        "tier": "core",
+        "volume": 7132,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "missing",
+        "priority": 8915
+      },
+      {
+        "keyword": "shower oil",
+        "tier": "core",
+        "volume": 11566,
+        "organic_rank": 83,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 6940
+      },
+      {
+        "keyword": "skin oil",
+        "tier": "core",
+        "volume": 777,
+        "organic_rank": 93,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "missing",
+        "priority": 2331
+      },
+      {
+        "keyword": "body oil for women",
+        "tier": "long_tail",
+        "volume": 4276,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2138
+      },
+      {
+        "keyword": "stretch mark oil",
+        "tier": "core",
+        "volume": 2383,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1430
+      },
+      {
+        "keyword": "nord body multi peptide body oil",
+        "tier": "long_tail",
+        "volume": 3701,
+        "organic_rank": 65,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1110
+      },
+      {
+        "keyword": "aveeno body oil",
+        "tier": "competitor",
+        "volume": 5550,
+        "organic_rank": 69,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 999
+      },
+      {
+        "keyword": "cellu overnight firming oil",
+        "tier": "long_tail",
+        "volume": 3319,
+        "organic_rank": 62,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 996
+      },
+      {
+        "keyword": "nuxe huile prodigieuse",
+        "tier": "competitor",
+        "volume": 967,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": 0.16,
+        "status": "missing",
+        "priority": 870
+      },
+      {
+        "keyword": "firming body oil",
+        "tier": "core",
+        "volume": 850,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 850
+      },
+      {
+        "keyword": "dry body oil",
+        "tier": "core",
+        "volume": 792,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 792
+      },
+      {
+        "keyword": "aloe vera oil",
+        "tier": "category",
+        "volume": 523,
+        "organic_rank": null,
+        "sponsored_rank": 5,
+        "cpc": 0.15,
+        "status": "sponsored_only",
+        "priority": 732
+      },
+      {
+        "keyword": "vaseline body oil",
+        "tier": "competitor",
+        "volume": 6045,
+        "organic_rank": 92,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 725
+      },
+      {
+        "keyword": "body oul",
+        "tier": "core",
+        "volume": 681,
+        "organic_rank": 38,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 681
+      },
+      {
+        "keyword": "goda silk body oil",
+        "tier": "long_tail",
+        "volume": 1287,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 644
+      },
+      {
+        "keyword": "body care",
+        "tier": "category",
+        "volume": 3926,
+        "organic_rank": null,
+        "sponsored_rank": 5,
+        "cpc": 2.0,
+        "status": "sponsored_only",
+        "priority": 550
+      },
+      {
+        "keyword": "besque magic body oil",
+        "tier": "brand",
+        "volume": 472,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "brand_defence_gap",
+        "priority": 472
+      },
+      {
+        "keyword": "besque",
+        "tier": "brand",
+        "volume": 450,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "brand_defence_gap",
+        "priority": 450
+      },
+      {
+        "keyword": "sweet almond oil for skin",
+        "tier": "long_tail",
+        "volume": 1425,
+        "organic_rank": 97,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 428
+      },
+      {
+        "keyword": "almond oil for skin",
+        "tier": "long_tail",
+        "volume": 1408,
+        "organic_rank": 105,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 422
+      },
+      {
+        "keyword": "extraordinary oil",
+        "tier": "core",
+        "volume": 696,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 418
+      },
+      {
+        "keyword": "saltair body butter",
+        "tier": "core",
+        "volume": 658,
+        "organic_rank": 90,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 395
+      },
+      {
+        "keyword": "nuxe body oil",
+        "tier": "competitor",
+        "volume": 2024,
+        "organic_rank": 115,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 364
+      },
+      {
+        "keyword": "alma oil",
+        "tier": "category",
+        "volume": 1205,
+        "organic_rank": null,
+        "sponsored_rank": 34,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 337
+      },
+      {
+        "keyword": "crepey skin repair treatment",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": 0.72,
+        "status": "push",
+        "priority": 312
+      },
+      {
+        "keyword": "cold pressed rosehip oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "missing",
+        "priority": 281
+      },
+      {
+        "keyword": "amaranth oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 55,
+        "sponsored_rank": 36,
+        "cpc": 0.26,
+        "status": "sponsored_support",
+        "priority": 260
+      },
+      {
+        "keyword": "weleda oil",
+        "tier": "competitor",
+        "volume": 750,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": 0.36,
+        "status": "sponsored_only",
+        "priority": 250
+      },
+      {
+        "keyword": "e45 hydrocell glow",
+        "tier": "long_tail",
+        "volume": 476,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 238
+      },
+      {
+        "keyword": "advanced korean skin brightening body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "anti aging body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "balaayah black gram booster body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "best body oil for aging skin",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "best body oil for crepey skin",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "body firming oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 29,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "body magic",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "cellu overnight firming body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "coda silk body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "dry body oil spray",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "elemis body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "evora body oil for crepey skin",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "glow body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "goda body oil for women",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 22,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "goda silk body oil for women",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "gouda silk body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "hydrating body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "nabhi oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "nature spell dry shimmering body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "olverum firming body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "argan oil for skin",
+        "tier": "long_tail",
+        "volume": 899,
+        "organic_rank": null,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 180
+      },
+      {
+        "keyword": "body oil for crepey skin",
+        "tier": "long_tail",
+        "volume": 1105,
+        "organic_rank": 31,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 166
+      },
+      {
+        "keyword": "osea body oil",
+        "tier": "long_tail",
+        "volume": 313,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 156
+      },
+      {
+        "keyword": "almond body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 135
+      },
+      {
+        "keyword": "cold pressed almond oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 82,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 135
+      },
+      {
+        "keyword": "lavender oil 100ml",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 144,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 135
+      },
+      {
+        "keyword": "nuxe dry oil",
+        "tier": "competitor",
+        "volume": 450,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 135
+      },
+      {
+        "keyword": "goda silk body oil firming",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 4,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 112
+      },
+      {
+        "keyword": "magic luxury body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 2,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 112
+      },
+      {
+        "keyword": "magic oil for sagging skin",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 112
+      },
+      {
+        "keyword": "skin so soft original dry oil spray",
+        "tier": "long_tail",
+        "volume": 510,
+        "organic_rank": null,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 102
+      },
+      {
+        "keyword": "moroccan body care",
+        "tier": "long_tail",
+        "volume": 495,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 99
+      },
+      {
+        "keyword": "bio-oil skincare oil",
+        "tier": "competitor",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": 0.59,
+        "status": "sponsored_only",
+        "priority": 92
+      },
+      {
+        "keyword": "after shower body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 95,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "amazon skin so soft",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "anti ageing body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "argon oil for skin",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "balaayah black gram body booster oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 3,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "beauty works oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 11,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "biooil skincare oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "body gel oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "body oil after shower",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "body oil spray for women",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "body spray oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "bondi sands oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 11,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "brightening body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "creepy skin tightening cream for arms",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "e45 glow body serum spray",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "glora",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "glow remedy oil skin tightening",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 3,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "glow remedy oil tightens and lifts sagging skin",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "gold bond age renew crepe corrector body lotion, replenishing",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "golden hour shimmer dry body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "golden shimmer body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "hand oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 3,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "korean body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "lumie queen oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "miracleparis body perfector",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "organic body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "aveeno body oil spray",
+        "tier": "competitor",
+        "volume": 641,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 77
+      },
+      {
+        "keyword": "vaseline oil for skin",
+        "tier": "competitor",
+        "volume": 575,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 69
+      },
+      {
+        "keyword": "body oil for crepey arms and legs",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 15,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "creepy skin tightening cream for body",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 21,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "goda body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 25,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "goda oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 45,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "goda silk body oil reviews",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 11,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "goda silk body oil uk",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 16,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "magic oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 2,
+        "sponsored_rank": 1,
+        "cpc": 0.34,
+        "status": "own",
+        "priority": 66
+      },
+      {
+        "keyword": "olay body",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": 1.39,
+        "status": "sponsored_only",
+        "priority": 65
+      },
+      {
+        "keyword": "aveeno vanilla oil",
+        "tier": "competitor",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 54
+      },
+      {
+        "keyword": "besque body oil",
+        "tier": "brand",
+        "volume": 450,
+        "organic_rank": 1,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 45
+      },
+      {
+        "keyword": "besque magic firming body oil",
+        "tier": "brand",
+        "volume": 450,
+        "organic_rank": 1,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 45
+      },
+      {
+        "keyword": "besque shower oil",
+        "tier": "brand",
+        "volume": 450,
+        "organic_rank": 4,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "own",
+        "priority": 45
+      },
+      {
+        "keyword": "magic body oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 1,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 22
+      }
+    ],
+    "tiers": {
+      "core": {
+        "keywords": 10,
+        "volume": 52952,
+        "gaps": 9
+      },
+      "long_tail": {
+        "keywords": 76,
+        "volume": 48014,
+        "gaps": 33
+      },
+      "competitor": {
+        "keywords": 10,
+        "volume": 17902,
+        "gaps": 4
+      },
+      "category": {
+        "keywords": 3,
+        "volume": 5654,
+        "gaps": 0
+      },
+      "brand": {
+        "keywords": 5,
+        "volume": 2272,
+        "gaps": 2
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "almond oil",
+        "tier": "core",
+        "volume": 7132,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "missing",
+        "priority": 8915
+      },
+      {
+        "keyword": "shower oil",
+        "tier": "core",
+        "volume": 11566,
+        "organic_rank": 83,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 6940
+      },
+      {
+        "keyword": "skin oil",
+        "tier": "core",
+        "volume": 777,
+        "organic_rank": 93,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "missing",
+        "priority": 2331
+      },
+      {
+        "keyword": "body oil for women",
+        "tier": "long_tail",
+        "volume": 4276,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2138
+      },
+      {
+        "keyword": "stretch mark oil",
+        "tier": "core",
+        "volume": 2383,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1430
+      },
+      {
+        "keyword": "nord body multi peptide body oil",
+        "tier": "long_tail",
+        "volume": 3701,
+        "organic_rank": 65,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1110
+      },
+      {
+        "keyword": "cellu overnight firming oil",
+        "tier": "long_tail",
+        "volume": 3319,
+        "organic_rank": 62,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 996
+      },
+      {
+        "keyword": "firming body oil",
+        "tier": "core",
+        "volume": 850,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 850
+      },
+      {
+        "keyword": "dry body oil",
+        "tier": "core",
+        "volume": 792,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 792
+      },
+      {
+        "keyword": "body oul",
+        "tier": "core",
+        "volume": 681,
+        "organic_rank": 38,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 681
+      },
+      {
+        "keyword": "goda silk body oil",
+        "tier": "long_tail",
+        "volume": 1287,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 644
+      },
+      {
+        "keyword": "besque magic body oil",
+        "tier": "brand",
+        "volume": 472,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "brand_defence_gap",
+        "priority": 472
+      },
+      {
+        "keyword": "besque",
+        "tier": "brand",
+        "volume": 450,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "brand_defence_gap",
+        "priority": 450
+      },
+      {
+        "keyword": "sweet almond oil for skin",
+        "tier": "long_tail",
+        "volume": 1425,
+        "organic_rank": 97,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 428
+      },
+      {
+        "keyword": "almond oil for skin",
+        "tier": "long_tail",
+        "volume": 1408,
+        "organic_rank": 105,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 422
+      },
+      {
+        "keyword": "extraordinary oil",
+        "tier": "core",
+        "volume": 696,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 418
+      },
+      {
+        "keyword": "saltair body butter",
+        "tier": "core",
+        "volume": 658,
+        "organic_rank": 90,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 395
+      },
+      {
+        "keyword": "crepey skin repair treatment",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": 0.72,
+        "status": "push",
+        "priority": 312
+      },
+      {
+        "keyword": "cold pressed rosehip oil",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "missing",
+        "priority": 281
+      },
+      {
+        "keyword": "e45 hydrocell glow",
+        "tier": "long_tail",
+        "volume": 476,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 238
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "core": 86,
+        "long_tail": 10
+      },
+      "monthly_by_ad_type": {
+        "SP": 61,
+        "SB": 17,
+        "SBV": 17,
+        "SD (remarketing/retention)": 11
+      },
+      "monthly_total": 106,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.1
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.12,
+      "multipack_share": 0.0,
+      "consumable_category": true,
+      "likelihood": "medium"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Beauty",
+    "available": false
+  },
+  "job_ad_present": false
+}
