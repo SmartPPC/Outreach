@@ -56,6 +56,8 @@ section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); p
 /* Hero */
 .hero { display: grid; gap: 14px; }
 .hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.subject:empty { display: none; }
+.subject { font-size: 17px; color: var(--ink-soft); max-width: 70ch; }
 .headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
 
 /* Recommendations: numbered because they are in priority order */
@@ -144,8 +146,9 @@ footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 
 <main class="page">
   <div class="hero">
-    <span class="eyebrow">Smart PPC · Amazon audit</span>
+    <span class="eyebrow">{{EYEBROW}}</span>
     <h1>{{BRAND}}</h1>
+    <p class="subject">{{SUBJECT}}</p>
     <div class="meta"><span>{{MARKET}}</span><span>Prepared {{DATE}}</span></div>
     <p class="headline">{{HEADLINE}}</p>
   </div>

@@ -445,7 +445,11 @@ def build(run: Path) -> dict:
     serps = read_json(run / "serps.json", {})
     bids = read_json(run / "ads_bids.json", {})
 
-    focus = checks.select_heroes(catalog)
+    seeds = target.get("seed_asins") or []
+    if target.get("scope") == "asin" and seeds:
+        focus = checks.focus_on_asin(catalog, seeds[0], next((p for p in products if p["asin"] == seeds[0]), None))
+    else:
+        focus = checks.select_heroes(catalog)
     run_dir_name = run
     top = [h["asin"] for h in focus["heroes"]] or list(js_sales) or top_parents(products, 10)
 
@@ -463,7 +467,7 @@ def build(run: Path) -> dict:
         "coverage": read_json(run / "collect_log.json", {}),
         "focus": {k: v for k, v in focus.items() if k != "heroes"},
         "heroes": _with_sheets(_heroes(focus["heroes"], catalog, products, per_asin_kw, brand, competitor_names,
-                                      attacked, bids, sov), run_dir_name),
+                                      attacked, bids, sov, keep_lead=focus.get("scope") == "asin"), run_dir_name),
         "quick_wins": _quick_wins(catalog, brand),
         "asin_map": _asin_map(products, kp["discovered"]),
         "catalogue": _catalogue(products, js_sales, top),
@@ -486,7 +490,8 @@ def catalog_from_keepa(products: list[dict]) -> list[dict]:
 
 
 def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_asin_kw: dict, brand: str,
-            competitor_names: set[str], attacked: set[str], bids: dict, sov: list[dict]) -> list[dict]:
+            competitor_names: set[str], attacked: set[str], bids: dict, sov: list[dict],
+            keep_lead: bool = False) -> list[dict]:
     by_asin = {p["asin"]: p for p in catalog}
     keepa_by_asin = {p["asin"]: p for p in products}
     fams = checks.families(catalog)
@@ -498,7 +503,7 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
     brand_seller = top_owner if owners and owners.count(top_owner) / len(owners) >= 0.8 else None
     for h in heroes:
         family_asins = [h["asin"], *h["children"]]
-        h = {**h, "asin": _live_lead(h, keepa_by_asin)}
+        h = h if keep_lead else {**h, "asin": _live_lead(h, keepa_by_asin)}
         js, kp = by_asin.get(h["asin"], {}), keepa_by_asin.get(h["asin"], {})
         p = {**js, **{k: v for k, v in kp.items() if v not in (None, [], "")}}
         p["price"] = js.get("price") or kp.get("price")
@@ -549,6 +554,7 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
             "buy_box_owner": p.get("buy_box_owner"),
             "sold_by": "Amazon" if checks.sold_by_amazon(p) else p.get("buy_box_owner"), "category": leaf, "product_type": checks.product_type(title),
             "rating": p.get("rating"), "reviews": p.get("reviews") or p.get("review_count"),
+            "sales_rank": kp.get("sales_rank"),
             "content": check_listing(p) if kp else None,
             "mobile": mobile.check(p, brand) if kp else None,
             "flags": flags, "targets": targets[:6], "wasted_terms": wasted[:8],

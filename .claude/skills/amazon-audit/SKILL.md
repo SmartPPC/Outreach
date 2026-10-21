@@ -78,6 +78,13 @@ Get the prospect identifier from the user. If they gave a job advert:
 
 Pass that file with `--job-ad`. If the marketplace isn't obvious from the URL, ask whether it's UK or US.
 
+**Single-product audits.** When the user gives one bare ASIN, or a product link with no store page, the tool
+runs in single-product mode (`scope: "asin"`; force it with `--asin-only`). Only that product's variation family
+is analysed, with the given ASIN as the lead, and brand totals are kept for context only. A bare ASIN has no
+marketplace, so ask or use the user's usual one (`--marketplace uk`). All 4 email points must be about this
+product. Brand-wide issues, such as a competitor bidding on the brand name, only count if they hit this product
+directly. The email opens with "I took a quick look at your <product> on Amazon UK…".
+
 ### 2. Collect
 Always run the pipeline. Don't hand-pull data, except to fill a step that failed in `collect_log.json`. If you
 do fill a gap by hand, say so in `evidence.md`.

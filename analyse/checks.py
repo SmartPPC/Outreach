@@ -136,6 +136,34 @@ def select_heroes(products: list[dict], share: float = HERO_REVENUE_SHARE,
     }
 
 
+def focus_on_asin(catalog: list[dict], seed: str, seed_product: dict | None = None) -> dict:
+    """Single-product audit: the seed's variation family is the only 'best-seller', with the seed as lead.
+    Brand totals are kept for context only."""
+    row = next((r for r in catalog if r["asin"] == seed), None)
+    parent = (row or {}).get("parent_asin") or (seed_product or {}).get("parent_asin") or seed
+    kids = [r for r in catalog if (r.get("parent_asin") or r["asin"]) == parent] or ([row] if row else [])
+    if not kids and seed_product:  # Jungle Scout doesn't know it: fall back to Keepa's bought-last-month
+        units = seed_product.get("monthly_sold") or 0
+        kids = [{"asin": seed, "parent_asin": parent, "price": seed_product.get("price"), "units_30d": units,
+                 "revenue_30d": units * (seed_product.get("price") or 0)}]
+    live = [r for r in catalog if is_live(r)]
+    brand_total = sum(family_revenue(k) for k in families(live).values())
+    rev = family_revenue(kids) if kids else 0
+    return {
+        "scope": "asin",
+        "seed": seed,
+        "total_asins": len(catalog),
+        "live_asins": len(live),
+        "families": len(families(live)),
+        "hero_families": 1,
+        "hero_revenue_share": round(rev / brand_total, 2) if brand_total else None,
+        "est_monthly_revenue": round(rev) if rev else None,
+        "brand_monthly_revenue": round(brand_total) if brand_total else None,
+        "heroes": [{"parent_asin": parent, "asin": seed, "revenue_30d": round(rev),
+                    "children": list(dict.fromkeys([seed, *(k["asin"] for k in kids)]))}],
+    }
+
+
 # --- per-hero checks --------------------------------------------------------------------------
 
 def category_mismatch(title: str, category_leaf: str | None) -> dict | None:

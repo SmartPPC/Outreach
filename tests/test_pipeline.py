@@ -19,6 +19,19 @@ def test_resolve_store_url():
     assert t["brand"] == "Brightpaw" and t["marketplace"] == "us"
 
 
+def test_single_asin_scope_and_focus():
+    from analyse import checks
+    from collectors.resolve import slug_for
+    t = resolve("B0GTRFKFV5", "uk")
+    assert t["scope"] == "asin" and slug_for({**t, "brand": "Acme"}, "2026-10-21") == "acme-b0gtrfkfv5-uk-2026-10-21"
+    assert resolve("https://www.amazon.co.uk/stores/X/page/1A2B3C4D-1111-2222-3333-444455556666")["scope"] == "brand"
+    catalog = sample_run.js_catalog()
+    f = checks.focus_on_asin(catalog, "B0SAMPLE11")
+    assert f["scope"] == "asin" and len(f["heroes"]) == 1
+    assert f["heroes"][0]["asin"] == "B0SAMPLE11" and f["heroes"][0]["parent_asin"] == "B0PARENT01"
+    assert f["est_monthly_revenue"] == 24000 and f["brand_monthly_revenue"] > 24000
+
+
 def test_resolve_seller_and_brand_and_asins():
     assert resolve("https://www.amazon.co.uk/s?me=A1B2C3D4E5F6G7")["seller_id"] == "A1B2C3D4E5F6G7"
     assert resolve("Brightpaw", "uk")["brand"] == "Brightpaw"

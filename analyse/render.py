@@ -91,6 +91,16 @@ def points_html(findings: dict) -> str:
 def stats_html(d: dict) -> str:
     cur = d["prospect"]["currency"]
     f, ads = d.get("focus") or {}, d["ads_observed"]
+    if f.get("scope") == "asin" and d.get("heroes"):
+        h = d["heroes"][0]
+        tiles = [
+            ("Est. monthly revenue", money(f.get("est_monthly_revenue"), cur), "this product family, Jungle Scout 30-day"),
+            ("Sales rank", f'#{num(h.get("sales_rank"))}' if h.get("sales_rank") else "–", "in its main category (Keepa)"),
+            ("Rating", f'{h.get("rating") or "–"}★', f'{num(h.get("reviews"))} reviews'),
+            ("Sponsored coverage", pct(ads["sponsored_coverage"]), "of its top 30 keywords"),
+        ]
+        return "".join(f'<div class="stat"><span class="stat-label">{e(a)}</span><span class="stat-value">{e(b)}</span>'
+                       f'<span class="stat-note">{e(c)}</span></div>' for a, b, c in tiles)
     tiles = [
         ("ASINs listed", num(f.get("total_asins")), f'{num(f.get("live_asins"))} live and selling'),
         ("Best-sellers", num(f.get("hero_families")), f'product families making {pct(f.get("hero_revenue_share"))} of revenue'),
@@ -249,9 +259,12 @@ def render(run: Path) -> tuple[Path, Path]:
         raise SystemExit(f"{run} needs dataset.json and findings.json")
     cur = d["prospect"]["currency"]
     budget = d["strategy"]["budget"]
+    single = (d.get("focus") or {}).get("scope") == "asin"
     sov = d["competitors"]["share_of_voice"][:8]
     slots = {
-        "TITLE": e(f'{d["prospect"]["brand"] or "Prospect"} Amazon Audit'),
+        "TITLE": e(f'{d["prospect"]["brand"] or "Prospect"} {"Product " if single else ""}Amazon Audit'),
+        "EYEBROW": "Smart PPC · Single-product audit" if single else "Smart PPC · Amazon audit",
+        "SUBJECT": e(((d.get("heroes") or [{}])[0].get("title") or "")[:110]) if single else "",
         "BRAND": e(d["prospect"]["brand"] or d["prospect"]["input"]),
         "MARKET": e(d["prospect"]["domain"]),
         "DATE": e(d["generated"]),

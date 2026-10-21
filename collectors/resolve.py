@@ -63,6 +63,9 @@ def resolve(raw: str, marketplace: str | None = None) -> dict:
             target["brand"] = raw
 
     target["marketplace"] = target["marketplace"] or "us"
+    # One product with no store, seller or brand context: audit that product, not the whole brand
+    target["scope"] = "asin" if (len(target["seed_asins"]) == 1 and not target["brand"]
+                                  and not target["seller_id"] and not target["store_page_id"]) else "brand"
     return target
 
 
@@ -81,6 +84,8 @@ def brand_spellings(*names: str | None) -> list[str]:
 
 def slug_for(target: dict, date: str) -> str:
     base = target.get("brand") or (target["seed_asins"][0] if target["seed_asins"] else target.get("seller_id") or "prospect")
+    if target.get("scope") == "asin" and target["seed_asins"]:
+        base = f"{base}-{target['seed_asins'][0]}"  # keep single-product audits apart from brand audits
     base = re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")
     return f"{base}-{target['marketplace']}-{date}"
 

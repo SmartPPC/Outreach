@@ -50,7 +50,8 @@ def guarded(log: Log, step: str, fn, default=None):
 
 
 def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_asins: int, top_n: int,
-            n_category_terms: int, website: str | None = None, brand: str | None = None) -> Path:
+            n_category_terms: int, website: str | None = None, brand: str | None = None,
+            asin_only: bool = False) -> Path:
     load_env()
     budget, log = Budget(), Log()
     target = resolve(raw_input, marketplace)
@@ -64,6 +65,9 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
             log.ok("keepa.token", tokens_left=status.get("left"), per_minute=status.get("rate"))
 
     # Brand unknown (ASIN or seller input): read it off a seed ASIN.
+    seed: list[dict] = []
+    if asin_only:
+        target["scope"] = "asin"
     if not target["brand"] and target["seed_asins"] and has_keepa:
         seed = guarded(log, "keepa.seed", lambda: keepa.fetch_products(target["seed_asins"][:1], mp, budget), [])
         if seed and seed[0].get("brand"):
@@ -109,6 +113,11 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
         if has_keepa and asins:
             products = guarded(log, "keepa.products", lambda: keepa.fetch_products(asins[:max_asins], mp, budget), []) or []
         focus = checks.select_heroes(build_dataset.catalog_from_keepa(products), max_families=top_n)
+
+    if target.get("scope") == "asin" and target["seed_asins"]:
+        # Single-product audit: only the given ASIN's family, with that ASIN as the lead
+        focus = checks.focus_on_asin(catalog_rows or build_dataset.catalog_from_keepa(products or seed),
+                                     target["seed_asins"][0], seed[0] if seed else None)
 
     heroes = [h["asin"] for h in focus["heroes"]] or target["seed_asins"][:1]
     log.ok("focus", live=focus["live_asins"], hero_families=focus["hero_families"],
@@ -221,6 +230,8 @@ def main() -> None:
     ap.add_argument("--max-asins", type=int, default=150, help="cap on ASINs pulled from Keepa (cost control)")
     ap.add_argument("--top-n", type=int, default=12, help="max best-seller families analysed in depth")
     ap.add_argument("--category-terms", type=int, default=12)
+    ap.add_argument("--asin-only", action="store_true",
+                    help="audit just the given ASIN's product family (automatic for a bare ASIN)")
     ap.add_argument("--brand", help="override the brand name read from the URL (use the spelling on Amazon)")
     ap.add_argument("--website", help="brand website for contact finding (otherwise <brand>.co.uk/.com/.co is tried)")
     ap.add_argument("--rebuild", type=Path, help="skip collection; rebuild dataset.json for an existing run dir")
@@ -232,7 +243,8 @@ def main() -> None:
         return
     if not args.input:
         ap.error("input is required unless --rebuild is given")
-    collect(args.input, args.marketplace, args.job_ad, args.max_asins, args.top_n, args.category_terms, args.website, args.brand)
+    collect(args.input, args.marketplace, args.job_ad, args.max_asins, args.top_n, args.category_terms, args.website, args.brand,
+            args.asin_only)
 
 
 if __name__ == "__main__":
