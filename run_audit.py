@@ -50,10 +50,12 @@ def guarded(log: Log, step: str, fn, default=None):
 
 
 def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_asins: int, top_n: int,
-            n_category_terms: int, website: str | None = None) -> Path:
+            n_category_terms: int, website: str | None = None, brand: str | None = None) -> Path:
     load_env()
     budget, log = Budget(), Log()
     target = resolve(raw_input, marketplace)
+    if brand:  # the store URL slug can mislead (e.g. "UltraDEX"); the user's spelling wins
+        target["brand"] = brand
     mp = target["marketplace"]
     has_keepa = bool(env("KEEPA_KEY"))
     if has_keepa:
@@ -218,6 +220,7 @@ def main() -> None:
     ap.add_argument("--max-asins", type=int, default=150, help="cap on ASINs pulled from Keepa (cost control)")
     ap.add_argument("--top-n", type=int, default=12, help="max best-seller families analysed in depth")
     ap.add_argument("--category-terms", type=int, default=12)
+    ap.add_argument("--brand", help="override the brand name read from the URL (use the spelling on Amazon)")
     ap.add_argument("--website", help="brand website for contact finding (otherwise <brand>.co.uk/.com/.co is tried)")
     ap.add_argument("--rebuild", type=Path, help="skip collection; rebuild dataset.json for an existing run dir")
     args = ap.parse_args()
@@ -228,7 +231,7 @@ def main() -> None:
         return
     if not args.input:
         ap.error("input is required unless --rebuild is given")
-    collect(args.input, args.marketplace, args.job_ad, args.max_asins, args.top_n, args.category_terms, args.website)
+    collect(args.input, args.marketplace, args.job_ad, args.max_asins, args.top_n, args.category_terms, args.website, args.brand)
 
 
 if __name__ == "__main__":

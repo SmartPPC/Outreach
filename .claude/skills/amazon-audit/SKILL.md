@@ -26,6 +26,44 @@ The Python collectors handle data and arithmetic, and their numbers are the sour
 - **AMC numbers are category benchmarks from other accounts, never this prospect's.** Phrase them as hypotheses ("in your category, typically…"). If the benchmark says `low_sample: true` or isn't available, describe what AMC would show without quoting figures.
 - **Never name our clients** or reveal any single client's numbers.
 
+## Smooth runs: lessons from real audits
+**Running the pipeline**
+- **Run `run_audit.py` in the background** and wait for the completion notification. Don't poll.
+  Keepa is on 1 token a minute, so a run waits about 2 minutes per uncached best-seller variant.
+- **One audit at a time.** Parallel runs share Keepa's token bucket, push it negative and slow both.
+- **Reruns are free.** Responses are cached for 7 days and cached Keepa calls never wait. After fixing
+  something, rerun the same command rather than hand-pulling data.
+- **Stopping a run:** use the task-stop tool, never `pkill -f run_audit`, which also kills the shell running it.
+- **Run folders are dated** (`runs/<brand>-<mp>-<YYYY-MM-DD>/`). A rerun the next day writes a new folder,
+  so read the folder the run printed, not an older one.
+
+**Checking the data before writing**
+- **Brand name.** The brand comes from the store URL slug. If `js.catalog` returns very few ASINs, or
+  `focus.live` is 0, the spelling is probably off (e.g. "UltraDEX" read as "Ultra DEX"). Rerun with
+  `--brand "<exact name on Amazon>"`.
+- **Revenue.** Jungle Scout repeats a family's sales on every variant; the pipeline counts it once. If one
+  family still looks implausibly large next to the brand total, check its variants' `units_30d`.
+- **Lead variant.** Each best-seller is represented by the variant Keepa sees with a live offer. If a hero
+  shows no price, rating or bullets, its Keepa record is thin. Don't report "0 bullets" or "no reviews"
+  from it; say "not captured".
+- **Seller names.** A seller that holds the Buy Box on 80%+ of the range is the brand's own account,
+  not a reseller.
+- **Company matches.** Companies House matches must be exact and active. Treat a dissolved company with the
+  same name as a different business.
+- **Conflicts.** Check `contacts.company` against the user's own employer. If the brand belongs to the
+  company the user works for, flag it and don't draft outreach.
+- **Amazon itself is blocked** in cloud sessions. Never claim to have looked at a live listing. Verify
+  claims against Keepa, Jungle Scout or DataForSEO data instead.
+
+**Contacts**
+- **The Apollo free plan** blocks people search and email reveal, through both the API and the connector.
+  The free `apollo_organizations_lookup` still works: use it to get the Apollo company ID, then give the user
+  `https://app.apollo.io/#/people?organizationIds[]=<id>` so they can reveal the email in the app (1 credit).
+- **When a named person is found** (e.g. from LinkedIn), add them to `contacts.json` and the audit README,
+  and personalise the email ("Hi <first name>"). Never guess an address format; bounces hurt deliverability.
+- **Send outreach from the Smart PPC email address** (info@smartppc.ai) rather than LinkedIn. LinkedIn
+  messages always show the user's personal profile.
+
 ## Steps
 
 ### 1. Gather inputs
