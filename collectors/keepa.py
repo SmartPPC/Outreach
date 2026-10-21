@@ -112,16 +112,22 @@ def fetch_products(asins: list[str], marketplace: str, budget: Budget, history_d
     while todo:
         affordable = int((_state["left"] or 0) // TOKENS_PER_PRODUCT) if _state["left"] is not None else 100
         batch, todo = todo[:max(1, min(100, affordable))], todo[max(1, min(100, affordable)):]
-        resp = _call("product", {
-            "domain": MARKETPLACES[marketplace]["keepa_domain"],
-            "asin": ",".join(batch),
-            "stats": 180,
-            "rating": 1,
-            "history": 1,
-            "days": history_days,
-            "videos": 1,
-            "aplus": 1,
-        }, budget, estimate=len(batch) * TOKENS_PER_PRODUCT)
+        try:
+            resp = _call("product", {
+                "domain": MARKETPLACES[marketplace]["keepa_domain"],
+                "asin": ",".join(batch),
+                "stats": 180,
+                "rating": 1,
+                "history": 1,
+                "days": history_days,
+                "videos": 1,
+                "aplus": 1,
+            }, budget, estimate=len(batch) * TOKENS_PER_PRODUCT)
+        except RuntimeError as e:
+            if out and "APA_KEEPA_MAX_WAIT_MIN" in str(e):
+                print(f"    … stopping Keepa early; keeping {len(out)} products ({e})", flush=True)
+                break
+            raise
         out.extend(parse_product(p) for p in resp.get("products") or [])
     return out
 
