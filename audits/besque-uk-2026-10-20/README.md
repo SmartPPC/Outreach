@@ -1,6 +1,6 @@
 # Besque (amazon.co.uk)
 
-- **Audited:** 2026-10-20
+- **Audited:** 2026-10-21
 - **Input:** https://www.amazon.co.uk/stores/BESQUE/page/FCF281A2-C3AA-48F9-8A1C-4B5315F2CBB5?lp_asin=B0DJH54BLF
 - **Audit page:** https://claude.ai/artifact/WfnjVNCWQ3GZU6pwWZd4y6
 - **Catalogue:** 40 ASINs, 24 live; 2 best-seller families make 90% of ~£23,321/mo
@@ -20,7 +20,7 @@
 - vip@besque.co (generic, from https://besque.co/policies/terms-of-service)
 - legal@besque.com (generic, from https://besque.co/policies/terms-of-service)
 - Company: HBL Ventures LLC
-- Only shared inboxes are published; find the founder or ecommerce lead on LinkedIn.
+- Only shared inboxes found; check LinkedIn:
 
 ## Data gaps
 

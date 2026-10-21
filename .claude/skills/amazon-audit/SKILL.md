@@ -160,6 +160,11 @@ linked or attached in the first email. Publish `runs/<slug>/audit.html` as a pri
 
 Otherwise give the user the file path.
 
+Also make the PDF version, which is the attachment for when a prospect replies asking for the report:
+```bash
+python -m analyse.pdf runs/<slug>
+```
+
 ### 7. Write `email.md`
 Follow `templates/email.md` exactly:
 - **Subject:** the single most surprising finding.

@@ -8,7 +8,7 @@
     "seller_name": null,
     "landing_asin": "B0DJH54BLF"
   },
-  "generated": "2026-10-20",
+  "generated": "2026-10-21",
   "coverage": {
     "steps": [
       {
@@ -153,6 +153,15 @@
           }
         }
       },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          }
+        }
+      },
       "flags": [],
       "targets": [
         {
@@ -218,7 +227,8 @@
           "reason": "unrelated to the product"
         }
       ],
-      "sponsored_terms": 51
+      "sponsored_terms": 51,
+      "mobile_sheet": null
     },
     {
       "asin": "B0FKC87JSM",
@@ -269,6 +279,15 @@
           "reviews": {
             "status": "fail",
             "detail": "18 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
           }
         }
       },
@@ -330,7 +349,8 @@
         }
       ],
       "wasted_terms": [],
-      "sponsored_terms": 7
+      "sponsored_terms": 7,
+      "mobile_sheet": null
     }
   ],
   "quick_wins": {

@@ -57,6 +57,8 @@ def archive(run: Path, link: str | None = None, audits_dir: Path = AUDITS_DIR) -
     for name in DELIVERABLES:
         if (run / name).exists():
             shutil.copy2(run / name, dest / name)
+    for pdf in run.glob("*-Amazon-Audit.pdf"):
+        shutil.copy2(pdf, dest / pdf.name)
 
     d = read_json(run / "dataset.json")
     p, focus = d["prospect"], d.get("focus") or {}
