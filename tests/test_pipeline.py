@@ -193,10 +193,18 @@ def test_keepa_gives_up_past_max_wait(monkeypatch):
 
 def test_family_revenue_counts_repeated_parent_units_once():
     from analyse import checks
-    kids = [{"units_30d": 879, "revenue_30d": 879 * price} for price in (12.0, 16.0, 20.0)]
-    assert checks.family_revenue(kids) == 879 * 16.0
-    near = [{"units_30d": u, "revenue_30d": r} for u, r in ((879, 26370), (879, 17580), (830, 13280), (882, 12348))]
-    assert round(checks.family_revenue(near)) == 17394
+    kids = [{"units_30d": 879, "revenue_30d": 879 * price, "price": price} for price in (12.0, 16.0, 20.0)]
+    assert checks.family_revenue(kids) == 879 * 12.0
+    near = [{"units_30d": u, "revenue_30d": r, "price": p}
+            for u, r, p in ((879, 26370, 30), (879, 17580, 20), (830, 13280, 16), (882, 12348, 14))]
+    assert checks.family_revenue(near) == 882 * 14
+    # UltraDEX: a 6-pack given the single's units must not count as 6x the revenue
+    rinse = [{"units_30d": 3381, "revenue_30d": 136829, "price": 40.47}, {"units_30d": 2340, "revenue_30d": 37440, "price": 16.0},
+             {"units_30d": 3381, "revenue_30d": 19238, "price": 5.69}]
+    assert round(checks.family_revenue(rinse)) == round(3381 * 5.69)
+    spray = [{"units_30d": 5441, "revenue_30d": 153436, "price": 28.2}, {"units_30d": 5432, "revenue_30d": 12765, "price": 2.35},
+             {"units_30d": 4472, "revenue_30d": 10509, "price": 2.35}]
+    assert round(checks.family_revenue(spray)) == round(5441 * 2.35)
     assert checks.family_revenue([{"units_30d": 10, "revenue_30d": 100}, {"units_30d": 5, "revenue_30d": 50}]) == 150
 
 

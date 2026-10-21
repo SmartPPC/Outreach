@@ -543,6 +543,7 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
         out.append({
             "asin": h["asin"], "parent_asin": h["parent_asin"], "title": title,
             "family_revenue_30d": h["revenue_30d"], "family_size": len(h["children"]),
+            "family_revenue_keepa": _keepa_revenue(family_asins, keepa_by_asin),
             "units_30d": p.get("units_30d") or p.get("monthly_sold"), "price": p.get("price"),
             "list_price": p.get("list_price"), "sellers": p.get("sellers") or p.get("offer_count"),
             "buy_box_owner": p.get("buy_box_owner"), "category": leaf, "product_type": checks.product_type(title),
@@ -561,6 +562,13 @@ def _with_sheets(heroes: list[dict], run: Path) -> list[dict]:
         sheet = run / "mobile" / f"{h['asin']}.png"
         h["mobile_sheet"] = str(sheet.relative_to(run)) if sheet.exists() else None
     return heroes
+
+
+def _keepa_revenue(asins: list[str], keepa_by_asin: dict) -> int | None:
+    """Cross-check from Keepa's 'bought in past month' (a lower bound) x current price, per variant."""
+    total = sum((k.get("monthly_sold") or 0) * (k.get("price") or 0)
+                for k in (keepa_by_asin.get(a) for a in dict.fromkeys(asins)) if k)
+    return round(total) or None
 
 
 def _live_lead(hero: dict, keepa_by_asin: dict) -> str:

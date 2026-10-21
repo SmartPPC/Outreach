@@ -97,9 +97,16 @@ def family_revenue(children: list[dict]) -> float:
     units at each child's own price. Count the family once when it does."""
     revs = [c.get("revenue_30d") or 0 for c in children]
     units = [c.get("units_30d") or 0 for c in children]
+    prices = [c.get("price") for c in children if c.get("price")]
+    if len(children) > 1 and len(set(revs)) == 1:
+        return revs[0]
     near_same_units = min(units) > 0 and max(units) <= min(units) * 1.15
-    if len(children) > 1 and (len(set(revs)) == 1 or near_same_units):
-        return sum(revs) / len(revs)
+    nz = sorted(u for u in units if u)
+    repeated_units = any(b - a <= 0.02 * b for a, b in zip(nz, nz[1:]))  # two variants within 2%: copied total
+    if len(children) > 1 and (near_same_units or repeated_units) and prices:
+        # Family-level units copied onto each pack size: price them at the single-unit price, otherwise a
+        # 6-pack at 6x the price looks like 6x the revenue (conservative by design).
+        return max(units) * min(prices)
     return sum(revs)
 
 
