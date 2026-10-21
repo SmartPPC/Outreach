@@ -28,7 +28,10 @@ def chromium() -> str:
 
 
 def to_pdf(run: Path) -> Path:
-    brand = (read_json(run / "dataset.json", {}).get("prospect") or {}).get("brand") or run.name
+    d = read_json(run / "dataset.json", {})
+    brand = (d.get("prospect") or {}).get("brand") or run.name
+    if (d.get("focus") or {}).get("scope") == "asin":  # one product: name the file after it and the market
+        brand = f'{brand}-{d["focus"]["seed"]}-{d["prospect"]["marketplace"].upper()}'
     page = (run / "audit.html").read_text()
     wrapper = run / "print.html"
     wrapper.write_text('<!doctype html><html data-theme="light"><head><meta charset="utf-8">'

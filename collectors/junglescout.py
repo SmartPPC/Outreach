@@ -41,8 +41,23 @@ def product_database(brand: str, marketplace: str, budget: Budget, max_pages: in
     for name in dict.fromkeys([brand, *(alt_spellings or [])]):
         for r in _product_database(name, marketplace, budget, max_pages):
             rows.setdefault(r["asin"], r)
-    want = {norm_brand(n) for n in [brand, *(alt_spellings or [])] if n}
-    return [r for r in rows.values() if any(w in norm_brand(r["brand"]) or w in norm_brand(r["title"]) for w in want)]
+    names = [n for n in [brand, *(alt_spellings or [])] if n]
+    return [r for r in rows.values() if any(brand_matches(r, n) for n in names)]
+
+
+def brand_matches(row: dict, name: str) -> bool:
+    """Brand field equal (ignoring spacing), or the brand as a whole word in the title. Short names like 'W7'
+    must never match inside other words ('W70 x L84' curtains)."""
+    want = norm_brand(name)
+    if not want:
+        return False
+    if norm_brand(row.get("brand")) == want:
+        return True
+    if len(want) <= 3:  # 'W7' is also a shoe size: only trust a title that starts with the brand
+        return bool(re.match(rf"\s*{re.escape(name)}(?![A-Za-z0-9])", row.get("title") or "", re.I))
+    if len(want) <= 4:
+        return bool(re.search(rf"(?<![A-Za-z0-9]){re.escape(name)}(?![A-Za-z0-9])", row.get("title") or "", re.I))
+    return want in norm_brand(row.get("brand")) or want in norm_brand(row.get("title"))
 
 
 def _product_database(brand: str, marketplace: str, budget: Budget, max_pages: int = 5) -> list[dict]:

@@ -38,9 +38,11 @@ def _video(videos: list[dict]) -> tuple[str, str]:
     brand = [v for v in videos if (v.get("creator") or "").strip().lower() not in NON_BRAND_CREATORS]
     if not brand:
         return WARN, f"{len(videos)} video(s), all influencer or customer: no brand-made video"
-    short = [v for v in brand if (v.get("duration") or 999) <= 90]
+    if all(not v.get("duration") for v in brand):  # Keepa sometimes doesn't record the length
+        return GOOD, f"{len(brand)} brand video(s) (length not recorded)"
+    short = [v for v in brand if v.get("duration") and v["duration"] <= 90]
     if not short:
-        return WARN, f"brand video is {min(v.get('duration') or 0 for v in brand)}s; aim for 60s or less on mobile"
+        return WARN, f"brand video is {min(v['duration'] for v in brand if v.get('duration'))}s; aim for 60s or less on mobile"
     return GOOD, f"{len(brand)} brand video(s), shortest {min(v.get('duration') or 0 for v in short)}s"
 
 

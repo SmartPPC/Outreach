@@ -1,0 +1,1795 @@
+{
+  "prospect": {
+    "brand": "W7",
+    "marketplace": "us",
+    "domain": "amazon.com",
+    "currency": "$",
+    "input": "B0GTRFKFV5",
+    "seller_name": null,
+    "landing_asin": "B0GTRFKFV5"
+  },
+  "generated": "2026-10-21",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 7,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog.spellings",
+        "status": "ok",
+        "searched": [
+          "W7"
+        ]
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 2
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 1,
+        "hero_families": 1,
+        "revenue_share": 1.01
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 2,
+        "waited_min": 0.0
+      },
+      {
+        "step": "images",
+        "status": "skipped",
+        "reason": "can't reach m.media-amazon.com (<urlopen error Tunnel connection failed: 403 Forbidden>); add it to Allowed domains"
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 1,
+        "keywords": 100
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 9
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": null,
+        "emails": 0
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 0,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 19,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 10.299999999999999,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      },
+      "apollo_search": {
+        "used": 0,
+        "limit": 10.0
+      },
+      "apollo_credits": {
+        "used": 0,
+        "limit": 3.0
+      }
+    },
+    "collected_at": "2026-10-21T08:30:46.831584+00:00"
+  },
+  "focus": {
+    "scope": "asin",
+    "seed": "B0GTRFKFV5",
+    "total_asins": 2,
+    "live_asins": 1,
+    "families": 1,
+    "hero_families": 1,
+    "hero_revenue_share": 1.01,
+    "est_monthly_revenue": 148181,
+    "brand_monthly_revenue": 147191
+  },
+  "heroes": [
+    {
+      "asin": "B0GTRFKFV5",
+      "parent_asin": "B0HCPRTQMZ",
+      "title": "W7 Beauty Blast 2026 Makeup Advent Calendar - 24 Cosmetic Treats",
+      "family_revenue_30d": 148181,
+      "family_size": 2,
+      "family_revenue_keepa": 59980,
+      "units_30d": 4908,
+      "price": 29.99,
+      "list_price": 31.99,
+      "sellers": 1,
+      "buy_box_owner": "W7 Makeup",
+      "sold_by": "W7 Makeup",
+      "category": "Home D\u00e9cor Products",
+      "product_type": null,
+      "rating": 4.4,
+      "reviews": 5328,
+      "sales_rank": 6663.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "8 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "64 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 197 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "5382 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s) (length not recorded)"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 177 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "10 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "advent calendar 2026",
+          "tier": "category",
+          "status": "push",
+          "volume": 3848176,
+          "organic_rank": 35,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "christmas advent calendar 2026",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 113824,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "calendario de adviento",
+          "tier": "core",
+          "status": "push",
+          "volume": 109109,
+          "organic_rank": 10,
+          "sponsored_rank": null,
+          "cpc": 0.39
+        },
+        {
+          "keyword": "beauty advent calendar 2026",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 99424,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "adult advent calendar 2026",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 95659,
+          "organic_rank": 46,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "amazon advent calendar 2026",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 93745,
+          "organic_rank": 24,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "stocking stuffers for teens",
+          "volume": 63334,
+          "sponsored_rank": 23,
+          "reason": "different product (\"stocking\")"
+        }
+      ],
+      "sponsored_terms": 5,
+      "mobile_sheet": null
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [],
+    "clutter": [],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 2,
+    "fetched": 2,
+    "parents": 1,
+    "categories": {
+      "Home & Kitchen": 2
+    },
+    "asins": [
+      {
+        "asin": "B0GTRFKFV5",
+        "parent_asin": "B0HCPRTQMZ",
+        "title": "W7 Beauty Blast 2026 Makeup Advent Calendar - 24 Cosmetic Treats",
+        "price": 29.99,
+        "rating": 4.4,
+        "review_count": 5382,
+        "monthly_sold": 2000,
+        "sales_rank": 6663.0,
+        "listed_since": "2026-08-02",
+        "root_category": "Home & Kitchen",
+        "est_monthly_revenue": 59980
+      },
+      {
+        "asin": "B09RKF8DQK",
+        "parent_asin": "B0HCPRTQMZ",
+        "title": "W7 Beauty Blast Makeup Advent Calendar 2025",
+        "price": null,
+        "rating": 4.4,
+        "review_count": 5368,
+        "monthly_sold": null,
+        "sales_rank": 6406.0,
+        "listed_since": "2022-08-17",
+        "root_category": "Home & Kitchen",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 2,
+    "launches_by_quarter": {
+      "2026-Q3": 1
+    },
+    "launches_last_12m": 1,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 59980,
+    "top3_revenue_share": 1.0,
+    "bsr_trend_top_parents": null,
+    "reviews_gained_12m": 7356
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 94,
+      "share_under_7_images": 0.0,
+      "share_no_video": 0.0,
+      "share_no_aplus": 0.0,
+      "share_under_5_bullets": 0.0,
+      "share_rating_below_4_2": 0.0,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B0GTRFKFV5",
+        "title": "W7 Beauty Blast 2026 Makeup Advent Calendar - 24 Cosmetic Treats",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "8 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "64 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 197 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "5382 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 1,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.03,
+    "est_monthly_spend_on_sampled_terms": {
+      "low": 2,
+      "high": 4
+    },
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "e.l.f.",
+        "avg_sov": 0.085,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Revolution Beauty London",
+        "avg_sov": 0.082,
+        "avg_sponsored_sov": 0.112,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "SEPHORA",
+        "avg_sov": 0.066,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 10,
+        "is_prospect": false
+      },
+      {
+        "brand": "Mythcloud",
+        "avg_sov": 0.059,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "Muxiziu",
+        "avg_sov": 0.05,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "Bonne Maman",
+        "avg_sov": 0.033,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "Generic",
+        "avg_sov": 0.032,
+        "avg_sponsored_sov": 0.017,
+        "keywords_present": 12,
+        "is_prospect": false
+      },
+      {
+        "brand": "VTYEPOU",
+        "avg_sov": 0.031,
+        "avg_sponsored_sov": 0.046,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "niaosiben",
+        "avg_sov": 0.026,
+        "avg_sponsored_sov": 0.02,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "pidouzim",
+        "avg_sov": 0.023,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 10,
+        "is_prospect": false
+      },
+      {
+        "brand": "santreetrade",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.028,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "Wafra",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "SUGAR PLUM",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.028,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "xibulun",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.028,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "LEGO",
+        "avg_sov": 0.02,
+        "avg_sponsored_sov": 0.006,
+        "keywords_present": 12,
+        "is_prospect": false
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [],
+    "prospect_sponsored_on_own_brand": false,
+    "positioning_page1": {
+      "our_median_price": 44.99,
+      "competitor_median_price": 32.84,
+      "our_median_rating": 4.7,
+      "competitor_median_rating": 4.6
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "advent calendar 2026",
+        "tier": "core",
+        "volume": 3848176,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3848176
+      },
+      {
+        "keyword": "needoh advent calendar",
+        "tier": "core",
+        "volume": 632456,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 379474
+      },
+      {
+        "keyword": "calendario de adviento",
+        "tier": "core",
+        "volume": 109109,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": 0.39,
+        "status": "push",
+        "priority": 279767
+      },
+      {
+        "keyword": "needoh advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 843652,
+        "organic_rank": 101,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 253096
+      },
+      {
+        "keyword": "dumpling advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 415328,
+        "organic_rank": 102,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 124598
+      },
+      {
+        "keyword": "advent calendar 2026 for adults",
+        "tier": "long_tail",
+        "volume": 363794,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 109138
+      },
+      {
+        "keyword": "christmas advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 113824,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 56912
+      },
+      {
+        "keyword": "beauty advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 99424,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 49712
+      },
+      {
+        "keyword": "adult advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 95659,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 47830
+      },
+      {
+        "keyword": "amazon advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 93745,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 46872
+      },
+      {
+        "keyword": "beauty advent calendar",
+        "tier": "core",
+        "volume": 66752,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": 0.73,
+        "status": "organic_top_unprotected",
+        "priority": 45721
+      },
+      {
+        "keyword": "2026 advent calendar",
+        "tier": "core",
+        "volume": 41851,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 41851
+      },
+      {
+        "keyword": "avent calendar 2026",
+        "tier": "core",
+        "volume": 39455,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 39455
+      },
+      {
+        "keyword": "amazon beauty advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 73498,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 36749
+      },
+      {
+        "keyword": "advent calender",
+        "tier": "core",
+        "volume": 31628,
+        "organic_rank": 49,
+        "sponsored_rank": null,
+        "cpc": 0.87,
+        "status": "push",
+        "priority": 36354
+      },
+      {
+        "keyword": "adult advent calendar",
+        "tier": "core",
+        "volume": 32154,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": 0.94,
+        "status": "push",
+        "priority": 34206
+      },
+      {
+        "keyword": "girls advent calendar",
+        "tier": "core",
+        "volume": 16399,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "push",
+        "priority": 34165
+      },
+      {
+        "keyword": "chocolate advent calendar",
+        "tier": "core",
+        "volume": 22938,
+        "organic_rank": 118,
+        "sponsored_rank": null,
+        "cpc": 0.42,
+        "status": "missing",
+        "priority": 32769
+      },
+      {
+        "keyword": "advent calendar 2026 for women",
+        "tier": "long_tail",
+        "volume": 62692,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 31346
+      },
+      {
+        "keyword": "makeup advent calendar",
+        "tier": "core",
+        "volume": 27829,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": 0.46,
+        "status": "organic_top_unprotected",
+        "priority": 30249
+      },
+      {
+        "keyword": "christmas calendar",
+        "tier": "core",
+        "volume": 15183,
+        "organic_rank": 49,
+        "sponsored_rank": null,
+        "cpc": 0.51,
+        "status": "push",
+        "priority": 29771
+      },
+      {
+        "keyword": "advent calendar for women",
+        "tier": "long_tail",
+        "volume": 47473,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": 0.81,
+        "status": "push",
+        "priority": 29304
+      },
+      {
+        "keyword": "advent calendar for adults",
+        "tier": "long_tail",
+        "volume": 56110,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": 1.01,
+        "status": "push",
+        "priority": 27777
+      },
+      {
+        "keyword": "fishing advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 82665,
+        "organic_rank": 118,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 24800
+      },
+      {
+        "keyword": "calendario de adviento maquillaje",
+        "tier": "long_tail",
+        "volume": 47340,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 23670
+      },
+      {
+        "keyword": "advent",
+        "tier": "core",
+        "volume": 40750,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": 1.05,
+        "status": "missing",
+        "priority": 23286
+      },
+      {
+        "keyword": "advent calendar for teen girls",
+        "tier": "long_tail",
+        "volume": 36229,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": 0.8,
+        "status": "push",
+        "priority": 22643
+      },
+      {
+        "keyword": "luxury beauty advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 44776,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 22388
+      },
+      {
+        "keyword": "girls advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 44667,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 22334
+      },
+      {
+        "keyword": "advent calendar 2026 girls",
+        "tier": "long_tail",
+        "volume": 44151,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 22076
+      },
+      {
+        "keyword": "teen advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 39478,
+        "organic_rank": 5,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 19739
+      },
+      {
+        "keyword": "teen advent calendar",
+        "tier": "core",
+        "volume": 15544,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": 0.8,
+        "status": "push",
+        "priority": 19430
+      },
+      {
+        "keyword": "chocolate advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 64644,
+        "organic_rank": 140,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 19393
+      },
+      {
+        "keyword": "christmas countdown calendar",
+        "tier": "core",
+        "volume": 18947,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": 0.64,
+        "status": "missing",
+        "priority": 17763
+      },
+      {
+        "keyword": "sephora advent calendar 2026",
+        "tier": "competitor",
+        "volume": 57941,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 17382
+      },
+      {
+        "keyword": "advent calendar makeup",
+        "tier": "core",
+        "volume": 16688,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": 0.97,
+        "status": "push",
+        "priority": 17204
+      },
+      {
+        "keyword": "nedoh advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 55760,
+        "organic_rank": 85,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 16728
+      },
+      {
+        "keyword": "milwaukee advent calendar",
+        "tier": "core",
+        "volume": 16473,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 16473
+      },
+      {
+        "keyword": "stocking stuffers for teens",
+        "tier": "long_tail",
+        "volume": 63334,
+        "organic_rank": null,
+        "sponsored_rank": 23,
+        "cpc": 0.83,
+        "status": "sponsored_only",
+        "priority": 15261
+      },
+      {
+        "keyword": "makeup advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 60463,
+        "organic_rank": 4,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 15116
+      },
+      {
+        "keyword": "2026 calendar",
+        "tier": "core",
+        "volume": 25017,
+        "organic_rank": 101,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 15010
+      },
+      {
+        "keyword": "redbull advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 27755,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 13878
+      },
+      {
+        "keyword": "crochet advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 24874,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 12437
+      },
+      {
+        "keyword": "gourmet food advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 24425,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 12212
+      },
+      {
+        "keyword": "advent calendars for teens",
+        "tier": "long_tail",
+        "volume": 24590,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": 1.01,
+        "status": "push",
+        "priority": 12173
+      },
+      {
+        "keyword": "25 days of beauty advent calendar",
+        "tier": "long_tail",
+        "volume": 23996,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 11998
+      },
+      {
+        "keyword": "halloween advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 39310,
+        "organic_rank": 129,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 11793
+      },
+      {
+        "keyword": "amazon advent calendar",
+        "tier": "core",
+        "volume": 15145,
+        "organic_rank": 21,
+        "sponsored_rank": null,
+        "cpc": 1.31,
+        "status": "push",
+        "priority": 11561
+      },
+      {
+        "keyword": "elf advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 23046,
+        "organic_rank": 19,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 11523
+      },
+      {
+        "keyword": "advent calendar 2026 squishy",
+        "tier": "long_tail",
+        "volume": 21059,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 10530
+      },
+      {
+        "keyword": "amazon advent calendar 2026 beauty",
+        "tier": "long_tail",
+        "volume": 20915,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 10458
+      },
+      {
+        "keyword": "rms dumpling advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 20565,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 10282
+      },
+      {
+        "keyword": "mini brands advent calendar",
+        "tier": "long_tail",
+        "volume": 19960,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 9980
+      },
+      {
+        "keyword": "wine advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 19657,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 9828
+      },
+      {
+        "keyword": "advent calendar for teens",
+        "tier": "long_tail",
+        "volume": 18926,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.99,
+        "status": "push",
+        "priority": 9559
+      },
+      {
+        "keyword": "disney advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 31432,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 9430
+      },
+      {
+        "keyword": "womens advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 18355,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 9178
+      },
+      {
+        "keyword": "teen girl christmas gifts 2026",
+        "tier": "long_tail",
+        "volume": 18029,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 9014
+      },
+      {
+        "keyword": "perfume advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 17829,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 8914
+      },
+      {
+        "keyword": "advent calendars for women",
+        "tier": "long_tail",
+        "volume": 13580,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": 0.77,
+        "status": "push",
+        "priority": 8818
+      },
+      {
+        "keyword": "minecraft advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 28569,
+        "organic_rank": 113,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 8571
+      },
+      {
+        "keyword": "cat advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 27961,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 8388
+      },
+      {
+        "keyword": "christmas dumpling advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 27893,
+        "organic_rank": 121,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 8368
+      },
+      {
+        "keyword": "advent calendar teen girl",
+        "tier": "long_tail",
+        "volume": 15514,
+        "organic_rank": 5,
+        "sponsored_rank": null,
+        "cpc": 0.94,
+        "status": "push",
+        "priority": 8252
+      },
+      {
+        "keyword": "teen girl advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 32932,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 8233
+      },
+      {
+        "keyword": "girl advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 16397,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 8198
+      },
+      {
+        "keyword": "kid advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 16192,
+        "organic_rank": 49,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 8096
+      },
+      {
+        "keyword": "squishmallow advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 26281,
+        "organic_rank": 77,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 7884
+      },
+      {
+        "keyword": "advent calendar 2026 beauty",
+        "tier": "long_tail",
+        "volume": 15574,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7787
+      },
+      {
+        "keyword": "champagne advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 15388,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7694
+      },
+      {
+        "keyword": "advent calendar for girls",
+        "tier": "long_tail",
+        "volume": 23808,
+        "organic_rank": 38,
+        "sponsored_rank": null,
+        "cpc": 1.56,
+        "status": "push",
+        "priority": 7631
+      },
+      {
+        "keyword": "best advent calendars 2026",
+        "tier": "long_tail",
+        "volume": 14886,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7443
+      },
+      {
+        "keyword": "advent calendar 2026 adults",
+        "tier": "long_tail",
+        "volume": 14833,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7416
+      },
+      {
+        "keyword": "advent calendar 2026 women",
+        "tier": "long_tail",
+        "volume": 14551,
+        "organic_rank": 5,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7276
+      },
+      {
+        "keyword": "uno advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 23723,
+        "organic_rank": 102,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 7117
+      },
+      {
+        "keyword": "jewelry advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 14171,
+        "organic_rank": 52,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7086
+      },
+      {
+        "keyword": "ulta advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 13722,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 6861
+      },
+      {
+        "keyword": "volleyball advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 13157,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 6578
+      },
+      {
+        "keyword": "skincare advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 12552,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 6276
+      },
+      {
+        "keyword": "dumplings advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 20545,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 6164
+      },
+      {
+        "keyword": "advent squishy calendar 2026",
+        "tier": "long_tail",
+        "volume": 18573,
+        "organic_rank": 134,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 5572
+      },
+      {
+        "keyword": "advent calendar beauty",
+        "tier": "core",
+        "volume": 15118,
+        "organic_rank": 6,
+        "sponsored_rank": 8,
+        "cpc": 0.82,
+        "status": "sponsored_support",
+        "priority": 5531
+      },
+      {
+        "keyword": "squishies advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 16916,
+        "organic_rank": 96,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 5075
+      },
+      {
+        "keyword": "advent-calendar",
+        "tier": "core",
+        "volume": 15457,
+        "organic_rank": 23,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 4637
+      },
+      {
+        "keyword": "advent calendar 2026 makeup",
+        "tier": "long_tail",
+        "volume": 18512,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 4628
+      },
+      {
+        "keyword": "baseball advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 14842,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4453
+      },
+      {
+        "keyword": "star wars advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 14823,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4447
+      },
+      {
+        "keyword": "princess advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 14563,
+        "organic_rank": 75,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4369
+      },
+      {
+        "keyword": "bluey advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 14453,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4336
+      },
+      {
+        "keyword": "duck advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 14425,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4328
+      },
+      {
+        "keyword": "make up advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 16553,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 4138
+      },
+      {
+        "keyword": "funko advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 13646,
+        "organic_rank": 92,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4094
+      },
+      {
+        "keyword": "grinch advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 13389,
+        "organic_rank": 109,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4017
+      },
+      {
+        "keyword": "book advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 13378,
+        "organic_rank": 63,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4013
+      },
+      {
+        "keyword": "wine whiskey tea advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 12746,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3824
+      },
+      {
+        "keyword": "calendario de adviento sephora",
+        "tier": "competitor",
+        "volume": 12042,
+        "organic_rank": 20,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3613
+      },
+      {
+        "keyword": "advent calendar 2026 teen girls",
+        "tier": "long_tail",
+        "volume": 19405,
+        "organic_rank": 5,
+        "sponsored_rank": 3,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2911
+      },
+      {
+        "keyword": "bonne maman advent calendar 2026",
+        "tier": "competitor",
+        "volume": 12868,
+        "organic_rank": 111,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2316
+      },
+      {
+        "keyword": "advent calendar girls",
+        "tier": "core",
+        "volume": 12519,
+        "organic_rank": 36,
+        "sponsored_rank": 1,
+        "cpc": 1.65,
+        "status": "sponsored_support",
+        "priority": 2276
+      },
+      {
+        "keyword": "lego star wars advent calendar 2026",
+        "tier": "competitor",
+        "volume": 11938,
+        "organic_rank": 73,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2149
+      }
+    ],
+    "tiers": {
+      "core": {
+        "keywords": 22,
+        "volume": 5075588,
+        "gaps": 17
+      },
+      "long_tail": {
+        "keywords": 74,
+        "volume": 3861882,
+        "gaps": 68
+      },
+      "competitor": {
+        "keywords": 4,
+        "volume": 94789,
+        "gaps": 4
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "advent calendar 2026",
+        "tier": "core",
+        "volume": 3848176,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3848176
+      },
+      {
+        "keyword": "needoh advent calendar",
+        "tier": "core",
+        "volume": 632456,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 379474
+      },
+      {
+        "keyword": "calendario de adviento",
+        "tier": "core",
+        "volume": 109109,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": 0.39,
+        "status": "push",
+        "priority": 279767
+      },
+      {
+        "keyword": "needoh advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 843652,
+        "organic_rank": 101,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 253096
+      },
+      {
+        "keyword": "dumpling advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 415328,
+        "organic_rank": 102,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 124598
+      },
+      {
+        "keyword": "advent calendar 2026 for adults",
+        "tier": "long_tail",
+        "volume": 363794,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 109138
+      },
+      {
+        "keyword": "christmas advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 113824,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 56912
+      },
+      {
+        "keyword": "beauty advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 99424,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 49712
+      },
+      {
+        "keyword": "adult advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 95659,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 47830
+      },
+      {
+        "keyword": "amazon advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 93745,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 46872
+      },
+      {
+        "keyword": "beauty advent calendar",
+        "tier": "core",
+        "volume": 66752,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": 0.73,
+        "status": "organic_top_unprotected",
+        "priority": 45721
+      },
+      {
+        "keyword": "2026 advent calendar",
+        "tier": "core",
+        "volume": 41851,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 41851
+      },
+      {
+        "keyword": "avent calendar 2026",
+        "tier": "core",
+        "volume": 39455,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 39455
+      },
+      {
+        "keyword": "amazon beauty advent calendar 2026",
+        "tier": "long_tail",
+        "volume": 73498,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 36749
+      },
+      {
+        "keyword": "advent calender",
+        "tier": "core",
+        "volume": 31628,
+        "organic_rank": 49,
+        "sponsored_rank": null,
+        "cpc": 0.87,
+        "status": "push",
+        "priority": 36354
+      },
+      {
+        "keyword": "adult advent calendar",
+        "tier": "core",
+        "volume": 32154,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": 0.94,
+        "status": "push",
+        "priority": 34206
+      },
+      {
+        "keyword": "girls advent calendar",
+        "tier": "core",
+        "volume": 16399,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "push",
+        "priority": 34165
+      },
+      {
+        "keyword": "chocolate advent calendar",
+        "tier": "core",
+        "volume": 22938,
+        "organic_rank": 118,
+        "sponsored_rank": null,
+        "cpc": 0.42,
+        "status": "missing",
+        "priority": 32769
+      },
+      {
+        "keyword": "advent calendar 2026 for women",
+        "tier": "long_tail",
+        "volume": 62692,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 31346
+      },
+      {
+        "keyword": "makeup advent calendar",
+        "tier": "core",
+        "volume": 27829,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": 0.46,
+        "status": "organic_top_unprotected",
+        "priority": 30249
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "core": 4304
+      },
+      "monthly_by_ad_type": {
+        "SP": 2582,
+        "SB": 861,
+        "SBV": 861,
+        "SD (remarketing/retention)": 478
+      },
+      "monthly_total": 4782,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.1
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.0,
+      "multipack_share": 0.0,
+      "consumable_category": false,
+      "likelihood": "low"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Home & Kitchen",
+    "available": false
+  },
+  "job_ad_present": false
+}

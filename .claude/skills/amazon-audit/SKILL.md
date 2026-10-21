@@ -43,6 +43,11 @@ The Python collectors handle data and arithmetic, and their numbers are the sour
   `collect_log.json`. The brand comes from the store URL slug. If `js.catalog` returns very few ASINs, or
   `focus.live` is 0, the spelling is probably off (e.g. "UltraDEX" read as "Ultra DEX"). Rerun with
   `--brand "<exact name on Amazon>"`.
+- **Short brand names** (2–4 characters, e.g. "W7") match only as whole words, and the brand is never
+  renamed to a different brand found in the results. If `prospect.brand` doesn't match the seed product's
+  brand, rerun with `--brand`.
+- **Marketplaces differ.** The same ASIN can sit in a different category, or have different content, on
+  .co.uk and .com. Compare the two when auditing both, because a mismatch is often a finding.
 - **Revenue.** Jungle Scout repeats a family's sales on every variant; the pipeline counts it once. If one
   family still looks implausibly large next to the brand total, check its variants' `units_30d`.
 - **Lead variant.** Each best-seller is represented by the variant Keepa sees with a live offer. If a hero

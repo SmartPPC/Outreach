@@ -31,6 +31,8 @@ CONTACT_PATHS = ["/", "/pages/contact", "/contact", "/contact-us", "/pages/conta
                  "/pages/about-us", "/about", "/pages/wholesale", "/policies/terms-of-service",
                  "/policies/privacy-policy"]
 GENERIC_PREFERRED = ("hello", "info", "contact", "enquiries", "team", "admin")  # read by staff, unlike complaints@/legal@
+PLATFORMS = re.compile(r"\b(shopify|google|amazon|paypal|klaviyo|stripe|meta|facebook|apple|microsoft|"
+                       r"wix|squarespace|bigcommerce|woocommerce|automattic|trustpilot|yotpo|klarna)\b", re.I)
 NOT_NAMES = {"Free Worldwide", "Happy Customers", "Our Story", "Terms Of", "Privacy Policy", "Read More"}
 
 
@@ -63,7 +65,8 @@ def extract(text: str, domain: str | None = None) -> dict:
             if name and name not in NOT_NAMES and len(name) <= 40:
                 people.setdefault(name, role.lower())
     company_no = COMPANY_NO_RE.search(text)
-    company_name = COMPANY_NAME_RE.search(text)
+    company_name = next((m for m in COMPANY_NAME_RE.finditer(text)
+                         if not PLATFORMS.search(m.group(1))), None)
     return {"emails": sorted(emails), "people": people,
             "company_number": company_no.group(1) if company_no else None,
             "company_name": company_name.group(1).strip() if company_name else None}

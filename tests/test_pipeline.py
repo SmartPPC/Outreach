@@ -59,6 +59,15 @@ def test_keepa_parse_product():
     assert check_listing(p)["score"] == 100
 
 
+def test_short_brand_names_match_whole_words_only():
+    from collectors.junglescout import brand_matches
+    assert brand_matches({"brand": "W7", "title": "W7 Beauty Blast"}, "W7")
+    assert brand_matches({"brand": None, "title": "W7 Beauty Blast Advent Calendar"}, "W7")
+    assert not brand_matches({"brand": "NICETOWN", "title": "Blackout Curtains W70 x L84"}, "W7")
+    assert not brand_matches({"brand": "HEYDUDE", "title": "HEYDUDE Women's Wendy Slip Size W7"}, "W7")
+    assert brand_matches({"brand": "Super Facialist", "title": "x"}, "SuperFacialist")
+
+
 def test_junglescout_parsers():
     kw = junglescout.parse_keywords({"data": [{"id": "us/dog shampoo", "attributes": {
         "name": "dog shampoo", "monthly_search_volume_exact": 90000, "organic_rank": 14, "ppc_bid_exact": 1.45}}]})
@@ -368,6 +377,14 @@ def test_apollo_enriches_only_the_top_people(monkeypatch):
 
 
 # --- mobile -----------------------------------------------------------------------------------------
+
+def test_new_listings_are_not_judged_on_stock():
+    import datetime as dt
+    from analyse import checks
+    recent = (dt.date.today() - dt.timedelta(days=60)).isoformat()
+    assert checks.stock_flag({"oos_pct_90": 34, "listed_since": recent}) is None
+    assert checks.stock_flag({"oos_pct_90": 34, "listed_since": "2020-01-01"})
+
 
 def test_mobile_checks():
     from analyse import mobile

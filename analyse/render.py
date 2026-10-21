@@ -262,7 +262,8 @@ def render(run: Path) -> tuple[Path, Path]:
     single = (d.get("focus") or {}).get("scope") == "asin"
     sov = d["competitors"]["share_of_voice"][:8]
     slots = {
-        "TITLE": e(f'{d["prospect"]["brand"] or "Prospect"} {"Product " if single else ""}Amazon Audit'),
+        "TITLE": e(f'{d["prospect"]["brand"]} {d["focus"]["seed"]} {d["prospect"]["marketplace"].upper()} Audit' if single
+                   else f'{d["prospect"]["brand"] or "Prospect"} Amazon Audit'),
         "EYEBROW": "Smart PPC · Single-product audit" if single else "Smart PPC · Amazon audit",
         "SUBJECT": e(((d.get("heroes") or [{}])[0].get("title") or "")[:110]) if single else "",
         "BRAND": e(d["prospect"]["brand"] or d["prospect"]["input"]),
@@ -272,7 +273,14 @@ def render(run: Path) -> tuple[Path, Path]:
         "POINTS": points_html(findings),
         "STATS": stats_html(d),
         "HEROES": heroes_html(d, findings),
-        "QUICK_WINS": quick_wins_html(d),
+        "CONTENT_TITLE": "Listing content" if single else "Content on the best-sellers",
+        "SNAPSHOT_TITLE": "The product today" if single else "The business today",
+        "HEROES_EYEBROW": "The listing" if single else "Best-sellers",
+        "HEROES_TITLE": "Fix, push and cut" if single else "Where the money is",
+        "HEROES_INTRO": ("What to fix on the listing, which searches to push and which to cut." if single
+                         else "The products below make most of the revenue, so every recommendation starts here."),
+        "QUICK_SECTION": "" if single else ('<section><header><span class="eyebrow">Quick wins</span>'
+                                            f'<h2>Catalogue tidy-up</h2></header>{quick_wins_html(d)}</section>'),
         "CONTENT_TABLE": content_table(d),
         "CONTENT_NOTE": e(findings.get("content_note", "")),
         "AD_SUMMARY": e(findings.get("ad_strategy_summary", "")),

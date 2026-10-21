@@ -9,6 +9,7 @@ Rules from reviewing real audits:
 """
 from __future__ import annotations
 
+import datetime as dt
 import re
 from collections import defaultdict
 
@@ -221,6 +222,9 @@ def seller_flags(p: dict, brand: str, brand_seller: str | None = None) -> list[s
 
 
 def stock_flag(p: dict) -> str | None:
+    listed = p.get("listed_since")
+    if listed and (dt.date.today() - dt.date.fromisoformat(listed)).days < 180:
+        return None  # new or seasonal listings often go live before stock lands
     oos = p.get("oos_pct_90")
     lo, hi = STOCKOUT_FLAG_RANGE
     if oos is not None and lo <= oos <= hi:

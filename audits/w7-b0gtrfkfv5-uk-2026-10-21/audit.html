@@ -1,0 +1,209 @@
+<title>W7 B0GTRFKFV5 UK Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the five recommendations lead, evidence sections follow in the order the email cites them. */
+:root {
+  --bg: #f6f1e7;
+  --paper: #fffdf8;
+  --ink: #1a1a18;
+  --ink-soft: #4a4842;
+  --muted: #7d7a72;
+  --rule: #d9d2c3;
+  --accent: #d85a30;
+  --accent-soft: #f3d9cc;
+  --bar: #4a4842;
+  --s0: #d85a30; --s1: #2a78d6; --s2: #1baf7a; --s3: #c98500; --s4: #6250d6; --s5: #e87ba4;
+  --good: #0a7d0a; --warn: #a86a00; --fail: #c03434;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+    --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+    --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+    --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+  --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+  --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+  --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 56px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
+h3 { font-size: 17px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow, .tag, .stat-label, th, .tick, small { font-family: var(--mono); }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+section { display: grid; gap: 20px; min-width: 0; }
+section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 14px; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.subject:empty { display: none; }
+.subject { font-size: 17px; color: var(--ink-soft); max-width: 70ch; }
+.headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
+
+/* Recommendations: numbered because they are in priority order */
+.points { list-style: none; counter-reset: pt; margin: 0; padding: 0; display: grid; gap: 14px; }
+.point { counter-increment: pt; display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 14px; padding: 20px 20px 18px 16px; }
+.point::before { content: counter(pt); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); text-align: center; }
+.point-body { display: grid; gap: 8px; min-width: 0; }
+.tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.quote { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--ink-soft); font-size: 15px; }
+details summary { cursor: pointer; color: var(--ink-soft); font-size: 14px; }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14px; display: grid; gap: 4px; }
+
+/* Stats */
+.stats { break-inside: avoid; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.stat { background: var(--paper); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.stat-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat-note { font-size: 13px; color: var(--muted); }
+
+/* Charts */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.two > * { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.chart { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--bar); }
+.chart .bar:hover { fill: var(--accent); }
+.chart .grid { stroke: var(--rule); stroke-dasharray: 2 4; }
+.chart .axis { stroke: var(--muted); }
+.chart .tick { fill: var(--muted); font-size: 11px; }
+.empty { color: var(--muted); font-style: italic; }
+.hbars { display: grid; gap: 8px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 160px) 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.hbar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; background: var(--rule); border-radius: 5px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+.hbar.mine { font-weight: 600; }
+.hbar.mine .hbar-fill { background: var(--accent); }
+.hbar-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.stack { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; }
+.seg, .sw { background: var(--s0); }
+.s1 { background: var(--s1); } .s2 { background: var(--s2); } .s3 { background: var(--s3); } .s4 { background: var(--s4); } .s5 { background: var(--s5); }
+.legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend small { color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.budget-total { font-family: var(--serif); font-size: 26px; }
+
+/* Tables */
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child > * { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+table.content td { white-space: nowrap; }
+table.content th[scope="row"] { text-transform: none; letter-spacing: 0; color: var(--ink); font-size: 13px; min-width: 180px; }
+table.content th[scope="row"] small { display: block; color: var(--muted); font-family: var(--sans); white-space: normal; }
+.chip { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; color: var(--paper); }
+.chip.good { background: var(--good); } .chip.warn { background: var(--warn); } .chip.fail { background: var(--fail); }
+.kw-status { font-size: 13px; color: var(--ink-soft); }
+.kw-status.push, .kw-status.brand_defence_gap { color: var(--accent); font-weight: 600; }
+.attackers { padding-left: 18px; margin: 0; display: grid; gap: 6px; }
+.attackers small { display: block; color: var(--muted); font-family: var(--sans); }
+ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.hero-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px; align-content: start; min-width: 0; }
+.hero-card header { display: grid; gap: 4px; }
+.hero-card header a { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.hero-meta { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.hero-card h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); }
+.hero-card ul { padding-left: 0; list-style: none; font-size: 14px; gap: 4px; }
+.hero-card ul small, .quick small { display: block; color: var(--muted); }
+.hero-card p { font-size: 14px; }
+.hero-card .action { font-weight: 600; border-left: 2px solid var(--accent); padding-left: 10px; }
+.flags li { display: flex; gap: 8px; align-items: baseline; }
+.flags li.verdict { display: block; font-style: italic; color: var(--ink-soft); }
+.quick { font-size: 14px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
+</style>
+
+<main class="page">
+  <div class="hero">
+    <span class="eyebrow">Smart PPC · Single-product audit</span>
+    <h1>W7</h1>
+    <p class="subject">W7 Beauty Blast Makeup Advent Calendar 2026-24 Cosmetic Treats</p>
+    <div class="meta"><span>amazon.co.uk</span><span>Prepared 2026-10-21</span></div>
+    <p class="headline">A brilliant listing at the peak of advent calendar season, but part of its ad budget is chasing shoppers who want squishy, chocolate and LEGO calendars, while its #1 rankings have no ad cover.</p>
+  </div>
+
+  <section>
+    <header><span class="eyebrow">Priorities</span><h2>What I would do first</h2></header>
+    <ol class="points"><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Stop paying for other kinds of advent calendar</h3><p>The calendar has sponsored placements on &#x27;squishy advent calendar 2026&#x27; (176k/mo, sponsored #4), chocolate, LEGO, dumpling and men&#x27;s advent calendar searches, where it ranks organically at #55-104 or not at all. In peak season those clicks are expensive and go to shoppers who want a different product.</p><details><summary>What we saw</summary><ul><li>squishy advent calendar 2026: 176,333/mo, sponsored #4, organic #55</li><li>chocolate advent calendar 2026: 40,305/mo, sponsored #8, organic #74</li><li>lego advent calendar: 30,767/mo, sponsored #8, organic #74</li><li>dumpling advent calendar 2026: 45,400/mo, sponsored #11, not ranked</li><li>mens advent calendar 2026: 21,147/mo, sponsored #10, organic #104</li><li>Source: Jungle Scout keywords by ASIN</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Protect the #1 rankings with top-of-search ads</h3><p>It ranks #1 organically for &#x27;advent calendar 2026 for women&#x27; (58.5k/mo), &#x27;beauty advent calendar 2026&#x27; (27k/mo) and &#x27;girls advent calendar 2026&#x27; (17k/mo) with no ad, so on mobile a competitor&#x27;s ad can sit above it. Cheap exact-match ads hold the top of the page through December.</p><details><summary>What we saw</summary><ul><li>advent calendar 2026 for women: 58,537/mo, organic #1, no sponsored rank</li><li>beauty advent calendar 2026: 26,967/mo, organic #1, no sponsored rank</li><li>girls advent calendar 2026: 17,153/mo, organic #1, no sponsored rank</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Push &#x27;advent calendar&#x27; from #5 to the top</h3><p>&#x27;Advent calendar&#x27; gets 220k searches a month and the calendar already ranks #5 organically with no ad behind it. That&#x27;s the biggest single term to win in the next eight weeks.</p><details><summary>What we saw</summary><ul><li>advent calendar: 220,256/mo, organic #5, no sponsored rank, CPC ~£0.22</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">competitors</span><h3>Cover the &#x27;w7&#x27; brand search</h3><p>Julep Eyeshadow takes a sponsored slot on &#x27;w7&#x27; searches and there&#x27;s no W7 ad there. A brand campaign is cheap insurance in the busiest weeks of the year.</p><details><summary>What we saw</summary><ul><li>&#x27;w7&#x27;: Julep Eyeshadow sponsored at position 10; no W7 sponsored placement (DataForSEO, Amazon UK)</li></ul></details></div></li></ol>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Snapshot</span><h2>The product today</h2></header>
+    <div class="stats"><div class="stat"><span class="stat-label">Est. monthly revenue</span><span class="stat-value">£76,525</span><span class="stat-note">this product family, Jungle Scout 30-day</span></div><div class="stat"><span class="stat-label">Sales rank</span><span class="stat-value">#865</span><span class="stat-note">in its main category (Keepa)</span></div><div class="stat"><span class="stat-label">Rating</span><span class="stat-value">4.7★</span><span class="stat-note">5,360 reviews</span></div><div class="stat"><span class="stat-label">Sponsored coverage</span><span class="stat-value">70%</span><span class="stat-note">of its top 30 keywords</span></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">The listing</span><h2>Fix, push and cut</h2>
+      <p>What to fix on the listing, which searches to push and which to cut.</p></header>
+    <div class="heroes"><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0GTRFKFV5">B0GTRFKFV5</a><h3>W7 Beauty Blast Makeup Advent Calendar 2026-24 Cosmetic Treats</h3><span class="hero-meta">£76,525/mo · 3,480 units · £21.99 · 4.7★ (5,360)</span></header><p class="action">Add negatives for squishy, chocolate, LEGO, dumpling and men&#x27;s calendar searches, and put that budget into top-of-search on its #1 terms and &#x27;advent calendar&#x27;.</p><div><h4>Push</h4><ul><li>“advent calendar” <small>220,256/mo · organic #5 · £0.22 CPC</small></li><li>“advent calendar 2026 for women” <small>58,537/mo · organic #1</small></li><li>“kids advent calendar 2026” <small>31,081/mo · organic #58</small></li></ul></div><div><h4>Cut</h4><p>“squishy advent calendar 2026”, “dumpling advent calendar 2026”, “chocolate advent calendar 2026”, “squishy advent calendar”, “lego advent calendar”</p></div><div><h4>Mobile · 100/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 41s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 177 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 10 A+ images with light, phone-friendly text</li></ul></div></article></div>
+  </section>
+
+  
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Listing content</h2><p>The listing itself is excellent on mobile and desktop: 2000px zoomable images, a brand video, phone-friendly A+ and 5,300+ reviews at 4.7★.</p></header>
+    <div class="scroll"><table class="content"><thead><tr><th>Listing</th><th>Score</th><th>Images</th><th>Video</th><th>A Plus</th><th>Title</th><th>Bullets</th><th>Bullet Depth</th><th>Rating</th><th>Reviews</th></tr></thead><tbody><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0GTRFKFV5">B0GTRFKFV5</a><small>W7 Beauty Blast Makeup Advent Calendar 2026-24 Cosmetic Trea</small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip good" title="Good">✓</span> 2 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 62 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 197 chars</td><td><span class="chip good" title="Good">✓</span> 4.7★</td><td><span class="chip good" title="Good">✓</span> 5367 reviews</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Advertising</span><h2>Keyword map and where to spend</h2><p>Move spend from other kinds of calendar to the terms it already ranks for: defend the #1 rankings, push &#x27;advent calendar&#x27; from #5, and cover the brand search.</p></header>
+    <div class="two">
+      <div><h3>Keywords by tier</h3><div class="scroll"><table><thead><tr><th>Tier</th><th class="num">Keywords</th><th class="num">Searches/mo</th><th class="num">Gaps</th></tr></thead><tbody><tr><td>Core</td><td class="num">24</td><td class="num">1,001,588</td><td class="num">6</td></tr><tr><td>Category</td><td class="num">14</td><td class="num">328,788</td><td class="num">6</td></tr><tr><td>Long-tail</td><td class="num">59</td><td class="num">927,551</td><td class="num">22</td></tr><tr><td>Competitor</td><td class="num">3</td><td class="num">45,378</td><td class="num">2</td></tr></tbody></table></div></div>
+      <div><h3>Indicative monthly budget</h3><span class="budget-total">£2,383</span><div class="stack"><span class="seg s0" style="flex:1235" title="SP: £1,235"></span><span class="seg s1" style="flex:455" title="SB: £455"></span><span class="seg s2" style="flex:455" title="SBV: £455"></span><span class="seg s3" style="flex:238" title="SD (remarketing/retention): £238"></span></div><ul class="legend"><li><span class="sw s0"></span>SP <b>£1,235</b> <small>52%</small></li><li><span class="sw s1"></span>SB <b>£455</b> <small>19%</small></li><li><span class="sw s2"></span>SBV <b>£455</b> <small>19%</small></li><li><span class="sw s3"></span>SD (remarketing/retention) <b>£238</b> <small>10%</small></li></ul></div>
+    </div>
+    <h3>Focus keywords</h3>
+    <div class="scroll"><table><thead><tr><th>Keyword</th><th>Tier</th><th class="num">Searches/mo</th><th class="num">Organic</th><th class="num">Sponsored</th><th class="num">CPC</th><th>Status</th></tr></thead><tbody><tr><td>advent calendar</td><td>Core</td><td class="num">220,256</td><td class="num">5</td><td class="num">–</td><td class="num">£0.22</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>makeup</td><td>Category</td><td class="num">143,072</td><td class="num">142</td><td class="num">–</td><td class="num">£0.45</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>advent</td><td>Core</td><td class="num">10,583</td><td class="num">9</td><td class="num">–</td><td class="num">£0.31</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>advent calendar 2026 kids</td><td>Long-tail</td><td class="num">107,340</td><td class="num">99</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>funko pop advent calendar</td><td>Long-tail</td><td class="num">11,540</td><td class="num">50</td><td class="num">–</td><td class="num">£0.25</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>advent calendar chocolate</td><td>Category</td><td class="num">10,335</td><td class="num">101</td><td class="num">–</td><td class="num">£0.17</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>kids advent calendar 2026</td><td>Long-tail</td><td class="num">31,081</td><td class="num">58</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>advent calendar 2026 for women</td><td>Long-tail</td><td class="num">58,537</td><td class="num">1</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status organic_top_unprotected">Top organically, no ad cover</span></td></tr><tr><td>advent calendar 2026 men</td><td>Long-tail</td><td class="num">34,249</td><td class="num">66</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>harry potter advent calendar</td><td>Long-tail</td><td class="num">6,310</td><td class="num">139</td><td class="num">–</td><td class="num">£0.22</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>make-up sets</td><td>Core</td><td class="num">7,271</td><td class="num">9</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>beauty advent calendar 2026</td><td>Long-tail</td><td class="num">26,967</td><td class="num">1</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status organic_top_unprotected">Top organically, no ad cover</span></td></tr><tr><td>makeup box</td><td>Category</td><td class="num">6,465</td><td class="num">66</td><td class="num">–</td><td class="num">£0.42</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>jellycat advent calendar</td><td>Core</td><td class="num">6,357</td><td class="num">13</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>girls advent calendar</td><td>Core</td><td class="num">5,143</td><td class="num">10</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>girls advent calendar 2026</td><td>Long-tail</td><td class="num">17,153</td><td class="num">1</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status organic_top_unprotected">Top organically, no ad cover</span></td></tr><tr><td>fuggler advent calendar</td><td>Core</td><td class="num">4,090</td><td class="num">7</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>f1 advent calendar 2026</td><td>Long-tail</td><td class="num">7,086</td><td class="num">30</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>needoh advent calendar 2026</td><td>Long-tail</td><td class="num">7,020</td><td class="num">10</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>cat advent calendar 2026</td><td>Long-tail</td><td class="num">11,625</td><td class="num">95</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Competitors</span><h2>Who is taking the clicks</h2></header>
+    <div class="two">
+      <div><h3>Share of voice across category searches</h3><div class="hbars"><div class="hbar"><span class="hbar-label">LEGO</span><span class="hbar-track"><span class="hbar-fill" style="width:100.0%" title="LEGO: 14%"></span></span><span class="hbar-value">14%</span></div><div class="hbar"><span class="hbar-label">Lindt</span><span class="hbar-track"><span class="hbar-fill" style="width:51.8%" title="Lindt: 7%"></span></span><span class="hbar-value">7%</span></div><div class="hbar"><span class="hbar-label">Generic</span><span class="hbar-track"><span class="hbar-fill" style="width:51.8%" title="Generic: 7%"></span></span><span class="hbar-value">7%</span></div><div class="hbar mine"><span class="hbar-label">W7</span><span class="hbar-track"><span class="hbar-fill" style="width:43.2%" title="W7: 6%"></span></span><span class="hbar-value">6%</span></div><div class="hbar"><span class="hbar-label">RZCOMP</span><span class="hbar-track"><span class="hbar-fill" style="width:34.5%" title="RZCOMP: 5%"></span></span><span class="hbar-value">5%</span></div><div class="hbar"><span class="hbar-label">Meitianfse</span><span class="hbar-track"><span class="hbar-fill" style="width:32.4%" title="Meitianfse: 4%"></span></span><span class="hbar-value">4%</span></div><div class="hbar"><span class="hbar-label">Maybelline</span><span class="hbar-track"><span class="hbar-fill" style="width:29.5%" title="Maybelline: 4%"></span></span><span class="hbar-value">4%</span></div><div class="hbar"><span class="hbar-label">medicube</span><span class="hbar-track"><span class="hbar-fill" style="width:26.6%" title="medicube: 4%"></span></span><span class="hbar-value">4%</span></div></div></div>
+      <div><h3>Ads on their brand name</h3><ul class="attackers"><li><b>Julep Eyeshadow</b> sponsored at position 10 on “w7”<small>Julep Eyeshadow 101 Crème-to-Powder Eyeshadow Stick (Mink Mauve Shimmer) Long-Lasting, Wat</small></li><li><b>LAURA GELLER</b> sponsored at position 50 on “w7”<small>LAURA GELLER NEW YORK INKcredible Gel Eyeliner (Beige to Beige) Waterproof &amp; Smudge-Proof </small></li></ul><p>They had no sponsored placement of their own on those searches.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Amazon Marketing Cloud</span><h2>Path to purchase and repeat buying</h2></header>
+    <p>Repeat-purchase signals: medium (Subscribe &amp; Save on 0% of ASINs, multipacks 0%, consumable category).</p><div class="two"><div><h3>What we expect AMC to show</h3><ul><li>Advent calendars are bought as gifts, so many buyers will be new to W7. AMC would show how many go on to buy W7 make-up afterwards.</li></ul></div><div><h3>Questions we would answer in week one</h3><ol><li>How many calendar buyers are new to W7?</li><li>What do they buy next, and when?</li></ol></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Method</span><h2>How this was put together</h2></header>
+    <div class="method"><p>Built from public marketplace data (Keepa, Jungle Scout, DataForSEO, Amazon catalogue and bid recommendations) on 2026-10-21. We have not seen this brand's Seller Central or advertising account, so spend and budget figures are estimates.</p><p>Budget model: search volume × 12% of searches producing an ad click × target sponsored share of voice by tier × CPC benchmark, plus 10% for remarketing.</p><details><summary>Data gaps in this run</summary><ul><li>images: can&#x27;t reach m.media-amazon.com (&lt;urlopen error Tunnel connection failed: 403 Forbidden&gt;); add it to Allowed domains</li><li>spapi.items: SP-API not configured</li><li>ads.bids: Ads API not configured; using Jungle Scout PPC bids</li></ul></details></div>
+  </section>
+
+  <footer>Smart PPC · smartppc.ai</footer>
+</main>

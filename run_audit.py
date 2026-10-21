@@ -88,9 +88,10 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
         log.ok("js.catalog.spellings", searched=spellings)
         write_json(out / "js_catalog.json", catalog_rows)
         log.ok("js.catalog", asins=len(catalog_rows))
-        brands = [r["brand"] for r in catalog_rows if r.get("brand")]
-        if brands:  # canonical spelling, e.g. store slug "SuperFacialist" -> "Super Facialist"
-            target["brand"] = max(set(brands), key=brands.count)
+        same = [r["brand"] for r in catalog_rows
+                if r.get("brand") and junglescout.norm_brand(r["brand"]) == junglescout.norm_brand(target["brand"])]
+        if same:  # canonical spelling only, e.g. "SuperFacialist" -> "Super Facialist"; never a different brand
+            target["brand"] = max(set(same), key=same.count)
     write_json(out / "input.json", target)
 
     products: list[dict] = []
