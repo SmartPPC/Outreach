@@ -34,7 +34,18 @@ def norm_brand(s: str | None) -> str:
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
 
 
-def product_database(brand: str, marketplace: str, budget: Budget, max_pages: int = 5) -> list[dict]:
+def product_database(brand: str, marketplace: str, budget: Budget, max_pages: int = 5,
+                     alt_spellings: list[str] | None = None) -> list[dict]:
+    """Search every spelling (e.g. 'Super Facialist' and 'SuperFacialist') and merge by ASIN."""
+    rows: dict[str, dict] = {}
+    for name in dict.fromkeys([brand, *(alt_spellings or [])]):
+        for r in _product_database(name, marketplace, budget, max_pages):
+            rows.setdefault(r["asin"], r)
+    want = {norm_brand(n) for n in [brand, *(alt_spellings or [])] if n}
+    return [r for r in rows.values() if any(w in norm_brand(r["brand"]) or w in norm_brand(r["title"]) for w in want)]
+
+
+def _product_database(brand: str, marketplace: str, budget: Budget, max_pages: int = 5) -> list[dict]:
     """Every ASIN Jungle Scout knows for the brand, with 30-day sales, sellers and Buy Box owner.
     One call per 100 products, so it is the cheap way to map a whole catalogue."""
     rows, cursor = [], None
@@ -51,8 +62,7 @@ def product_database(brand: str, marketplace: str, budget: Budget, max_pages: in
         cursor = dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(nxt).query)).get("page[cursor]") if nxt else None
         if not cursor:
             break
-    want = norm_brand(brand)
-    return [r for r in rows if want and (want in norm_brand(r["brand"]) or want in norm_brand(r["title"]))]
+    return rows
 
 
 def parse_products(resp: dict) -> list[dict]:

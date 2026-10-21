@@ -42,7 +42,9 @@ def resolve(raw: str, marketplace: str | None = None) -> dict:
         if m := STORE_RE.search(parts.path):
             if m.group(1):
                 slug = urllib.parse.unquote_plus(m.group(1)).replace("-", " ")
-                target["brand"] = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", slug)  # SuperFacialist -> Super Facialist
+                # SuperFacialist -> Super Facialist, but keep UltraDEX / iPhone-style capitals together
+                target["brand"] = re.sub(r"(?<=[a-z])(?=[A-Z][a-z])", " ", slug)
+                target["brand_slug"] = slug
             target["store_page_id"] = m.group(2)
         for key in ("seller", "me"):
             if query.get(key):

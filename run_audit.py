@@ -76,7 +76,9 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
     #    best-sellers that make ~80% of revenue.
     catalog_rows: list[dict] = []
     if junglescout.configured() and target["brand"]:
-        catalog_rows = guarded(log, "js.catalog", lambda: junglescout.product_database(target["brand"], mp, budget), []) or []
+        spellings = [target.get("brand_slug"), target["brand"].replace(" ", "")]
+        catalog_rows = guarded(log, "js.catalog", lambda: junglescout.product_database(
+            target["brand"], mp, budget, alt_spellings=[s for s in spellings if s]), []) or []
         write_json(out / "js_catalog.json", catalog_rows)
         log.ok("js.catalog", asins=len(catalog_rows))
         brands = [r["brand"] for r in catalog_rows if r.get("brand")]
