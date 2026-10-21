@@ -8,7 +8,7 @@
     "seller_name": null,
     "landing_asin": "B0D6BWBYY2"
   },
-  "generated": "2026-10-20",
+  "generated": "2026-10-21",
   "coverage": {
     "steps": [
       {
@@ -98,7 +98,7 @@
     "families": 20,
     "hero_families": 5,
     "hero_revenue_share": 0.85,
-    "est_monthly_revenue": 111133
+    "est_monthly_revenue": 102395
   },
   "heroes": [
     {
@@ -107,11 +107,13 @@
       "title": "Super Facialist Vitamin C Cleansing Oil, Makeup Remover Face Wash, 200ml",
       "family_revenue_30d": 39703,
       "family_size": 1,
+      "family_revenue_keepa": 22410,
       "units_30d": 5315,
       "price": 7.47,
       "list_price": 12.0,
       "sellers": 3,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Make-Up Cleansing Oils",
       "product_type": "cleansing oil",
       "rating": 4.5,
@@ -153,12 +155,16 @@
           }
         }
       },
-      "flags": [
-        {
-          "type": "price",
-          "detail": "discounted 38% off list (7.47 vs 12.00)"
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          }
         }
-      ],
+      },
+      "flags": [],
       "targets": [
         {
           "keyword": "face cleanser",
@@ -253,19 +259,159 @@
           "reason": "unrelated to the product"
         }
       ],
-      "sponsored_terms": 27
+      "sponsored_terms": 27,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B014MI41AU",
+      "parent_asin": "B0HKL2RQC5",
+      "title": "Super Facialist Vitamin C Brighten Micro Polish Face Wash, Vegan, 125ml",
+      "family_revenue_30d": 16630,
+      "family_size": 1,
+      "family_revenue_keepa": 5000,
+      "units_30d": 3326,
+      "price": 5.0,
+      "list_price": 10.0,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Make-Up Cleansing Oils",
+      "product_type": "face wash",
+      "rating": 4.4,
+      "reviews": 1509,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "5 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "71 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 168 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1510 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "face wash women",
+          "tier": "category",
+          "status": "push",
+          "volume": 10686,
+          "organic_rank": 27,
+          "sponsored_rank": null,
+          "cpc": 0.29
+        },
+        {
+          "keyword": "exfoliating face wash",
+          "tier": "category",
+          "status": "push",
+          "volume": 9781,
+          "organic_rank": 35,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "face exfoliator",
+          "tier": "category",
+          "status": "push",
+          "volume": 8876,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": 0.48
+        },
+        {
+          "keyword": "korean face wash",
+          "tier": "category",
+          "status": "push",
+          "volume": 4799,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "face scrub exfoliator",
+          "tier": "core",
+          "status": "push",
+          "volume": 3746,
+          "organic_rank": 18,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "face cleanser women",
+          "tier": "category",
+          "status": "push",
+          "volume": 3534,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "super",
+          "volume": 12490,
+          "sponsored_rank": 4,
+          "reason": "partial brand term"
+        },
+        {
+          "keyword": "manyo cleansing oil",
+          "volume": 2498,
+          "sponsored_rank": 4,
+          "reason": "unrelated to the product"
+        }
+      ],
+      "sponsored_terms": 5,
+      "mobile_sheet": null
     },
     {
       "asin": "B0D6BWBYY2",
       "parent_asin": "B0F8R55N8X",
       "title": "Super Facialist Rosehip Meltaway Cleansing Balm, Makeup Remover, 100ml",
-      "family_revenue_30d": 17394,
+      "family_revenue_30d": 12348,
       "family_size": 4,
+      "family_revenue_keepa": 7400,
       "units_30d": 882,
       "price": 14.0,
       "list_price": 20.0,
       "sellers": 11,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Day Care",
       "product_type": "cleansing balm",
       "rating": 4.5,
@@ -307,6 +453,15 @@
           }
         }
       },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          }
+        }
+      },
       "flags": [
         {
           "type": "wrong_category",
@@ -315,10 +470,6 @@
         {
           "type": "mixed_variation_family",
           "detail": "variation family mixes cleanser, cleansing balm, day cream, facial oil, night cream, scrub"
-        },
-        {
-          "type": "sellers",
-          "detail": "11 sellers on the listing"
         }
       ],
       "targets": [
@@ -427,149 +578,22 @@
           "reason": "unrelated to the product"
         }
       ],
-      "sponsored_terms": 27
-    },
-    {
-      "asin": "B014MI41AU",
-      "parent_asin": "B0HKL2RQC5",
-      "title": "Super Facialist Vitamin C Brighten Micro Polish Face Wash, Vegan, 125ml",
-      "family_revenue_30d": 16630,
-      "family_size": 1,
-      "units_30d": 3326,
-      "price": 5.0,
-      "list_price": 10.0,
-      "sellers": 2,
-      "buy_box_owner": "Amazon",
-      "category": "Make-Up Cleansing Oils",
-      "product_type": "face wash",
-      "rating": 4.4,
-      "reviews": 1509,
-      "content": {
-        "score": 94,
-        "checks": {
-          "images": {
-            "status": "good",
-            "detail": "7 images"
-          },
-          "video": {
-            "status": "good",
-            "detail": "5 videos"
-          },
-          "a_plus": {
-            "status": "good",
-            "detail": "A+ with 1 modules"
-          },
-          "title": {
-            "status": "warn",
-            "detail": "71 chars"
-          },
-          "bullets": {
-            "status": "good",
-            "detail": "5 bullets"
-          },
-          "bullet_depth": {
-            "status": "good",
-            "detail": "avg 168 chars"
-          },
-          "rating": {
-            "status": "good",
-            "detail": "4.4\u2605"
-          },
-          "reviews": {
-            "status": "good",
-            "detail": "1510 reviews"
-          }
-        }
-      },
-      "flags": [
-        {
-          "type": "price",
-          "detail": "discounted 50% off list (5.00 vs 10.00)"
-        }
-      ],
-      "targets": [
-        {
-          "keyword": "face wash women",
-          "tier": "category",
-          "status": "push",
-          "volume": 10686,
-          "organic_rank": 27,
-          "sponsored_rank": null,
-          "cpc": 0.29
-        },
-        {
-          "keyword": "exfoliating face wash",
-          "tier": "category",
-          "status": "push",
-          "volume": 9781,
-          "organic_rank": 35,
-          "sponsored_rank": null,
-          "cpc": null
-        },
-        {
-          "keyword": "face exfoliator",
-          "tier": "category",
-          "status": "push",
-          "volume": 8876,
-          "organic_rank": 26,
-          "sponsored_rank": null,
-          "cpc": 0.48
-        },
-        {
-          "keyword": "korean face wash",
-          "tier": "category",
-          "status": "push",
-          "volume": 4799,
-          "organic_rank": 53,
-          "sponsored_rank": null,
-          "cpc": null
-        },
-        {
-          "keyword": "face scrub exfoliator",
-          "tier": "core",
-          "status": "push",
-          "volume": 3746,
-          "organic_rank": 18,
-          "sponsored_rank": null,
-          "cpc": null
-        },
-        {
-          "keyword": "face cleanser women",
-          "tier": "category",
-          "status": "push",
-          "volume": 3534,
-          "organic_rank": 53,
-          "sponsored_rank": null,
-          "cpc": null
-        }
-      ],
-      "wasted_terms": [
-        {
-          "keyword": "super",
-          "volume": 12490,
-          "sponsored_rank": 4,
-          "reason": "partial brand term"
-        },
-        {
-          "keyword": "manyo cleansing oil",
-          "volume": 2498,
-          "sponsored_rank": 4,
-          "reason": "unrelated to the product"
-        }
-      ],
-      "sponsored_terms": 5
+      "sponsored_terms": 27,
+      "mobile_sheet": null
     },
     {
       "asin": "B07K1Z7Q7V",
       "parent_asin": "B0H2BDYNF4",
       "title": "Super Facialist Salicylic Acid Blemish Cleansing Face Wash, 150ml",
-      "family_revenue_30d": 12880,
+      "family_revenue_30d": 10030,
       "family_size": 2,
+      "family_revenue_keepa": 6300,
       "units_30d": 1592,
       "price": 6.3,
       "list_price": 9.0,
       "sellers": 2,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Cleansers",
       "product_type": "face wash",
       "rating": 4.4,
@@ -608,6 +632,15 @@
           "reviews": {
             "status": "good",
             "detail": "2065 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
           }
         }
       },
@@ -705,7 +738,8 @@
           "reason": "unrelated to the product"
         }
       ],
-      "sponsored_terms": 15
+      "sponsored_terms": 15,
+      "mobile_sheet": null
     },
     {
       "asin": "B07K1XJ9YG",
@@ -713,11 +747,13 @@
       "title": "Super Facialist Vitamin C Brightening Face Moisturiser, Vegan, 75ml",
       "family_revenue_30d": 7976,
       "family_size": 2,
+      "family_revenue_keepa": 1700,
       "units_30d": 197,
       "price": 16.93,
       "list_price": 17.0,
       "sellers": 17,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Day Care",
       "product_type": "moisturiser",
       "rating": 4.3,
@@ -759,19 +795,25 @@
           }
         }
       },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          }
+        }
+      },
       "flags": [
         {
           "type": "wrong_category",
           "detail": "moisturiser listed under Day Care"
-        },
-        {
-          "type": "sellers",
-          "detail": "17 sellers on the listing"
         }
       ],
       "targets": [],
       "wasted_terms": [],
-      "sponsored_terms": 0
+      "sponsored_terms": 0,
+      "mobile_sheet": null
     }
   ],
   "quick_wins": {
@@ -1038,45 +1080,6 @@
         }
       },
       {
-        "asin": "B0D6BWBYY2",
-        "title": "Super Facialist Rosehip Meltaway Cleansing Balm, Makeup Remover, 100ml",
-        "score": 94,
-        "checks": {
-          "images": {
-            "status": "good",
-            "detail": "8 images"
-          },
-          "video": {
-            "status": "good",
-            "detail": "11 videos"
-          },
-          "a_plus": {
-            "status": "good",
-            "detail": "A+ with 1 modules"
-          },
-          "title": {
-            "status": "warn",
-            "detail": "70 chars"
-          },
-          "bullets": {
-            "status": "good",
-            "detail": "5 bullets"
-          },
-          "bullet_depth": {
-            "status": "good",
-            "detail": "avg 159 chars"
-          },
-          "rating": {
-            "status": "good",
-            "detail": "4.5\u2605"
-          },
-          "reviews": {
-            "status": "good",
-            "detail": "177 reviews"
-          }
-        }
-      },
-      {
         "asin": "B014MI41AU",
         "title": "Super Facialist Vitamin C Brighten Micro Polish Face Wash, Vegan, 125ml",
         "score": 94,
@@ -1112,6 +1115,45 @@
           "reviews": {
             "status": "good",
             "detail": "1510 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0D6BWBYY2",
+        "title": "Super Facialist Rosehip Meltaway Cleansing Balm, Makeup Remover, 100ml",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "11 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "70 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 159 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "177 reviews"
           }
         }
       },

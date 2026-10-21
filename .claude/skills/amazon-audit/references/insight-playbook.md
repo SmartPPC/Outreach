@@ -6,7 +6,7 @@
 | `heroes[].flags` mixed_variation_family | Split the family by product type | "Your balm, scrub and night cream share one variation family, which confuses search and the category." |
 | `heroes[].wasted_terms` | Negatives on unrelated and partial-brand terms; move budget to `targets` | "<Product> is showing ads on '<term>' and '<term>', which have nothing to do with it. That budget would work harder on '<target>'." |
 | `heroes[].targets` push | Exact-match SP at top of search | "<Product> already ranks #<n> for '<term>' (<vol>/mo) with no ad support. That's the quickest visibility win." |
-| `heroes[].flags` sellers (Buy Box held by a reseller, crowded listing, above list price) | Brand Registry and distribution controls | "A reseller holds the Buy Box on <product>, so you don't control its price or the ad spend's return." |
+| `heroes[].flags` sellers (Buy Box held by a reseller, crowded listing, above list price; only raised when a third party holds the Buy Box, never when Amazon sells it) | Brand Registry and distribution controls | "A reseller holds the Buy Box on <product>, so you don't control its price or the ad spend's return." |
 | `heroes[].flags` stock (10–60% out of stock) | Inventory planning on the best-seller | "<Product> was out of stock ~<x>% of the last 90 days. That's lost sales and lost rank on your best-seller." |
 | `heroes[].mobile` video warn (influencer-only) | Add a short brand video | "Your best-seller has 7 videos, but all from influencers. A 30-second brand video would explain it faster on a phone." |
 | `heroes[].mobile` A+ fail (text-heavy) | Rebuild A+ for mobile | "Half your A+ images carry paragraphs of text that shrink to unreadable on a phone." |

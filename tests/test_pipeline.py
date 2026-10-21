@@ -191,6 +191,14 @@ def test_keepa_gives_up_past_max_wait(monkeypatch):
         keepa._wait_for(10)
 
 
+def test_amazon_held_buy_box_raises_no_price_or_seller_flags():
+    from analyse import checks
+    p = {"price": 2.35, "list_price": 7.16, "sellers": 8, "buy_box_owner": "Amazon"}
+    assert checks.seller_flags(p, "UltraDEX") == [] and checks.price_flag(p) is None
+    reseller = {**p, "buy_box_owner": "Cheap Deals UK"}
+    assert len(checks.seller_flags(reseller, "UltraDEX")) == 2 and checks.price_flag(reseller)
+
+
 def test_own_brand_terms_are_never_wasted():
     from analyse import checks
     kws = [{"keyword": "ultradex toothpaste", "sponsored_rank": 9, "organic_rank": None, "volume": 766},

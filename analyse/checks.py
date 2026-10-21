@@ -155,7 +155,15 @@ def mixed_family(children: list[dict]) -> list[str] | None:
     return types if len(types) > 1 else None
 
 
+def sold_by_amazon(p: dict) -> bool:
+    return "amazon" in (p.get("buy_box_owner") or "").lower()
+
+
 def seller_flags(p: dict, brand: str, brand_seller: str | None = None) -> list[str]:
+    """Reseller problems only exist when a third party holds the Buy Box. When Amazon sells it (Vendor/1P),
+    Amazon sets the price and other offers aren't winning sales, so there's nothing to pitch."""
+    if sold_by_amazon(p):
+        return []
     flags = []
     owner = p.get("buy_box_owner") or ""
     if owner and owner != brand_seller and "amazon" not in owner.lower() and norm(brand)[:6] not in norm(owner):
@@ -177,6 +185,8 @@ def stock_flag(p: dict) -> str | None:
 
 
 def price_flag(p: dict) -> str | None:
+    if sold_by_amazon(p):
+        return None  # Amazon's retail price, not the brand's or a reseller's
     if p.get("price") and p.get("list_price") and p["price"] < p["list_price"] * 0.7:
         return f"discounted {100 - 100 * p['price'] / p['list_price']:.0f}% off list ({p['price']:.2f} vs {p['list_price']:.2f})"
     return None

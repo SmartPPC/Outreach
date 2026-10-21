@@ -9,7 +9,7 @@
 
 1. You're barely advertising on your biggest searches. Only 1 of your top 30 keywords has an UltraDEX ad. Your Fresh Breath Spray ranks #6 for "bad breath" (73,600 searches a month) with nothing behind it.
 2. CB12 is advertising on your brand name. It takes an ad slot when people search "ultradex", and you have no ads there yourself.
-3. Your Fresh Breath Spray is selling at £2.35 against a £7.16 list price, with 8 sellers on the listing, which looks like resellers pulling the price down.
+3. Your 12hr Low-Abrasion Toothpaste listing isn't finished. It has 5 images, no video and no A+, while your rinses have all three.
 4. Your pack sizes are listed separately. The 12-pack spray and 6-pack rinses have their own listings, which splits your reviews and sales rank.
 
 ## Contacts

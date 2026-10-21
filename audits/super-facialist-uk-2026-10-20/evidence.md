@@ -1,4 +1,4 @@
-# Evidence: Super Facialist (amazon.co.uk, 2026-10-20)
+# Evidence: Super Facialist (amazon.co.uk, 2026-10-21)
 
 ## 1. Rosehip Cleansing Balm: move it out of Day Care and give it its own variation family
 
@@ -26,7 +26,6 @@ The Cleansing Oil is the engine (~£39.7k/mo, 5,300 reviews, 4.5★) and already
 - B00KZYWQLM: 5,315 units/mo, £7.47 (Jungle Scout), 4.5★ from 5,303 reviews
 - face cleanser: 22,136/mo, organic #36, no sponsored rank, CPC ~£0.96
 - facial cleanser: 7,989/mo, organic #30, no sponsored rank, CPC ~£0.75
-- Selling at £7.47 against a £12 list price (38% off), so check the discount is funded
 
 ## 4. Salicylic Blemish Face Wash: advertise on 'face wash' and acne terms
 
@@ -37,13 +36,12 @@ This ~£12.9k/mo family has 2,000+ reviews but is sponsored on only 15 terms, so
 - salicylic acid: 36,360/mo, organic #48, CPC ~£0.24
 - acne face wash: 4,093/mo, organic #25, CPC ~£0.54
 
-## 5. Quick wins: tidy two more mixed families and the night cream's resellers
+## 5. Quick wins: tidy up two more mixed product families
 
-The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cream shares one with a cleanser, moisturiser and serum. The night cream has 17 sellers and is selling at £20 against a £12.50 list price, which points to reseller pricing to rein in through Brand Registry.
+The Salicylic wash shares a variation family with a toner, and the Vegan Collagen Night Cream shares one with a cleanser, moisturiser and serum. Splitting them by product type gives each its own reviews, rank and the right category.
 
 - Parent B0H2BDYNF4: face wash + toner
 - Parent B0D9LRH3ZN: night cream + cleanser + moisturiser + serum
-- B0CSPJHQRC: 17 sellers, £20.00 vs £12.50 list (Keepa)
 - B00IEU6OF8 titled 'Superfacialist…' rather than 'Super Facialist'
 
 ## Data coverage

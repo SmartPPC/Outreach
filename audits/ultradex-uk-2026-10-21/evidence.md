@@ -17,15 +17,7 @@ CB12 Mouthwash takes a sponsored slot at #4 on 'ultradex' and #15 on 'ultradex m
 - 'ultradex mouthwash': CB12 sponsored at position 15
 - No UltraDEX sponsored placement on either brand search
 
-## 3. Fresh Breath Spray: check the price and sellers
-
-The spray family (~£13–17k/mo) sells at £2.35 against a £7.16 list price (67% off) with 8 sellers on the listing. If the discount isn't planned, it's resellers driving the price down on one of the brand's top three products.
-
-- B00HIXUCNC: £2.35 vs list £7.16 (Keepa); 8 sellers (Jungle Scout)
-- ~5,400 units/mo; Keepa cross-check ~£16.9k/mo for the family
-- 6 gallery images (one under 1600px)
-
-## 4. Bring the multipacks into their product families
+## 3. Bring the multipacks into their product families
 
 Pack sizes are listed separately from their main products, e.g. the Fresh Breath Spray 12-pack, '6 x Daily Oral Rinse 250ml' and the toothpaste 6-packs. That splits reviews and sales rank across six sets of duplicate listings. Merging them into variation families pools both.
 
@@ -33,7 +25,7 @@ Pack sizes are listed separately from their main products, e.g. the Fresh Breath
 - e.g. B0BG676CYD (Spray 12-pack) separate from B00HIXUCNC (single)
 - e.g. B016KXU6OK '6 x UltraDex Daily Oral Rinse 250ml' separate from the rinse family
 
-## 5. 12hr Low-Abrasion Toothpaste: finish the listing
+## 4. 12hr Low-Abrasion Toothpaste: finish the listing
 
 This newer best-seller family (~£7–8k/mo, 57 reviews) has 5 images, no video and no A+, and its title cuts off on mobile before the pack size. Bringing it up to the standard of the rinses would help it convert.
 

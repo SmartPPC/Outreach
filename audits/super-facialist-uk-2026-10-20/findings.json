@@ -33,8 +33,7 @@
       "evidence": [
         "B00KZYWQLM: 5,315 units/mo, £7.47 (Jungle Scout), 4.5★ from 5,303 reviews",
         "face cleanser: 22,136/mo, organic #36, no sponsored rank, CPC ~£0.96",
-        "facial cleanser: 7,989/mo, organic #30, no sponsored rank, CPC ~£0.75",
-        "Selling at £7.47 against a £12 list price (38% off), so check the discount is funded"
+        "facial cleanser: 7,989/mo, organic #30, no sponsored rank, CPC ~£0.75"
       ],
       "job_ad_quote": null
     },
@@ -52,12 +51,11 @@
     },
     {
       "category": "catalogue",
-      "title": "Quick wins: tidy two more mixed families and the night cream's resellers",
-      "detail": "The Salicylic wash shares a family with a toner, and the Vegan Collagen Night Cream shares one with a cleanser, moisturiser and serum. The night cream has 17 sellers and is selling at £20 against a £12.50 list price, which points to reseller pricing to rein in through Brand Registry.",
+      "title": "Quick wins: tidy up two more mixed product families",
+      "detail": "The Salicylic wash shares a variation family with a toner, and the Vegan Collagen Night Cream shares one with a cleanser, moisturiser and serum. Splitting them by product type gives each its own reviews, rank and the right category.",
       "evidence": [
         "Parent B0H2BDYNF4: face wash + toner",
         "Parent B0D9LRH3ZN: night cream + cleanser + moisturiser + serum",
-        "B0CSPJHQRC: 17 sellers, £20.00 vs £12.50 list (Keepa)",
         "B00IEU6OF8 titled 'Superfacialist…' rather than 'Super Facialist'"
       ],
       "job_ad_quote": null
@@ -66,9 +64,9 @@
   "hero_actions": {
     "B00KZYWQLM": "Exact-match SP on 'face cleanser' and 'facial cleanser'; negative 'super' and the micellar-water terms.",
     "B0D6BWBYY2": "Move to Cleansing Balms and split it out of the Rosehip 'Style' family, then cut the unrelated sponsored terms.",
-    "B014MI41AU": "Test SP on 'face wash women' (organic #27) and 'face exfoliator' (#26); check the 50% discount is deliberate.",
+    "B014MI41AU": "Test SP on 'face wash women' (organic #27) and 'face exfoliator' (#26).",
     "B07K1Z7Q7V": "Advertise on 'face wash', 'salicylic acid' and 'acne face wash'; separate it from the toner.",
-    "B0CSPJHQRC": "Bring reseller pricing back to list via Brand Registry, then split the family by product type."
+    "B0CSPJHQRC": "Split the family by product type and build up reviews (50 so far)."
   },
   "content_note": "Content isn't the problem: every best-seller has 7–9 images, video and A+. The Vegan Collagen Night Cream has the thinnest bullets and only 50 reviews.",
   "ad_strategy_summary": "Fund the generic cleanser and face-wash terms where the best-sellers already rank on page 2–3, paid for by cutting 'super' and the unrelated terms. An indicative £1.2k–1.9k a month covers the focus terms below.",

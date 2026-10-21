@@ -1,9 +1,9 @@
 # Super Facialist (amazon.co.uk)
 
-- **Audited:** 2026-10-20
+- **Audited:** 2026-10-21
 - **Input:** https://www.amazon.co.uk/stores/SuperFacialist/page/4DCB54EE-A8CD-4785-9118-273A1D6CBDD4?lp_asin=B0D6BWBYY2
 - **Audit page:** https://claude.ai/artifact/Y5r9e7Q48kLy7uQ9rXGBbT
-- **Catalogue:** 104 ASINs, 34 live; 5 best-seller families make 85% of ~£111,133/mo
+- **Catalogue:** 104 ASINs, 34 live; 5 best-seller families make 85% of ~£102,395/mo
 
 ## Email points
 
@@ -17,7 +17,7 @@
 - **Recommended To:** info@superfacialist.co.uk
 - info@superfacialist.co.uk (generic, from https://superfacialist.co.uk/pages/contact)
 - Company: The Brand Architekts Limited (06315241)
-- Only shared inboxes are published; find the founder or ecommerce lead on LinkedIn.
+- Only shared inboxes found; check LinkedIn:
 
 ## Data gaps
 

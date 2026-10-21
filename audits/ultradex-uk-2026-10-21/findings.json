@@ -26,17 +26,6 @@
     },
     {
       "category": "catalogue",
-      "title": "Fresh Breath Spray: check the price and sellers",
-      "detail": "The spray family (~£13–17k/mo) sells at £2.35 against a £7.16 list price (67% off) with 8 sellers on the listing. If the discount isn't planned, it's resellers driving the price down on one of the brand's top three products.",
-      "evidence": [
-        "B00HIXUCNC: £2.35 vs list £7.16 (Keepa); 8 sellers (Jungle Scout)",
-        "~5,400 units/mo; Keepa cross-check ~£16.9k/mo for the family",
-        "6 gallery images (one under 1600px)"
-      ],
-      "job_ad_quote": null
-    },
-    {
-      "category": "catalogue",
       "title": "Bring the multipacks into their product families",
       "detail": "Pack sizes are listed separately from their main products, e.g. the Fresh Breath Spray 12-pack, '6 x Daily Oral Rinse 250ml' and the toothpaste 6-packs. That splits reviews and sales rank across six sets of duplicate listings. Merging them into variation families pools both.",
       "evidence": [
@@ -62,7 +51,7 @@
     "B071VT9KBZ": "Add ads on 'alcohol free mouthwash' (3.1k/mo, organic #43).",
     "B007Y5XCZE": "Exact-match ads on 'mouth wash' and 'bad breath'; drop 'otrivine' (sponsored #1, unrelated).",
     "B007Y5XD3A": "Test ads on 'toothpaste' and 'whitening toothpaste', where it ranks #47–48 with no ad support.",
-    "B00HIXUCNC": "Back the #6 organic rank on 'bad breath' with ads; check the 67% discount and the 8 sellers.",
+    "B00HIXUCNC": "Back the #6 organic rank on 'bad breath' with ads, and add a 7th gallery image.",
     "B071Z1B158": "Fold the 250ml 6-pack and 1L into the rinse families; add ads on 'fluoride mouth rinse'.",
     "B0BG66FF4T": "Add video and A+, a 6th and 7th image, and move the pack size into the first 80 characters of the title."
   },

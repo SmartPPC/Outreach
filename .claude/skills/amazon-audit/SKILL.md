@@ -50,6 +50,9 @@ The Python collectors handle data and arithmetic, and their numbers are the sour
   from it; say "not captured".
 - **Seller names.** A seller that holds the Buy Box on 80%+ of the range is the brand's own account,
   not a reseller.
+- **Amazon holds the Buy Box (Vendor/1P).** Amazon sets the retail price, so a deep discount or many other
+  sellers isn't the brand's problem to fix. Never pitch it. Price and reseller points only apply when a third
+  party holds the Buy Box.
 - **Company matches.** Companies House matches must be exact and active. Treat a dissolved company with the
   same name as a different business.
 - **Conflicts.** Check `contacts.company` against the user's own employer. If the brand belongs to the

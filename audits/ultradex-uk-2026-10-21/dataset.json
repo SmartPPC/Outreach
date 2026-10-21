@@ -134,6 +134,7 @@
       "list_price": 8.15,
       "sellers": 2,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Mouthwashes",
       "product_type": null,
       "rating": 4.6,
@@ -257,6 +258,7 @@
       "list_price": 8.0,
       "sellers": 12,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Mouthwashes",
       "product_type": null,
       "rating": 4.4,
@@ -327,12 +329,7 @@
           }
         }
       },
-      "flags": [
-        {
-          "type": "sellers",
-          "detail": "12 sellers on the listing"
-        }
-      ],
+      "flags": [],
       "targets": [
         {
           "keyword": "bad breath",
@@ -412,6 +409,7 @@
       "list_price": 6.15,
       "sellers": 6,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Toothpastes",
       "product_type": null,
       "rating": 4.5,
@@ -482,12 +480,7 @@
           }
         }
       },
-      "flags": [
-        {
-          "type": "sellers",
-          "detail": "6 sellers on the listing"
-        }
-      ],
+      "flags": [],
       "targets": [
         {
           "keyword": "toothpaste",
@@ -573,6 +566,7 @@
       "list_price": 7.16,
       "sellers": 8,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Sprays",
       "product_type": null,
       "rating": 4.4,
@@ -643,16 +637,7 @@
           }
         }
       },
-      "flags": [
-        {
-          "type": "sellers",
-          "detail": "8 sellers on the listing"
-        },
-        {
-          "type": "price",
-          "detail": "discounted 67% off list (2.35 vs 7.16)"
-        }
-      ],
+      "flags": [],
       "targets": [
         {
           "keyword": "bad breath",
@@ -725,6 +710,7 @@
       "list_price": 25.99,
       "sellers": 2,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Mouthwashes",
       "product_type": null,
       "rating": 4.7,
@@ -795,12 +781,7 @@
           }
         }
       },
-      "flags": [
-        {
-          "type": "price",
-          "detail": "discounted 56% off list (11.38 vs 25.99)"
-        }
-      ],
+      "flags": [],
       "targets": [
         {
           "keyword": "oral thrush treatment for mouth and tongue",
@@ -864,6 +845,7 @@
       "list_price": 36.9,
       "sellers": 2,
       "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
       "category": "Toothpastes",
       "product_type": null,
       "rating": 4.6,
