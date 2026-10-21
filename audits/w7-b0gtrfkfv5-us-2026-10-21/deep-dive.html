@@ -1,98 +1,104 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>W7 Advent Calendar US Deep Dive</title>
+<html lang="en"><head><meta charset="utf-8"><title>W7 Beauty Blast 2026 US Review</title>
 <style>
-@page{size:A4;margin:11mm 12mm}
+@page{size:A4;margin:13mm 14mm}
 *{box-sizing:border-box}
+:root{--ink:#111;--pink:#E4007C;--pinksoft:#FDEAF3;--grey:#6b6b70;--line:#e4e1e3;--good:#0a7a4f;--bad:#c0262d;--warn:#a06a00}
 html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-body{margin:0;font:9.3pt/1.4 "Helvetica Neue",Arial,sans-serif;color:#1d1d1f;background:#fff}
-.page{break-after:page;display:flex;flex-direction:column;gap:7px}
+body{margin:0;font:10.6pt/1.5 "Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff}
+.page{break-after:page;display:flex;flex-direction:column;gap:12px}
 .page:last-child{break-after:auto}
-h1{font-size:17pt;margin:0;letter-spacing:-.2px}
-h2{font-size:11.5pt;margin:4px 0 2px;color:#0b3d2e;border-bottom:1.5px solid #0b3d2e;padding-bottom:2px}
-h3{font-size:9.6pt;margin:2px 0}
+.band{background:var(--ink);color:#fff;border-radius:4px;padding:16px 18px 14px;display:flex;align-items:center;gap:18px}
+.logo{font-weight:900;font-size:34pt;letter-spacing:-2px;line-height:1;border:3px solid #fff;padding:2px 8px 4px}
+.band h1{font-size:17pt;margin:0;line-height:1.2}
+.band .sub{font-size:9pt;color:#d6d6d6;margin-top:3px;letter-spacing:.06em;text-transform:uppercase}
+.band .sub b{color:var(--pink)}
+h2{font-size:14pt;margin:6px 0 0;display:flex;align-items:center;gap:9px}
+h2 .num{background:var(--pink);color:#fff;border-radius:50%;width:24px;height:24px;font-size:11pt;display:inline-flex;align-items:center;justify-content:center;flex:none}
+h2::after{content:"";flex:1;height:2px;background:var(--pink);margin-left:6px}
+h3{font-size:11pt;margin:0 0 3px}
 p{margin:0}
-.meta{color:#5b5b60;font-size:8.2pt}
-.eyebrow{font-size:7.8pt;letter-spacing:.12em;text-transform:uppercase;color:#0b7a55;font-weight:700}
-.headline{background:#0b3d2e;color:#fff;border-radius:6px;padding:9px 12px;font-size:10.4pt;line-height:1.4}
-.headline b{color:#ffd76a}
-.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
-.tile{border:1px solid #d9d6cf;border-radius:6px;padding:6px 8px;background:#faf8f3}
-.tile .v{font-size:13.5pt;font-weight:700}
-.tile .l{font-size:7.6pt;color:#5b5b60;text-transform:uppercase;letter-spacing:.05em}
-.tile .s{font-size:7.8pt;color:#5b5b60}
-.bad{color:#b42318}.good{color:#0b7a55}.warn{color:#9a6700}
-table{width:100%;border-collapse:collapse;font-size:8.4pt}
-th{background:#eef3f0;text-align:left;padding:3px 5px;font-size:7.7pt;text-transform:uppercase;letter-spacing:.03em;color:#33433d}
-td{padding:2.5px 5px;border-bottom:1px solid #e6e3dc;vertical-align:top}
+.meta{color:var(--grey);font-size:9pt}
+.lead{font-size:12pt;line-height:1.5;border-left:5px solid var(--pink);padding:4px 0 4px 14px}
+.lead b{color:var(--pink)}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tile{border-top:4px solid var(--ink);background:#f6f5f5;padding:8px 10px}
+.tile .v{font-size:17pt;font-weight:800;line-height:1.15}
+.tile .l{font-size:8pt;color:var(--grey);text-transform:uppercase;letter-spacing:.06em}
+.tile .s{font-size:8.6pt;color:var(--grey)}
+.tile.hot{border-top-color:var(--pink)}
+.good{color:var(--good)}.bad{color:var(--bad)}.warn{color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:9.6pt}
+th{background:var(--ink);color:#fff;text-align:left;padding:5px 7px;font-size:8.3pt;text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+td{padding:4px 7px;border-bottom:1px solid var(--line);vertical-align:top}
 td.n,th.n{text-align:right;white-space:nowrap}
 tr{break-inside:avoid}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.box{border:1px solid #d9d6cf;border-radius:6px;padding:7px 9px}
-.verdict{border-left:4px solid #0b7a55;background:#f1f8f4;padding:6px 9px;border-radius:0 6px 6px 0}
-.verdict.red{border-color:#b42318;background:#fdf3f2}
-.verdict.amber{border-color:#9a6700;background:#fdf8ec}
-ul{margin:2px 0 0;padding-left:15px}li{margin:1px 0}
-.pill{display:inline-block;font-size:7.3pt;font-weight:700;padding:0 5px;border-radius:8px;color:#fff}
-.p-g{background:#0b7a55}.p-r{background:#b42318}.p-a{background:#9a6700}
-ol.actions{margin:0;padding-left:0;list-style:none;counter-reset:a;display:flex;flex-direction:column;gap:6px}
-ol.actions li{counter-increment:a;border:1px solid #d9d6cf;border-radius:6px;padding:6px 9px 6px 34px;position:relative;break-inside:avoid}
-ol.actions li::before{content:counter(a);position:absolute;left:9px;top:6px;width:18px;height:18px;border-radius:50%;background:#0b3d2e;color:#fff;font-weight:700;font-size:8.5pt;text-align:center;line-height:18px}
-ol.actions .why{color:#5b5b60;font-size:8.2pt}
-.foot{font-size:7.4pt;color:#6b6b70;border-top:1px solid #e6e3dc;padding-top:4px;margin-top:auto}
-.sqp td{padding:1.3px 5px}.sqp td:first-child{white-space:nowrap}.sqp{font-size:7.9pt}tr.grp td{background:#f4f1ea;font-weight:700;color:#0b3d2e;padding-top:3px}</style></head>
-<body>
+.sqp td{padding:3px 7px}.sqp td:first-child{white-space:nowrap}
+tr.grp td{background:var(--pinksoft);font-weight:800;color:var(--ink);border-bottom:2px solid var(--pink);padding-top:5px}
+ul{margin:2px 0 0;padding-left:18px}li{margin:3px 0}
+li::marker{color:var(--pink)}
+.callout{background:var(--pinksoft);border-radius:4px;padding:10px 14px}
+.callout.dark{background:var(--ink);color:#fff}
+.callout.dark b{color:var(--pink)}
+.pill{display:inline-block;font-size:8pt;font-weight:800;padding:1px 7px;border-radius:9px;color:#fff;letter-spacing:.03em}
+.p-g{background:var(--good)}.p-r{background:var(--bad)}.p-a{background:var(--warn)}.p-k{background:var(--pink)}
+ol.actions{margin:0;padding:0;list-style:none;counter-reset:a;display:flex;flex-direction:column;gap:9px}
+ol.actions li{counter-increment:a;border:1px solid var(--line);border-left:5px solid var(--pink);border-radius:3px;padding:8px 12px 8px 46px;position:relative;break-inside:avoid;margin:0}
+ol.actions li::before{content:counter(a);position:absolute;left:12px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:10.5pt;text-align:center;line-height:24px}
+ol.actions .why{color:var(--grey);font-size:9.4pt;margin-top:2px}
+.foot{font-size:8.4pt;color:var(--grey);margin-top:auto;border-top:1px solid var(--line);padding-top:5px}
+</style></head><body>
 
 <section class="page">
-  <div>
-    <div class="eyebrow">Amazon US · 21 October 2026</div>
-    <h1>W7 Beauty Blast 2026 Advent Calendar (B0GTRFKFV5)</h1>
-    <p class="meta">Based on Seller Central sales and traffic, Brand Analytics search data (30 Aug – 17 Oct), the Sponsored Products report (1 Sep – 21 Oct), the campaign list and an outside-in review of the listing.</p>
+  <div class="band">
+    <div class="logo">W7</div>
+    <div><div class="sub"><b>Amazon US</b> · Beauty Blast 2026 Advent Calendar · B0GTRFKFV5</div>
+    <h1>What's driving sales, and where the ad money should go</h1>
+    <div class="sub">21 October 2026</div></div>
   </div>
 
-  <div class="headline">Sales are growing fast. Daily sales are up <b>9×</b> since September, and shoppers choose this calendar over rivals on beauty searches. The problem is the ad spend: <b>each ad sale costs about $29 in clicks on a $27 product</b>. The fix is where the ad money goes, not the listing or the category.</div>
+  <p class="lead">Sales are growing fast: <b>9× more a day</b> than in September, and shoppers choose this calendar over rivals on beauty searches. The problem is ad spend. <b>Each ad sale costs about $29 in clicks on a $27 product.</b> Moving the money to the right searches is the biggest win, and fixing the category should help on top of that.</p>
 
   <div class="tiles">
     <div class="tile"><div class="l">Sales, 1–20 Oct</div><div class="v">$68.9k</div><div class="s">All of Sep: $11.2k</div></div>
     <div class="tile"><div class="l">Sold per day</div><div class="v">117</div><div class="s">Sep: 12</div></div>
     <div class="tile"><div class="l">Conversion</div><div class="v">2.5%</div><div class="s">Sep: 1.9%</div></div>
     <div class="tile"><div class="l">Ad spend, 1–20 Oct</div><div class="v">~$43k</div><div class="s">for $68.9k of sales</div></div>
-    <div class="tile"><div class="l">Ad spend ÷ sales</div><div class="v bad">~63%</div><div class="s">Sep: 42%</div></div>
+    <div class="tile hot"><div class="l">Ad spend ÷ sales</div><div class="v bad">~63%</div><div class="s">Sep: 42%</div></div>
   </div>
 
-  <h2>1. Conversion rate</h2>
-  <div class="two">
-    <table>
-      <tr><th>W7 product, 1–20 Oct</th><th class="n">Conversion</th></tr>
-      <tr><td><b>Beauty Blast 2026 calendar</b></td><td class="n"><b>2.5%</b></td></tr>
-      <tr><td>Makeup Set Box (Makeup Sets)</td><td class="n">2.2%</td></tr>
-      <tr><td>Meet Your Mattes Gift Set (Makeup Sets)</td><td class="n">4.0%</td></tr>
-      <tr><td>On the Go Essentials Set (Makeup Sets)</td><td class="n">0.8%</td></tr>
-    </table>
-    <ul>
-      <li>2.5% is <b>normal for a gift set</b>, in line with W7's other sets.</li>
-      <li>Shoppers who find it <b>without an ad convert at about 3.7%</b>, against about <b>1.8% from ad clicks</b>.</li>
-      <li>On beauty searches it <b>wins more than its share of sales</b>. On "beauty advent calendar 2026" it gets about 1 in 20 clicks but <b>1 in 8 purchases</b>.</li>
-      <li>The reason is price: <b>$27 against $55–60</b> for a typical beauty calendar.</li>
-    </ul>
-  </div>
+  <h2><span class="num">1</span>Conversion rate</h2>
+  <table>
+    <tr><th>W7 product, 1–20 Oct</th><th>Category</th><th class="n">Conversion</th></tr>
+    <tr><td><b>Beauty Blast 2026 calendar</b></td><td>Home &amp; Kitchen › Home Décor</td><td class="n"><b>2.5%</b></td></tr>
+    <tr><td>Makeup Set Box</td><td>Beauty › Makeup › Makeup Sets</td><td class="n">2.2%</td></tr>
+    <tr><td>Meet Your Mattes Gift Set</td><td>Beauty › Makeup › Makeup Sets</td><td class="n">4.0%</td></tr>
+  </table>
+  <ul>
+    <li>2.5% is <b>normal for a gift set</b> and sits within the range of W7's other sets.</li>
+    <li>Shoppers who find it <b>without an ad convert at about 3.7%</b>. Ad clicks convert at about <b>1.8%</b>.</li>
+    <li>On beauty searches it <b>wins more than its fair share</b>. On "make up advent calendar 2026" it gets about 1 in 12 clicks but <b>1 in 8 purchases</b>. On "luxury beauty advent calendar 2026" its share of purchases is twice its share of clicks.</li>
+    <li>The reason is price: <b>$27 against $55–60</b> for a typical beauty calendar.</li>
+  </ul>
 
-  <h2>2. Category</h2>
-  <div class="two">
-    <ul>
-      <li>It's listed in <b class="bad">Home &amp; Kitchen › Home Décor</b> (rank #6,663).</li>
-      <li>The UK listing and the main rivals (e.l.f., Revolution, L'Oréal) are in <b>Beauty › Makeup › Makeup Sets</b>.</li>
-      <li>The Holiday Haul calendar is in Home Décor too.</li>
-    </ul>
-    <div class="verdict amber"><b>Not the main problem, but worth fixing.</b> It already shows up well on beauty searches. Moving it to Makeup Sets would let it earn a Best Seller badge and rank against the right products. It's a quick Seller Support request.</div>
-  </div>
-
-  <h2>3. Listing and mobile</h2>
-  <p><b>Strong. Content isn't the problem.</b> It has 7 zoomable images, a video, phone-friendly A+ content, a clear title, and 5,300+ reviews at 4.4★. It has one seller and a 99% Buy Box.</p>
+  <h2><span class="num">2</span>Category</h2>
+  <table>
+    <tr><th>Listing</th><th>Category</th></tr>
+    <tr><td><b>Beauty Blast 2026 (US)</b></td><td class="bad"><b>Home &amp; Kitchen › Home Décor Products</b> (rank #6,663)</td></tr>
+    <tr><td>Same calendar in the UK</td><td>Beauty › Make-up › Make-up Sets</td></tr>
+    <tr><td>e.l.f., Revolution, L'Oréal, UCANBE</td><td>Beauty › Makeup › Makeup Sets</td></tr>
+    <tr><td>W7 Holiday Haul 2026 (US)</td><td class="bad">Home &amp; Kitchen › Home Décor Products</td></tr>
+  </table>
+  <div class="callout"><b>Moving to Makeup Sets should lift both visibility and conversion.</b> It already shows up well on beauty searches. But on broad searches like "advent calendar 2026", Amazon treats it as a home décor item and shows it to a mixed audience, and it converts at about a third of the market rate there. In Makeup Sets, Amazon should match it to more beauty-minded shoppers. It could also earn a <b>Best Seller badge</b>, which usually lifts clicks and conversion. We can't promise a number, but it's a quick Seller Support request and it all points the same way.</div>
 </section>
 
 <section class="page">
-  <h2>4. Where to push spend: Search Query Performance, 27 Sep – 17 Oct</h2>
-  <p class="meta">Each search shows the calendar's share of all clicks and all purchases for that search. A <b>purchase ÷ click ratio above 1×</b> means shoppers buy W7 more often than they click it, so extra traffic there will convert. Below 1×, they click W7 and then buy something else. W7 sales = purchases in the 3 weeks. Organic rank: Jungle Scout, 21 Oct.</p>
+  <h2><span class="num">3</span>Listing and mobile</h2>
+  <p><b>Strong. Content isn't the problem.</b> It has 7 zoomable images, a video, phone-friendly A+ content, a clear title, and 5,300+ reviews at 4.4★. W7 is the only seller and holds a 99% Buy Box.</p>
+
+  <h2><span class="num">4</span>Where to push spend</h2>
+  <p>Brand Analytics Search Query Performance, <b>27 Sep – 17 Oct</b> (the 3 weeks since the price came down). For each search it shows W7's share of all clicks and all purchases.</p>
+  <div class="callout"><b>How to read it:</b> a <b>purchase ÷ click ratio above 1×</b> means shoppers buy W7 more often than they click it, so extra traffic there will convert. Below 1×, they click W7 and then buy something else. "W7 sales" is the calendar's purchases over the 3 weeks. Organic rank is from Jungle Scout, 21 Oct.</div>
   <table class="sqp">
     <tr><th>Search</th><th class="n">Searches / wk</th><th class="n">Organic rank</th><th class="n">W7 click share</th><th class="n">W7 purchase share</th><th class="n">Purchase ÷ click</th><th class="n">W7 sales</th></tr>
 <tr class="grp"><td colspan="7">Push: beauty and makeup searches</td></tr>
@@ -120,6 +126,12 @@ ol.actions .why{color:#5b5b60;font-size:8.2pt}
 <tr class="grp"><td colspan="7">Defend: brand searches</td></tr>
 <tr><td>w7 advent calendar 2026</td><td class="n">199</td><td class="n">–</td><td class="n">43.1%</td><td class="n good"><b>70.6%</b></td><td class="n">1.6×</td><td class="n">12</td></tr>
 <tr><td>w7 advent calendar</td><td class="n">141</td><td class="n">–</td><td class="n">38.5%</td><td class="n good"><b>90.0%</b></td><td class="n">2.3×</td><td class="n">9</td></tr>
+  </table>
+</section>
+
+<section class="page">
+  <table class="sqp">
+    <tr><th>Search</th><th class="n">Searches / wk</th><th class="n">Organic rank</th><th class="n">W7 click share</th><th class="n">W7 purchase share</th><th class="n">Purchase ÷ click</th><th class="n">W7 sales</th></tr>
 <tr class="grp"><td colspan="7">Hold: converting at or below market</td></tr>
 <tr><td>beauty advent calendar</td><td class="n">22k</td><td class="n">#3</td><td class="n">5.3%</td><td class="n warn"><b>5.0%</b></td><td class="n">0.9×</td><td class="n">10</td></tr>
 <tr><td>teen advent calendar 2026</td><td class="n">9.7k</td><td class="n">#5</td><td class="n">3.5%</td><td class="n bad"><b>2.5%</b></td><td class="n">0.7×</td><td class="n">6</td></tr>
@@ -139,46 +151,47 @@ ol.actions .why{color:#5b5b60;font-size:8.2pt}
   </table>
   <ul>
     <li><b>Organic:</b> page one (#1–10) on nearly every beauty, makeup and teen search. Page 2–3 on broad "advent calendar" searches.</li>
-    <li><b>Paid:</b> the ads rarely reach the top of the page. Top-of-search share is under 5%, with no top-of-search bid boost set.</li>
+    <li><b>Paid:</b> the ads rarely reach the top of the page. Top-of-search share is under 5%, and no top-of-search bid boost is set.</li>
     <li><b>Biggest opportunity:</b> the "Push" searches add up to about <b>170k searches a week</b> (including Spanish), and W7 already converts above market on them.</li>
   </ul>
 
-  <h2>5. Where ad spend is working, and where it isn't</h2>
+  <h2><span class="num">5</span>Where ad spend is working, and where it isn't</h2>
   <table>
     <tr><th>Campaign</th><th class="n">Spend</th><th class="n">Calendars sold</th><th class="n">Ad cost per calendar</th><th>Verdict</th></tr>
     <tr><td>Auto</td><td class="n">$2,813</td><td class="n">126</td><td class="n">$22</td><td><span class="pill p-g">BEST</span></td></tr>
-    <tr><td>Competitor product pages</td><td class="n">$6,469</td><td class="n">286</td><td class="n">$23</td><td><span class="pill p-g">OK</span> expand</td></tr>
+    <tr><td>Competitor product pages</td><td class="n">$6,469</td><td class="n">286</td><td class="n">$23</td><td><span class="pill p-g">EXPAND</span></td></tr>
     <tr><td>Beauty Blast keywords</td><td class="n">$9,406</td><td class="n">364</td><td class="n">$26</td><td><span class="pill p-a">FIX</span> move to top of search</td></tr>
     <tr><td>Sponsored Brands video ($1,400/day)</td><td class="n">$15,203</td><td class="n">~572</td><td class="n">~$27</td><td><span class="pill p-a">TIGHTEN</span></td></tr>
     <tr><td><b>General "advent calendar" terms</b></td><td class="n bad"><b>$14,054</b></td><td class="n">330</td><td class="n bad"><b>$43</b></td><td><span class="pill p-r">CUT</span> loses money</td></tr>
   </table>
-  <p><b class="good">Working:</b> ads plus the price cut lifted sales without ads about 6× (about 7 a day to 41 a day). Auto and competitor product pages buy sales most cheaply. <b class="bad">Not working:</b> every campaign pays more than $20 in ads per $27 calendar. Spend nearly tripled in two weeks, but returns fell to $0.95 of sales per $1.</p>
+  <p><b class="good">Working:</b> ads plus the price cut lifted sales without ads about <b>6×</b> (about 7 a day to 41 a day). Auto and competitor product pages buy sales most cheaply.</p>
+  <p><b class="bad">Not working:</b> every campaign pays more than $20 in ads per $27 calendar. Spend nearly tripled in two weeks, but returns fell to <b>$0.95 of sales per $1</b>.</p>
 </section>
 
 <section class="page">
-  <h2>6. Actions</h2>
+  <h2><span class="num">6</span>Actions</h2>
   <ol class="actions">
-    <li><b>Cut the general "advent calendar" campaign from $1,000 to about $200 a day.</b> Keep only terms that sell profitably. Keep "advent calendar 2026" on exact match at a low bid only: it brings sales, but W7 converts at a third of the market rate there. Add negatives: <i>needoh, squishy, dumpling, chocolate, lego, for adults, amazon beauty advent calendar, amazon advent calendar</i>.<div class="why">Frees up about $800 a day. Today it loses money on every sale.</div></li>
-    <li><b>Move that budget to the "Push" searches in section 4, at the top of the page.</b> Use exact match on <i>beauty advent calendar 2026, makeup advent calendar 2026, make up advent calendar 2026, luxury beauty advent calendar 2026, makeup advent calendar, advent calendar 2026 makeup/beauty, advent calendar makeup/beauty</i>, plus teen and women searches such as <i>advent calendar 2026 teen girls, advent calendar for teen girls, makeup advent calendar 2026 for teens, advent calendar 2026 women</i>. Add a <b>+50–100% top-of-search boost</b>.<div class="why">Shoppers buy W7 1.1–2.8× more often than they click it on these searches, and it already ranks #1–10 organically.</div></li>
-    <li><b>Add competitor targeting for rival beauty calendars, led by product pages.</b> Expand the competitor product-page campaign (already one of the cheapest at about $23 per calendar) to the best-selling rival calendars from Sephora, Ulta, e.l.f., L'Oréal and Revolution. Add searches for those brands only as a small test: <i>ulta advent calendar 2026</i> converts at market rate, while <i>sephora</i> and <i>elf advent calendar 2026</i> convert at about half the market rate.<div class="why">Reach shoppers who are already looking at a $60–95 beauty calendar, with a $27 alternative.</div></li>
+    <li><b>Cut the general "advent calendar" campaign from $1,000 to about $200 a day.</b> Keep "advent calendar 2026" on exact match at a low bid only: it brings sales, but W7 converts at a third of the market rate there. Add negatives: <i>needoh, squishy, dumpling, chocolate, lego, for adults, amazon beauty advent calendar, amazon advent calendar</i>.<div class="why">Frees up about $800 a day. Today it loses money on every sale.</div></li>
+    <li><b>Move that budget to the "Push" searches, at the top of the page.</b> Use exact match on <i>beauty advent calendar 2026, makeup advent calendar 2026, make up advent calendar 2026, luxury beauty advent calendar 2026, makeup advent calendar, advent calendar 2026 makeup/beauty</i>, plus teen and women searches such as <i>advent calendar 2026 teen girls, makeup advent calendar 2026 for teens, advent calendar 2026 women</i>. Add a <b>+50–100% top-of-search boost</b>.<div class="why">Shoppers buy W7 1.1–2.8× more often than they click it here, and it already ranks #1–10 organically.</div></li>
+    <li><b>Add competitor targeting for rival beauty calendars, led by product pages.</b> Expand the competitor product-page campaign (already about $23 per calendar) to the best-selling Sephora, Ulta, e.l.f., L'Oréal and Revolution calendars. Add searches for those brands only as a small test: <i>ulta advent calendar 2026</i> converts at market rate, while <i>sephora</i> and <i>elf</i> convert at about half.<div class="why">Reach shoppers already looking at a $60–95 calendar, with a $27 alternative.</div></li>
     <li><b>Add Spanish searches:</b> <i>calendario de adviento maquillaje</i> and <i>calendario de adviento</i>.<div class="why">About 42k searches a week, page one organically, and 1.9–4.1× more purchases than clicks.</div></li>
     <li><b>Set a limit on ad cost per calendar</b> of about $10–12, depending on W7's margin, and lower bids on anything above it.<div class="why">It's $22–43 today.</div></li>
     <li><b>Tighten the $1,400/day Sponsored Brands video</b> to the "Push" and brand searches. Keep a small exact-match bid on <i>w7 advent calendar</i>.<div class="why">It's the biggest budget. Brand searches convert at 70–90% purchase share.</div></li>
-    <li><b>Ask Seller Support to move the calendar (and Holiday Haul) to Makeup Sets.</b><div class="why">Quick to do. It opens up the Best Seller badge.</div></li>
+    <li><b>Ask Seller Support to move the calendar (and the Holiday Haul) to Makeup Sets.</b><div class="why">Expect better matching to beauty shoppers, a likely lift in conversion on broad searches, and eligibility for the Best Seller badge.</div></li>
   </ol>
 
-  <h2>7. Targets for the next 2–3 weeks</h2>
+  <h2><span class="num">7</span>Targets for the next 2–3 weeks</h2>
   <table>
     <tr><th>Measure</th><th class="n">Now</th><th class="n">Target</th></tr>
     <tr><td>Ad spend as a share of total calendar sales</td><td class="n bad">~63%</td><td class="n">25–35%</td></tr>
     <tr><td>Ad cost per calendar</td><td class="n bad">~$29</td><td class="n">$10–12</td></tr>
-    <tr><td>Share of sales on "beauty advent calendar 2026"</td><td class="n">12%</td><td class="n">Hold 10%+</td></tr>
+    <tr><td>Conversion rate (all traffic)</td><td class="n">2.5%</td><td class="n">3%+ after the category move</td></tr>
     <tr><td>Calendars sold per day without an ad</td><td class="n">~41</td><td class="n">Rising</td></tr>
-    <tr><td>Top-of-search share on beauty searches</td><td class="n">&lt;5%</td><td class="n">20%+</td></tr>
+    <tr><td>Top-of-search share on "Push" searches</td><td class="n">&lt;5%</td><td class="n">20%+</td></tr>
   </table>
 
-  <div class="verdict" style="margin-top:4px"><b>Bottom line.</b> The product, price and reviews are winning. Stop paying for broad and off-target searches. Put the money at the top of the beauty searches and into rival-calendar searches, where shoppers already choose W7. Do it before the late-November peak.</div>
+  <div class="callout dark"><b>Bottom line.</b> The product, price and reviews are winning. Stop paying for broad and off-target searches. Put the money at the top of the beauty searches and on rival calendars' pages, where shoppers already choose W7. Move it into Makeup Sets. Do it before the late-November peak.</div>
 
-  <p class="meta" style="margin-top:4px">Notes: sales without ads are estimated as total sales minus ad-attributed sales. Recent days will still gain some sales, because Amazon counts sales for 7 days after a click. Part of the growth is seasonal.</p>
+  <p class="foot">Notes: sales without ads are estimated as total sales minus ad-attributed sales. Recent days will still gain some sales, because Amazon counts sales for 7 days after a click. Part of the growth is seasonal.</p>
 </section>
 </body></html>
