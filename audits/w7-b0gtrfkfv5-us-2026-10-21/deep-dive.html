@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>W7 Advent Calendar US Deep Dive</title>
+<style>
+@page{size:A4;margin:11mm 12mm}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;font:8.8pt/1.34 "Helvetica Neue",Arial,sans-serif;color:#1d1d1f;background:#fff}
+.page{break-after:page;display:flex;flex-direction:column;gap:9px}
+.page:last-child{break-after:auto}
+h1{font-size:17pt;margin:0;letter-spacing:-.2px}
+h2{font-size:11.5pt;margin:4px 0 2px;color:#0b3d2e;border-bottom:1.5px solid #0b3d2e;padding-bottom:2px}
+h3{font-size:9.6pt;margin:2px 0}
+p{margin:0}
+.meta{color:#5b5b60;font-size:8.2pt}
+.eyebrow{font-size:7.8pt;letter-spacing:.12em;text-transform:uppercase;color:#0b7a55;font-weight:700}
+.headline{background:#0b3d2e;color:#fff;border-radius:6px;padding:9px 12px;font-size:10.4pt;line-height:1.4}
+.headline b{color:#ffd76a}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.tile{border:1px solid #d9d6cf;border-radius:6px;padding:6px 8px;background:#faf8f3}
+.tile .v{font-size:13.5pt;font-weight:700}
+.tile .l{font-size:7.6pt;color:#5b5b60;text-transform:uppercase;letter-spacing:.05em}
+.tile .s{font-size:7.8pt;color:#5b5b60}
+.bad{color:#b42318}.good{color:#0b7a55}.warn{color:#9a6700}
+table{width:100%;border-collapse:collapse;font-size:7.9pt}
+th{background:#eef3f0;text-align:left;padding:3px 5px;font-size:7.7pt;text-transform:uppercase;letter-spacing:.03em;color:#33433d}
+td{padding:2.5px 5px;border-bottom:1px solid #e6e3dc;vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+tr{break-inside:avoid}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.box{border:1px solid #d9d6cf;border-radius:6px;padding:7px 9px}
+.verdict{border-left:4px solid #0b7a55;background:#f1f8f4;padding:6px 9px;border-radius:0 6px 6px 0}
+.verdict.red{border-color:#b42318;background:#fdf3f2}
+.verdict.amber{border-color:#9a6700;background:#fdf8ec}
+ul{margin:2px 0 0;padding-left:15px}li{margin:1px 0}
+.pill{display:inline-block;font-size:7.3pt;font-weight:700;padding:0 5px;border-radius:8px;color:#fff}
+.p-g{background:#0b7a55}.p-r{background:#b42318}.p-a{background:#9a6700}
+ol.actions{margin:0;padding-left:0;list-style:none;counter-reset:a;display:flex;flex-direction:column;gap:6px}
+ol.actions li{counter-increment:a;border:1px solid #d9d6cf;border-radius:6px;padding:6px 9px 6px 34px;position:relative;break-inside:avoid}
+ol.actions li::before{content:counter(a);position:absolute;left:9px;top:6px;width:18px;height:18px;border-radius:50%;background:#0b3d2e;color:#fff;font-weight:700;font-size:8.5pt;text-align:center;line-height:18px}
+ol.actions .why{color:#5b5b60;font-size:8.2pt}
+.foot{font-size:7.4pt;color:#6b6b70;border-top:1px solid #e6e3dc;padding-top:4px;margin-top:auto}
+</style></head><body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div>
+    <div class="eyebrow">Amazon US · Single-product deep dive · 21 October 2026</div>
+    <h1>W7 Beauty Blast 2026 Makeup Advent Calendar (B0GTRFKFV5)</h1>
+    <p class="meta">Sources: Seller Central Business Reports (Sep, 1–20 Oct), Brand Analytics Search Query Performance (7 weeks, 30 Aug – 17 Oct), Sponsored Products advertised-product report (daily, 1 Sep – 21 Oct), campaign list, plus our outside-in audit (Keepa, Jungle Scout, Amazon search results).</p>
+  </div>
+
+  <div class="headline">The calendar is taking off. Daily sales rose <b>9×</b> from September to October, and shoppers pick it over rivals on beauty searches. But <b>ads are buying a lot of those sales at a loss</b>: each Sponsored Products sale costs <b>$29.30</b> in clicks on a <b>$27.19</b> product. The Home Décor category isn't what's holding it back. Where the ad money goes is.</div>
+
+  <div class="tiles">
+    <div class="tile"><div class="l">Sales, 1–20 Oct</div><div class="v">$68.9k</div><div class="s">Sep: $11.2k (30 days)</div></div>
+    <div class="tile"><div class="l">Units per day</div><div class="v">117</div><div class="s">Sep: 12/day</div></div>
+    <div class="tile"><div class="l">Conversion</div><div class="v">2.46%</div><div class="s">Sep: 1.87%</div></div>
+    <div class="tile"><div class="l">Ad spend, 1–20 Oct</div><div class="v">~$43k</div><div class="s">SP $28.0k + video ~$15.2k</div></div>
+    <div class="tile"><div class="l">TACoS</div><div class="v bad">~63%</div><div class="s">Sep: 42%</div></div>
+  </div>
+
+  <h2>1. Conversion rate: normal for a gift set, and strong when shoppers see it</h2>
+  <div class="two">
+    <div>
+      <table>
+        <tr><th>Product, 1–20 Oct</th><th>Category</th><th class="n">Conv.</th></tr>
+        <tr><td><b>Beauty Blast 2026 calendar</b></td><td>Home Décor</td><td class="n"><b>2.46%</b></td></tr>
+        <tr><td>Makeup Set Box (worth $50)</td><td>Makeup Sets</td><td class="n">2.16%</td></tr>
+        <tr><td>Meet Your Mattes Gift Set</td><td>Makeup Sets</td><td class="n">4.02%</td></tr>
+        <tr><td>On the Go Essentials Set</td><td>Makeup Sets</td><td class="n">0.80%</td></tr>
+        <tr><td>W7 account, excl. calendars</td><td>Various</td><td class="n">11.5%</td></tr>
+      </table>
+      <p class="meta" style="margin-top:3px">Conversion is units ÷ sessions, from Business Reports. Gift sets convert well below single products because shoppers browse them.</p>
+    </div>
+    <ul>
+      <li>The calendar converts <b>in line with W7's own sets that sit in Makeup Sets</b>. Its category isn't hurting conversion.</li>
+      <li><b>Visitors who arrive without an ad convert at about 3.7%; Sponsored Products clicks convert at about 1.8%.</b> Paid traffic is the weaker traffic.</li>
+      <li>On beauty searches it wins <b>2–3× its share of clicks in purchases</b>. Example: "beauty advent calendar 2026" gets 4.7% of clicks but 12.2% of purchases.</li>
+      <li>Price is the reason: <b>$27.19 against a $55–60 typical price</b> on beauty-calendar searches. The price cut ($31.99 → $29.99 → $27.19) lines up with the October jump.</li>
+    </ul>
+  </div>
+
+  <h2>2. Category: worth fixing, but it isn't the main brake</h2>
+  <div class="two">
+    <table>
+      <tr><th>Listing</th><th>Category</th></tr>
+      <tr><td><b>2026 calendar (US)</b></td><td class="bad">Home &amp; Kitchen › Home Décor Products (#6,663)</td></tr>
+      <tr><td>2025 calendar (US)</td><td>Home &amp; Kitchen › Seasonal Décor › Advent Calendars</td></tr>
+      <tr><td>Same calendar (UK)</td><td>Beauty › Make-up › Make-up Sets</td></tr>
+      <tr><td>e.l.f., Revolution, L'Oréal, UCANBE</td><td>Beauty › Makeup › Makeup Sets</td></tr>
+      <tr><td>W7 Holiday Haul 2026 (US)</td><td class="bad">Home Décor Products (#186,784)</td></tr>
+    </table>
+    <div class="verdict amber"><b>Verdict.</b> On beauty searches the calendar already gets <b>3–4.5% of impressions</b>. That's about the most one listing gets: on its own brand search, "w7 advent calendar 2026", it gets 3.2%. So the wrong category isn't hiding it from beauty shoppers.<br><br><b>Still fix it, as a quick win.</b> In Makeup Sets it could earn a Best Seller badge, which it can't win against home décor products. Its rank would be measured against the right products, and Amazon would match it better on broad "advent calendar" searches. The Holiday Haul has the same problem.</div>
+  </div>
+
+  <h2>3. Content and mobile (from our first audit): not the problem</h2>
+  <p>The listing passes every mobile check. It has <b>7 zoomable images at 2000px</b>, a brand video, <b>10 phone-friendly A+ images</b>, the brand, product and size within the first 80 characters of the title, short bullets, and <b>5,300+ reviews at 4.4★</b>. There's one seller (W7 Makeup) with a 99% Buy Box. <b>Time and money should go into traffic quality, not content.</b></p>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <h2>4. Organic and paid positions on the searches that matter</h2>
+  <table>
+    <tr><th>Search</th><th class="n">Searches / mo</th><th class="n">Organic rank</th><th class="n">Impr. share</th><th class="n">Click share</th><th class="n">Purchase share</th><th>Read</th></tr>
+    <tr><td><b>beauty advent calendar 2026</b></td><td class="n">99k</td><td class="n">#6</td><td class="n">3.45%</td><td class="n">4.74%</td><td class="n good"><b>12.2%</b></td><td><span class="pill p-g">PUSH</span> wins when seen</td></tr>
+    <tr><td><b>make up advent calendar 2026</b></td><td class="n">–</td><td class="n">–</td><td class="n">4.39%</td><td class="n">8.85%</td><td class="n good"><b>15.4%</b></td><td><span class="pill p-g">PUSH</span></td></tr>
+    <tr><td><b>beauty advent calendar</b></td><td class="n">67k</td><td class="n">#3</td><td class="n">3.11%</td><td class="n">4.67%</td><td class="n good">8.1%</td><td><span class="pill p-g">PUSH</span></td></tr>
+    <tr><td><b>makeup advent calendar 2026</b></td><td class="n">60k</td><td class="n">#4</td><td class="n">4.44%</td><td class="n">8.84%</td><td class="n good">7.9%</td><td><span class="pill p-g">PUSH</span></td></tr>
+    <tr><td><b>calendario de adviento</b></td><td class="n">109k</td><td class="n">#10</td><td class="n">1.95%</td><td class="n">3.40%</td><td class="n good">9.8%</td><td><span class="pill p-g">PUSH</span> Spanish, cheap</td></tr>
+    <tr><td>teen advent calendar 2026</td><td class="n">39k</td><td class="n">#5</td><td class="n">3.90%</td><td class="n">5.95%</td><td class="n good">5.1%</td><td><span class="pill p-g">KEEP</span></td></tr>
+    <tr><td>advent calendar 2026 for women</td><td class="n">63k</td><td class="n">#9</td><td class="n">2.38%</td><td class="n">2.07%</td><td class="n warn">1.3%</td><td><span class="pill p-a">TEST</span> exact only</td></tr>
+    <tr><td><b>advent calendar 2026</b></td><td class="n">3.85M</td><td class="n">#35</td><td class="n">1.72%</td><td class="n">2.32%</td><td class="n warn">1.05%</td><td><span class="pill p-a">LIMIT</span> paid, under-converts</td></tr>
+    <tr><td>amazon beauty advent calendar 2026</td><td class="n">73k</td><td class="n">#7</td><td class="n">4.14%</td><td class="n">3.38%</td><td class="n bad">1.8%</td><td><span class="pill p-r">CUT</span> want Amazon's own</td></tr>
+    <tr><td>advent calendar 2026 for adults</td><td class="n">364k</td><td class="n">#67</td><td class="n">0.80%</td><td class="n">0.78%</td><td class="n bad">0.34%</td><td><span class="pill p-r">CUT</span> wrong audience</td></tr>
+    <tr><td>needoh / squishy advent calendar</td><td class="n">632k+</td><td class="n">#114</td><td class="n">0.1–0.3%</td><td class="n">0.05–0.09%</td><td class="n bad">0.04–0.1%</td><td><span class="pill p-r">CUT</span> off-target</td></tr>
+  </table>
+  <p class="meta">Shares are for the week of 11–17 Oct (Search Query Performance), the calendar against every product shown for that search. Search volume and organic rank are from Jungle Scout, 21 Oct. "make up advent calendar 2026" had 4,136 searches that week.</p>
+  <ul>
+    <li><b>Organic:</b> page one (#3–10) on almost every beauty-calendar search. Page 2–3 on the broad terms ("advent calendar 2026" #35, "…for adults" #67).</li>
+    <li><b>Paid:</b> all calendar campaigns run a <b>0% top-of-search bid adjustment</b> and get <b>under 5% top-of-search impression share</b>. The money mostly buys rest-of-search and product-page placements, not the top of page one where beauty shoppers decide.</li>
+    <li>Our outside-in check saw ads on only 1 of 30 terms. The account shows heavy spend, but <b>it isn't reaching the top of the page</b>.</li>
+  </ul>
+
+  <h2>5. Where ad spend is working, and where it isn't</h2>
+  <table>
+    <tr><th>Campaign (calendar)</th><th class="n">Daily budget</th><th class="n">Spend</th><th class="n">Calendars sold</th><th class="n">Ad cost per calendar</th><th class="n">ACOS</th><th>Read</th></tr>
+    <tr><td>SP Auto</td><td class="n">$300</td><td class="n">$2,813</td><td class="n">126</td><td class="n">$22.30</td><td class="n">72%</td><td><span class="pill p-g">BEST</span> cheapest clicks ($0.33)</td></tr>
+    <tr><td>SP Competitor products</td><td class="n">$300</td><td class="n">$6,469</td><td class="n">286</td><td class="n">$22.60</td><td class="n">74%</td><td><span class="pill p-g">OK</span> trim weak ASINs</td></tr>
+    <tr><td>SP Beauty Blast generic</td><td class="n">$450</td><td class="n">$9,406</td><td class="n">364</td><td class="n">$25.80</td><td class="n">85%</td><td><span class="pill p-a">FIX</span> right terms, wrong placement</td></tr>
+    <tr><td>Sponsored Brands video, generic</td><td class="n">$1,400</td><td class="n">$15,203</td><td class="n">572 orders*</td><td class="n">~$26.60</td><td class="n">80%</td><td><span class="pill p-a">TIGHTEN</span> biggest budget</td></tr>
+    <tr><td><b>SP General terms</b></td><td class="n">$1,000</td><td class="n bad"><b>$14,054</b></td><td class="n">330</td><td class="n bad"><b>$42.60</b></td><td class="n bad"><b>139%</b></td><td><span class="pill p-r">CUT</span> loses money on every sale</td></tr>
+  </table>
+  <p class="meta">*The Sponsored Brands figure is at campaign level (14-day attribution) and may include other W7 products. Sponsored Products figures are 1 Sep – 21 Oct, 7-day attribution.</p>
+  <div class="two">
+    <div class="box"><h3 class="good">Working</h3><ul>
+      <li>Ads plus the price cut <b>lifted organic sales about 6× a day</b> (Sep ~7/day → Oct ~41/day without an ad).</li>
+      <li>Auto and competitor-product targeting buy calendars cheapest (~$22).</li>
+      <li>Beauty searches: the calendar takes 8–15% of purchases there.</li>
+    </ul></div>
+    <div class="box"><h3 class="bad">Not working</h3><ul>
+      <li><b>Every SP sale costs $29.30 in ads on a $27.19 product.</b> Across all sales, ads cost ~$18.40 per calendar.</li>
+      <li>Spend almost tripled in two weeks ($4.0k → $11.6k a week), and the latest full week returned only $0.95 of ad sales per $1.</li>
+      <li>The "General terms" campaign: $42.60 per calendar on broad and off-target searches.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <h2>6. Actions, in priority order</h2>
+  <ol class="actions">
+    <li><b>Cut the "General terms" campaign from $1,000 to about $200 a day.</b> Keep only exact-match terms that sell below the target cost per calendar (action 2). Add negatives: <i>needoh, nee doh, squishy, dumpling, chocolate, lego, fishing, halloween, for adults, amazon beauty advent calendar, 25 days of beauty</i>.<div class="why">Saves about $800 a day. This campaign is 28% of calendar spend at 139% ACOS.</div></li>
+    <li><b>Set a target ad cost per calendar and bid to it.</b> We suggest about $10–12 (ACOS ~35–45%), confirmed against W7's product cost plus FBA fees. Lower bids on any target running above it for 7+ days.<div class="why">Ad cost per sale is $22–43 today, against a $27 price.</div></li>
+    <li><b>Move the budget into the beauty terms where the calendar wins, at the top of search.</b> Use exact match on <i>beauty advent calendar 2026, beauty advent calendar, makeup advent calendar 2026, make up advent calendar 2026, makeup advent calendar, teen advent calendar 2026, advent calendar for teen girls</i>, with a <b>+50–100% top-of-search adjustment</b> (0% today).<div class="why">It ranks organically #3–10 here and takes 8–15% of purchases. A second slot at the top of the page doubles its presence where shoppers already pick it.</div></li>
+    <li><b>Add a Spanish-language ad group</b> for <i>calendario de adviento, calendario de adviento maquillaje, calendario de adviento 2026</i>.<div class="why">109k + 47k searches a month, organic #9–10, and 9.8% of purchases from 3.4% of clicks. Usually cheaper clicks.</div></li>
+    <li><b>Add competitor-brand keyword targeting for rival calendars.</b> Today the only competitor campaign targets rival product pages (ASINs). There's no keyword campaign on searches like <i>sephora advent calendar 2026</i> (18.8k a week, 2.8% purchase share), <i>ulta advent calendar 2026</i> (7.9%), <i>elf advent calendar 2026</i> (3.2%) and <i>essence advent calendar 2026</i>. Bid exact match, at the top of search.<div class="why">These shoppers are already looking for a beauty calendar, and the typical rival costs $60–95 against W7's $27. That's a strong price-led conquest message.</div></li>
+    <li><b>Tighten the $1,400/day Sponsored Brands video</b> to beauty terms and the brand search, then cap it until it hits the target cost per calendar.<div class="why">The biggest single budget, at 80% ACOS.</div></li>
+    <li><b>Request the category change</b> to Beauty &amp; Personal Care › Makeup › Makeup Sets through a Seller Support case. Cite the UK listing and competitors' categories, and include the Holiday Haul.<div class="why">Low effort. Opens up the Best Seller badge and a cleaner rank. Not the main growth lever.</div></li>
+    <li><b>Hold the price at $27.19 for now. Test $29.99 once ad waste is cut.</b><div class="why">It's half the market price and wins on beauty searches. A small rise on organic and cheaper paid sales may protect margin without losing many sales. Check weekly in Search Query Performance.</div></li>
+  </ol>
+
+  <h2>7. What good looks like in 2–3 weeks</h2>
+  <table>
+    <tr><th>Measure</th><th class="n">Now</th><th class="n">Target</th><th>Where to check</th></tr>
+    <tr><td>TACoS (ad spend ÷ total calendar sales)</td><td class="n bad">~63%</td><td class="n">25–35%</td><td>Advertised product + Business Reports</td></tr>
+    <tr><td>Ad cost per calendar (SP)</td><td class="n bad">$29.30</td><td class="n">≤ $12</td><td>Advertised product report</td></tr>
+    <tr><td>Purchase share, "beauty advent calendar 2026"</td><td class="n">12.2%</td><td class="n">Hold 10%+</td><td>Search Query Performance, weekly</td></tr>
+    <tr><td>Units per day without an ad</td><td class="n">~41</td><td class="n">Rising</td><td>Business Reports − ad units</td></tr>
+    <tr><td>Top-of-search impression share, beauty terms</td><td class="n">&lt;5%</td><td class="n">20%+</td><td>Campaign manager</td></tr>
+  </table>
+
+  <div class="verdict" style="margin-top:4px"><b>Bottom line.</b> The listing, the price and the reviews are winning: shoppers choose it over e.l.f., Sephora and Ulta when they see it. The fix is to stop paying for broad, kids and squishy searches, and to put that money at the top of the beauty searches where it already sells. Do that now, before the late-November peak.</div>
+
+  <p class="meta" style="margin-top:4px"><b>Notes and limits.</b> Organic units are estimated as total units minus SP ad units minus Sponsored Brands orders, so treat them as approximate. Recent days will still gain sales because Amazon counts sales for 7 days after a click. The campaign list is assumed to cover about 1 Sep – 21 Oct. Part of the September–October growth is seasonal. The keyword-level search term, targeting and placement reports are the next step, to turn actions 1–3 into exact bid and negative lists.</p>
+
+  <div class="foot">Prepared by Smart PPC · smartppc.ai · Amazon US · B0GTRFKFV5 · 21 October 2026</div>
+</section>
+</body></html>
