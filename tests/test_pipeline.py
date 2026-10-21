@@ -212,6 +212,21 @@ def test_amazon_held_buy_box_raises_no_price_or_seller_flags():
     assert len(checks.seller_flags(reseller, "UltraDEX")) == 2 and checks.price_flag(reseller)
 
 
+def test_off_target_qualifiers_and_brand_seller():
+    from analyse import checks
+    title = "W7 Beauty Blast Makeup Advent Calendar 2026 - 24 Cosmetic Treats"
+    kws = [{"keyword": "squishy advent calendar 2026", "sponsored_rank": 4, "organic_rank": 55, "volume": 176333},
+           {"keyword": "lego advent calendar", "sponsored_rank": 8, "organic_rank": 74, "volume": 30767},
+           {"keyword": "beauty advent calendar 2026", "sponsored_rank": 3, "organic_rank": 1, "volume": 26967},
+           {"keyword": "make up set", "sponsored_rank": 11, "organic_rank": None, "volume": 17533},
+           {"keyword": "advent calendar 2026 for women", "sponsored_rank": 2, "organic_rank": 120, "volume": 58537}]
+    out = {w["keyword"]: w["reason"] for w in checks.wasted_terms(title, "W7", kws)}
+    assert out == {"squishy advent calendar 2026": 'different product ("squishy")',
+                   "lego advent calendar": 'different product ("lego")'}
+    assert checks.brand_seller(["Warpaint Cosmetics"] * 72 + ["Sabrikas"] * 16 + ["Amazon"] * 30) == "Warpaint Cosmetics"
+    assert checks.brand_seller(["A"] * 10 + ["B"] * 8) is None
+
+
 def test_own_brand_terms_are_never_wasted():
     from analyse import checks
     kws = [{"keyword": "ultradex toothpaste", "sponsored_rank": 9, "organic_rank": None, "volume": 766},

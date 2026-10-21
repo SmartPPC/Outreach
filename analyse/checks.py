@@ -183,6 +183,22 @@ def mixed_family(children: list[dict]) -> list[str] | None:
     return types if len(types) > 1 else None
 
 
+def brand_seller(owners: list[str | None]) -> str | None:
+    """The brand's own seller account: the non-Amazon seller holding the most Buy Boxes, when it holds 80%+
+    of the range or at least 3x as many as the next seller (e.g. Warpaint Cosmetics for W7: 72 vs 16)."""
+    counts: dict[str, int] = defaultdict(int)
+    for o in owners:
+        if o and "amazon" not in o.lower():
+            counts[o] += 1
+    if not counts:
+        return None
+    ranked = sorted(counts.items(), key=lambda kv: kv[1], reverse=True)
+    top, n = ranked[0]
+    total = sum(1 for o in owners if o)
+    runner_up = ranked[1][1] if len(ranked) > 1 else 0
+    return top if (total and n / total >= 0.8) or n >= 3 * max(runner_up, 1) else None
+
+
 def sold_by_amazon(p: dict) -> bool:
     return "amazon" in (p.get("buy_box_owner") or "").lower()
 
@@ -270,20 +286,57 @@ def clutter(live: list[dict], brand: str) -> list[dict]:
 
 # --- ads --------------------------------------------------------------------------------------
 
-def wasted_terms(hero_title: str, brand: str, keywords: list[dict]) -> list[dict]:
+# Words that refine a search without changing what product it's for
+GENERIC_MODIFIERS = set("""best cheap gift gifts set sets new for women woman womens ladies her him adult adults uk
+2024 2025 2026 2027 christmas xmas present presents luxury large small mini travel pack edition the and with
+calendar calendars""".split())
+
+
+def _relevant(keyword: str, title_text: str, title_stems: set[str]) -> bool:
+    kt = tokens(keyword)
+    if stems(keyword) & title_stems:
+        return True
+    words = re.findall(r"[a-z0-9]+", keyword.lower())  # "make up" vs "makeup"
+    return any((a + b) in norm(title_text) for a, b in zip(words, words[1:]))
+
+
+def _off_target(keyword: str, title_text: str, title_stems: set[str], ranked_vocab: set[str]) -> str | None:
+    """A qualifier that makes it a different product: 'squishy advent calendar' on a makeup calendar.
+    Words from searches the product already ranks on page one for (top 20) are treated as relevant."""
+    for t in tokens(keyword):
+        if (t in GENERIC_MODIFIERS or t[:5] in title_stems or t in norm(title_text)
+                or t[:5] in ranked_vocab):
+            continue
+        return t
+    return None
+
+
+def wasted_terms(hero_title: str, brand: str, keywords: list[dict],
+                 competitor_names: set[str] | None = None) -> list[dict]:
     """Terms the hero is sponsored on but has no organic relevance to: auto/broad drift."""
     title_stems = stems(hero_title) - stems(brand)  # "facialist" must not make "facial oil" relevant
     brand_toks = tokens(brand)
+    ranked_vocab = {t[:5] for k in keywords if 0 < (k.get("organic_rank") or 0) <= 20 for t in tokens(k["keyword"])}
+    rivals = {t for n in (competitor_names or set()) for t in tokens(n)}
     out = []
     for k in keywords:
-        if not k.get("sponsored_rank") or (k.get("organic_rank") or 999) <= 100:
+        if not k.get("sponsored_rank"):
             continue
-        kt = tokens(k["keyword"])
         nk, nb = norm(k["keyword"]), norm(brand)
         if nb and nb in nk:
             continue  # own-brand searches (any spelling, any product) are brand defence, never waste
+        organic = k.get("organic_rank") or 999   # Jungle Scout uses 0 for "not ranked"
+        qualifier = _off_target(k["keyword"], hero_title, title_stems, ranked_vocab) if organic > 50 else None
+        if qualifier:
+            rival = qualifier in rivals
+            out.append({"keyword": k["keyword"], "volume": k.get("volume"), "sponsored_rank": k["sponsored_rank"],
+                        "reason": "competitor's brand: worth reviewing" if rival else f'different product ("{qualifier}")'})
+            continue
+        if organic <= 100:
+            continue
+        kt = tokens(k["keyword"])
         partial_brand = bool(nk) and nk != nb and ((kt and kt <= brand_toks) or nb.startswith(nk))
-        if partial_brand or not (stems(k["keyword"]) & title_stems):
+        if partial_brand or not _relevant(k["keyword"], hero_title, title_stems):
             out.append({"keyword": k["keyword"], "volume": k.get("volume"), "sponsored_rank": k["sponsored_rank"],
                         "reason": "partial brand term" if partial_brand else "unrelated to the product"})
     return sorted(out, key=lambda r: r.get("volume") or 0, reverse=True)

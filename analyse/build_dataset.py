@@ -497,10 +497,7 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
     fams = checks.families(catalog)
     sov_by_kw = {s["keyword"]: s for s in sov}
     out = []
-    owners = [p.get("buy_box_owner") for p in catalog if checks.is_live(p) and p.get("buy_box_owner")]
-    top_owner = max(set(owners), key=owners.count) if owners else None
-    # One seller holding the Buy Box across nearly the whole range is the brand's own account.
-    brand_seller = top_owner if owners and owners.count(top_owner) / len(owners) >= 0.8 else None
+    brand_seller = checks.brand_seller([p.get("buy_box_owner") for p in catalog if checks.is_live(p)])
     for h in heroes:
         family_asins = [h["asin"], *h["children"]]
         h = h if keep_lead else {**h, "asin": _live_lead(h, keepa_by_asin)}
@@ -527,7 +524,7 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
         # judge relevance against every title in the family: variants often word the same product differently
         family_text = " ".join(filter(None, [title] + [by_asin.get(a, {}).get("title") for a in family_asins]
                                       + [keepa_by_asin.get(a, {}).get("title") for a in family_asins]))
-        wasted = checks.wasted_terms(family_text, brand, kws)
+        wasted = checks.wasted_terms(family_text, brand, kws, competitor_names)
         wasted_set = {w["keyword"] for w in wasted}
         targets = []
         title_stems = checks.stems(family_text) - checks.stems(brand)
