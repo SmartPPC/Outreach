@@ -9,7 +9,7 @@ import json
 import math
 import time
 
-from .common import MARKETPLACES, Budget, env, http_json
+from .common import MARKETPLACES, Budget, cached_json, env, http_json
 
 BASE = "https://api.keepa.com"
 KEEPA_EPOCH_OFFSET_MIN = 21564000
@@ -66,6 +66,9 @@ def _wait_for(tokens: float) -> None:
 
 
 def _call(path: str, params: dict, budget: Budget, estimate: float):
+    hit = cached_json("GET", f"{BASE}/{path}", {"key": _key(), **params})
+    if hit is not None:  # already paid for: no tokens, no waiting
+        return hit
     budget.spend("keepa", estimate)
     for _ in range(5):
         _wait_for(estimate)
@@ -197,6 +200,15 @@ def parse_product(p: dict) -> dict:
         "variation_dimensions": sorted({a.get("dimension") for v in p.get("variations") or []
                                         for a in v.get("attributes") or [] if a.get("dimension")}),
         "is_sns": bool(p.get("isSNS")),
+        # mobile checks: image sizes (zoom), video makers and lengths, A+ alt text (text density), bullet text
+        "images_detail": [{"file": i.get("l"), "medium": i.get("m"), "w": i.get("lW"), "h": i.get("lH"),
+                           "variant": i.get("variant")} for i in p.get("images") or [] if isinstance(i, dict)],
+        "videos_detail": [{"creator": v.get("creator"), "duration": v.get("duration"), "title": v.get("title")}
+                          for v in p.get("videos") or []],
+        "aplus_alt": [alt for m in p.get("aPlus") or [] if isinstance(m, dict)
+                      for mod in (m.get("module") if isinstance(m.get("module"), list) else [])
+                      if isinstance(mod, dict) for alt in mod.get("imageAltText") or [] if alt],
+        "features": features,
         "list_price": stats_current[CSV_LIST_PRICE] / 100 if len(stats_current) > CSV_LIST_PRICE and (stats_current[CSV_LIST_PRICE] or 0) > 0 else None,
         "offer_count": stats_current[CSV_COUNT_NEW] if len(stats_current) > CSV_COUNT_NEW and (stats_current[CSV_COUNT_NEW] or -1) >= 0 else None,
         # index 1 = all new offers; index 0 (Amazon itself) is meaningless for brands selling 3P

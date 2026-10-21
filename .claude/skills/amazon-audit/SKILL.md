@@ -56,6 +56,7 @@ If a connected MCP server covers a provider whose API key is missing (Jungle Sco
 ### 3. Analyse
 Read `dataset.json`, then `job_ad.txt` if present, and these references:
 - `references/scoring-rubric.md`: what the content checks mean and when they matter
+- `references/mobile-rubric.md`: the mobile checks, plus how to review the phone-width image sheets
 - `references/ad-strategy-framework.md`: keyword tiers, visibility logic, budget
 - `references/amc-playbook.md`: AMC hypotheses and week-one questions
 - `references/insight-playbook.md`: finding → recommendation → phrasing
@@ -72,6 +73,7 @@ Work through `heroes` in revenue order. For each best-seller, the biggest lever 
 - **Push:** `targets`, i.e. page-1/2 terms with no ad support, and brand-term defence.
 - **Cut:** `wasted_terms`, i.e. sponsored on unrelated or partial-brand terms (auto/broad drift).
 - **Content:** the `content` checks.
+- **Mobile:** the `mobile` checks and the phone-width image review (see mobile-rubric.md).
 
 Then score each candidate from 1 to 3 on three things:
 - **Impact:** revenue at stake, using `family_revenue_30d`.
@@ -95,6 +97,7 @@ Keep the top 5, ordered by revenue at stake. Every point names a best-seller, ex
       "job_ad_quote": "Exact phrase from the job ad this answers, or null"
     }
   ],
+  "mobile_review": {"<hero ASIN>": {"legible": true, "worst_image": "PT03", "verdict": "One line on how it reads on a phone"}},
   "hero_actions": {"<hero ASIN>": "One line: the single most valuable action for this best-seller"},
   "content_note": "1-2 sentences summarising the content table.",
   "ad_strategy_summary": "2-3 sentences: which tiers to fund, why, indicative budget.",

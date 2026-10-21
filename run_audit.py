@@ -15,7 +15,7 @@ import traceback
 from pathlib import Path
 
 from analyse import build_dataset, checks
-from collectors import ads_bench, catalog, contacts, dataforseo, junglescout, keepa
+from collectors import ads_bench, catalog, contacts, dataforseo, images, junglescout, keepa
 from collectors.common import Budget, BudgetExceeded, env, load_env, run_dir, write_json
 from collectors.resolve import resolve, slug_for
 
@@ -116,6 +116,25 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
     elif not has_keepa:
         log.skip("keepa", "KEEPA_KEY not set")
     write_json(out / "keepa_products.json", {"discovered": discovered, "products": products})
+
+    # Phone-size image sheets for the best-sellers (needs m.media-amazon.com in Allowed domains)
+    keepa_by_asin = {p["asin"]: p for p in products}
+    sheets = 0
+    for h in focus["heroes"]:
+        lead = keepa_by_asin.get(build_dataset._live_lead(h, keepa_by_asin))
+        if not lead or not lead.get("images_detail"):
+            continue
+        try:
+            if images.phone_sheet(lead["images_detail"], out / "mobile" / f"{lead['asin']}.png"):
+                sheets += 1
+        except images.ImagesBlocked as e:
+            log.skip("images", str(e))
+            break
+        except Exception as e:  # noqa: BLE001 - a missing sheet only loses the legibility check
+            log.fail("images", e)
+            break
+    if sheets:
+        log.ok("images", sheets=sheets)
 
     if catalog.configured() and heroes:
         items = guarded(log, "spapi.items", lambda: catalog.get_items(heroes, mp, budget), [])

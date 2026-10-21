@@ -13,7 +13,7 @@ from pathlib import Path
 
 from collectors.common import MARKETPLACES, ROOT, RUNS_DIR, read_json
 
-from . import checks
+from . import checks, mobile
 from .rubric import check_listing
 
 # --- assumptions (surfaced on the audit page) -------------------------------------------------
@@ -446,6 +446,7 @@ def build(run: Path) -> dict:
     bids = read_json(run / "ads_bids.json", {})
 
     focus = checks.select_heroes(catalog)
+    run_dir_name = run
     top = [h["asin"] for h in focus["heroes"]] or list(js_sales) or top_parents(products, 10)
 
     competitors = _competitors(sov, serps, brand, our_asins, _previous_sov(run))
@@ -461,7 +462,8 @@ def build(run: Path) -> dict:
         "generated": dt.date.today().isoformat(),
         "coverage": read_json(run / "collect_log.json", {}),
         "focus": {k: v for k, v in focus.items() if k != "heroes"},
-        "heroes": _heroes(focus["heroes"], catalog, products, per_asin_kw, brand, competitor_names, attacked, bids, sov),
+        "heroes": _with_sheets(_heroes(focus["heroes"], catalog, products, per_asin_kw, brand, competitor_names,
+                                      attacked, bids, sov), run_dir_name),
         "quick_wins": _quick_wins(catalog, brand),
         "asin_map": _asin_map(products, kp["discovered"]),
         "catalogue": _catalogue(products, js_sales, top),
@@ -546,10 +548,19 @@ def _heroes(heroes: list[dict], catalog: list[dict], products: list[dict], per_a
             "buy_box_owner": p.get("buy_box_owner"), "category": leaf, "product_type": checks.product_type(title),
             "rating": p.get("rating"), "reviews": p.get("reviews") or p.get("review_count"),
             "content": check_listing(p) if kp else None,
+            "mobile": mobile.check(p, brand) if kp else None,
             "flags": flags, "targets": targets[:6], "wasted_terms": wasted[:8],
             "sponsored_terms": sum(1 for k in kws if k.get("sponsored_rank")),
         })
     return out
+
+
+def _with_sheets(heroes: list[dict], run: Path) -> list[dict]:
+    """Point each best-seller at its phone-size image sheet, if the images step made one."""
+    for h in heroes:
+        sheet = run / "mobile" / f"{h['asin']}.png"
+        h["mobile_sheet"] = str(sheet.relative_to(run)) if sheet.exists() else None
+    return heroes
 
 
 def _live_lead(hero: dict, keepa_by_asin: dict) -> str:

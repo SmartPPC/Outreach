@@ -25,6 +25,8 @@ KW_STATUS = {
     "sponsored_support": "Ads supporting organic",
     "own": "Owns the top of page",
 }
+MOBILE_LABEL = {"zoom": "Zoom", "image_count": "Images", "video": "Video", "title_on_mobile": "Title in search",
+                "bullets_on_mobile": "Bullets", "a_plus_on_mobile": "A+ on a phone"}
 TIER_LABEL = {"brand": "Brand", "core": "Core", "category": "Category", "long_tail": "Long-tail", "competitor": "Competitor"}
 
 
@@ -95,6 +97,10 @@ def stats_html(d: dict) -> str:
         ("Est. monthly revenue", money(f.get("est_monthly_revenue"), cur), "Jungle Scout 30-day estimate"),
         ("Sponsored coverage", pct(ads["sponsored_coverage"]), "of their top 30 keywords"),
     ]
+    scores = [h["mobile"]["score"] for h in d.get("heroes", []) if h.get("mobile") and h["mobile"].get("score") is not None]
+    if scores:
+        ready = sum(1 for s in scores if s >= 75)
+        tiles.append(("Mobile-ready best-sellers", f"{ready} of {len(scores)}", "zoom, video, title, bullets and A+ on a phone"))
     return "".join(f'<div class="stat"><span class="stat-label">{e(a)}</span><span class="stat-value">{e(b)}</span>'
                    f'<span class="stat-note">{e(c)}</span></div>' for a, b, c in tiles)
 
@@ -111,6 +117,15 @@ def heroes_html(d: dict, findings: dict) -> str:
             f'{" · " + money(t["cpc"], cur) + " CPC" if t["cpc"] else ""}</small></li>' for t in h["targets"][:3])
         wasted = ", ".join(f'“{e(w["keyword"])}”' for w in h["wasted_terms"][:5])
         action = f'<p class="action">{e(actions[h["asin"]])}</p>' if actions.get(h["asin"]) else ""
+        mob = h.get("mobile") or {}
+        review = (findings.get("mobile_review") or {}).get(h["asin"]) or {}
+        mobile_items = "".join(
+            f'<li><span class="chip {c["status"]}" title="{e(STATUS_ICON[c["status"]][1])}">{STATUS_ICON[c["status"]][0]}</span> '
+            f'{e(MOBILE_LABEL.get(k, k))}: {e(c["detail"])}</li>' for k, c in (mob.get("checks") or {}).items())
+        if review.get("verdict"):
+            mobile_items += f'<li class="verdict">{e(review["verdict"])}</li>'
+        mobile_html = (f'<div><h4>Mobile{" · " + str(mob["score"]) + "/100" if mob.get("score") is not None else ""}</h4>'
+                       f'<ul class="flags">{mobile_items}</ul></div>') if mobile_items else ""
         meta = " · ".join(x for x in (
             f'{money(h["family_revenue_30d"], cur)}/mo' if h.get("family_revenue_30d") else "",
             f'{num(h["units_30d"])} units' if h.get("units_30d") else "",
@@ -122,6 +137,7 @@ def heroes_html(d: dict, findings: dict) -> str:
             + (f'<div><h4>Fix</h4><ul class="flags">{flags}</ul></div>' if flags else "")
             + (f'<div><h4>Push</h4><ul>{targets}</ul></div>' if targets else "")
             + (f'<div><h4>Cut</h4><p>{wasted}</p></div>' if wasted else "")
+            + mobile_html
             + "</article>")
     return "".join(cards) or '<p class="empty">No best-seller data in this run.</p>'
 

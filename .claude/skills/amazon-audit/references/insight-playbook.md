@@ -8,6 +8,9 @@
 | `heroes[].targets` push | Exact-match SP at top of search | "<Product> already ranks #<n> for '<term>' (<vol>/mo) with no ad support. That's the quickest visibility win." |
 | `heroes[].flags` sellers (Buy Box held by a reseller, crowded listing, above list price) | Brand Registry and distribution controls | "A reseller holds the Buy Box on <product>, so you don't control its price or the ad spend's return." |
 | `heroes[].flags` stock (10–60% out of stock) | Inventory planning on the best-seller | "<Product> was out of stock ~<x>% of the last 90 days. That's lost sales and lost rank on your best-seller." |
+| `heroes[].mobile` video warn (influencer-only) | Add a short brand video | "Your best-seller has 7 videos, but all from influencers. A 30-second brand video would explain it faster on a phone." |
+| `heroes[].mobile` A+ fail (text-heavy) | Rebuild A+ for mobile | "Half your A+ images carry paragraphs of text that shrink to unreadable on a phone." |
+| `heroes[].mobile` zoom fail | Re-upload images at 2000px | "Some of your images can't be zoomed, so shoppers can't check the details." |
 | `quick_wins.duplicates` / `clutter` | Merge duplicates, fix titles (group into one point) | "<n> products are listed twice, which splits reviews and rank, and a few titles are missing the brand name." |
 | `competitors.brand_term_attackers` non-empty, `prospect_sponsored_on_own_brand` false | Launch brand defence SP + SB | "<Rival> is buying the top ad slot when shoppers search '<brand>', and you're not there to block it." |
 | Several `push` focus keywords | Top-of-search SP exact on page-1 terms | "You already rank on page one for '<term>' (<vol> searches/mo) but sit below the fold, so a small exact-match campaign moves you to the top." |

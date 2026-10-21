@@ -103,6 +103,16 @@ def _cache_key(method: str, url: str, body) -> Path:
     return CACHE_DIR / (hashlib.sha1(raw.encode()).hexdigest() + ".json")
 
 
+def cached_json(method: str, url: str, params: dict | None = None, body=None):
+    """The cached response for a request, or None. Lets rate-limited callers skip waiting on cache hits."""
+    if params:
+        url = f"{url}{'&' if '?' in url else '?'}{urllib.parse.urlencode(params)}"
+    path = _cache_key(method, _strip_secrets(url), body)
+    if path.exists() and time.time() - path.stat().st_mtime < CACHE_TTL_SECONDS:
+        return json.loads(path.read_text())
+    return None
+
+
 def http_json(
     method: str,
     url: str,

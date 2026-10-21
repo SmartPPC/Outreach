@@ -309,3 +309,53 @@ def test_apollo_enriches_only_the_top_people(monkeypatch):
                         {"email": f"p{pid}@besque.co", "email_status": "verified"})
     out = apollo.people_for([], "besque.co", Budget(), enrich_top=2)
     assert calls == ["0", "1"] and out["people"][0]["email"] == "p0@besque.co"
+
+
+# --- mobile -----------------------------------------------------------------------------------------
+
+def test_mobile_checks():
+    from analyse import mobile
+    p = {"title": "Brightpaw Dog Shampoo 250ml – Oatmeal", "has_aplus": True,
+         "images_detail": [{"w": 2000, "h": 2000}] * 6 + [{"w": 900, "h": 900}],
+         "videos_detail": [{"creator": "Influencer", "duration": 40}],
+         "features": ["Gentle oatmeal formula for itchy skin", "x" * 300],
+         "aplus_alt": ["Text reads 'Soothes'", "Text reads '" + " ".join(["word"] * 35) + "'"]}
+    c = mobile.check(p, "Brightpaw")["checks"]
+    assert c["zoom"]["status"] == "fail" and "1 of 7" in c["zoom"]["detail"]
+    assert c["video"]["status"] == "warn" and "no brand-made video" in c["video"]["detail"]
+    assert c["title_on_mobile"]["status"] == "good"
+    assert c["bullets_on_mobile"]["status"] == "warn"
+    assert c["a_plus_on_mobile"]["status"] == "warn"
+    long_title = "Brightpaw " + "natural gentle soothing calming nourishing " * 3 + "Dog Shampoo 250ml"
+    assert mobile.check({"title": long_title}, "Brightpaw")["checks"]["title_on_mobile"]["status"] == "fail"
+    assert mobile.text_words("Text reads &#39;86% Saw Firmness&#39; and &#39;Full Body&#39;") == 5
+
+
+def test_phone_sheet_skips_cleanly_when_images_are_blocked(tmp_path):
+    from collectors import images
+    import pytest
+
+    def blocked(file):
+        raise images.ImagesBlocked("blocked")
+    with pytest.raises(images.ImagesBlocked):
+        images.phone_sheet([{"medium": "a.jpg"}], tmp_path / "s.png", fetcher=blocked)
+
+
+def test_phone_sheet_builds_from_images(tmp_path):
+    import io
+    from PIL import Image
+    from collectors import images
+    buf = io.BytesIO()
+    Image.new("RGB", (500, 500), "red").save(buf, "JPEG")
+    out = images.phone_sheet([{"medium": "a.jpg", "variant": "MAIN"}, {"medium": "b.jpg", "variant": "PT01"}],
+                             tmp_path / "s.png", fetcher=lambda f: buf.getvalue())
+    assert out and Image.open(out).width == 3 * (images.PHONE_W + images.GAP) + images.GAP
+
+
+def test_keepa_cached_calls_never_wait(monkeypatch):
+    from collectors.common import Budget
+    monkeypatch.setenv("KEEPA_KEY", "k")
+    monkeypatch.setattr(keepa, "cached_json", lambda *a, **k: {"products": []})
+    monkeypatch.setattr(keepa, "_state", {"left": 0, "rate": 1, "refill_in_ms": 60_000, "waited_s": 0.0})
+    monkeypatch.setattr(keepa, "_sleep", lambda s: (_ for _ in ()).throw(AssertionError("waited on a cache hit")))
+    keepa.fetch_products(["B01"], "uk", Budget())
