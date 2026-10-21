@@ -66,6 +66,19 @@ def resolve(raw: str, marketplace: str | None = None) -> dict:
     return target
 
 
+def brand_spellings(*names: str | None) -> list[str]:
+    """Every likely way a brand is written: as given, without spaces, and split at each case change.
+    'UltraDEX' -> ['UltraDEX', 'Ultra DEX']; 'Super Facialist' -> ['Super Facialist', 'SuperFacialist']."""
+    out: list[str] = []
+    for name in filter(None, names):
+        joined = name.replace(" ", "")
+        for v in (name, joined, re.sub(r"(?<=[a-z])(?=[A-Z])", " ", joined),
+                  re.sub(r"(?<=[a-z])(?=[A-Z][a-z])", " ", joined)):
+            if v and v.lower() not in {o.lower() for o in out}:
+                out.append(v)
+    return out
+
+
 def slug_for(target: dict, date: str) -> str:
     base = target.get("brand") or (target["seed_asins"][0] if target["seed_asins"] else target.get("seller_id") or "prospect")
     base = re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")

@@ -17,7 +17,7 @@ from pathlib import Path
 from analyse import build_dataset, checks
 from collectors import ads_bench, catalog, contacts, dataforseo, images, junglescout, keepa
 from collectors.common import Budget, BudgetExceeded, env, load_env, run_dir, write_json
-from collectors.resolve import resolve, slug_for
+from collectors.resolve import brand_spellings, resolve, slug_for
 
 
 class Log:
@@ -78,9 +78,10 @@ def collect(raw_input: str, marketplace: str | None, job_ad: Path | None, max_as
     #    best-sellers that make ~80% of revenue.
     catalog_rows: list[dict] = []
     if junglescout.configured() and target["brand"]:
-        spellings = [target.get("brand_slug"), target["brand"].replace(" ", "")]
+        spellings = brand_spellings(target["brand"], target.get("brand_slug"))
         catalog_rows = guarded(log, "js.catalog", lambda: junglescout.product_database(
-            target["brand"], mp, budget, alt_spellings=[s for s in spellings if s]), []) or []
+            target["brand"], mp, budget, alt_spellings=spellings[1:]), []) or []
+        log.ok("js.catalog.spellings", searched=spellings)
         write_json(out / "js_catalog.json", catalog_rows)
         log.ok("js.catalog", asins=len(catalog_rows))
         brands = [r["brand"] for r in catalog_rows if r.get("brand")]

@@ -125,6 +125,9 @@ def test_store_url_landing_asin_and_brand_spacing():
                 "?lp_asin=B0D6BWBYY2&ref_=ast_bln")
     assert t["brand"] == "Super Facialist" and t["seed_asins"] == ["B0D6BWBYY2"] and t["marketplace"] == "uk"
     assert resolve("https://www.amazon.co.uk/stores/UltraDEX/page/02885511-9448-4D57-A25F-B3812F09FE2C")["brand"] == "UltraDEX"
+    from collectors.resolve import brand_spellings
+    assert brand_spellings("UltraDEX") == ["UltraDEX", "Ultra DEX"]
+    assert brand_spellings("Super Facialist", "SuperFacialist") == ["Super Facialist", "SuperFacialist"]
     assert build_dataset._has_brand("Superfacialist Rose Miracle Makeover Facial Oil", "Super Facialist")
 
 

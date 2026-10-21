@@ -38,7 +38,9 @@ The Python collectors handle data and arithmetic, and their numbers are the sour
   so read the folder the run printed, not an older one.
 
 **Checking the data before writing**
-- **Brand name.** The brand comes from the store URL slug. If `js.catalog` returns very few ASINs, or
+- **Brand name.** The catalogue search tries every spelling of the brand ("UltraDEX" and "Ultra DEX",
+  "SuperFacialist" and "Super Facialist") and merges the results. The searched spellings are listed in
+  `collect_log.json`. The brand comes from the store URL slug. If `js.catalog` returns very few ASINs, or
   `focus.live` is 0, the spelling is probably off (e.g. "UltraDEX" read as "Ultra DEX"). Rerun with
   `--brand "<exact name on Amazon>"`.
 - **Revenue.** Jungle Scout repeats a family's sales on every variant; the pipeline counts it once. If one
