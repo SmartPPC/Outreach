@@ -1,0 +1,3494 @@
+{
+  "prospect": {
+    "brand": "UltraDEX",
+    "marketplace": "uk",
+    "domain": "amazon.co.uk",
+    "currency": "\u00a3",
+    "input": "https://www.amazon.co.uk/stores/UltraDEX/page/02885511-9448-4D57-A25F-B3812F09FE2C?lp_asin=B071Z1B158",
+    "seller_name": null,
+    "landing_asin": "B071Z1B158"
+  },
+  "generated": "2026-10-21",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 2,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog.spellings",
+        "status": "ok",
+        "searched": [
+          "UltraDEX",
+          "Ultra DEX"
+        ]
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 84
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 45,
+        "hero_families": 6,
+        "revenue_share": 0.85
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 13,
+        "waited_min": 8.5
+      },
+      {
+        "step": "images",
+        "status": "skipped",
+        "reason": "can't reach m.media-amazon.com (<urlopen error Tunnel connection failed: 403 Forbidden>); add it to Allowed domains"
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 6,
+        "keywords": 308
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 10
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": "https://ultradex.co.uk",
+        "emails": 0
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 10,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 21,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 12.099999999999996,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      },
+      "apollo_search": {
+        "used": 0,
+        "limit": 10.0
+      },
+      "apollo_credits": {
+        "used": 0,
+        "limit": 3.0
+      }
+    },
+    "collected_at": "2026-10-21T07:41:36.212585+00:00"
+  },
+  "focus": {
+    "total_asins": 84,
+    "live_asins": 45,
+    "families": 30,
+    "hero_families": 6,
+    "hero_revenue_share": 0.85,
+    "est_monthly_revenue": 99890
+  },
+  "heroes": [
+    {
+      "asin": "B071VT9KBZ",
+      "parent_asin": "B0BGYRXB3B",
+      "title": "UltraDEX Daily Oral Rinse, Mint 500 ml",
+      "family_revenue_30d": 22344,
+      "family_size": 3,
+      "family_revenue_keepa": 28800,
+      "units_30d": 2793,
+      "price": 8.0,
+      "list_price": 8.15,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "category": "Mouthwashes",
+      "product_type": null,
+      "rating": 4.6,
+      "reviews": 1771,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "38 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 224 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1778 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 12s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "1 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "alcohol free mouthwash",
+          "tier": "category",
+          "status": "push",
+          "volume": 3097,
+          "organic_rank": 43,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "alcohol-free mouthwash",
+          "tier": "category",
+          "status": "push",
+          "volume": 677,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "nystatin oral suspension",
+          "tier": "core",
+          "status": "push",
+          "volume": 660,
+          "organic_rank": 14,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "euthymol",
+          "volume": 3912,
+          "sponsored_rank": 4,
+          "reason": "unrelated to the product"
+        }
+      ],
+      "sponsored_terms": 8,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B007Y5XCZE",
+      "parent_asin": "B0GWQC292T",
+      "title": "UltraDEX Daily Oral Rinse with Fluoride 500ml | Fresh Breath Mouthwash for Daily Oral Hygiene | Fluoride Mouth Rinse for Healthy Teeth & Gums",
+      "family_revenue_30d": 19238,
+      "family_size": 3,
+      "family_revenue_keepa": 26807,
+      "units_30d": 3381,
+      "price": 5.69,
+      "list_price": 8.0,
+      "sellers": 12,
+      "buy_box_owner": "Amazon",
+      "category": "Mouthwashes",
+      "product_type": null,
+      "rating": 4.4,
+      "reviews": 3639,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "4 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "141 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 205 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "3641 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 6 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 brand video(s), shortest 12s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 220 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "sellers",
+          "detail": "12 sellers on the listing"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "bad breath",
+          "tier": "category",
+          "status": "push",
+          "volume": 73603,
+          "organic_rank": 49,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "mouth wash",
+          "tier": "category",
+          "status": "push",
+          "volume": 24719,
+          "organic_rank": 39,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "mouthwash for gum disease",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 7255,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bad breath treatment for adults",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 6721,
+          "organic_rank": 35,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "therabreath mouthwash",
+          "tier": "category",
+          "status": "push",
+          "volume": 4574,
+          "organic_rank": 25,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "whitening mouthwash",
+          "tier": "category",
+          "status": "push",
+          "volume": 4472,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "otrivine",
+          "volume": 3481,
+          "sponsored_rank": 1,
+          "reason": "unrelated to the product"
+        }
+      ],
+      "sponsored_terms": 10,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B007Y5XD3A",
+      "parent_asin": "B0H3WXCLPT",
+      "title": "UltraDEX Low-Abrasion Toothpaste 75Ml",
+      "family_revenue_30d": 12867,
+      "family_size": 2,
+      "family_revenue_keepa": 5990,
+      "units_30d": 1188,
+      "price": 5.99,
+      "list_price": 6.15,
+      "sellers": 6,
+      "buy_box_owner": "Amazon",
+      "category": "Toothpastes",
+      "product_type": null,
+      "rating": 4.5,
+      "reviews": 1518,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "37 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 173 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1518 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 2 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "8 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 62s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 178 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "sellers",
+          "detail": "6 sellers on the listing"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "toothpaste",
+          "tier": "category",
+          "status": "push",
+          "volume": 392821,
+          "organic_rank": 47,
+          "sponsored_rank": null,
+          "cpc": 0.49
+        },
+        {
+          "keyword": "whitening toothpaste",
+          "tier": "category",
+          "status": "push",
+          "volume": 44232,
+          "organic_rank": 48,
+          "sponsored_rank": null,
+          "cpc": 1.3
+        },
+        {
+          "keyword": "curaprox toothpaste",
+          "tier": "category",
+          "status": "push",
+          "volume": 3985,
+          "organic_rank": 23,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "xylitol toothpaste",
+          "tier": "category",
+          "status": "push",
+          "volume": 2985,
+          "organic_rank": 60,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "oranurse unflavoured toothpaste",
+          "tier": "category",
+          "status": "push",
+          "volume": 2849,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "gc tooth mousse",
+          "tier": "category",
+          "status": "push",
+          "volume": 2714,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": 0.21
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "pearl drops",
+          "volume": 1364,
+          "sponsored_rank": 5,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "detralex",
+          "volume": 450,
+          "sponsored_rank": 3,
+          "reason": "unrelated to the product"
+        }
+      ],
+      "sponsored_terms": 8,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B00HIXUCNC",
+      "parent_asin": "B0BJ7VY23J",
+      "title": "UltraDEX Fresh Breath Spray, 9 ml (Pack of 1)",
+      "family_revenue_30d": 12786,
+      "family_size": 3,
+      "family_revenue_keepa": 16920,
+      "units_30d": 5432,
+      "price": 2.35,
+      "list_price": 7.16,
+      "sellers": 8,
+      "buy_box_owner": "Amazon",
+      "category": "Sprays",
+      "product_type": null,
+      "rating": 4.4,
+      "reviews": 3999,
+      "content": {
+        "score": 88,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "45 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 256 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "4007 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 62s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "1 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "sellers",
+          "detail": "8 sellers on the listing"
+        },
+        {
+          "type": "price",
+          "detail": "discounted 67% off list (2.35 vs 7.16)"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "bad breath",
+          "tier": "core",
+          "status": "push",
+          "volume": 73603,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bad breath treatment for adults",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 6721,
+          "organic_rank": 9,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "dry mouth spray",
+          "tier": "category",
+          "status": "push",
+          "volume": 4473,
+          "organic_rank": 22,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "the breath co mouthwash",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4167,
+          "organic_rank": 17,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "breath",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 2050,
+          "organic_rank": 3,
+          "sponsored_rank": null,
+          "cpc": 0.23
+        },
+        {
+          "keyword": "mouthwash for bad breath",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 1929,
+          "organic_rank": 16,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 19,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B071Z1B158",
+      "parent_asin": "B0HGMDQGN2",
+      "title": "Ultradex Daily Oral Rinse, 1000Ml",
+      "family_revenue_30d": 9138,
+      "family_size": 1,
+      "family_revenue_keepa": 11380,
+      "units_30d": 803,
+      "price": 11.38,
+      "list_price": 25.99,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "category": "Mouthwashes",
+      "product_type": null,
+      "rating": 4.7,
+      "reviews": 721,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "33 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 212 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "725 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 12s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "1 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "price",
+          "detail": "discounted 56% off list (11.38 vs 25.99)"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "oral thrush treatment for mouth and tongue",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 653,
+          "organic_rank": 29,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "antifungal mouthwash oral thrush",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "beetakt oral mouthwash",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 24,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "difflam oral rinse",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 33,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "fluoride mouth rinse",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 18,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 11,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0BG66FF4T",
+      "parent_asin": "B0GX213TNP",
+      "title": "UltraDEX Low-Abrasion Toothpaste, Clinically Proven 12hr Bad Breath Treatment, Gentle & Non-Foaming, with Fluoride, Mint 6 X 75 ml, White",
+      "family_revenue_30d": 8183,
+      "family_size": 2,
+      "family_revenue_keepa": 6678,
+      "units_30d": 99,
+      "price": 33.39,
+      "list_price": 36.9,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "category": "Toothpastes",
+      "product_type": null,
+      "rating": 4.6,
+      "reviews": 57,
+      "content": {
+        "score": 62,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "137 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 172 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "58 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 5 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "5 gallery images"
+          },
+          "title_on_mobile": {
+            "status": "warn",
+            "detail": "cut off on mobile before the size/pack"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 178 characters"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "toothpastes",
+          "tier": "category",
+          "status": "push",
+          "volume": 4893,
+          "organic_rank": 45,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "extreme bad breath treatment",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 480,
+          "organic_rank": 39,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "ultradex fresh breath spray",
+          "tier": "brand",
+          "status": "push",
+          "volume": 469,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "best toothpaste for bad breath",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 464,
+          "organic_rank": 5,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bad breath toothpaste",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 10,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "oralieve ultra mild toothpaste",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 40,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "guardium",
+          "volume": 777,
+          "sponsored_rank": 3,
+          "reason": "unrelated to the product"
+        }
+      ],
+      "sponsored_terms": 5,
+      "mobile_sheet": null
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [
+      [
+        {
+          "asin": "B0BG676CYD",
+          "title": "UltraDEX Fresh Breath Oral Spray 12 X 9 ml, White, 9 ml (Pack of 12)",
+          "revenue_30d": 153436.2
+        },
+        {
+          "asin": "B01MQ61GXT",
+          "title": "Ultradex Fresh Breath Oral Spray 9ml (PACK OF 6)",
+          "revenue_30d": 71.96
+        },
+        {
+          "asin": "B01M2ADDW8",
+          "title": "Ultradex Fresh Breath Oral Spray 9ml (PACK OF 4)",
+          "revenue_30d": 49.95
+        },
+        {
+          "asin": "B01M9GGSNS",
+          "title": "Ultradex Fresh Breath Oral Spray 9ml (PACK OF 2)",
+          "revenue_30d": 29.16
+        }
+      ],
+      [
+        {
+          "asin": "B00HIXUCNC",
+          "title": "UltraDEX Fresh Breath Spray, 9 ml (Pack of 1)",
+          "revenue_30d": 12765.2
+        },
+        {
+          "asin": "B086QXT8MR",
+          "title": "UltraDEX Fresh Breath Spray 9ml - 2 Pack",
+          "revenue_30d": 29.16
+        }
+      ],
+      [
+        {
+          "asin": "B071Z1B158",
+          "title": "Ultradex Daily Oral Rinse, 1000Ml",
+          "revenue_30d": 9138.14
+        },
+        {
+          "asin": "B013V6C9SK",
+          "title": "ULTRADEX Rinse Daily Oral 500ML",
+          "revenue_30d": 489.63
+        },
+        {
+          "asin": "B016KXU6OK",
+          "title": "6 x UltraDex Daily Oral Rinse 250ml",
+          "revenue_30d": 143.6
+        }
+      ],
+      [
+        {
+          "asin": "B007Y5XD3A",
+          "title": "UltraDEX Low-Abrasion Toothpaste 75Ml",
+          "revenue_30d": 7116.12
+        },
+        {
+          "asin": "B00ZISXACE",
+          "title": "6 x UltraDex Low-Abrasion Toothpaste 75ml",
+          "revenue_30d": 398.32
+        }
+      ],
+      [
+        {
+          "asin": "B00BIYO1B6",
+          "title": "UltraDEX Whitening Toothpaste + Enamel Defense, Clinically Proven 12hr Bad Breat",
+          "revenue_30d": 4452.0
+        },
+        {
+          "asin": "B0BG63671K",
+          "title": "UltraDEX Whitening Toothpaste + Enamel Defense, Clinically Proven 12hr Bad Breat",
+          "revenue_30d": 297.0
+        },
+        {
+          "asin": "B0H3KG5XV4",
+          "title": "UltraDEX Whitening Toothpaste + Enamel Defense, Clinically Proven 12hr Bad Breat",
+          "revenue_30d": 198.0
+        }
+      ],
+      [
+        {
+          "asin": "B018469FIY",
+          "title": "Ultradex Recalcifying & Whitening Toothpaste 75Ml - Pack of 6",
+          "revenue_30d": 171.92
+        },
+        {
+          "asin": "B00LI4KX7M",
+          "title": "6 x UltraDex Recalcifying & Whitening Toothpaste 75ml",
+          "revenue_30d": 132.24
+        },
+        {
+          "asin": "B00DW7FY04",
+          "title": "3X UltraDex Recalcifying & Whitening Toothpaste",
+          "revenue_30d": 69.6
+        }
+      ]
+    ],
+    "clutter": [],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 84,
+    "fetched": 13,
+    "parents": 6,
+    "categories": {
+      "Health & Personal Care": 13
+    },
+    "asins": [
+      {
+        "asin": "B071VT9KBZ",
+        "parent_asin": "B0BGYRXB3B",
+        "title": "UltraDEX Daily Oral Rinse, Mint 500 ml",
+        "price": 8.0,
+        "rating": 4.6,
+        "review_count": 1778,
+        "monthly_sold": 3000,
+        "sales_rank": 927.0,
+        "listed_since": "2017-05-08",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 24000
+      },
+      {
+        "asin": "B007Y5XCZE",
+        "parent_asin": "B0GWQC292T",
+        "title": "UltraDEX Daily Oral Rinse with Fluoride 500ml | Fresh Breath Mouthwash for Daily Oral Hygiene | Fluoride Mouth Rinse for Healthy Teeth & Gums",
+        "price": 5.69,
+        "rating": 4.4,
+        "review_count": 3641,
+        "monthly_sold": 4000,
+        "sales_rank": 732.0,
+        "listed_since": "2012-06-02",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 22760
+      },
+      {
+        "asin": "B00HIXUCNC",
+        "parent_asin": "B0BJ7VY23J",
+        "title": "UltraDEX Fresh Breath Spray, 9 ml (Pack of 1)",
+        "price": 2.35,
+        "rating": 4.4,
+        "review_count": 4007,
+        "monthly_sold": 6000,
+        "sales_rank": 358.0,
+        "listed_since": "2012-07-13",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 14100
+      },
+      {
+        "asin": "B071Z1B158",
+        "parent_asin": "B0HGMDQGN2",
+        "title": "Ultradex Daily Oral Rinse, 1000Ml",
+        "price": 11.38,
+        "rating": 4.7,
+        "review_count": 725,
+        "monthly_sold": 1000,
+        "sales_rank": 3603.0,
+        "listed_since": "2017-05-08",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 11380
+      },
+      {
+        "asin": "B0BG66FF4T",
+        "parent_asin": "B0GX213TNP",
+        "title": "UltraDEX Low-Abrasion Toothpaste, Clinically Proven 12hr Bad Breath Treatment, Gentle & Non-Foaming, with Fluoride, Mint 6 X 75 ml, White",
+        "price": 33.39,
+        "rating": 4.6,
+        "review_count": 58,
+        "monthly_sold": 200,
+        "sales_rank": 19536.0,
+        "listed_since": "2012-07-01",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 6678
+      },
+      {
+        "asin": "B007Y5XD3A",
+        "parent_asin": "B0H3WXCLPT",
+        "title": "UltraDEX Low-Abrasion Toothpaste 75Ml",
+        "price": 5.99,
+        "rating": 4.5,
+        "review_count": 1518,
+        "monthly_sold": 1000,
+        "sales_rank": 2458.0,
+        "listed_since": "2012-06-02",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 5990
+      },
+      {
+        "asin": "B0BG63B8DT",
+        "parent_asin": "B0BGYRXB3B",
+        "title": "UltraDEX Daily Oral Rinse 500ml (Pack of 6) - Alcohol Free Mint Flavoured",
+        "price": 48.0,
+        "rating": 4.6,
+        "review_count": 1778,
+        "monthly_sold": 100,
+        "sales_rank": 924.0,
+        "listed_since": "2017-05-08",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 4800
+      },
+      {
+        "asin": "B0BGY8SGJS",
+        "parent_asin": "B0GWQC292T",
+        "title": "UltraDEX Daily Oral Rinse Original, 6 x 500ml, Clear",
+        "price": 40.47,
+        "rating": 4.4,
+        "review_count": 3641,
+        "monthly_sold": 100,
+        "sales_rank": 732.0,
+        "listed_since": "2012-07-01",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 4047
+      },
+      {
+        "asin": "B0BG676CYD",
+        "parent_asin": "B0BJ7VY23J",
+        "title": "UltraDEX Fresh Breath Oral Spray 12 X 9 ml, White, 9 ml (Pack of 12)",
+        "price": 28.2,
+        "rating": 4.4,
+        "review_count": 4008,
+        "monthly_sold": 100,
+        "sales_rank": 358.0,
+        "listed_since": "2012-07-01",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 2820
+      },
+      {
+        "asin": "B0GWQC292T",
+        "parent_asin": "B0GWQC292T",
+        "title": "Ultradex Daily Oral Rinse with Fluoride 500ml",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 732.0,
+        "listed_since": "2026-04-10",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0BGYRXB3B",
+        "parent_asin": "B0BGYRXB3B",
+        "title": "UltraDEX Daily Oral Rinse, Mint 500 ml Clear",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 924.0,
+        "listed_since": "2022-09-30",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0H3WXCLPT",
+        "parent_asin": "B0H3WXCLPT",
+        "title": "UltraDEX Low-Abrasion Toothpaste 75Ml",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 2458.0,
+        "listed_since": "2026-06-03",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0GX213TNP",
+        "parent_asin": "B0GX213TNP",
+        "title": "UltraDEX Low-Abrasion Toothpaste 75Ml",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 19536.0,
+        "listed_since": "2026-04-13",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 13,
+    "launches_by_quarter": {
+      "2026-Q2": 3
+    },
+    "launches_last_12m": 3,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 96575,
+    "top3_revenue_share": 0.63,
+    "bsr_trend_top_parents": {
+      "median_bsr_now": 1194.5,
+      "median_bsr_year_ago": 1756.0,
+      "improved": true,
+      "change_pct": -32
+    },
+    "reviews_gained_12m": 1460
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 69,
+      "share_under_7_images": 0.38,
+      "share_no_video": 0.54,
+      "share_no_aplus": 0.62,
+      "share_under_5_bullets": 0.31,
+      "share_rating_below_4_2": 0.0,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B0BGYRXB3B",
+        "title": "UltraDEX Daily Oral Rinse, Mint 500 ml Clear",
+        "score": 38,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "44 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B007Y5XCZE",
+        "title": "UltraDEX Daily Oral Rinse with Fluoride 500ml | Fresh Breath Mouthwash for Daily Oral Hygiene | Fluoride Mouth Rinse for Healthy Teeth & Gums",
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "4 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "141 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 205 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "3641 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B007Y5XD3A",
+        "title": "UltraDEX Low-Abrasion Toothpaste 75Ml",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "37 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 173 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1518 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0BG676CYD",
+        "title": "UltraDEX Fresh Breath Oral Spray 12 X 9 ml, White, 9 ml (Pack of 12)",
+        "score": 62,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "68 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "fail",
+            "detail": "avg 43 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "4008 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B071Z1B158",
+        "title": "Ultradex Daily Oral Rinse, 1000Ml",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "33 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 212 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "725 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0GX213TNP",
+        "title": "UltraDEX Low-Abrasion Toothpaste 75Ml",
+        "score": 25,
+        "checks": {
+          "images": {
+            "status": "fail",
+            "detail": "3 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "37 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "3 bullets"
+          },
+          "bullet_depth": {
+            "status": "fail",
+            "detail": "avg 28 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 1,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.03,
+    "est_monthly_spend_on_sampled_terms": {
+      "low": 287,
+      "high": 717
+    },
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "Colgate",
+        "avg_sov": 0.178,
+        "avg_sponsored_sov": 0.068,
+        "keywords_present": 12,
+        "is_prospect": false
+      },
+      {
+        "brand": "Marvis",
+        "avg_sov": 0.122,
+        "avg_sponsored_sov": 0.058,
+        "keywords_present": 10,
+        "is_prospect": false
+      },
+      {
+        "brand": "Corsodyl",
+        "avg_sov": 0.11,
+        "avg_sponsored_sov": 0.078,
+        "keywords_present": 12,
+        "is_prospect": false
+      },
+      {
+        "brand": "Oral-B",
+        "avg_sov": 0.102,
+        "avg_sponsored_sov": 0.11,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "Euthymol",
+        "avg_sov": 0.087,
+        "avg_sponsored_sov": 0.016,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "Listerine",
+        "avg_sov": 0.075,
+        "avg_sponsored_sov": 0.088,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "CB12",
+        "avg_sov": 0.062,
+        "avg_sponsored_sov": 0.064,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "HISMILE",
+        "avg_sov": 0.058,
+        "avg_sponsored_sov": 0.104,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Waken",
+        "avg_sov": 0.044,
+        "avg_sponsored_sov": 0.09,
+        "keywords_present": 11,
+        "is_prospect": false
+      },
+      {
+        "brand": "Sensodyne",
+        "avg_sov": 0.043,
+        "avg_sponsored_sov": 0.012,
+        "keywords_present": 10,
+        "is_prospect": false
+      },
+      {
+        "brand": "The Breath Co.",
+        "avg_sov": 0.032,
+        "avg_sponsored_sov": 0.003,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "Vitacrazy",
+        "avg_sov": 0.02,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 3,
+        "is_prospect": false
+      },
+      {
+        "brand": "BetterWhite",
+        "avg_sov": 0.012,
+        "avg_sponsored_sov": 0.015,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "HealthAid",
+        "avg_sov": 0.009,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "UltraDEX",
+        "avg_sov": 0.007,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 12,
+        "is_prospect": true
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [
+      {
+        "keyword": "ultradex",
+        "asin": "B00KKE8CC4",
+        "brand_guess": "CB12 Mouthwash",
+        "title": "CB12 Mouthwash Mint Alcohol Free for 12H Bad Breath Treatment 1 Litre | Chlorhexidine mout",
+        "position": 4
+      },
+      {
+        "keyword": "ultradex",
+        "asin": "B00KKE8CC4",
+        "brand_guess": "CB12 Mouthwash",
+        "title": "CB12 Mouthwash Mint Alcohol Free for 12H Bad Breath Treatment 1 Litre | Chlorhexidine mout",
+        "position": 50
+      },
+      {
+        "keyword": "ultradex mouthwash",
+        "asin": "B00KKE8CC4",
+        "brand_guess": "CB12 Mouthwash",
+        "title": "CB12 Mouthwash Mint Alcohol Free for 12H Bad Breath Treatment 1 Litre | Chlorhexidine mout",
+        "position": 15
+      },
+      {
+        "keyword": "ultradex mouthwash",
+        "asin": "B01JZHYC1G",
+        "brand_guess": "CB12 Whitening",
+        "title": "CB12 Whitening Mouthwash Alcohol Free for 16H Bad Breath Treatment 250ml | Whitening chlor",
+        "position": 50
+      }
+    ],
+    "prospect_sponsored_on_own_brand": false,
+    "positioning_page1": {
+      "our_median_price": 4.7,
+      "competitor_median_price": 7.16,
+      "our_median_rating": 4.4,
+      "competitor_median_rating": 4.6
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "toothpaste",
+        "tier": "core",
+        "volume": 392821,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": 0.49,
+        "status": "push",
+        "priority": 801676
+      },
+      {
+        "keyword": "mouthwash",
+        "tier": "core",
+        "volume": 174132,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.3,
+        "status": "push",
+        "priority": 580440
+      },
+      {
+        "keyword": "bad breath",
+        "tier": "core",
+        "volume": 73603,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 73603
+      },
+      {
+        "keyword": "whitening toothpaste",
+        "tier": "core",
+        "volume": 44232,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": 1.3,
+        "status": "push",
+        "priority": 34025
+      },
+      {
+        "keyword": "toothpaste whitening",
+        "tier": "core",
+        "volume": 29758,
+        "organic_rank": 124,
+        "sponsored_rank": null,
+        "cpc": 0.81,
+        "status": "missing",
+        "priority": 22043
+      },
+      {
+        "keyword": "marvis toothpaste",
+        "tier": "competitor",
+        "volume": 23059,
+        "organic_rank": 127,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "missing",
+        "priority": 20753
+      },
+      {
+        "keyword": "mouth wash",
+        "tier": "category",
+        "volume": 24719,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 17303
+      },
+      {
+        "keyword": "gc tooth mousse",
+        "tier": "core",
+        "volume": 2714,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": 0.21,
+        "status": "push",
+        "priority": 12924
+      },
+      {
+        "keyword": "spray",
+        "tier": "core",
+        "volume": 4433,
+        "organic_rank": 142,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "missing",
+        "priority": 12090
+      },
+      {
+        "keyword": "tooth paste",
+        "tier": "core",
+        "volume": 11507,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": 0.66,
+        "status": "missing",
+        "priority": 10461
+      },
+      {
+        "keyword": "marvis",
+        "tier": "competitor",
+        "volume": 6720,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "missing",
+        "priority": 6048
+      },
+      {
+        "keyword": "corsodyl mouthwash",
+        "tier": "competitor",
+        "volume": 32741,
+        "organic_rank": 115,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 5893
+      },
+      {
+        "keyword": "toothpastes",
+        "tier": "core",
+        "volume": 4893,
+        "organic_rank": 45,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4893
+      },
+      {
+        "keyword": "listerine mouthwash",
+        "tier": "competitor",
+        "volume": 25858,
+        "organic_rank": 85,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4654
+      },
+      {
+        "keyword": "breath",
+        "tier": "core",
+        "volume": 2050,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": 0.23,
+        "status": "organic_top_unprotected",
+        "priority": 4457
+      },
+      {
+        "keyword": "travel mouthwash",
+        "tier": "core",
+        "volume": 4362,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4362
+      },
+      {
+        "keyword": "kids mouthwash",
+        "tier": "core",
+        "volume": 4176,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4176
+      },
+      {
+        "keyword": "fluoride toothpaste",
+        "tier": "core",
+        "volume": 6833,
+        "organic_rank": 63,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4100
+      },
+      {
+        "keyword": "corsodyl toothpaste",
+        "tier": "competitor",
+        "volume": 22162,
+        "organic_rank": 122,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3989
+      },
+      {
+        "keyword": "curaprox toothpaste",
+        "tier": "core",
+        "volume": 3985,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3985
+      },
+      {
+        "keyword": "otrivine",
+        "tier": "core",
+        "volume": 3481,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": 0.35,
+        "status": "sponsored_only",
+        "priority": 3978
+      },
+      {
+        "keyword": "mouth ulcer treatment",
+        "tier": "category",
+        "volume": 9214,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3870
+      },
+      {
+        "keyword": "mouthwash for gum disease",
+        "tier": "long_tail",
+        "volume": 7255,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3628
+      },
+      {
+        "keyword": "fresh breath",
+        "tier": "core",
+        "volume": 1380,
+        "organic_rank": 2,
+        "sponsored_rank": null,
+        "cpc": 0.17,
+        "status": "organic_top_unprotected",
+        "priority": 3450
+      },
+      {
+        "keyword": "oralieve",
+        "tier": "category",
+        "volume": 1675,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": 0.34,
+        "status": "push",
+        "priority": 3449
+      },
+      {
+        "keyword": "bad breath treatment for adults",
+        "tier": "long_tail",
+        "volume": 6721,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3360
+      },
+      {
+        "keyword": "biotene",
+        "tier": "category",
+        "volume": 1914,
+        "organic_rank": 45,
+        "sponsored_rank": null,
+        "cpc": 0.41,
+        "status": "push",
+        "priority": 3268
+      },
+      {
+        "keyword": "therabreath mouthwash",
+        "tier": "category",
+        "volume": 4574,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3202
+      },
+      {
+        "keyword": "dry mouth spray",
+        "tier": "category",
+        "volume": 4473,
+        "organic_rank": 22,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3131
+      },
+      {
+        "keyword": "whitening mouthwash",
+        "tier": "category",
+        "volume": 4472,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3130
+      },
+      {
+        "keyword": "toothpaste oral b",
+        "tier": "core",
+        "volume": 4627,
+        "organic_rank": 122,
+        "sponsored_rank": null,
+        "cpc": 0.89,
+        "status": "missing",
+        "priority": 3119
+      },
+      {
+        "keyword": "tooth mousse",
+        "tier": "category",
+        "volume": 1987,
+        "organic_rank": 135,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 3091
+      },
+      {
+        "keyword": "biorepair toothpaste",
+        "tier": "core",
+        "volume": 5061,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3037
+      },
+      {
+        "keyword": "xylitol toothpaste",
+        "tier": "core",
+        "volume": 2985,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2985
+      },
+      {
+        "keyword": "antibacterial mouthwash",
+        "tier": "category",
+        "volume": 4169,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2918
+      },
+      {
+        "keyword": "oranurse unflavoured toothpaste",
+        "tier": "core",
+        "volume": 2849,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2849
+      },
+      {
+        "keyword": "zing toothpaste",
+        "tier": "core",
+        "volume": 4726,
+        "organic_rank": 97,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2836
+      },
+      {
+        "keyword": "gum toothpaste",
+        "tier": "core",
+        "volume": 1774,
+        "organic_rank": 104,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "missing",
+        "priority": 2801
+      },
+      {
+        "keyword": "peroxyl mouthwash",
+        "tier": "category",
+        "volume": 3727,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2609
+      },
+      {
+        "keyword": "hydrogen peroxide mouthwash",
+        "tier": "category",
+        "volume": 3691,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2584
+      },
+      {
+        "keyword": "chlorhexidine mouthwash",
+        "tier": "category",
+        "volume": 3683,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2578
+      },
+      {
+        "keyword": "antiseptic mouthwash",
+        "tier": "category",
+        "volume": 3537,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2476
+      },
+      {
+        "keyword": "veneer toothpaste",
+        "tier": "core",
+        "volume": 2451,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2451
+      },
+      {
+        "keyword": "sls free toothpaste",
+        "tier": "core",
+        "volume": 3988,
+        "organic_rank": 91,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2393
+      },
+      {
+        "keyword": "mouthwashes",
+        "tier": "core",
+        "volume": 2362,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2362
+      },
+      {
+        "keyword": "euthymol toothpaste",
+        "tier": "competitor",
+        "volume": 14550,
+        "organic_rank": 141,
+        "sponsored_rank": null,
+        "cpc": 1.11,
+        "status": "missing",
+        "priority": 2359
+      },
+      {
+        "keyword": "trycure whitening mouthwash",
+        "tier": "core",
+        "volume": 2358,
+        "organic_rank": 20,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2358
+      },
+      {
+        "keyword": "duraphat 5000ppm fluoride toothpaste",
+        "tier": "long_tail",
+        "volume": 2090,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 2322
+      },
+      {
+        "keyword": "curasept mouthwash",
+        "tier": "category",
+        "volume": 3129,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2190
+      },
+      {
+        "keyword": "alcohol free mouthwash",
+        "tier": "category",
+        "volume": 3097,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2168
+      },
+      {
+        "keyword": "listerine strips",
+        "tier": "competitor",
+        "volume": 5926,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": 0.84,
+        "status": "push",
+        "priority": 2116
+      },
+      {
+        "keyword": "pronamel toothpaste",
+        "tier": "core",
+        "volume": 3504,
+        "organic_rank": 108,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2102
+      },
+      {
+        "keyword": "orajel",
+        "tier": "category",
+        "volume": 3003,
+        "organic_rank": 42,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2102
+      },
+      {
+        "keyword": "the breath co mouthwash",
+        "tier": "long_tail",
+        "volume": 4167,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2084
+      },
+      {
+        "keyword": "daktarin oral gel",
+        "tier": "core",
+        "volume": 2034,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2034
+      },
+      {
+        "keyword": "aloe dent toothpaste",
+        "tier": "core",
+        "volume": 3245,
+        "organic_rank": 96,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1947
+      },
+      {
+        "keyword": "dentyl mouthwash",
+        "tier": "category",
+        "volume": 2765,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1935
+      },
+      {
+        "keyword": "biotene mouthwash",
+        "tier": "category",
+        "volume": 2758,
+        "organic_rank": 29,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1931
+      },
+      {
+        "keyword": "curasept",
+        "tier": "category",
+        "volume": 906,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "missing",
+        "priority": 1903
+      },
+      {
+        "keyword": "mouthwash alcohol free",
+        "tier": "category",
+        "volume": 4205,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1766
+      },
+      {
+        "keyword": "breath strips",
+        "tier": "core",
+        "volume": 1447,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": 0.84,
+        "status": "push",
+        "priority": 1723
+      },
+      {
+        "keyword": "steradent",
+        "tier": "category",
+        "volume": 4013,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1685
+      },
+      {
+        "keyword": "mouth ulcer treatment for adults",
+        "tier": "long_tail",
+        "volume": 3279,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1640
+      },
+      {
+        "keyword": "curasept gel",
+        "tier": "category",
+        "volume": 568,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": 0.26,
+        "status": "push",
+        "priority": 1529
+      },
+      {
+        "keyword": "high fluoride toothpaste",
+        "tier": "core",
+        "volume": 2477,
+        "organic_rank": 75,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1486
+      },
+      {
+        "keyword": "dry mouth relief",
+        "tier": "category",
+        "volume": 3456,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1452
+      },
+      {
+        "keyword": "elmex toothpaste",
+        "tier": "core",
+        "volume": 2410,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1446
+      },
+      {
+        "keyword": "travel size mouthwash",
+        "tier": "core",
+        "volume": 1437,
+        "organic_rank": 18,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1437
+      },
+      {
+        "keyword": "biotene toothpaste",
+        "tier": "core",
+        "volume": 1391,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1391
+      },
+      {
+        "keyword": "lumine organics mouthwash",
+        "tier": "category",
+        "volume": 1986,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1390
+      },
+      {
+        "keyword": "gingivitis treatment",
+        "tier": "category",
+        "volume": 3293,
+        "organic_rank": 79,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1383
+      },
+      {
+        "keyword": "oral hygiene products",
+        "tier": "core",
+        "volume": 1378,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1378
+      },
+      {
+        "keyword": "toothpast",
+        "tier": "core",
+        "volume": 1070,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": 0.5,
+        "status": "missing",
+        "priority": 1284
+      },
+      {
+        "keyword": "oral b mouthwash",
+        "tier": "category",
+        "volume": 1782,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1247
+      },
+      {
+        "keyword": "gum disease mouthwash",
+        "tier": "category",
+        "volume": 1765,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1236
+      },
+      {
+        "keyword": "the breath co",
+        "tier": "core",
+        "volume": 1225,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1225
+      },
+      {
+        "keyword": "oranurse toothpaste",
+        "tier": "core",
+        "volume": 1218,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1218
+      },
+      {
+        "keyword": "mouthwash travel size",
+        "tier": "core",
+        "volume": 1206,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1206
+      },
+      {
+        "keyword": "hydrogen peroxide toothpaste",
+        "tier": "core",
+        "volume": 2005,
+        "organic_rank": 79,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1203
+      },
+      {
+        "keyword": "gengigel mouthwash",
+        "tier": "category",
+        "volume": 1707,
+        "organic_rank": 39,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1195
+      },
+      {
+        "keyword": "euthymol",
+        "tier": "competitor",
+        "volume": 3912,
+        "organic_rank": null,
+        "sponsored_rank": 4,
+        "cpc": 0.4,
+        "status": "sponsored_only",
+        "priority": 1174
+      },
+      {
+        "keyword": "mouthwash whitening",
+        "tier": "category",
+        "volume": 1634,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1144
+      },
+      {
+        "keyword": "oranurse",
+        "tier": "core",
+        "volume": 1135,
+        "organic_rank": 54,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1135
+      },
+      {
+        "keyword": "bioniq toothpaste",
+        "tier": "core",
+        "volume": 1869,
+        "organic_rank": 134,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1121
+      },
+      {
+        "keyword": "hygiene",
+        "tier": "core",
+        "volume": 1119,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1119
+      },
+      {
+        "keyword": "dcxc toothpaste whitening",
+        "tier": "core",
+        "volume": 1102,
+        "organic_rank": 45,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1102
+      },
+      {
+        "keyword": "mouth wash for gums disease",
+        "tier": "long_tail",
+        "volume": 2180,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1090
+      },
+      {
+        "keyword": "colgate mouthwash",
+        "tier": "competitor",
+        "volume": 5776,
+        "organic_rank": 82,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1040
+      },
+      {
+        "keyword": "hygiene spray",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": 0.23,
+        "status": "push",
+        "priority": 978
+      },
+      {
+        "keyword": "oral hygiene",
+        "tier": "core",
+        "volume": 941,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 941
+      },
+      {
+        "keyword": "teeth whitening mouthwash",
+        "tier": "category",
+        "volume": 1319,
+        "organic_rank": 42,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 923
+      },
+      {
+        "keyword": "fluorigard mouthwash",
+        "tier": "core",
+        "volume": 904,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 904
+      },
+      {
+        "keyword": "travel mouthwash mini",
+        "tier": "core",
+        "volume": 896,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 896
+      },
+      {
+        "keyword": "anti snoring spray",
+        "tier": "category",
+        "volume": 1242,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 869
+      },
+      {
+        "keyword": "toothpaste travel size",
+        "tier": "core",
+        "volume": 1428,
+        "organic_rank": 107,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 857
+      },
+      {
+        "keyword": "therabreath",
+        "tier": "category",
+        "volume": 1216,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 851
+      },
+      {
+        "keyword": "blanx toothpaste",
+        "tier": "core",
+        "volume": 850,
+        "organic_rank": 50,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 850
+      },
+      {
+        "keyword": "tepe toothpaste",
+        "tier": "core",
+        "volume": 838,
+        "organic_rank": 19,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 838
+      },
+      {
+        "keyword": "sls free toothpaste uk",
+        "tier": "long_tail",
+        "volume": 1613,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 806
+      },
+      {
+        "keyword": "dental hygiene",
+        "tier": "category",
+        "volume": 1140,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 798
+      },
+      {
+        "keyword": "composite bonding toothpaste",
+        "tier": "core",
+        "volume": 793,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 793
+      },
+      {
+        "keyword": "mini mouthwash",
+        "tier": "core",
+        "volume": 2615,
+        "organic_rank": 9,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 784
+      },
+      {
+        "keyword": "xylitol mouthwash",
+        "tier": "category",
+        "volume": 1102,
+        "organic_rank": 28,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 771
+      },
+      {
+        "keyword": "dentyl",
+        "tier": "category",
+        "volume": 1095,
+        "organic_rank": 39,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 766
+      },
+      {
+        "keyword": "cortisol mouthwash",
+        "tier": "category",
+        "volume": 1090,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 763
+      },
+      {
+        "keyword": "fluoride mouthwash",
+        "tier": "core",
+        "volume": 2529,
+        "organic_rank": 10,
+        "sponsored_rank": 36,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 759
+      },
+      {
+        "keyword": "dry mouth mouthwash",
+        "tier": "category",
+        "volume": 1063,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 744
+      },
+      {
+        "keyword": "difflam",
+        "tier": "category",
+        "volume": 1047,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 733
+      },
+      {
+        "keyword": "unflavoured toothpaste",
+        "tier": "core",
+        "volume": 1209,
+        "organic_rank": 86,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 725
+      },
+      {
+        "keyword": "zing toothpaste whitening",
+        "tier": "core",
+        "volume": 1184,
+        "organic_rank": 73,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 710
+      },
+      {
+        "keyword": "closys mouthwash",
+        "tier": "core",
+        "volume": 707,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 707
+      },
+      {
+        "keyword": "oralieve toothpaste",
+        "tier": "core",
+        "volume": 1177,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 706
+      },
+      {
+        "keyword": "nil by mouth",
+        "tier": "core",
+        "volume": 1731,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 692
+      },
+      {
+        "keyword": "gum disease",
+        "tier": "category",
+        "volume": 1641,
+        "organic_rank": 105,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 689
+      },
+      {
+        "keyword": "macleans toothpaste",
+        "tier": "core",
+        "volume": 1139,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 683
+      },
+      {
+        "keyword": "probiotic mouth spray",
+        "tier": "core",
+        "volume": 662,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 662
+      },
+      {
+        "keyword": "nystatin oral suspension",
+        "tier": "core",
+        "volume": 660,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 660
+      },
+      {
+        "keyword": "hi smile mouthwash",
+        "tier": "category",
+        "volume": 938,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 657
+      },
+      {
+        "keyword": "waken mouthwash",
+        "tier": "competitor",
+        "volume": 2179,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 654
+      },
+      {
+        "keyword": "oral care",
+        "tier": "category",
+        "volume": 1071,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": 1.18,
+        "status": "push",
+        "priority": 635
+      },
+      {
+        "keyword": "peroxyl",
+        "tier": "core",
+        "volume": 622,
+        "organic_rank": 19,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 622
+      },
+      {
+        "keyword": "dog mouthwash",
+        "tier": "category",
+        "volume": 1477,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 620
+      },
+      {
+        "keyword": "fluoride free mouthwash",
+        "tier": "category",
+        "volume": 867,
+        "organic_rank": 56,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 607
+      },
+      {
+        "keyword": "breath mints",
+        "tier": "core",
+        "volume": 1502,
+        "organic_rank": null,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 601
+      },
+      {
+        "keyword": "toothoaste",
+        "tier": "core",
+        "volume": 593,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 593
+      },
+      {
+        "keyword": "denture toothpaste",
+        "tier": "core",
+        "volume": 583,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 583
+      },
+      {
+        "keyword": "gengigel toothpaste",
+        "tier": "core",
+        "volume": 575,
+        "organic_rank": 55,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 575
+      },
+      {
+        "keyword": "sensitive mouthwash",
+        "tier": "category",
+        "volume": 798,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 559
+      },
+      {
+        "keyword": "gingivitis mouthwash",
+        "tier": "category",
+        "volume": 795,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 556
+      },
+      {
+        "keyword": "dr dent purple mouthwash",
+        "tier": "long_tail",
+        "volume": 1106,
+        "organic_rank": 39,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 553
+      },
+      {
+        "keyword": "act mouthwash",
+        "tier": "core",
+        "volume": 550,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 550
+      },
+      {
+        "keyword": "difflam mouthwash",
+        "tier": "category",
+        "volume": 781,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 547
+      },
+      {
+        "keyword": "oraldene mouthwash",
+        "tier": "core",
+        "volume": 1808,
+        "organic_rank": 25,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 542
+      },
+      {
+        "keyword": "oral probiotics for bad breath",
+        "tier": "long_tail",
+        "volume": 1076,
+        "organic_rank": 59,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 538
+      },
+      {
+        "keyword": "mouth wash antibacterial",
+        "tier": "core",
+        "volume": 1753,
+        "organic_rank": 26,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 526
+      },
+      {
+        "keyword": "oralb toothpaste",
+        "tier": "core",
+        "volume": 869,
+        "organic_rank": 93,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 521
+      },
+      {
+        "keyword": "antibacterial toothpaste",
+        "tier": "core",
+        "volume": 519,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 519
+      },
+      {
+        "keyword": "mouth ulcer",
+        "tier": "category",
+        "volume": 1221,
+        "organic_rank": 132,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 513
+      },
+      {
+        "keyword": "wisdom chlorhexidine mouthwash",
+        "tier": "category",
+        "volume": 730,
+        "organic_rank": 54,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 511
+      },
+      {
+        "keyword": "janina toothpaste",
+        "tier": "core",
+        "volume": 506,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 506
+      },
+      {
+        "keyword": "breath co",
+        "tier": "core",
+        "volume": 502,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 502
+      },
+      {
+        "keyword": "pearl drops",
+        "tier": "core",
+        "volume": 1364,
+        "organic_rank": null,
+        "sponsored_rank": 5,
+        "cpc": 1.09,
+        "status": "sponsored_only",
+        "priority": 501
+      },
+      {
+        "keyword": "zinc toothpaste",
+        "tier": "core",
+        "volume": 500,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 500
+      },
+      {
+        "keyword": "bleeding gums treatment",
+        "tier": "category",
+        "volume": 1185,
+        "organic_rank": 69,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 498
+      },
+      {
+        "keyword": "biomed mouthwash",
+        "tier": "category",
+        "volume": 702,
+        "organic_rank": 56,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 491
+      },
+      {
+        "keyword": "oral",
+        "tier": "category",
+        "volume": 624,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": 0.89,
+        "status": "push",
+        "priority": 491
+      },
+      {
+        "keyword": "mouthwash for bad breath",
+        "tier": "long_tail",
+        "volume": 1929,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 482
+      },
+      {
+        "keyword": "tonsil stone mouthwash",
+        "tier": "core",
+        "volume": 1594,
+        "organic_rank": 18,
+        "sponsored_rank": 8,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 478
+      },
+      {
+        "keyword": "alcohol-free mouthwash",
+        "tier": "category",
+        "volume": 677,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 474
+      },
+      {
+        "keyword": "tonsillitis treatment",
+        "tier": "category",
+        "volume": 676,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 473
+      }
+    ],
+    "tiers": {
+      "core": {
+        "keywords": 89,
+        "volume": 881211,
+        "gaps": 69
+      },
+      "competitor": {
+        "keywords": 43,
+        "volume": 173738,
+        "gaps": 39
+      },
+      "category": {
+        "keywords": 70,
+        "volume": 149529,
+        "gaps": 69
+      },
+      "long_tail": {
+        "keywords": 97,
+        "volume": 76634,
+        "gaps": 80
+      },
+      "brand": {
+        "keywords": 9,
+        "volume": 8250,
+        "gaps": 0
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "toothpaste",
+        "tier": "core",
+        "volume": 392821,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": 0.49,
+        "status": "push",
+        "priority": 801676
+      },
+      {
+        "keyword": "mouthwash",
+        "tier": "core",
+        "volume": 174132,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.3,
+        "status": "push",
+        "priority": 580440
+      },
+      {
+        "keyword": "bad breath",
+        "tier": "core",
+        "volume": 73603,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 73603
+      },
+      {
+        "keyword": "whitening toothpaste",
+        "tier": "core",
+        "volume": 44232,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": 1.3,
+        "status": "push",
+        "priority": 34025
+      },
+      {
+        "keyword": "toothpaste whitening",
+        "tier": "core",
+        "volume": 29758,
+        "organic_rank": 124,
+        "sponsored_rank": null,
+        "cpc": 0.81,
+        "status": "missing",
+        "priority": 22043
+      },
+      {
+        "keyword": "mouth wash",
+        "tier": "category",
+        "volume": 24719,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 17303
+      },
+      {
+        "keyword": "gc tooth mousse",
+        "tier": "core",
+        "volume": 2714,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": 0.21,
+        "status": "push",
+        "priority": 12924
+      },
+      {
+        "keyword": "spray",
+        "tier": "core",
+        "volume": 4433,
+        "organic_rank": 142,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "missing",
+        "priority": 12090
+      },
+      {
+        "keyword": "tooth paste",
+        "tier": "core",
+        "volume": 11507,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": 0.66,
+        "status": "missing",
+        "priority": 10461
+      },
+      {
+        "keyword": "toothpastes",
+        "tier": "core",
+        "volume": 4893,
+        "organic_rank": 45,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4893
+      },
+      {
+        "keyword": "breath",
+        "tier": "core",
+        "volume": 2050,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": 0.23,
+        "status": "organic_top_unprotected",
+        "priority": 4457
+      },
+      {
+        "keyword": "travel mouthwash",
+        "tier": "core",
+        "volume": 4362,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4362
+      },
+      {
+        "keyword": "kids mouthwash",
+        "tier": "core",
+        "volume": 4176,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4176
+      },
+      {
+        "keyword": "fluoride toothpaste",
+        "tier": "core",
+        "volume": 6833,
+        "organic_rank": 63,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4100
+      },
+      {
+        "keyword": "curaprox toothpaste",
+        "tier": "core",
+        "volume": 3985,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3985
+      },
+      {
+        "keyword": "mouth ulcer treatment",
+        "tier": "category",
+        "volume": 9214,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3870
+      },
+      {
+        "keyword": "mouthwash for gum disease",
+        "tier": "long_tail",
+        "volume": 7255,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3628
+      },
+      {
+        "keyword": "fresh breath",
+        "tier": "core",
+        "volume": 1380,
+        "organic_rank": 2,
+        "sponsored_rank": null,
+        "cpc": 0.17,
+        "status": "organic_top_unprotected",
+        "priority": 3450
+      },
+      {
+        "keyword": "oralieve",
+        "tier": "category",
+        "volume": 1675,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": 0.34,
+        "status": "push",
+        "priority": 3449
+      },
+      {
+        "keyword": "bad breath treatment for adults",
+        "tier": "long_tail",
+        "volume": 6721,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3360
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "core": 8068,
+        "category": 7
+      },
+      "monthly_by_ad_type": {
+        "SP": 4844,
+        "SB": 1615,
+        "SBV": 1615,
+        "SD (remarketing/retention)": 1425
+      },
+      "monthly_total": 9500,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.15
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.62,
+      "multipack_share": 0.38,
+      "consumable_category": true,
+      "likelihood": "high"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Health & Personal Care",
+    "available": false
+  },
+  "job_ad_present": false
+}

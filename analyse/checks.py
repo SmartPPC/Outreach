@@ -242,6 +242,8 @@ def wasted_terms(hero_title: str, brand: str, keywords: list[dict]) -> list[dict
             continue
         kt = tokens(k["keyword"])
         nk, nb = norm(k["keyword"]), norm(brand)
+        if nb and nb in nk:
+            continue  # own-brand searches (any spelling, any product) are brand defence, never waste
         partial_brand = bool(nk) and nk != nb and ((kt and kt <= brand_toks) or nb.startswith(nk))
         if partial_brand or not (stems(k["keyword"]) & title_stems):
             out.append({"keyword": k["keyword"], "volume": k.get("volume"), "sponsored_rank": k["sponsored_rank"],

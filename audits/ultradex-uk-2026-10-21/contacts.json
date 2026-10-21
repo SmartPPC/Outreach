@@ -1,0 +1,108 @@
+{
+  "website": "https://ultradex.co.uk",
+  "domain": "ultradex.co.uk",
+  "pages_checked": [
+    "https://ultradex.co.uk/",
+    "https://ultradex.co.uk/pages/contact",
+    "https://ultradex.co.uk/contact",
+    "https://ultradex.co.uk/contact-us",
+    "https://ultradex.co.uk/pages/contact-us",
+    "https://ultradex.co.uk/pages/about",
+    "https://ultradex.co.uk/pages/about-us",
+    "https://ultradex.co.uk/about"
+  ],
+  "emails": [],
+  "people": [],
+  "company": {
+    "name": "Periproducts Limited",
+    "number": null
+  },
+  "email_format": null,
+  "suggested": [],
+  "recommended_to": null,
+  "only_generic": false,
+  "organisations": [
+    {
+      "name": "UltraDEX",
+      "kind": "brand"
+    },
+    {
+      "name": "Periproducts Limited",
+      "kind": "website operator"
+    }
+  ],
+  "companies_house": [
+    {
+      "number": "02864374",
+      "name": "PERIPRODUCTS LIMITED",
+      "address": "Festival House, Jessop Avenue, Cheltenham, England, GL50 3SH",
+      "active": true,
+      "status": "Incorporated on 20 October 1993",
+      "people": [
+        "BERNHOLT, Richard Paul",
+        "COLLINS, Sharon Mary",
+        "COUZENS, Angela Christina",
+        "GIOFFRE, Giuseppe",
+        "GLASSMAN, David Michael",
+        "HIGHAM, Quentin Giles Anthony",
+        "HITCHEN, Louisa",
+        "HUNTER, James Douglas",
+        "KRIEGER, Simon",
+        "MCCARTHY, Louise",
+        "NCUBE, David Bafana",
+        "POTTS, Michael Thomas",
+        "RANDALL, Jeremy Anthony Phillip",
+        "SHEPHERD, Peter",
+        "STALBOW, Michael Robert",
+        "WATERS, Mark Andrew",
+        "WELLS, Daniel James"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02864374/officers"
+    }
+  ],
+  "linkedin_profiles": [],
+  "linkedin_searches": [
+    {
+      "org": "UltraDEX",
+      "role": "founder",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22UltraDEX%22%20founder"
+    },
+    {
+      "org": "UltraDEX",
+      "role": "ecommerce",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22UltraDEX%22%20ecommerce"
+    },
+    {
+      "org": "UltraDEX",
+      "role": "amazon",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22UltraDEX%22%20amazon"
+    },
+    {
+      "org": "UltraDEX",
+      "role": "marketing",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22UltraDEX%22%20marketing"
+    },
+    {
+      "org": "Periproducts Limited",
+      "role": "founder",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Periproducts%20Limited%22%20founder"
+    },
+    {
+      "org": "Periproducts Limited",
+      "role": "ecommerce",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Periproducts%20Limited%22%20ecommerce"
+    },
+    {
+      "org": "Periproducts Limited",
+      "role": "amazon",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Periproducts%20Limited%22%20amazon"
+    },
+    {
+      "org": "Periproducts Limited",
+      "role": "marketing",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Periproducts%20Limited%22%20marketing"
+    }
+  ],
+  "apollo_people_url": "https://app.apollo.io/#/people?organizationIds[]=54a1296c69702d8b19581702",
+  "note": "No emails published on ultradex.co.uk. Companies House lists current and past officers; check roles before use."
+}

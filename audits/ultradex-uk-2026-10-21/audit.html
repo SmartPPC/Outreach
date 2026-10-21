@@ -1,0 +1,208 @@
+<title>UltraDEX Amazon Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the five recommendations lead, evidence sections follow in the order the email cites them. */
+:root {
+  --bg: #f6f1e7;
+  --paper: #fffdf8;
+  --ink: #1a1a18;
+  --ink-soft: #4a4842;
+  --muted: #7d7a72;
+  --rule: #d9d2c3;
+  --accent: #d85a30;
+  --accent-soft: #f3d9cc;
+  --bar: #4a4842;
+  --s0: #d85a30; --s1: #2a78d6; --s2: #1baf7a; --s3: #c98500; --s4: #6250d6; --s5: #e87ba4;
+  --good: #0a7d0a; --warn: #a86a00; --fail: #c03434;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+    --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+    --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+    --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+  --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+  --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+  --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 56px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
+h3 { font-size: 17px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow, .tag, .stat-label, th, .tick, small { font-family: var(--mono); }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+section { display: grid; gap: 20px; min-width: 0; }
+section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 14px; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
+
+/* Recommendations: numbered because they are in priority order */
+.points { list-style: none; counter-reset: pt; margin: 0; padding: 0; display: grid; gap: 14px; }
+.point { counter-increment: pt; display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 14px; padding: 20px 20px 18px 16px; }
+.point::before { content: counter(pt); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); text-align: center; }
+.point-body { display: grid; gap: 8px; min-width: 0; }
+.tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.quote { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--ink-soft); font-size: 15px; }
+details summary { cursor: pointer; color: var(--ink-soft); font-size: 14px; }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14px; display: grid; gap: 4px; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.stat { background: var(--paper); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.stat-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat-note { font-size: 13px; color: var(--muted); }
+
+/* Charts */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.two > * { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.chart { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--bar); }
+.chart .bar:hover { fill: var(--accent); }
+.chart .grid { stroke: var(--rule); stroke-dasharray: 2 4; }
+.chart .axis { stroke: var(--muted); }
+.chart .tick { fill: var(--muted); font-size: 11px; }
+.empty { color: var(--muted); font-style: italic; }
+.hbars { display: grid; gap: 8px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 160px) 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.hbar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; background: var(--rule); border-radius: 5px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+.hbar.mine { font-weight: 600; }
+.hbar.mine .hbar-fill { background: var(--accent); }
+.hbar-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.stack { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; }
+.seg, .sw { background: var(--s0); }
+.s1 { background: var(--s1); } .s2 { background: var(--s2); } .s3 { background: var(--s3); } .s4 { background: var(--s4); } .s5 { background: var(--s5); }
+.legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend small { color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.budget-total { font-family: var(--serif); font-size: 26px; }
+
+/* Tables */
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child > * { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+table.content td { white-space: nowrap; }
+table.content th[scope="row"] { text-transform: none; letter-spacing: 0; color: var(--ink); font-size: 13px; min-width: 180px; }
+table.content th[scope="row"] small { display: block; color: var(--muted); font-family: var(--sans); white-space: normal; }
+.chip { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; color: var(--paper); }
+.chip.good { background: var(--good); } .chip.warn { background: var(--warn); } .chip.fail { background: var(--fail); }
+.kw-status { font-size: 13px; color: var(--ink-soft); }
+.kw-status.push, .kw-status.brand_defence_gap { color: var(--accent); font-weight: 600; }
+.attackers { padding-left: 18px; margin: 0; display: grid; gap: 6px; }
+.attackers small { display: block; color: var(--muted); font-family: var(--sans); }
+ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.hero-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px; align-content: start; min-width: 0; }
+.hero-card header { display: grid; gap: 4px; }
+.hero-card header a { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.hero-meta { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.hero-card h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); }
+.hero-card ul { padding-left: 0; list-style: none; font-size: 14px; gap: 4px; }
+.hero-card ul small, .quick small { display: block; color: var(--muted); }
+.hero-card p { font-size: 14px; }
+.hero-card .action { font-weight: 600; border-left: 2px solid var(--accent); padding-left: 10px; }
+.flags li { display: flex; gap: 8px; align-items: baseline; }
+.flags li.verdict { display: block; font-style: italic; color: var(--ink-soft); }
+.quick { font-size: 14px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
+</style>
+
+<main class="page">
+  <div class="hero">
+    <span class="eyebrow">Smart PPC · Amazon audit</span>
+    <h1>UltraDEX</h1>
+    <div class="meta"><span>amazon.co.uk</span><span>Prepared 2026-10-21</span></div>
+    <p class="headline">UltraDEX&#x27;s listings are strong and well reviewed, but it advertises on almost none of its biggest searches, and a competitor is buying the ad slot on its own brand name.</p>
+  </div>
+
+  <section>
+    <header><span class="eyebrow">Priorities</span><h2>What I would do first</h2></header>
+    <ol class="points"><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Put ad support behind the big searches where UltraDEX already ranks</h3><p>Only 1 of the top 30 keywords across the best-sellers has an UltraDEX ad. The Fresh Breath Spray ranks #6 organically for &#x27;bad breath&#x27; (73.6k/mo) with no ad, and the rinses sit at #39 for &#x27;mouth wash&#x27; (24.7k/mo) and #49 for &#x27;bad breath&#x27;. Exact-match ads on these terms are the fastest visibility win.</p><details><summary>What we saw</summary><ul><li>Sponsored coverage: 1 of top 30 keywords (Jungle Scout keywords by ASIN)</li><li>bad breath: 73,603/mo; Spray organic #6, Fluoride Rinse organic #49, no sponsored rank</li><li>mouth wash: 24,719/mo; Fluoride Rinse organic #39, no sponsored rank</li><li>toothpaste: 392,821/mo; Low-Abrasion Toothpaste organic #47, no sponsored rank, CPC ~£0.49</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Defend the UltraDEX brand searches from CB12</h3><p>CB12 Mouthwash takes a sponsored slot at #4 on &#x27;ultradex&#x27; and #15 on &#x27;ultradex mouthwash&#x27;, and UltraDEX runs no ads on its own name. Brand-term ads are cheap and keep loyal buyers from switching.</p><details><summary>What we saw</summary><ul><li>&#x27;ultradex&#x27;: CB12 Mouthwash sponsored at position 4 (DataForSEO, Amazon UK)</li><li>&#x27;ultradex mouthwash&#x27;: CB12 sponsored at position 15</li><li>No UltraDEX sponsored placement on either brand search</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">catalogue</span><h3>Fresh Breath Spray: check the price and sellers</h3><p>The spray family (~£13–17k/mo) sells at £2.35 against a £7.16 list price (67% off) with 8 sellers on the listing. If the discount isn&#x27;t planned, it&#x27;s resellers driving the price down on one of the brand&#x27;s top three products.</p><details><summary>What we saw</summary><ul><li>B00HIXUCNC: £2.35 vs list £7.16 (Keepa); 8 sellers (Jungle Scout)</li><li>~5,400 units/mo; Keepa cross-check ~£16.9k/mo for the family</li><li>6 gallery images (one under 1600px)</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">catalogue</span><h3>Bring the multipacks into their product families</h3><p>Pack sizes are listed separately from their main products, e.g. the Fresh Breath Spray 12-pack, &#x27;6 x Daily Oral Rinse 250ml&#x27; and the toothpaste 6-packs. That splits reviews and sales rank across six sets of duplicate listings. Merging them into variation families pools both.</p><details><summary>What we saw</summary><ul><li>6 duplicate groups among live listings (title match, different parents)</li><li>e.g. B0BG676CYD (Spray 12-pack) separate from B00HIXUCNC (single)</li><li>e.g. B016KXU6OK &#x27;6 x UltraDex Daily Oral Rinse 250ml&#x27; separate from the rinse family</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">content</span><h3>12hr Low-Abrasion Toothpaste: finish the listing</h3><p>This newer best-seller family (~£7–8k/mo, 57 reviews) has 5 images, no video and no A+, and its title cuts off on mobile before the pack size. Bringing it up to the standard of the rinses would help it convert.</p><details><summary>What we saw</summary><ul><li>B0BG66FF4T: 5 images, 0 videos, no A+ (Keepa)</li><li>Title cut off before the size in mobile search (first 80 characters)</li><li>57 reviews, 4.6★</li></ul></details></div></li></ol>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Snapshot</span><h2>The business today</h2></header>
+    <div class="stats"><div class="stat"><span class="stat-label">ASINs listed</span><span class="stat-value">84</span><span class="stat-note">45 live and selling</span></div><div class="stat"><span class="stat-label">Best-sellers</span><span class="stat-value">6</span><span class="stat-note">product families making 85% of revenue</span></div><div class="stat"><span class="stat-label">Est. monthly revenue</span><span class="stat-value">£99,890</span><span class="stat-note">Jungle Scout 30-day estimate</span></div><div class="stat"><span class="stat-label">Sponsored coverage</span><span class="stat-value">3%</span><span class="stat-note">of their top 30 keywords</span></div><div class="stat"><span class="stat-label">Mobile-ready best-sellers</span><span class="stat-value">6 of 6</span><span class="stat-note">zoom, video, title, bullets and A+ on a phone</span></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Best-sellers</span><h2>Where the money is</h2>
+      <p>The products below make most of the revenue, so every recommendation starts here.</p></header>
+    <div class="heroes"><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B071VT9KBZ">B071VT9KBZ</a><h3>UltraDEX Daily Oral Rinse, Mint 500 ml</h3><span class="hero-meta">£22,344/mo · 2,793 units · £8.00 · 4.6★ (1,771)</span></header><p class="action">Add ads on &#x27;alcohol free mouthwash&#x27; (3.1k/mo, organic #43).</p><div><h4>Push</h4><ul><li>“alcohol free mouthwash” <small>3,097/mo · organic #43</small></li><li>“alcohol-free mouthwash” <small>677/mo · organic #51</small></li><li>“nystatin oral suspension” <small>660/mo · organic #14</small></li></ul></div><div><h4>Cut</h4><p>“euthymol”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 2 brand video(s), shortest 12s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 1 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B007Y5XCZE">B007Y5XCZE</a><h3>UltraDEX Daily Oral Rinse with Fluoride 500ml | Fresh Breath Mouthwash for Daily Oral Hygi</h3><span class="hero-meta">£19,238/mo · 3,381 units · £5.69 · 4.4★ (3,639)</span></header><p class="action">Exact-match ads on &#x27;mouth wash&#x27; and &#x27;bad breath&#x27;; drop &#x27;otrivine&#x27; (sponsored #1, unrelated).</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> 12 sellers on the listing</li></ul></div><div><h4>Push</h4><ul><li>“bad breath” <small>73,603/mo · organic #49</small></li><li>“mouth wash” <small>24,719/mo · organic #39</small></li><li>“mouthwash for gum disease” <small>7,255/mo · organic #41</small></li></ul></div><div><h4>Cut</h4><p>“otrivine”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip warn" title="Needs work">!</span> Zoom: all zoomable, but 6 under 1600px look soft when pinched</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 3 brand video(s), shortest 12s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 220 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B007Y5XD3A">B007Y5XD3A</a><h3>UltraDEX Low-Abrasion Toothpaste 75Ml</h3><span class="hero-meta">£12,867/mo · 1,188 units · £5.99 · 4.5★ (1,518)</span></header><p class="action">Test ads on &#x27;toothpaste&#x27; and &#x27;whitening toothpaste&#x27;, where it ranks #47–48 with no ad support.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> 6 sellers on the listing</li></ul></div><div><h4>Push</h4><ul><li>“toothpaste” <small>392,821/mo · organic #47 · £0.49 CPC</small></li><li>“whitening toothpaste” <small>44,232/mo · organic #48 · £1.30 CPC</small></li><li>“curaprox toothpaste” <small>3,985/mo · organic #23</small></li></ul></div><div><h4>Cut</h4><p>“pearl drops”, “detralex”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip warn" title="Needs work">!</span> Zoom: all zoomable, but 2 under 1600px look soft when pinched</li><li><span class="chip good" title="Good">✓</span> Images: 8 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 62s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 178 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B00HIXUCNC">B00HIXUCNC</a><h3>UltraDEX Fresh Breath Spray, 9 ml (Pack of 1)</h3><span class="hero-meta">£12,786/mo · 5,432 units · £2.35 · 4.4★ (3,999)</span></header><p class="action">Back the #6 organic rank on &#x27;bad breath&#x27; with ads; check the 67% discount and the 8 sellers.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> 8 sellers on the listing</li><li><span class="chip warn" title="Issue">!</span> discounted 67% off list (2.35 vs 7.16)</li></ul></div><div><h4>Push</h4><ul><li>“bad breath” <small>73,603/mo · organic #6</small></li><li>“bad breath treatment for adults” <small>6,721/mo · organic #9</small></li><li>“dry mouth spray” <small>4,473/mo · organic #22</small></li></ul></div><div><h4>Mobile · 75/100</h4><ul class="flags"><li><span class="chip warn" title="Needs work">!</span> Zoom: all zoomable, but 1 under 1600px look soft when pinched</li><li><span class="chip warn" title="Needs work">!</span> Images: 6 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 62s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 1 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B071Z1B158">B071Z1B158</a><h3>Ultradex Daily Oral Rinse, 1000Ml</h3><span class="hero-meta">£9,138/mo · 803 units · £11.38 · 4.7★ (721)</span></header><p class="action">Fold the 250ml 6-pack and 1L into the rinse families; add ads on &#x27;fluoride mouth rinse&#x27;.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> discounted 56% off list (11.38 vs 25.99)</li></ul></div><div><h4>Push</h4><ul><li>“oral thrush treatment for mouth and tongue” <small>653/mo · organic #29</small></li><li>“antifungal mouthwash oral thrush” <small>450/mo · organic #26</small></li><li>“beetakt oral mouthwash” <small>450/mo · organic #24</small></li></ul></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 2 brand video(s), shortest 12s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 1 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0BG66FF4T">B0BG66FF4T</a><h3>UltraDEX Low-Abrasion Toothpaste, Clinically Proven 12hr Bad Breath Treatment, Gentle &amp; No</h3><span class="hero-meta">£8,183/mo · 99 units · £33.39 · 4.6★ (57)</span></header><p class="action">Add video and A+, a 6th and 7th image, and move the pack size into the first 80 characters of the title.</p><div><h4>Push</h4><ul><li>“toothpastes” <small>4,893/mo · organic #45</small></li><li>“extreme bad breath treatment” <small>480/mo · organic #39</small></li><li>“ultradex fresh breath spray” <small>469/mo · organic #26</small></li></ul></div><div><h4>Cut</h4><p>“guardium”</p></div><div><h4>Mobile · 75/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 5 images zoomable (2000px+)</li><li><span class="chip warn" title="Needs work">!</span> Images: 5 gallery images</li><li><span class="chip warn" title="Needs work">!</span> Title in search: cut off on mobile before the size/pack</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 178 characters</li></ul></div></article></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Quick wins</span><h2>Catalogue tidy-up</h2></header>
+    <ul class="quick"><li>Duplicate listings: B0BG676CYD / B01MQ61GXT / B01M2ADDW8 / B01M9GGSNS <small>UltraDEX Fresh Breath Oral Spray 12 X 9 ml, White, 9 ml (Pack of 12)</small></li><li>Duplicate listings: B00HIXUCNC / B086QXT8MR <small>UltraDEX Fresh Breath Spray, 9 ml (Pack of 1)</small></li><li>Duplicate listings: B071Z1B158 / B013V6C9SK / B016KXU6OK <small>Ultradex Daily Oral Rinse, 1000Ml</small></li><li>Duplicate listings: B007Y5XD3A / B00ZISXACE <small>UltraDEX Low-Abrasion Toothpaste 75Ml</small></li><li>Duplicate listings: B00BIYO1B6 / B0BG63671K / B0H3KG5XV4 <small>UltraDEX Whitening Toothpaste + Enamel Defense, Clinically Proven 12hr Bad Breat</small></li><li>Duplicate listings: B018469FIY / B00LI4KX7M / B00DW7FY04 <small>Ultradex Recalcifying &amp; Whitening Toothpaste 75Ml - Pack of 6</small></li></ul>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Content on the best-sellers</h2><p>The rinses and the spray are well built for mobile (2000px zoomable images, brand videos, phone-friendly A+). The newer 12hr toothpaste is the gap.</p></header>
+    <div class="scroll"><table class="content"><thead><tr><th>Listing</th><th>Score</th><th>Images</th><th>Video</th><th>A Plus</th><th>Title</th><th>Bullets</th><th>Bullet Depth</th><th>Rating</th><th>Reviews</th></tr></thead><tbody><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0BGYRXB3B">B0BGYRXB3B</a><small>UltraDEX Daily Oral Rinse, Mint 500 ml Clear</small></th><td class="num">38</td><td><span class="chip warn" title="Needs work">!</span> 6 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip warn" title="Needs work">!</span> 44 chars</td><td><span class="chip warn" title="Needs work">!</span> bullets not captured</td><td><span class="chip warn" title="Needs work">!</span> not captured</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B007Y5XCZE">B007Y5XCZE</a><small>UltraDEX Daily Oral Rinse with Fluoride 500ml | Fresh Breath</small></th><td class="num">100</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip good" title="Good">✓</span> 4 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 141 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 205 chars</td><td><span class="chip good" title="Good">✓</span> 4.4★</td><td><span class="chip good" title="Good">✓</span> 3641 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B007Y5XD3A">B007Y5XD3A</a><small>UltraDEX Low-Abrasion Toothpaste 75Ml</small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 8 images</td><td><span class="chip good" title="Good">✓</span> 1 video</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 37 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 173 chars</td><td><span class="chip good" title="Good">✓</span> 4.5★</td><td><span class="chip good" title="Good">✓</span> 1518 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0BG676CYD">B0BG676CYD</a><small>UltraDEX Fresh Breath Oral Spray 12 X 9 ml, White, 9 ml (Pac</small></th><td class="num">62</td><td><span class="chip warn" title="Needs work">!</span> 6 images</td><td><span class="chip good" title="Good">✓</span> 1 video</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip warn" title="Needs work">!</span> 68 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip fail" title="Missing">✕</span> avg 43 chars</td><td><span class="chip good" title="Good">✓</span> 4.4★</td><td><span class="chip good" title="Good">✓</span> 4008 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B071Z1B158">B071Z1B158</a><small>Ultradex Daily Oral Rinse, 1000Ml</small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip good" title="Good">✓</span> 2 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip warn" title="Needs work">!</span> 33 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 212 chars</td><td><span class="chip good" title="Good">✓</span> 4.7★</td><td><span class="chip good" title="Good">✓</span> 725 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0GX213TNP">B0GX213TNP</a><small>UltraDEX Low-Abrasion Toothpaste 75Ml</small></th><td class="num">25</td><td><span class="chip fail" title="Missing">✕</span> 3 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip warn" title="Needs work">!</span> 37 chars</td><td><span class="chip warn" title="Needs work">!</span> 3 bullets</td><td><span class="chip fail" title="Missing">✕</span> avg 28 chars</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Advertising</span><h2>Keyword map and where to spend</h2><p>UltraDEX is almost absent from paid search on its biggest terms. Defend the brand name first, then add exact-match ads where products already rank on page 1–3 (&#x27;bad breath&#x27;, &#x27;mouth wash&#x27;, &#x27;toothpaste&#x27;).</p></header>
+    <div class="two">
+      <div><h3>Keywords by tier</h3><div class="scroll"><table><thead><tr><th>Tier</th><th class="num">Keywords</th><th class="num">Searches/mo</th><th class="num">Gaps</th></tr></thead><tbody><tr><td>Core</td><td class="num">89</td><td class="num">881,211</td><td class="num">69</td></tr><tr><td>Competitor</td><td class="num">43</td><td class="num">173,738</td><td class="num">39</td></tr><tr><td>Category</td><td class="num">70</td><td class="num">149,529</td><td class="num">69</td></tr><tr><td>Long-tail</td><td class="num">97</td><td class="num">76,634</td><td class="num">80</td></tr><tr><td>Brand</td><td class="num">9</td><td class="num">8,250</td><td class="num">0</td></tr></tbody></table></div></div>
+      <div><h3>Indicative monthly budget</h3><span class="budget-total">£9,500</span><div class="stack"><span class="seg s0" style="flex:4844" title="SP: £4,844"></span><span class="seg s1" style="flex:1615" title="SB: £1,615"></span><span class="seg s2" style="flex:1615" title="SBV: £1,615"></span><span class="seg s3" style="flex:1425" title="SD (remarketing/retention): £1,425"></span></div><ul class="legend"><li><span class="sw s0"></span>SP <b>£4,844</b> <small>51%</small></li><li><span class="sw s1"></span>SB <b>£1,615</b> <small>17%</small></li><li><span class="sw s2"></span>SBV <b>£1,615</b> <small>17%</small></li><li><span class="sw s3"></span>SD (remarketing/retention) <b>£1,425</b> <small>15%</small></li></ul></div>
+    </div>
+    <h3>Focus keywords</h3>
+    <div class="scroll"><table><thead><tr><th>Keyword</th><th>Tier</th><th class="num">Searches/mo</th><th class="num">Organic</th><th class="num">Sponsored</th><th class="num">CPC</th><th>Status</th></tr></thead><tbody><tr><td>toothpaste</td><td>Core</td><td class="num">392,821</td><td class="num">47</td><td class="num">–</td><td class="num">£0.49</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>mouthwash</td><td>Core</td><td class="num">174,132</td><td class="num">15</td><td class="num">–</td><td class="num">£0.30</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>bad breath</td><td>Core</td><td class="num">73,603</td><td class="num">6</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>whitening toothpaste</td><td>Core</td><td class="num">44,232</td><td class="num">48</td><td class="num">–</td><td class="num">£1.30</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>toothpaste whitening</td><td>Core</td><td class="num">29,758</td><td class="num">124</td><td class="num">–</td><td class="num">£0.81</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>mouth wash</td><td>Category</td><td class="num">24,719</td><td class="num">27</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>gc tooth mousse</td><td>Core</td><td class="num">2,714</td><td class="num">51</td><td class="num">–</td><td class="num">£0.21</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>spray</td><td>Core</td><td class="num">4,433</td><td class="num">142</td><td class="num">–</td><td class="num">£0.22</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>tooth paste</td><td>Core</td><td class="num">11,507</td><td class="num">80</td><td class="num">–</td><td class="num">£0.66</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>toothpastes</td><td>Core</td><td class="num">4,893</td><td class="num">45</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>breath</td><td>Core</td><td class="num">2,050</td><td class="num">3</td><td class="num">–</td><td class="num">£0.23</td><td><span class="kw-status organic_top_unprotected">Top organically, no ad cover</span></td></tr><tr><td>travel mouthwash</td><td>Core</td><td class="num">4,362</td><td class="num">12</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>kids mouthwash</td><td>Core</td><td class="num">4,176</td><td class="num">58</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>fluoride toothpaste</td><td>Core</td><td class="num">6,833</td><td class="num">63</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>curaprox toothpaste</td><td>Core</td><td class="num">3,985</td><td class="num">23</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>mouth ulcer treatment</td><td>Category</td><td class="num">9,214</td><td class="num">130</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>mouthwash for gum disease</td><td>Long-tail</td><td class="num">7,255</td><td class="num">41</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>fresh breath</td><td>Core</td><td class="num">1,380</td><td class="num">2</td><td class="num">–</td><td class="num">£0.17</td><td><span class="kw-status organic_top_unprotected">Top organically, no ad cover</span></td></tr><tr><td>oralieve</td><td>Category</td><td class="num">1,675</td><td class="num">32</td><td class="num">–</td><td class="num">£0.34</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>bad breath treatment for adults</td><td>Long-tail</td><td class="num">6,721</td><td class="num">9</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Competitors</span><h2>Who is taking the clicks</h2></header>
+    <div class="two">
+      <div><h3>Share of voice across category searches</h3><div class="hbars"><div class="hbar"><span class="hbar-label">Colgate</span><span class="hbar-track"><span class="hbar-fill" style="width:100.0%" title="Colgate: 18%"></span></span><span class="hbar-value">18%</span></div><div class="hbar"><span class="hbar-label">Marvis</span><span class="hbar-track"><span class="hbar-fill" style="width:68.5%" title="Marvis: 12%"></span></span><span class="hbar-value">12%</span></div><div class="hbar"><span class="hbar-label">Corsodyl</span><span class="hbar-track"><span class="hbar-fill" style="width:61.8%" title="Corsodyl: 11%"></span></span><span class="hbar-value">11%</span></div><div class="hbar"><span class="hbar-label">Oral-B</span><span class="hbar-track"><span class="hbar-fill" style="width:57.3%" title="Oral-B: 10%"></span></span><span class="hbar-value">10%</span></div><div class="hbar"><span class="hbar-label">Euthymol</span><span class="hbar-track"><span class="hbar-fill" style="width:48.9%" title="Euthymol: 9%"></span></span><span class="hbar-value">9%</span></div><div class="hbar"><span class="hbar-label">Listerine</span><span class="hbar-track"><span class="hbar-fill" style="width:42.1%" title="Listerine: 8%"></span></span><span class="hbar-value">8%</span></div><div class="hbar"><span class="hbar-label">CB12</span><span class="hbar-track"><span class="hbar-fill" style="width:34.8%" title="CB12: 6%"></span></span><span class="hbar-value">6%</span></div><div class="hbar"><span class="hbar-label">HISMILE</span><span class="hbar-track"><span class="hbar-fill" style="width:32.6%" title="HISMILE: 6%"></span></span><span class="hbar-value">6%</span></div></div></div>
+      <div><h3>Ads on their brand name</h3><ul class="attackers"><li><b>CB12 Mouthwash</b> sponsored at position 4 on “ultradex”<small>CB12 Mouthwash Mint Alcohol Free for 12H Bad Breath Treatment 1 Litre | Chlorhexidine mout</small></li><li><b>CB12 Mouthwash</b> sponsored at position 50 on “ultradex”<small>CB12 Mouthwash Mint Alcohol Free for 12H Bad Breath Treatment 1 Litre | Chlorhexidine mout</small></li><li><b>CB12 Mouthwash</b> sponsored at position 15 on “ultradex mouthwash”<small>CB12 Mouthwash Mint Alcohol Free for 12H Bad Breath Treatment 1 Litre | Chlorhexidine mout</small></li><li><b>CB12 Whitening</b> sponsored at position 50 on “ultradex mouthwash”<small>CB12 Whitening Mouthwash Alcohol Free for 16H Bad Breath Treatment 250ml | Whitening chlor</small></li></ul><p>They had no sponsored placement of their own on those searches.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Amazon Marketing Cloud</span><h2>Path to purchase and repeat buying</h2></header>
+    <p>Repeat-purchase signals: high (Subscribe &amp; Save on 62% of ASINs, multipacks 38%, consumable category).</p><div class="two"><div><h3>What we expect AMC to show</h3><ul><li>Most best-sellers offer Subscribe &amp; Save in a repeat-purchase category, so repeat buyers are likely a large share of rinse and spray revenue.</li><li>With CB12 advertising on the brand name, some existing UltraDEX buyers are probably being tempted to switch at the point of reordering.</li></ul></div><div><h3>Questions we would answer in week one</h3><ol><li>How many rinse buyers reorder, and after how many days?</li><li>Do spray buyers go on to buy the rinse or toothpaste?</li><li>How many shoppers who search &#x27;ultradex&#x27; end up buying CB12?</li></ol></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Method</span><h2>How this was put together</h2></header>
+    <div class="method"><p>Built from public marketplace data (Keepa, Jungle Scout, DataForSEO, Amazon catalogue and bid recommendations) on 2026-10-21. We have not seen this brand's Seller Central or advertising account, so spend and budget figures are estimates.</p><p>Budget model: search volume × 12% of searches producing an ad click × target sponsored share of voice by tier × CPC benchmark, plus 15% for remarketing.</p><details><summary>Data gaps in this run</summary><ul><li>images: can&#x27;t reach m.media-amazon.com (&lt;urlopen error Tunnel connection failed: 403 Forbidden&gt;); add it to Allowed domains</li><li>spapi.items: SP-API not configured</li><li>ads.bids: Ads API not configured; using Jungle Scout PPC bids</li></ul></details></div>
+  </section>
+
+  <footer>Smart PPC · smartppc.ai</footer>
+</main>

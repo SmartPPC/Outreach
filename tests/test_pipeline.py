@@ -191,6 +191,14 @@ def test_keepa_gives_up_past_max_wait(monkeypatch):
         keepa._wait_for(10)
 
 
+def test_own_brand_terms_are_never_wasted():
+    from analyse import checks
+    kws = [{"keyword": "ultradex toothpaste", "sponsored_rank": 9, "organic_rank": None, "volume": 766},
+           {"keyword": "ultra dex", "sponsored_rank": 14, "organic_rank": None, "volume": 599},
+           {"keyword": "otrivine", "sponsored_rank": 1, "organic_rank": None, "volume": 3481}]
+    assert [w["keyword"] for w in checks.wasted_terms("UltraDEX Daily Oral Rinse 500ml", "UltraDEX", kws)] == ["otrivine"]
+
+
 def test_family_revenue_counts_repeated_parent_units_once():
     from analyse import checks
     kids = [{"units_30d": 879, "revenue_30d": 879 * price, "price": price} for price in (12.0, 16.0, 20.0)]

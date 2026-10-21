@@ -1,0 +1,11 @@
+{
+  "input": "https://www.amazon.co.uk/stores/UltraDEX/page/02885511-9448-4D57-A25F-B3812F09FE2C?lp_asin=B071Z1B158",
+  "brand": "UltraDEX",
+  "seller_id": null,
+  "store_page_id": "02885511-9448-4D57-A25F-B3812F09FE2C",
+  "seed_asins": [
+    "B071Z1B158"
+  ],
+  "marketplace": "uk",
+  "brand_slug": "UltraDEX"
+}
