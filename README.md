@@ -8,8 +8,17 @@ product URL, an ASIN or a brand name, and optionally a job advert. You get back:
   competitors, and AMC hypotheses
 - **`evidence.md`**: the data behind every claim
 
-The Python collectors pull and compute the numbers. The Claude skill in `.claude/skills/amazon-audit/` decides what
+The Python collectors pull and compute the numbers. The Claude skill in `.claude/skills/outreach/` decides what
 matters and writes the output.
+
+## Two skills
+- **`outreach`** (`.claude/skills/outreach/`): the outside-in prospect audit above, in Smart PPC style, with the
+  outreach email. Start a chat with "use the outreach skill to audit <brand store URL / ASIN>".
+- **`internal-audit`** (`.claude/skills/internal-audit/`): a client-branded review built from the client's own
+  Seller Central and Amazon Ads exports (Business Reports, Search Query Performance, Sponsored Products advertised
+  product / search term / targeting / placement reports, campaign list). The skill lists which reports to pull;
+  `analyse/internal_audit.py` builds the numbers and `analyse/internal_report.py` renders the PDF. Needs `pandas`
+  and `openpyxl` (preinstalled in the cloud environment).
 
 ## Setup
 ```bash

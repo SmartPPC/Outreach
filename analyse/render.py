@@ -2,7 +2,7 @@
 
     python -m analyse.render runs/<slug>
 
-Layout and styling live in .claude/skills/amazon-audit/templates/audit.html; this fills its slots.
+Layout and styling live in .claude/skills/outreach/templates/audit.html; this fills its slots.
 Charts are inline SVG with <title> tooltips; every chart has a table beside or below it.
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ from pathlib import Path
 
 from collectors.common import ROOT, read_json
 
-TEMPLATE = ROOT / ".claude/skills/amazon-audit/templates/audit.html"
+TEMPLATE = ROOT / ".claude/skills/outreach/templates/audit.html"
 STATUS_ICON = {"good": ("✓", "Good"), "warn": ("!", "Needs work"), "fail": ("✕", "Missing")}
 KW_STATUS = {
     "push": "Ranks page 1–2, no ads: push to top",

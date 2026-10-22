@@ -1,6 +1,6 @@
 """Mobile-shopper checks for the best-sellers. Most Amazon traffic is the app or mobile web: images are
 small, titles are cut short in search, bullets sit collapsed under "About this item" and A+ modules stack
-full-width. Thresholds mirror .claude/skills/amazon-audit/references/mobile-rubric.md; change both together.
+full-width. Thresholds mirror .claude/skills/outreach/references/mobile-rubric.md; change both together.
 """
 from __future__ import annotations
 

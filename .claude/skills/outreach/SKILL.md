@@ -1,9 +1,9 @@
 ---
-name: amazon-audit
-description: Audit a prospect's Amazon business from the outside and draft a consultant outreach email with up to 5 improvement points plus a one-page visual audit. Use when the user pastes an Amazon brand store URL, seller URL, product URL, ASIN or brand name and wants a prospect audit, outreach email, or "what would we fix" summary, optionally alongside a job advert.
+name: outreach
+description: Smart PPC outreach audit. Audit a prospect's Amazon business from the outside (no account access) and draft a consultant outreach email with 4 points, plus a one-page visual audit and PDF in Smart PPC style. Use when the user pastes an Amazon brand store URL, seller URL, product URL, ASIN or brand name and wants a prospect audit, outreach email, or "what would we fix" summary, optionally alongside a job advert. For a client's own Seller Central or Amazon Ads exports, use the internal-audit skill instead.
 ---
 
-# Amazon prospect audit
+# Outreach audit (Smart PPC prospects)
 
 Turns a brand, store URL or ASIN (plus an optional job advert) into:
 - `runs/<slug>/email.md`: a brief outreach email with 4 plain-English points, offering the detailed report free of charge
@@ -63,6 +63,13 @@ The Python collectors handle data and arithmetic, and their numbers are the sour
 - **Conflicts.** Check `contacts.company` against the user's own employer. If the brand belongs to the
   company the user works for, flag it and don't draft outreach.
 - **Amazon itself is blocked** in cloud sessions. Never claim to have looked at a live listing. Verify
+- **Don't pitch ads to "defend" a #1 ranking.** If the listing is already #1 organically and nothing sits above
+  it, spend there buys little. Only suggest brand or #1 defence when a competitor ad is shown above the listing.
+  Point budget at big searches where it ranks #2–10 instead.
+- **A Jungle Scout sponsored "–" means "not seen near the top", not "no ads".** Accounts we later saw had
+  heavy spend on those searches. Write "ads not showing near the top" rather than "no ads".
+- **Two marketplaces:** compare category and, where known, conversion between them. The same product in the
+  right category in one market is the strongest evidence for a category fix in the other.
   claims against Keepa, Jungle Scout or DataForSEO data instead.
 
 **Contacts**

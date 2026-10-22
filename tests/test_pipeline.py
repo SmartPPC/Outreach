@@ -432,3 +432,66 @@ def test_keepa_cached_calls_never_wait(monkeypatch):
     monkeypatch.setattr(keepa, "_state", {"left": 0, "rate": 1, "refill_in_ms": 60_000, "waited_s": 0.0})
     monkeypatch.setattr(keepa, "_sleep", lambda s: (_ for _ in ()).throw(AssertionError("waited on a cache hit")))
     keepa.fetch_products(["B01"], "uk", Budget())
+
+
+# --- internal audit ------------------------------------------------------------------------------
+
+def _ia_cfg():
+    return {"brand_terms": ["w7", "beauty blast"], "rivals": ["sephora", "elf"], "category_words": ["beauty", "makeup"],
+            "off_target": ["needoh", "squishy"]}
+
+
+def test_internal_audit_detects_reports_by_columns():
+    import pandas as pd
+    from analyse.internal_audit import detect
+    assert detect(pd.DataFrame(columns=["Search Query", "Purchases: ASIN Count"])) == "sqp"
+    assert detect(pd.DataFrame(columns=["(Child) ASIN", "Sessions - Total"])) == "business"
+    assert detect(pd.DataFrame(columns=["Customer Search Term", "Spend"])) == "search_term"
+    assert detect(pd.DataFrame(columns=["Placement", "Bidding strategy"])) == "placement"
+    assert detect(pd.DataFrame(columns=["Targeting", "Top-of-search Impression Share"])) == "targeting"
+    assert detect(pd.DataFrame(columns=["Advertised ASIN", "Date"])) == "advertised"
+    assert detect(pd.DataFrame(columns=["Campaign name", "Top-of-search bid adjustment"])) == "campaigns"
+    assert detect(pd.DataFrame(columns=["Foo"])) is None
+
+
+def test_internal_audit_groups_searches():
+    from analyse.internal_audit import bucket, classify_query
+    cfg = _ia_cfg()
+    assert classify_query("beauty advent calendar 2026", 1.2, cfg) == "push"
+    assert classify_query("beauty advent calendar", 0.95, cfg) == "hold"
+    assert classify_query("advent calendar 2026", 0.3, cfg) == "cut"
+    assert classify_query("w7 advent calendar", 2.0, cfg) == "defend"
+    assert classify_query("sephora advent calendar", 0.5, cfg) == "test"
+    assert classify_query("needoh advent calendar", 3.0, cfg) == "cut"
+    assert classify_query("amazon beauty advent calendar", 1.2, cfg) == "cut"
+    assert classify_query("selfie calendar", 0.5, cfg) == "cut"  # "elf" only matches as a whole word
+    assert bucket("b0abcdef12", cfg) == "Rival product pages"
+    assert bucket("makeup advent calendar", cfg) == "Category searches"
+    assert bucket("advent calendar for teen girls", cfg) == "Audience searches"
+    assert bucket("advent calendar 2026", cfg) == "Generic searches"
+
+
+def test_internal_audit_sqp_and_placement():
+    import pandas as pd
+    from analyse.internal_audit import placement, sqp
+    week = pd.DataFrame([
+        {"Search Query": "makeup advent calendar", "Search Query Volume": 1000, "Impressions: Total Count": 1000,
+         "Impressions: ASIN Count": 40, "Clicks: Total Count": 100, "Clicks: ASIN Count": 10,
+         "Purchases: Total Count": 20, "Purchases: ASIN Count": 4},
+        {"Search Query": "advent calendar", "Search Query Volume": 50000, "Impressions: Total Count": 9000,
+         "Impressions: ASIN Count": 9, "Clicks: Total Count": 1000, "Clicks: ASIN Count": 20,
+         "Purchases: Total Count": 500, "Purchases: ASIN Count": 3}])
+    out = sqp([("2026-10-17", "2026-10-11", week)], 3, _ia_cfg())
+    rows = {r["query"]: r for r in out["rows"]}
+    assert rows["makeup advent calendar"]["group"] == "push" and rows["makeup advent calendar"]["ratio"] == 2.0
+    assert rows["advent calendar"]["group"] == "cut"
+    p = pd.DataFrame([
+        {"Campaign Name": "A", "Placement": "Top of Search on Amazon", "Spend": "100", "Clicks": 10, "Impressions": 1,
+         "7 Day Total Sales": 50, "7 Day Total Orders (#)": 2},
+        {"Campaign Name": "A", "Placement": "Rest of search on Amazon", "Spend": 50, "Clicks": 10, "Impressions": 1,
+         "7 Day Total Sales": 100, "7 Day Total Orders (#)": 4},
+        {"Campaign Name": "B", "Placement": "Top of Search on Amazon", "Spend": 999, "Clicks": 1, "Impressions": 1,
+         "7 Day Total Sales": 0, "7 Day Total Orders (#)": 0}])
+    pl = placement(p, ["A"])
+    tos = next(r for r in pl["by_placement"] if r["Placement"].startswith("Top"))
+    assert tos["spend"] == 100 and round(tos["share"]) == 67 and tos["cost_per_order"] == 50

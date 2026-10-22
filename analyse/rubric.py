@@ -1,4 +1,4 @@
-"""Listing-quality checks. Thresholds mirror .claude/skills/amazon-audit/references/scoring-rubric.md;
+"""Listing-quality checks. Thresholds mirror .claude/skills/outreach/references/scoring-rubric.md;
 change both together."""
 from __future__ import annotations
 
