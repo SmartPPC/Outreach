@@ -1,0 +1,87 @@
+{
+  "website": "https://www.shnuggle.com",
+  "domain": "shnuggle.com",
+  "pages_checked": [
+    "https://www.shnuggle.com/",
+    "https://www.shnuggle.com/contact-us",
+    "https://www.shnuggle.com/pages/contact-us",
+    "https://www.shnuggle.com/policies/terms-of-service",
+    "https://www.shnuggle.com/policies/privacy-policy",
+    "https://www.shnuggle.com/pages/our-story"
+  ],
+  "emails": [
+    {
+      "email": "hello@shnuggle.co.uk",
+      "type": "generic",
+      "source": "https://www.shnuggle.com/policies/terms-of-service",
+      "on_domain": false
+    }
+  ],
+  "people": [],
+  "company": {
+    "name": "Shnuggle Ltd",
+    "number": "NI601295"
+  },
+  "email_format": null,
+  "suggested": [],
+  "recommended_to": "hello@shnuggle.co.uk",
+  "only_generic": true,
+  "organisations": [
+    {
+      "name": "Shnuggle",
+      "kind": "brand"
+    }
+  ],
+  "companies_house": [
+    {
+      "number": "NI601295",
+      "name": "SHNUGGLE LTD",
+      "address": "17 Jubilee Road, Newtownards, Northern Ireland, BT23 4YH",
+      "active": true,
+      "status": "Incorporated on 13 November 2009",
+      "people": [
+        "CURRAN, Sean Martin",
+        "HARVEY, Stuart",
+        "MCCALL, David Alexander Mervyn",
+        "MCGOWAN-SMYTH, Robert William",
+        "MCQUILLAN, Michael",
+        "MURPHY, Adam",
+        "MURPHY, Sinead Una"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/NI601295/officers"
+    }
+  ],
+  "linkedin_profiles": [],
+  "linkedin_searches": [
+    {
+      "org": "Shnuggle",
+      "role": "founder",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Shnuggle%22%20founder"
+    },
+    {
+      "org": "Shnuggle",
+      "role": "ecommerce",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Shnuggle%22%20ecommerce"
+    },
+    {
+      "org": "Shnuggle",
+      "role": "amazon",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Shnuggle%22%20amazon"
+    },
+    {
+      "org": "Shnuggle",
+      "role": "marketing",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Shnuggle%22%20marketing"
+    }
+  ],
+  "apollo": {
+    "organisation": {
+      "name": "Shnuggle",
+      "domain": "shnuggle.com",
+      "id": "5569e4e5736964257981b000",
+      "people_search": "https://app.apollo.io/#/people?organizationIds[]=5569e4e5736964257981b000"
+    },
+    "people": [],
+    "note": "Apollo free plan: people search and email reveal blocked; open the link to reveal (1 credit)."
+  }
+}

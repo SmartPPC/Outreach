@@ -1,0 +1,2463 @@
+{
+  "prospect": {
+    "brand": "ManiLife",
+    "marketplace": "uk",
+    "domain": "amazon.co.uk",
+    "currency": "\u00a3",
+    "input": "ManiLife",
+    "seller_name": null,
+    "landing_asin": null
+  },
+  "generated": "2026-11-14",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 36,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog.spellings",
+        "status": "ok",
+        "searched": [
+          "ManiLife",
+          "Mani Life"
+        ]
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 33
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 15,
+        "hero_families": 2,
+        "revenue_share": 0.99
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 4,
+        "waited_min": 0.0
+      },
+      {
+        "step": "images",
+        "status": "skipped",
+        "reason": "can't reach m.media-amazon.com (<urlopen error Tunnel connection failed: 403 Forbidden>); add it to Allowed domains"
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 2,
+        "keywords": 128
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 10
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": null,
+        "emails": 0
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 8,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 17,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 11.2,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      },
+      "apollo_search": {
+        "used": 0,
+        "limit": 10.0
+      },
+      "apollo_credits": {
+        "used": 0,
+        "limit": 3.0
+      }
+    },
+    "collected_at": "2026-11-14T08:08:53.133810+00:00"
+  },
+  "focus": {
+    "total_asins": 33,
+    "live_asins": 15,
+    "families": 9,
+    "hero_families": 2,
+    "hero_revenue_share": 0.99,
+    "est_monthly_revenue": 47361
+  },
+  "heroes": [
+    {
+      "asin": "B0BCQ91KNW",
+      "parent_asin": "B0GKBBS3JC",
+      "title": "ManiLife Deep Roast Crunchy Natural Peanut Butter 900g | High Protein, No Palm Oil & No Added Sugar | Made from Single Origin Argentine Grade A Peanuts (packaging may vary)",
+      "family_revenue_30d": 28536,
+      "family_size": 3,
+      "family_revenue_keepa": 29750,
+      "units_30d": 4796,
+      "price": 5.95,
+      "list_price": 9.0,
+      "sellers": 4,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Peanut Spread",
+      "product_type": null,
+      "rating": 4.4,
+      "reviews": 638,
+      "sales_rank": 492.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "172 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 153 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "656 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 6 images zoomable (2560px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 35s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 172 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "8 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "peanut butter powder",
+          "tier": "core",
+          "status": "push",
+          "volume": 10763,
+          "organic_rank": 12,
+          "sponsored_rank": null,
+          "cpc": 0.2
+        },
+        {
+          "keyword": "crunchy butter",
+          "tier": "core",
+          "status": "push",
+          "volume": 7001,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "salted butter",
+          "tier": "category",
+          "status": "push",
+          "volume": 5153,
+          "organic_rank": 27,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "crunchy peanut",
+          "tier": "category",
+          "status": "push",
+          "volume": 3921,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "butter portions",
+          "tier": "category",
+          "status": "push",
+          "volume": 3604,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "nut butter",
+          "tier": "category",
+          "status": "push",
+          "volume": 3353,
+          "organic_rank": 36,
+          "sponsored_rank": null,
+          "cpc": 0.28
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "nutella",
+          "volume": 24311,
+          "sponsored_rank": 24,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "hummus",
+          "volume": 17448,
+          "sponsored_rank": 16,
+          "reason": "different product (\"hummus\")"
+        },
+        {
+          "keyword": "spread",
+          "volume": 6132,
+          "sponsored_rank": 22,
+          "reason": "different product (\"spread\")"
+        },
+        {
+          "keyword": "cashew butter",
+          "volume": 2953,
+          "sponsored_rank": 29,
+          "reason": "different product (\"cashew\")"
+        },
+        {
+          "keyword": "anchor butter",
+          "volume": 2292,
+          "sponsored_rank": 47,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "garlic butter",
+          "volume": 2125,
+          "sponsored_rank": 42,
+          "reason": "different product (\"garlic\")"
+        },
+        {
+          "keyword": "nutella 1kg",
+          "volume": 989,
+          "sponsored_rank": 33,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "president butter",
+          "volume": 989,
+          "sponsored_rank": 9,
+          "reason": "different product (\"president\")"
+        }
+      ],
+      "sponsored_terms": 55,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0BCQCKK12",
+      "parent_asin": "B0GKB7P1HW",
+      "title": "ManiLife Original Roast Smooth Natural Peanut Butter 900g | High Protein, No Palm Oil & No Added Sugar | Made from Single Origin Argentine Grade A Peanuts (packaging may vary)",
+      "family_revenue_30d": 18380,
+      "family_size": 3,
+      "family_revenue_keepa": 3570,
+      "units_30d": 1575,
+      "price": 11.99,
+      "list_price": 9.0,
+      "sellers": 11,
+      "buy_box_owner": "NBR TRAD\u00a3RS",
+      "sold_by": "NBR TRAD\u00a3RS",
+      "category": "Peanut Spread",
+      "product_type": null,
+      "rating": 4.3,
+      "reviews": 224,
+      "sales_rank": 1848.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "175 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 173 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.3\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "225 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2560px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 35s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 191 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "8 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "sellers",
+          "detail": "Buy Box held by NBR TRAD\u00a3RS"
+        },
+        {
+          "type": "sellers",
+          "detail": "11 sellers on the listing"
+        },
+        {
+          "type": "sellers",
+          "detail": "selling above list price (11.99 vs 9.00)"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "peanut butter powder",
+          "tier": "core",
+          "status": "push",
+          "volume": 10763,
+          "organic_rank": 13,
+          "sponsored_rank": null,
+          "cpc": 0.2
+        },
+        {
+          "keyword": "nut butter",
+          "tier": "category",
+          "status": "push",
+          "volume": 3353,
+          "organic_rank": 46,
+          "sponsored_rank": null,
+          "cpc": 0.28
+        },
+        {
+          "keyword": "pb fit peanut butter powder",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2830,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": 0.38
+        },
+        {
+          "keyword": "pb2 powdered peanut butter",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2554,
+          "organic_rank": 52,
+          "sponsored_rank": null,
+          "cpc": 0.29
+        },
+        {
+          "keyword": "peanut butter m&m's",
+          "tier": "category",
+          "status": "push",
+          "volume": 2169,
+          "organic_rank": 34,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "hazelnut butter",
+          "tier": "category",
+          "status": "push",
+          "volume": 1479,
+          "organic_rank": 37,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "morrisons",
+          "volume": 45974,
+          "sponsored_rank": 22,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "nutella",
+          "volume": 24311,
+          "sponsored_rank": 21,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "margarine",
+          "volume": 7568,
+          "sponsored_rank": 17,
+          "reason": "different product (\"margarine\")"
+        },
+        {
+          "keyword": "president butter",
+          "volume": 989,
+          "sponsored_rank": 10,
+          "reason": "different product (\"president\")"
+        },
+        {
+          "keyword": "eat great stay full",
+          "volume": 725,
+          "sponsored_rank": 17,
+          "reason": "different product (\"great\")"
+        },
+        {
+          "keyword": "nutella peanut",
+          "volume": 714,
+          "sponsored_rank": 4,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "penut butter",
+          "volume": 711,
+          "sponsored_rank": 4,
+          "reason": "different product (\"penut\")"
+        },
+        {
+          "keyword": "almond butter 1kg",
+          "volume": 704,
+          "sponsored_rank": 14,
+          "reason": "different product (\"almond\")"
+        }
+      ],
+      "sponsored_terms": 54,
+      "mobile_sheet": null
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [
+      [
+        {
+          "asin": "B0BCQ91KNW",
+          "title": "ManiLife Deep Roast Crunchy Natural Peanut Butter 900g | High Protein, No Palm O",
+          "revenue_30d": 28536.2
+        },
+        {
+          "asin": "B0BCQCKK12",
+          "title": "ManiLife Original Roast Smooth Natural Peanut Butter 900g | High Protein, No Pal",
+          "revenue_30d": 18884.25
+        },
+        {
+          "asin": "B0GKB7P1HW",
+          "title": "ManiLife Deep Roast Smooth Natural Peanut Butter 900g | High Protein, No Palm Oi",
+          "revenue_30d": 18379.55
+        },
+        {
+          "asin": "B0BCQ8LPB9",
+          "title": "ManiLife Deep Roast Smooth Natural Peanut Butter 900g | High Protein, No Palm Oi",
+          "revenue_30d": 9371.25
+        }
+      ],
+      [
+        {
+          "asin": "B073XS5XXQ",
+          "title": "Manilife Peanut Butter Original Roast Crunchy \u2013 All Natural, No Palm Oil, No Add",
+          "revenue_30d": 201.88
+        },
+        {
+          "asin": "B072L8BWKY",
+          "title": "ManiLife Peanut Butter Original Roast Crunchy \u2013 All Natural, No Palm Oil, No Add",
+          "revenue_30d": 30.76
+        }
+      ],
+      [
+        {
+          "asin": "B07LG82BMP",
+          "title": "ManiLife Peanut Butter Original Roast Smooth - All Natural, No Palm Oil, No Adde",
+          "revenue_30d": 26.16
+        },
+        {
+          "asin": "B08W3D6XFS",
+          "title": "ManiLife Peanut Butter Deep Roast Smooth - All Natural, No Palm Oil, No Added Su",
+          "revenue_30d": 15.38
+        }
+      ]
+    ],
+    "clutter": [],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 33,
+    "fetched": 4,
+    "parents": 2,
+    "categories": {
+      "Grocery": 4
+    },
+    "asins": [
+      {
+        "asin": "B0BCQ91KNW",
+        "parent_asin": "B0GKBBS3JC",
+        "title": "ManiLife Deep Roast Crunchy Natural Peanut Butter 900g | High Protein, No Palm Oil & No Added Sugar | Made from Single Origin Argentine Grade A Peanuts (packaging may vary)",
+        "price": 5.95,
+        "rating": 4.4,
+        "review_count": 656,
+        "monthly_sold": 4000,
+        "sales_rank": 492.0,
+        "listed_since": "2023-02-06",
+        "root_category": "Grocery",
+        "est_monthly_revenue": 23800
+      },
+      {
+        "asin": "B0BCQ8K829",
+        "parent_asin": "B0GKBBS3JC",
+        "title": "ManiLife Original Roast Crunchy Natural Peanut Butter 900g | High Protein, No Palm Oil & No Added Sugar | Made from Single Origin Argentine Grade A Peanuts (packaging may vary)",
+        "price": 5.95,
+        "rating": 4.3,
+        "review_count": 331,
+        "monthly_sold": 1000,
+        "sales_rank": 492.0,
+        "listed_since": "2023-02-06",
+        "root_category": "Grocery",
+        "est_monthly_revenue": 5950
+      },
+      {
+        "asin": "B0BCQCKK12",
+        "parent_asin": "B0GKB7P1HW",
+        "title": "ManiLife Original Roast Smooth Natural Peanut Butter 900g | High Protein, No Palm Oil & No Added Sugar | Made from Single Origin Argentine Grade A Peanuts (packaging may vary)",
+        "price": 5.95,
+        "rating": 4.3,
+        "review_count": 225,
+        "monthly_sold": 600,
+        "sales_rank": 1848.0,
+        "listed_since": "2023-02-06",
+        "root_category": "Grocery",
+        "est_monthly_revenue": 3570
+      },
+      {
+        "asin": "B0GKB7P1HW",
+        "parent_asin": "B0GKB7P1HW",
+        "title": "ManiLife Smooth Peanut Butter, 900g Tub - Small Batch Vegan Peanut Butter Made from Single Origin Grade-A Argentine Peanuts - No Palm Oil, No Added Sugar, No GMOs",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 1848.0,
+        "listed_since": "2026-01-28",
+        "root_category": "Grocery",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 4,
+    "launches_by_quarter": {
+      "2026-Q1": 1
+    },
+    "launches_last_12m": 1,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 33320,
+    "top3_revenue_share": 1.0,
+    "bsr_trend_top_parents": {
+      "median_bsr_now": 1623.0,
+      "median_bsr_year_ago": 776.0,
+      "improved": false,
+      "change_pct": 109
+    },
+    "reviews_gained_12m": 0
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 72,
+      "share_under_7_images": 0.25,
+      "share_no_video": 0.25,
+      "share_no_aplus": 0.25,
+      "share_under_5_bullets": 0.25,
+      "share_rating_below_4_2": 0.0,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B0BCQ91KNW",
+        "title": "ManiLife Deep Roast Crunchy Natural Peanut Butter 900g | High Protein, No Palm Oil & No Added Sugar | Made from Single Origin Argentine Grade A Peanuts (packaging may vary)",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "172 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 153 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "656 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0GKB7P1HW",
+        "title": "ManiLife Smooth Peanut Butter, 900g Tub - Small Batch Vegan Peanut Butter Made from Single Origin Grade-A Argentine Peanuts - No Palm Oil, No Added Sugar, No GMOs",
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "162 chars"
+          },
+          "bullets": {
+            "status": "fail",
+            "detail": "1 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 178 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 16,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.53,
+    "est_monthly_spend_on_sampled_terms": null,
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "Pip & Nut",
+        "avg_sov": 0.158,
+        "avg_sponsored_sov": 0.148,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Morrisons",
+        "avg_sov": 0.122,
+        "avg_sponsored_sov": 0.009,
+        "keywords_present": 11,
+        "is_prospect": false
+      },
+      {
+        "brand": "Nutella",
+        "avg_sov": 0.09,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "PBfit",
+        "avg_sov": 0.072,
+        "avg_sponsored_sov": 0.072,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "MAN\u00cdLIFE",
+        "avg_sov": 0.059,
+        "avg_sponsored_sov": 0.079,
+        "keywords_present": 12,
+        "is_prospect": false
+      },
+      {
+        "brand": "Grenade",
+        "avg_sov": 0.024,
+        "avg_sponsored_sov": 0.033,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Anchor",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 3,
+        "is_prospect": false
+      },
+      {
+        "brand": "Cutting It Vine",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "Kasih",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "Blue Band",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "geqiuda",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "Utterly Butterly",
+        "avg_sov": 0.018,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 3,
+        "is_prospect": false
+      },
+      {
+        "brand": "by Amazon",
+        "avg_sov": 0.018,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "Lakeland Dairies",
+        "avg_sov": 0.016,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "direct deals 123",
+        "avg_sov": 0.016,
+        "avg_sponsored_sov": 0.019,
+        "keywords_present": 1,
+        "is_prospect": false
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [
+      {
+        "keyword": "manilife",
+        "asin": "B01N2X219B",
+        "brand_guess": "Wellness CORE",
+        "title": "Wellness CORE Original 10 kg, Chicken & Turkey \u2013 Dry Dog Food | for Medium Breeds, Grain-F",
+        "position": 37
+      },
+      {
+        "keyword": "manilife peanut butter",
+        "asin": "B084TJXCDV",
+        "brand_guess": "PBfit Classic",
+        "title": "PBfit Classic Peanut Butter Powder 225g, with 8g Protein, 3g Fibre",
+        "position": 50
+      }
+    ],
+    "prospect_sponsored_on_own_brand": true,
+    "positioning_page1": {
+      "our_median_price": 5.95,
+      "competitor_median_price": 7.38,
+      "our_median_rating": 4.35,
+      "competitor_median_rating": 4.5
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "butter",
+        "tier": "core",
+        "volume": 173146,
+        "organic_rank": 64,
+        "sponsored_rank": 12,
+        "cpc": 0.24,
+        "status": "sponsored_only",
+        "priority": 288577
+      },
+      {
+        "keyword": "peanuts",
+        "tier": "core",
+        "volume": 29011,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.23,
+        "status": "missing",
+        "priority": 75681
+      },
+      {
+        "keyword": "peanut butter",
+        "tier": "core",
+        "volume": 109985,
+        "organic_rank": 7,
+        "sponsored_rank": 1,
+        "cpc": 0.45,
+        "status": "sponsored_support",
+        "priority": 73323
+      },
+      {
+        "keyword": "peanut butter powder",
+        "tier": "core",
+        "volume": 10763,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 53815
+      },
+      {
+        "keyword": "hummus",
+        "tier": "category",
+        "volume": 17448,
+        "organic_rank": null,
+        "sponsored_rank": 16,
+        "cpc": 0.21,
+        "status": "sponsored_only",
+        "priority": 23264
+      },
+      {
+        "keyword": "pb2",
+        "tier": "core",
+        "volume": 2090,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "push",
+        "priority": 10450
+      },
+      {
+        "keyword": "peanut",
+        "tier": "category",
+        "volume": 4160,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "missing",
+        "priority": 8736
+      },
+      {
+        "keyword": "peanut butter smooth",
+        "tier": "core",
+        "volume": 6098,
+        "organic_rank": 17,
+        "sponsored_rank": 2,
+        "cpc": 0.21,
+        "status": "sponsored_support",
+        "priority": 8711
+      },
+      {
+        "keyword": "nut butter",
+        "tier": "category",
+        "volume": 3353,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": 0.28,
+        "status": "push",
+        "priority": 8382
+      },
+      {
+        "keyword": "nutella",
+        "tier": "competitor",
+        "volume": 24311,
+        "organic_rank": null,
+        "sponsored_rank": 21,
+        "cpc": 0.37,
+        "status": "sponsored_only",
+        "priority": 7885
+      },
+      {
+        "keyword": "crunchy butter",
+        "tier": "core",
+        "volume": 7001,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7001
+      },
+      {
+        "keyword": "almond butter",
+        "tier": "category",
+        "volume": 14303,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": 0.92,
+        "status": "missing",
+        "priority": 6530
+      },
+      {
+        "keyword": "pip and nut",
+        "tier": "category",
+        "volume": 8994,
+        "organic_rank": 22,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 6296
+      },
+      {
+        "keyword": "morrisons",
+        "tier": "competitor",
+        "volume": 45974,
+        "organic_rank": null,
+        "sponsored_rank": 22,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 5517
+      },
+      {
+        "keyword": "skippy peanut butter",
+        "tier": "core",
+        "volume": 3622,
+        "organic_rank": 10,
+        "sponsored_rank": 2,
+        "cpc": 0.21,
+        "status": "sponsored_support",
+        "priority": 5174
+      },
+      {
+        "keyword": "roast",
+        "tier": "category",
+        "volume": 3338,
+        "organic_rank": 50,
+        "sponsored_rank": null,
+        "cpc": 0.5,
+        "status": "push",
+        "priority": 4673
+      },
+      {
+        "keyword": "pb2 powdered peanut butter",
+        "tier": "long_tail",
+        "volume": 2554,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "push",
+        "priority": 4403
+      },
+      {
+        "keyword": "crunchy peanut",
+        "tier": "core",
+        "volume": 3921,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3921
+      },
+      {
+        "keyword": "smooth peanut butter",
+        "tier": "core",
+        "volume": 3313,
+        "organic_rank": 6,
+        "sponsored_rank": 2,
+        "cpc": 0.26,
+        "status": "sponsored_support",
+        "priority": 3823
+      },
+      {
+        "keyword": "pb fit peanut butter powder",
+        "tier": "long_tail",
+        "volume": 2830,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 3724
+      },
+      {
+        "keyword": "salted butter",
+        "tier": "category",
+        "volume": 5153,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3607
+      },
+      {
+        "keyword": "spread",
+        "tier": "category",
+        "volume": 6132,
+        "organic_rank": null,
+        "sponsored_rank": 22,
+        "cpc": 0.48,
+        "status": "sponsored_only",
+        "priority": 3577
+      },
+      {
+        "keyword": "jif peanut butter",
+        "tier": "core",
+        "volume": 671,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": 0.17,
+        "status": "push",
+        "priority": 3355
+      },
+      {
+        "keyword": "margarine",
+        "tier": "core",
+        "volume": 7568,
+        "organic_rank": null,
+        "sponsored_rank": 17,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 3027
+      },
+      {
+        "keyword": "peanut powder",
+        "tier": "core",
+        "volume": 1469,
+        "organic_rank": 69,
+        "sponsored_rank": 31,
+        "cpc": 0.2,
+        "status": "sponsored_only",
+        "priority": 2938
+      },
+      {
+        "keyword": "butter powder",
+        "tier": "category",
+        "volume": 2010,
+        "organic_rank": null,
+        "sponsored_rank": 22,
+        "cpc": 0.2,
+        "status": "sponsored_only",
+        "priority": 2814
+      },
+      {
+        "keyword": "powder peanut butter",
+        "tier": "core",
+        "volume": 546,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 2730
+      },
+      {
+        "keyword": "whole earth peanut butter",
+        "tier": "long_tail",
+        "volume": 5387,
+        "organic_rank": 19,
+        "sponsored_rank": 2,
+        "cpc": 0.32,
+        "status": "sponsored_support",
+        "priority": 2525
+      },
+      {
+        "keyword": "butter portions",
+        "tier": "category",
+        "volume": 3604,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2523
+      },
+      {
+        "keyword": "meridian peanut butter",
+        "tier": "core",
+        "volume": 2003,
+        "organic_rank": 15,
+        "sponsored_rank": 2,
+        "cpc": 0.27,
+        "status": "sponsored_support",
+        "priority": 2226
+      },
+      {
+        "keyword": "peanut butter m&m's",
+        "tier": "core",
+        "volume": 2169,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2169
+      },
+      {
+        "keyword": "peanut butter 1kg",
+        "tier": "core",
+        "volume": 1210,
+        "organic_rank": 6,
+        "sponsored_rank": 3,
+        "cpc": 0.2,
+        "status": "sponsored_support",
+        "priority": 1815
+      },
+      {
+        "keyword": "peanut butter chocolate",
+        "tier": "category",
+        "volume": 1412,
+        "organic_rank": 134,
+        "sponsored_rank": null,
+        "cpc": 0.34,
+        "status": "missing",
+        "priority": 1744
+      },
+      {
+        "keyword": "spreadable butter",
+        "tier": "category",
+        "volume": 3925,
+        "organic_rank": 65,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1648
+      },
+      {
+        "keyword": "clover butter",
+        "tier": "category",
+        "volume": 2311,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1618
+      },
+      {
+        "keyword": "powdered peanut butter",
+        "tier": "category",
+        "volume": 3030,
+        "organic_rank": 49,
+        "sponsored_rank": 38,
+        "cpc": 0.4,
+        "status": "sponsored_support",
+        "priority": 1591
+      },
+      {
+        "keyword": "organic peanut butter",
+        "tier": "core",
+        "volume": 3033,
+        "organic_rank": 20,
+        "sponsored_rank": 16,
+        "cpc": 0.58,
+        "status": "sponsored_support",
+        "priority": 1569
+      },
+      {
+        "keyword": "crunchy peanut butter",
+        "tier": "core",
+        "volume": 3673,
+        "organic_rank": 18,
+        "sponsored_rank": 2,
+        "cpc": 0.75,
+        "status": "sponsored_support",
+        "priority": 1469
+      },
+      {
+        "keyword": "kerrygold butter",
+        "tier": "category",
+        "volume": 3483,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1463
+      },
+      {
+        "keyword": "peanut butter cups",
+        "tier": "category",
+        "volume": 905,
+        "organic_rank": 83,
+        "sponsored_rank": null,
+        "cpc": 0.35,
+        "status": "missing",
+        "priority": 1086
+      },
+      {
+        "keyword": "vegan butter",
+        "tier": "category",
+        "volume": 1518,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1063
+      },
+      {
+        "keyword": "pistachio butter",
+        "tier": "category",
+        "volume": 2508,
+        "organic_rank": 84,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1053
+      },
+      {
+        "keyword": "hazelnut butter",
+        "tier": "category",
+        "volume": 1479,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1035
+      },
+      {
+        "keyword": "protein spread",
+        "tier": "category",
+        "volume": 997,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": 0.69,
+        "status": "push",
+        "priority": 1011
+      },
+      {
+        "keyword": "natural peanut butter",
+        "tier": "core",
+        "volume": 935,
+        "organic_rank": 7,
+        "sponsored_rank": 3,
+        "cpc": 0.28,
+        "status": "sponsored_support",
+        "priority": 1002
+      },
+      {
+        "keyword": "crunchy nut",
+        "tier": "core",
+        "volume": 2360,
+        "organic_rank": null,
+        "sponsored_rank": 6,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 944
+      },
+      {
+        "keyword": "powdered butter",
+        "tier": "core",
+        "volume": 1056,
+        "organic_rank": 37,
+        "sponsored_rank": 55,
+        "cpc": 0.34,
+        "status": "sponsored_support",
+        "priority": 932
+      },
+      {
+        "keyword": "organic butter",
+        "tier": "core",
+        "volume": 983,
+        "organic_rank": 94,
+        "sponsored_rank": 61,
+        "cpc": 0.44,
+        "status": "sponsored_only",
+        "priority": 894
+      },
+      {
+        "keyword": "peanut butter crunchy",
+        "tier": "core",
+        "volume": 2565,
+        "organic_rank": 4,
+        "sponsored_rank": 1,
+        "cpc": 0.29,
+        "status": "own",
+        "priority": 884
+      },
+      {
+        "keyword": "cashew butter",
+        "tier": "category",
+        "volume": 2953,
+        "organic_rank": 52,
+        "sponsored_rank": 29,
+        "cpc": 0.71,
+        "status": "sponsored_support",
+        "priority": 873
+      },
+      {
+        "keyword": "peanut butter meridian",
+        "tier": "core",
+        "volume": 756,
+        "organic_rank": 14,
+        "sponsored_rank": 2,
+        "cpc": 0.28,
+        "status": "sponsored_support",
+        "priority": 810
+      },
+      {
+        "keyword": "crunchy",
+        "tier": "category",
+        "volume": 801,
+        "organic_rank": 72,
+        "sponsored_rank": 2,
+        "cpc": 0.28,
+        "status": "sponsored_only",
+        "priority": 801
+      },
+      {
+        "keyword": "garlic butter",
+        "tier": "category",
+        "volume": 2125,
+        "organic_rank": 65,
+        "sponsored_rank": 42,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 595
+      },
+      {
+        "keyword": "nutella 1kg",
+        "tier": "competitor",
+        "volume": 989,
+        "organic_rank": null,
+        "sponsored_rank": 33,
+        "cpc": 0.19,
+        "status": "sponsored_only",
+        "priority": 593
+      },
+      {
+        "keyword": "peanut butter organic",
+        "tier": "core",
+        "volume": 810,
+        "organic_rank": 17,
+        "sponsored_rank": 5,
+        "cpc": 0.41,
+        "status": "sponsored_support",
+        "priority": 593
+      },
+      {
+        "keyword": "sugar almonds",
+        "tier": "category",
+        "volume": 1334,
+        "organic_rank": 86,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 560
+      },
+      {
+        "keyword": "peanut butter protein powder",
+        "tier": "long_tail",
+        "volume": 1118,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 559
+      },
+      {
+        "keyword": "manilife peanut butter",
+        "tier": "brand",
+        "volume": 2100,
+        "organic_rank": 1,
+        "sponsored_rank": 1,
+        "cpc": 0.39,
+        "status": "own",
+        "priority": 538
+      },
+      {
+        "keyword": "dairy free butter",
+        "tier": "category",
+        "volume": 683,
+        "organic_rank": 45,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 478
+      },
+      {
+        "keyword": "protein peanut butter",
+        "tier": "core",
+        "volume": 604,
+        "organic_rank": 11,
+        "sponsored_rank": 1,
+        "cpc": 0.38,
+        "status": "sponsored_support",
+        "priority": 477
+      },
+      {
+        "keyword": "organic peanuts",
+        "tier": "long_tail",
+        "volume": 456,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "push",
+        "priority": 475
+      },
+      {
+        "keyword": "pb fit",
+        "tier": "core",
+        "volume": 1489,
+        "organic_rank": 14,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 447
+      },
+      {
+        "keyword": "pb powder",
+        "tier": "category",
+        "volume": 631,
+        "organic_rank": 50,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 442
+      },
+      {
+        "keyword": "peanut butter for birds",
+        "tier": "long_tail",
+        "volume": 876,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 438
+      },
+      {
+        "keyword": "manilife",
+        "tier": "brand",
+        "volume": 928,
+        "organic_rank": 1,
+        "sponsored_rank": 1,
+        "cpc": 0.23,
+        "status": "own",
+        "priority": 403
+      },
+      {
+        "keyword": "pbfit peanut butter powder",
+        "tier": "competitor",
+        "volume": 1337,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 401
+      },
+      {
+        "keyword": "president butter",
+        "tier": "core",
+        "volume": 989,
+        "organic_rank": 63,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 396
+      },
+      {
+        "keyword": "pip and nut peanut butter",
+        "tier": "long_tail",
+        "volume": 2614,
+        "organic_rank": 12,
+        "sponsored_rank": 11,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 392
+      },
+      {
+        "keyword": "walnut butter",
+        "tier": "category",
+        "volume": 549,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 384
+      },
+      {
+        "keyword": "mini butter portions",
+        "tier": "category",
+        "volume": 537,
+        "organic_rank": 42,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 376
+      },
+      {
+        "keyword": "pip nut",
+        "tier": "category",
+        "volume": 536,
+        "organic_rank": 21,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 375
+      },
+      {
+        "keyword": "sunflower seed butter",
+        "tier": "category",
+        "volume": 838,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 352
+      },
+      {
+        "keyword": "macadamia nut butter",
+        "tier": "category",
+        "volume": 773,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 325
+      },
+      {
+        "keyword": "nutella 3kg",
+        "tier": "competitor",
+        "volume": 787,
+        "organic_rank": null,
+        "sponsored_rank": 7,
+        "cpc": 0.31,
+        "status": "sponsored_only",
+        "priority": 305
+      },
+      {
+        "keyword": "canned butter long life",
+        "tier": "long_tail",
+        "volume": 592,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 296
+      },
+      {
+        "keyword": "french butter",
+        "tier": "category",
+        "volume": 694,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 291
+      },
+      {
+        "keyword": "keto peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 4,
+        "sponsored_rank": null,
+        "cpc": 0.4,
+        "status": "organic_top_unprotected",
+        "priority": 281
+      },
+      {
+        "keyword": "pbfit",
+        "tier": "competitor",
+        "volume": 934,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 280
+      },
+      {
+        "keyword": "100% peanut butter",
+        "tier": "core",
+        "volume": 906,
+        "organic_rank": 10,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 272
+      },
+      {
+        "keyword": "skippy peanut butter smooth",
+        "tier": "long_tail",
+        "volume": 540,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 270
+      },
+      {
+        "keyword": "butter mintoes",
+        "tier": "category",
+        "volume": 930,
+        "organic_rank": null,
+        "sponsored_rank": 8,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 260
+      },
+      {
+        "keyword": "whole earth crunchy peanut butter",
+        "tier": "long_tail",
+        "volume": 649,
+        "organic_rank": 7,
+        "sponsored_rank": 1,
+        "cpc": 0.38,
+        "status": "sponsored_support",
+        "priority": 256
+      },
+      {
+        "keyword": "peanut butter sachets",
+        "tier": "core",
+        "volume": 830,
+        "organic_rank": 10,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 249
+      },
+      {
+        "keyword": "peanut butter whole earth",
+        "tier": "long_tail",
+        "volume": 514,
+        "organic_rank": 12,
+        "sponsored_rank": 4,
+        "cpc": 0.32,
+        "status": "sponsored_support",
+        "priority": 241
+      },
+      {
+        "keyword": "brandy butter",
+        "tier": "long_tail",
+        "volume": 477,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 238
+      },
+      {
+        "keyword": "flora buttery",
+        "tier": "long_tail",
+        "volume": 476,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 238
+      },
+      {
+        "keyword": "almond butter smooth",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "bird peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 45,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "dale farm butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "goats butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 42,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "high protein peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 225
+      },
+      {
+        "keyword": "popcorn butter",
+        "tier": "category",
+        "volume": 785,
+        "organic_rank": null,
+        "sponsored_rank": 3,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 220
+      },
+      {
+        "keyword": "low fat peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 31,
+        "sponsored_rank": 3,
+        "cpc": 0.31,
+        "status": "sponsored_support",
+        "priority": 218
+      },
+      {
+        "keyword": "marmite peanut butter",
+        "tier": "core",
+        "volume": 712,
+        "organic_rank": 26,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 214
+      },
+      {
+        "keyword": "penut butter",
+        "tier": "core",
+        "volume": 711,
+        "organic_rank": 8,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 213
+      },
+      {
+        "keyword": "anchor butter",
+        "tier": "competitor",
+        "volume": 2292,
+        "organic_rank": 12,
+        "sponsored_rank": 47,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 206
+      },
+      {
+        "keyword": "flora butter",
+        "tier": "core",
+        "volume": 677,
+        "organic_rank": 14,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 203
+      },
+      {
+        "keyword": "pip n nut",
+        "tier": "core",
+        "volume": 676,
+        "organic_rank": 13,
+        "sponsored_rank": 3,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 203
+      },
+      {
+        "keyword": "amazon peanut butter",
+        "tier": "core",
+        "volume": 665,
+        "organic_rank": 16,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 200
+      },
+      {
+        "keyword": "amazon fresh uk groceries delivery",
+        "tier": "long_tail",
+        "volume": 946,
+        "organic_rank": null,
+        "sponsored_rank": 17,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 189
+      },
+      {
+        "keyword": "bertolli",
+        "tier": "category",
+        "volume": 671,
+        "organic_rank": null,
+        "sponsored_rank": 20,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 188
+      },
+      {
+        "keyword": "kitkat peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 11,
+        "cpc": 0.49,
+        "status": "sponsored_only",
+        "priority": 184
+      },
+      {
+        "keyword": "squeezy peanut butter",
+        "tier": "core",
+        "volume": 554,
+        "organic_rank": 8,
+        "sponsored_rank": 7,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 166
+      },
+      {
+        "keyword": "margerine",
+        "tier": "category",
+        "volume": 551,
+        "organic_rank": null,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 154
+      },
+      {
+        "keyword": "peanut butter protein bars",
+        "tier": "long_tail",
+        "volume": 514,
+        "organic_rank": 83,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 154
+      },
+      {
+        "keyword": "almond butter 1kg",
+        "tier": "category",
+        "volume": 704,
+        "organic_rank": 37,
+        "sponsored_rank": 14,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 148
+      },
+      {
+        "keyword": "eat great stay full",
+        "tier": "long_tail",
+        "volume": 725,
+        "organic_rank": null,
+        "sponsored_rank": 17,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 145
+      },
+      {
+        "keyword": "long life butter",
+        "tier": "category",
+        "volume": 645,
+        "organic_rank": 30,
+        "sponsored_rank": 15,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 135
+      },
+      {
+        "keyword": "peanut butter kitkat chunky",
+        "tier": "long_tail",
+        "volume": 474,
+        "organic_rank": null,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 95
+      },
+      {
+        "keyword": "pip & nut",
+        "tier": "competitor",
+        "volume": 1038,
+        "organic_rank": 20,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 93
+      },
+      {
+        "keyword": "lactose free butter",
+        "tier": "long_tail",
+        "volume": 457,
+        "organic_rank": null,
+        "sponsored_rank": 22,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 91
+      },
+      {
+        "keyword": "amazon crunchy peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 3,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "b005d50wd2",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 10,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "big butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 11,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "block butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 10,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "butter me up",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 17,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "dried butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "i cant believe its not butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "low fat butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": null,
+        "sponsored_rank": 21,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 90
+      },
+      {
+        "keyword": "sun-pat peanut butter",
+        "tier": "long_tail",
+        "volume": 485,
+        "organic_rank": 45,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 73
+      },
+      {
+        "keyword": "bulk peanut butter",
+        "tier": "long_tail",
+        "volume": 479,
+        "organic_rank": 9,
+        "sponsored_rank": 14,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 72
+      },
+      {
+        "keyword": "peanuts butter smooth",
+        "tier": "long_tail",
+        "volume": 464,
+        "organic_rank": 16,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 70
+      },
+      {
+        "keyword": "pip and nut almond butter",
+        "tier": "long_tail",
+        "volume": 454,
+        "organic_rank": 26,
+        "sponsored_rank": 17,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "drizzle peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 25,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "healthy peanut butter",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 7,
+        "sponsored_rank": 2,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 68
+      },
+      {
+        "keyword": "nutella peanut",
+        "tier": "competitor",
+        "volume": 714,
+        "organic_rank": 23,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 64
+      },
+      {
+        "keyword": "sugar free peanut butter",
+        "tier": "long_tail",
+        "volume": 620,
+        "organic_rank": 4,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 31
+      },
+      {
+        "keyword": "low calorie peanut butter",
+        "tier": "long_tail",
+        "volume": 533,
+        "organic_rank": 12,
+        "sponsored_rank": 1,
+        "cpc": 4.64,
+        "status": "sponsored_support",
+        "priority": 17
+      }
+    ],
+    "tiers": {
+      "core": {
+        "keywords": 37,
+        "volume": 389570,
+        "gaps": 8
+      },
+      "category": {
+        "keywords": 38,
+        "volume": 106803,
+        "gaps": 25
+      },
+      "competitor": {
+        "keywords": 9,
+        "volume": 78376,
+        "gaps": 2
+      },
+      "long_tail": {
+        "keywords": 42,
+        "volume": 33334,
+        "gaps": 15
+      },
+      "brand": {
+        "keywords": 2,
+        "volume": 3028,
+        "gaps": 0
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "peanuts",
+        "tier": "core",
+        "volume": 29011,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.23,
+        "status": "missing",
+        "priority": 75681
+      },
+      {
+        "keyword": "peanut butter powder",
+        "tier": "core",
+        "volume": 10763,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 53815
+      },
+      {
+        "keyword": "pb2",
+        "tier": "core",
+        "volume": 2090,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "push",
+        "priority": 10450
+      },
+      {
+        "keyword": "peanut",
+        "tier": "category",
+        "volume": 4160,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "missing",
+        "priority": 8736
+      },
+      {
+        "keyword": "nut butter",
+        "tier": "category",
+        "volume": 3353,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": 0.28,
+        "status": "push",
+        "priority": 8382
+      },
+      {
+        "keyword": "crunchy butter",
+        "tier": "core",
+        "volume": 7001,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7001
+      },
+      {
+        "keyword": "almond butter",
+        "tier": "category",
+        "volume": 14303,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": 0.92,
+        "status": "missing",
+        "priority": 6530
+      },
+      {
+        "keyword": "pip and nut",
+        "tier": "category",
+        "volume": 8994,
+        "organic_rank": 22,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 6296
+      },
+      {
+        "keyword": "roast",
+        "tier": "category",
+        "volume": 3338,
+        "organic_rank": 50,
+        "sponsored_rank": null,
+        "cpc": 0.5,
+        "status": "push",
+        "priority": 4673
+      },
+      {
+        "keyword": "pb2 powdered peanut butter",
+        "tier": "long_tail",
+        "volume": 2554,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "push",
+        "priority": 4403
+      },
+      {
+        "keyword": "crunchy peanut",
+        "tier": "core",
+        "volume": 3921,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3921
+      },
+      {
+        "keyword": "pb fit peanut butter powder",
+        "tier": "long_tail",
+        "volume": 2830,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 3724
+      },
+      {
+        "keyword": "salted butter",
+        "tier": "category",
+        "volume": 5153,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3607
+      },
+      {
+        "keyword": "jif peanut butter",
+        "tier": "core",
+        "volume": 671,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": 0.17,
+        "status": "push",
+        "priority": 3355
+      },
+      {
+        "keyword": "powder peanut butter",
+        "tier": "core",
+        "volume": 546,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 2730
+      },
+      {
+        "keyword": "butter portions",
+        "tier": "category",
+        "volume": 3604,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2523
+      },
+      {
+        "keyword": "peanut butter m&m's",
+        "tier": "core",
+        "volume": 2169,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2169
+      },
+      {
+        "keyword": "peanut butter chocolate",
+        "tier": "category",
+        "volume": 1412,
+        "organic_rank": 134,
+        "sponsored_rank": null,
+        "cpc": 0.34,
+        "status": "missing",
+        "priority": 1744
+      },
+      {
+        "keyword": "spreadable butter",
+        "tier": "category",
+        "volume": 3925,
+        "organic_rank": 65,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1648
+      },
+      {
+        "keyword": "clover butter",
+        "tier": "category",
+        "volume": 2311,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1618
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "core": 226,
+        "category": 205,
+        "long_tail": 33
+      },
+      "monthly_by_ad_type": {
+        "SP": 271,
+        "SB": 96,
+        "SBV": 96,
+        "SD (remarketing/retention)": 82
+      },
+      "monthly_total": 546,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.15
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.75,
+      "multipack_share": 0.0,
+      "consumable_category": true,
+      "likelihood": "high"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Grocery",
+    "available": false
+  },
+  "job_ad_present": false
+}

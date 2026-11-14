@@ -1,0 +1,69 @@
+{
+  "headline": "Matchstick Monkey's teethers own \"teething toys for baby\", but the sonic toothbrush and the mid-page teething searches have no ads near the top, and two best-sellers are split across duplicate listings.",
+  "points": [
+    {
+      "category": "advertising",
+      "title": "Sonic toothbrush: push \"baby toothbrush\", \"toddler toothbrush\" and \"electric toothbrush kids\"",
+      "detail": "The toothbrush (~£18,000 a month) ranks #21 for \"baby toothbrush\" (17,000 searches a month) and \"toddler toothbrush\" (15,600), and #30 for \"electric toothbrush kids\" (23,000), with no ads near the top on the first and third.",
+      "evidence": [
+        "baby toothbrush: 16,988/mo, organic #21, no sponsored rank (Jungle Scout)",
+        "toddler toothbrush: 15,610/mo, organic #21, sponsored #16",
+        "electric toothbrush kids: 23,014/mo, organic #30, no sponsored rank",
+        "Family revenue ~£18,355/mo, 1,330 units, 4.3★ (Jungle Scout estimate)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Animal teether: push \"baby teething toy\" and \"teething toys\" from page one to the top",
+      "detail": "The Ludo Lion teether ranks #6 for \"baby teething toy\" (12,900 a month) and #8 for \"teething toys\" (9,400) with no ads near the top. You already own \"teething toys for baby\" (#2 organic, #1 sponsored), so these are the next ones to win.",
+      "evidence": [
+        "baby teething toy: 12,924/mo, organic #6, no sponsored rank",
+        "teething toys: 9,362/mo, organic #8; teething toy: 4,107/mo, #5",
+        "teething toys for baby: 48,828/mo, organic #2, sponsored #1",
+        "Animal teether family ~£18,599/mo, 4.8★ from 2,942 reviews (Jungle Scout estimate)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "catalogue",
+      "title": "Tidy-up: Teddy Tiger teether and Ludo Lion toothbrush are listed more than once",
+      "detail": "The Teddy Tiger teether sits on two separate listings (2,952 reviews on one, 281 on the other), and the Ludo Lion toothbrush on three. Merging them puts the reviews and sales history in one place.",
+      "evidence": [
+        "Teddy Tiger teether: B0CDX4RHKN (~£25,919/mo, 2,952 reviews) and B0CDX4JM5P (~£1,961/mo, 281 reviews), different parent listings",
+        "Ludo Lion sonic toothbrush: B0CZ9LR1XX (~£17,095/mo, 422 reviews), B0DB8Q7M35 and B0GMRGX4SQ (26 reviews)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Teethers and bath toys: cut ads on gifts, dummies and other brands",
+      "detail": "The teethers show sponsored on searches for different products: \"nuby\" (6,000 a month), \"giraffe gifts\", \"snuffle babe\", \"baby shower gift\", MAM dummies and Bonjela gel, where they don't rank organically. Negatives free budget for the teething searches above.",
+      "evidence": [
+        "Original teether B0FXBXDLPZ: nuby (6,014/mo), giraffe gifts (5,217), mam newborn dummies (2,329), ashton parsons teething gel (1,594)",
+        "Animal teether B07YXDNZSG: snuffle babe (5,336), baby shower gift (5,015), highchair toy (3,452), bonjela baby teething gel (1,916)",
+        "Toothbrush: kids toothbrushes (21,907/mo) sponsored with organic #140"
+      ],
+      "job_ad_quote": null
+    }
+  ],
+  "mobile_review": {},
+  "hero_actions": {
+    "B0FXBXDLPZ": "Shorten the 5 long bullets; negate nuby, giraffe gifts and dummy searches.",
+    "B07YXDNZSG": "Push baby teething toy (#6) and teething toys (#8).",
+    "B0DTJ6LHSJ": "Push baby toothbrush, toddler toothbrush and electric toothbrush kids; merge the duplicate Ludo Lion listings.",
+    "B072XHLRC9": "Fix the title so the size shows on mobile; push teething powder (#26).",
+    "B09R414M3N": "Negate light-up and duck searches; test bath toys for 1 year old.",
+    "B09R3TKL2V": "Push bath toys 6 months (#13) and baby stocking fillers (#8)."
+  },
+  "content_note": "Strong ratings (4.3–4.8★) and good mobile scores (83–92). Across the range, bullets run over 250 characters and collapse on a phone; the silicone teether's title cuts off before the size.",
+  "ad_strategy_summary": "Ads show on 6 of the top 30 searches. Fund the toothbrush searches and the page-one teething searches, paid for by cutting gift, dummy and rival-brand drift. Indicative ~£4,300/mo across the account.",
+  "amc_hypotheses": [
+    "Teething and first toothbrush follow each other in the same months; AMC would show how many teether buyers go on to buy the toothbrush."
+  ],
+  "amc_questions": [
+    "Which product do new customers buy first?",
+    "How many teether buyers come back for a second product?",
+    "What share of ad-driven sales are new to Matchstick Monkey?"
+  ]
+}

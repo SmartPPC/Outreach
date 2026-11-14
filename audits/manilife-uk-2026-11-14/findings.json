@@ -1,0 +1,65 @@
+{
+  "headline": "ManiLife's ads are drifting into dairy butter and supermarket searches, and a reseller is charging £11.99 for a jar you sell at £5.95 elsewhere.",
+  "points": [
+    {
+      "category": "advertising",
+      "title": "Deep Roast Crunchy and Original Roast Smooth: cut ads on butter, hummus and Morrisons searches",
+      "detail": "Both best-sellers show sponsored on searches for other products: \"butter\" (173,000 a month, organic #64), \"morrisons\" (46,000), \"hummus\" (17,000), \"margarine\" and \"garlic butter\". Negatives on these free budget for peanut butter searches.",
+      "evidence": [
+        "butter: 173,146 searches/mo, sponsored #12, organic #64 (Jungle Scout)",
+        "morrisons: 45,974/mo, sponsored #22, not ranked organically",
+        "hummus: 17,448/mo, sponsored #16, not ranked",
+        "margarine: 7,568/mo, sponsored #17, not ranked",
+        "Also sponsored on spread, cashew butter, garlic butter, anchor butter, president butter"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "catalogue",
+      "title": "Original Roast Smooth: a reseller holds the Buy Box at £11.99",
+      "detail": "On the Original Roast Smooth jar (~£18,000 a month) the Buy Box is held by NBR TRAD£RS at £11.99, above the £9.00 list price, with 11 sellers, while the sister jars sell through Amazon at £5.95. Worth checking supply to Amazon and Brand Registry protection.",
+      "evidence": [
+        "B0BCQCKK12: Buy Box owner NBR TRAD£RS, 11 sellers, price £11.99 vs list £9.00 (Keepa)",
+        "Deep Roast Crunchy B0BCQ91KNW: £5.95 via Amazon",
+        "Family revenue ~£18,380/mo (Jungle Scout estimate); Keepa sees ~£3,570, consistent with lost sales"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "competitors",
+      "title": "Go after Pip & Nut shoppers on price",
+      "detail": "Pip & Nut leads share of voice across your searches (16% vs ManiLife's 6%), and \"pip and nut\" (9,000 searches a month) has ManiLife at #22 with no ads near the top. At £5.95 against a £7.38 page-one median, the price makes the case for you.",
+      "evidence": [
+        "Share of voice: Pip & Nut 15.8%, Morrisons 12.2%, Nutella 9.0%, ManiLife 5.9% (Jungle Scout)",
+        "pip and nut: 8,994 searches/mo, organic #22, no sponsored rank",
+        "Median page-one price: ManiLife £5.95 vs competitors £7.38"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "content",
+      "title": "Deep Roast Crunchy: add a seventh gallery image",
+      "detail": "The best-seller has 6 gallery images, one short of what shoppers swipe through on a phone. A comparison image (protein and ingredients against the big brands) would do the most work.",
+      "evidence": [
+        "B0BCQ91KNW: 6 gallery images, mobile score 92 (Keepa)",
+        "Family revenue ~£28,536/mo, 4,796 units, 4.4★ from 638 reviews (Jungle Scout estimate)"
+      ],
+      "job_ad_quote": null
+    }
+  ],
+  "mobile_review": {},
+  "hero_actions": {
+    "B0BCQ91KNW": "Negate butter, hummus, margarine and Morrisons searches; add a 7th image.",
+    "B0BCQCKK12": "Win the Buy Box back from the reseller before spending on ads."
+  },
+  "content_note": "Listings are strong on mobile (scores 92–100). The only gap is 6 images on the Deep Roast Crunchy gallery.",
+  "ad_strategy_summary": "Ads already cover about half of the top 30 searches and ManiLife is #1 sponsored on \"peanut butter\". The job is pruning: cut the butter, spread and supermarket searches, and test Pip & Nut and Whole Earth searches with the price advantage. Indicative budget is small (~£550/mo on the gaps).",
+  "amc_hypotheses": [
+    "75% of the live range offers Subscribe & Save in a consumable category, so in this category repeat buyers typically drive most revenue."
+  ],
+  "amc_questions": [
+    "How many ManiLife buyers reorder, and after how many days?",
+    "Which flavour do new customers start with, and what do they buy next?",
+    "What share of ad-driven sales are new to the brand?"
+  ]
+}

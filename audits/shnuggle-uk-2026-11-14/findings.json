@@ -1,0 +1,70 @@
+{
+  "headline": "Shnuggle's baby bath and changing mat lead the range, but ads are leaking into other bath products and the brand search shows rival products in five of the first 13 slots.",
+  "points": [
+    {
+      "category": "advertising",
+      "title": "Baby bath, rinse cup and Ellie storage: cut ads on other bath products",
+      "detail": "The bath range shows sponsored on searches for different products: foldable, collapsible and inflatable baths, bath chairs and cushions, Aveeno shampoo, and \"bath water storage bag\" (8,600 a month) on the Ellie toy scoop. Negatives free budget for the searches below.",
+      "evidence": [
+        "Baby bath B084PP9W5F sponsored on: foldable baby bath (3,089/mo), baby bath chair (1,898), collapsible baby bath (1,638), baby bath cushion (1,406), inflatable baby bath (864) (Jungle Scout)",
+        "Rinse cup B0C9R3Z3YJ sponsored on: baby bath support (3,855), aveeno baby shampoo (1,138), aveeno baby wash (983)",
+        "Ellie B0C5RHGNTS sponsored on: bath water storage bag (8,595/mo)",
+        "Nappy bin B0GMQVL2SD sponsored on: snuggle ups (3,689/mo)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "content",
+      "title": "Baby bath: add a brand-made video and shorten the bullets",
+      "detail": "The baby bath (~£56,000 a month, 4.7★ from 3,675 reviews) has 7 videos, all from influencers or customers, none made by Shnuggle, and 2 bullets over 250 characters that collapse on a phone. A short brand video showing the bum bump and backrest would lift conversion.",
+      "evidence": [
+        "B084PP9W5F: 7 videos, all influencer or customer (Keepa)",
+        "2 bullets over 250 characters; mobile score 75",
+        "Family revenue ~£56,121/mo, 2,283 units (Jungle Scout estimate)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Squishy changing mat: push \"baby mat\", \"changing table\" and \"anti roll changing mat\"",
+      "detail": "The changing mat (~£58,000 a month) already ranks #5 for \"changing mat\", but \"baby mat\" (8,800 a month, #15), \"anti roll changing mat\" (#14) and \"changing table\" (7,900, #28) have no ads near the top.",
+      "evidence": [
+        "baby mat: 8,756 searches/mo, organic #15, no sponsored rank",
+        "changing table: 7,933/mo, organic #28; baby changing table: 7,367/mo, #28",
+        "anti roll changing mat: 2,894/mo, organic #14",
+        "Family revenue ~£57,967/mo, 1,451 units (Jungle Scout estimate)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "competitors",
+      "title": "Brand search: show the rest of the range in the slots rivals are taking",
+      "detail": "Shnuggle is #1 on its own name, but rival products (swaddle sacks, a nappy bin set, sleeping bags) take sponsored slots 4, 5, 11, 12 and 13 on \"shnuggle\", and a foldable bath takes slot 12 on \"shnuggle baby bath\". A brand headline ad showing the nappy bin, mat and bath keeps those shoppers in the range.",
+      "evidence": [
+        "shnuggle: Cozyganoosh #4, Transitional Swaddle #5, 6-Way Omni Swaddle #11, Transitional Swaddle #12, Twist & Click nappy bin set #13 (DataForSEO)",
+        "shnuggle baby bath: SUPERBE BEBE foldable bath #12",
+        "shnuggle: 1,232 searches/mo, organic #1, sponsored #1"
+      ],
+      "job_ad_quote": null
+    }
+  ],
+  "mobile_review": {},
+  "hero_actions": {
+    "B0CDLW5K89": "Push baby mat, changing table and anti roll changing mat.",
+    "B084PP9W5F": "Add a brand video, shorten bullets, negate foldable and inflatable bath searches.",
+    "B0GMQVL2SD": "Negate nappy bag and Snuggle Ups searches.",
+    "B0861ZL7KV": "Push \"bath tub\" (#15) and \"baby bathtub\" (#15).",
+    "B0C9R3Z3YJ": "Negate Aveeno and bath support searches.",
+    "B0C5RHGNTS": "Negate bath water storage bag; push \"bath storage\" (#29)."
+  },
+  "content_note": "Most best-sellers score 88–100 on mobile. The baby bath is the exception: no brand video and long bullets.",
+  "ad_strategy_summary": "Ads show on 8 of the top 30 searches. Prune drift into other bath products, push the mid-page changing mat and bath searches, and use a brand headline ad on \"shnuggle\". Indicative ~£1,500/mo on the gaps.",
+  "amc_hypotheses": [
+    "Baby products are bought in a sequence (bath, mat, nappy bin, toddler bath); AMC would show how often a first purchase leads to a second Shnuggle product."
+  ],
+  "amc_questions": [
+    "Which product do new customers buy first?",
+    "How many go on to buy the toddler bath?",
+    "What share of ad-driven sales are new to Shnuggle?"
+  ]
+}

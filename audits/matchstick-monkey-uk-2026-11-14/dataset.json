@@ -1,0 +1,3731 @@
+{
+  "prospect": {
+    "brand": "Matchstick Monkey",
+    "marketplace": "uk",
+    "domain": "amazon.co.uk",
+    "currency": "\u00a3",
+    "input": "Matchstick Monkey",
+    "seller_name": null,
+    "landing_asin": null
+  },
+  "generated": "2026-11-14",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 26,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog.spellings",
+        "status": "ok",
+        "searched": [
+          "Matchstick Monkey",
+          "MatchstickMonkey"
+        ]
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 169
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 99,
+        "hero_families": 6,
+        "revenue_share": 0.81
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 15,
+        "waited_min": 2.4
+      },
+      {
+        "step": "images",
+        "status": "skipped",
+        "reason": "can't reach m.media-amazon.com (<urlopen error Tunnel connection failed: 403 Forbidden>); add it to Allowed domains"
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 6,
+        "keywords": 387
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 11
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": "https://matchstickmonkey.com",
+        "emails": 0
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 30,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 22,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 13.299999999999995,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      },
+      "apollo_search": {
+        "used": 0,
+        "limit": 10.0
+      },
+      "apollo_credits": {
+        "used": 0,
+        "limit": 3.0
+      }
+    },
+    "collected_at": "2026-11-14T08:38:50.131076+00:00"
+  },
+  "focus": {
+    "total_asins": 169,
+    "live_asins": 99,
+    "families": 30,
+    "hero_families": 6,
+    "hero_revenue_share": 0.81,
+    "est_monthly_revenue": 136779
+  },
+  "heroes": [
+    {
+      "asin": "B0FXBXDLPZ",
+      "parent_asin": "B0HP143L8Q",
+      "title": "Matchstick Monkey Original Teether with Gel Applicator, Hearts",
+      "family_revenue_30d": 42188,
+      "family_size": 15,
+      "family_revenue_keepa": 8342,
+      "units_30d": 7043,
+      "price": 10.99,
+      "list_price": 16.99,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Teethers",
+      "product_type": null,
+      "rating": 4.8,
+      "reviews": 8750,
+      "sales_rank": 26.0,
+      "content": {
+        "score": 69,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "62 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 400 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "8758 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 88,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (1800px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "baby gifts",
+          "tier": "category",
+          "status": "push",
+          "volume": 23360,
+          "organic_rank": 42,
+          "sponsored_rank": null,
+          "cpc": 0.18
+        },
+        {
+          "keyword": "baby toy",
+          "tier": "category",
+          "status": "push",
+          "volume": 17415,
+          "organic_rank": 37,
+          "sponsored_rank": null,
+          "cpc": 0.55
+        },
+        {
+          "keyword": "new baby gifts",
+          "tier": "category",
+          "status": "push",
+          "volume": 15243,
+          "organic_rank": 35,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "chew toys for autistic children",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 14488,
+          "organic_rank": 25,
+          "sponsored_rank": null,
+          "cpc": 3.3
+        },
+        {
+          "keyword": "baby gift",
+          "tier": "category",
+          "status": "push",
+          "volume": 12019,
+          "organic_rank": 35,
+          "sponsored_rank": null,
+          "cpc": 0.47
+        },
+        {
+          "keyword": "baby rattles 0-6 months",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 9141,
+          "organic_rank": 52,
+          "sponsored_rank": null,
+          "cpc": 1.29
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "nuby",
+          "volume": 6014,
+          "sponsored_rank": 7,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "giraffe gifts",
+          "volume": 5217,
+          "sponsored_rank": 21,
+          "reason": "different product (\"giraffe\")"
+        },
+        {
+          "keyword": "baby wishlist list",
+          "volume": 2344,
+          "sponsored_rank": 10,
+          "reason": "different product (\"list\")"
+        },
+        {
+          "keyword": "mam newborn dummies",
+          "volume": 2329,
+          "sponsored_rank": 23,
+          "reason": "different product (\"newborn\")"
+        },
+        {
+          "keyword": "baby essentials for newborn girl",
+          "volume": 2110,
+          "sponsored_rank": 55,
+          "reason": "different product (\"newborn\")"
+        },
+        {
+          "keyword": "ashton parsons teething gel",
+          "volume": 1594,
+          "sponsored_rank": 35,
+          "reason": "different product (\"ashton\")"
+        },
+        {
+          "keyword": "tommee tippee 6-18 month dummies",
+          "volume": 1532,
+          "sponsored_rank": 17,
+          "reason": "competitor's brand: worth reviewing"
+        }
+      ],
+      "sponsored_terms": 39,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B07YXDNZSG",
+      "parent_asin": "B0H4RP87J2",
+      "title": "Matchstick Monkey Animal Teether with Gel Applicator, Ludo Lion",
+      "family_revenue_30d": 18599,
+      "family_size": 7,
+      "family_revenue_keepa": 1868,
+      "units_30d": 2932,
+      "price": 9.34,
+      "list_price": 16.99,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Teethers",
+      "product_type": null,
+      "rating": 4.8,
+      "reviews": 2942,
+      "sales_rank": 130.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "63 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 400 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "2953 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 21s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "baby teething toy",
+          "tier": "core",
+          "status": "push",
+          "volume": 12924,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "teething toys",
+          "tier": "core",
+          "status": "push",
+          "volume": 9362,
+          "organic_rank": 8,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "teething",
+          "tier": "category",
+          "status": "push",
+          "volume": 7872,
+          "organic_rank": 38,
+          "sponsored_rank": null,
+          "cpc": 0.53
+        },
+        {
+          "keyword": "3 month old baby toys",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 6767,
+          "organic_rank": 59,
+          "sponsored_rank": null,
+          "cpc": 1.25
+        },
+        {
+          "keyword": "giraffe gifts",
+          "tier": "core",
+          "status": "push",
+          "volume": 5217,
+          "organic_rank": 17,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "teething toy",
+          "tier": "core",
+          "status": "push",
+          "volume": 4107,
+          "organic_rank": 5,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "snuffle babe",
+          "volume": 5336,
+          "sponsored_rank": 8,
+          "reason": "different product (\"babe\")"
+        },
+        {
+          "keyword": "baby shower gift",
+          "volume": 5015,
+          "sponsored_rank": 13,
+          "reason": "different product (\"shower\")"
+        },
+        {
+          "keyword": "highchair toy",
+          "volume": 3452,
+          "sponsored_rank": 28,
+          "reason": "different product (\"highchair\")"
+        },
+        {
+          "keyword": "baby presents",
+          "volume": 2641,
+          "sponsored_rank": 3,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "baby wishlist list",
+          "volume": 2344,
+          "sponsored_rank": 16,
+          "reason": "different product (\"list\")"
+        },
+        {
+          "keyword": "mam newborn dummies",
+          "volume": 2329,
+          "sponsored_rank": 22,
+          "reason": "different product (\"newborn\")"
+        },
+        {
+          "keyword": "baby tous 6-12 month",
+          "volume": 1971,
+          "sponsored_rank": 21,
+          "reason": "different product (\"tous\")"
+        },
+        {
+          "keyword": "bonjela baby teething gel",
+          "volume": 1916,
+          "sponsored_rank": 8,
+          "reason": "different product (\"bonjela\")"
+        }
+      ],
+      "sponsored_terms": 41,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0DTJ6LHSJ",
+      "parent_asin": "B0H8X54DBY",
+      "title": "Matchstick Monkey Baby Electric Sonic Toothbrush, Dusty Pink",
+      "family_revenue_30d": 18355,
+      "family_size": 6,
+      "family_revenue_keepa": 5196,
+      "units_30d": 1330,
+      "price": 12.99,
+      "list_price": 15.99,
+      "sellers": 3,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Electric Toothbrushes",
+      "product_type": null,
+      "rating": 4.3,
+      "reviews": 428,
+      "sales_rank": 2406.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "60 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 392 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.3\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "428 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 27s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "6 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "kids electric toothbrush",
+          "tier": "category",
+          "status": "push",
+          "volume": 72042,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "electric toothbrush kids",
+          "tier": "category",
+          "status": "push",
+          "volume": 23014,
+          "organic_rank": 30,
+          "sponsored_rank": null,
+          "cpc": 2.31
+        },
+        {
+          "keyword": "baby toothbrush",
+          "tier": "category",
+          "status": "push",
+          "volume": 16988,
+          "organic_rank": 21,
+          "sponsored_rank": null,
+          "cpc": 0.14
+        },
+        {
+          "keyword": "childrens electric toothbrush",
+          "tier": "category",
+          "status": "push",
+          "volume": 3605,
+          "organic_rank": 35,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "brush baby replacement heads",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2606,
+          "organic_rank": 43,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "paw patrol toothbrush",
+          "tier": "category",
+          "status": "push",
+          "volume": 1297,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "kids toothbrushes",
+          "volume": 21907,
+          "sponsored_rank": 12,
+          "reason": "different product (\"kids\")"
+        },
+        {
+          "keyword": "oral b kids toothbrush",
+          "volume": 2013,
+          "sponsored_rank": 54,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "oral b toothbrush kids",
+          "volume": 1928,
+          "sponsored_rank": 53,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "baby tongue cleaner newborn",
+          "volume": 1793,
+          "sponsored_rank": 40,
+          "reason": "different product (\"newborn\")"
+        },
+        {
+          "keyword": "finger toothbrush baby",
+          "volume": 1760,
+          "sponsored_rank": 50,
+          "reason": "different product (\"finger\")"
+        },
+        {
+          "keyword": "monkey teether",
+          "volume": 1742,
+          "sponsored_rank": 15,
+          "reason": "different product (\"teether\")"
+        },
+        {
+          "keyword": "kids toothbrushes 3-5",
+          "volume": 1682,
+          "sponsored_rank": 47,
+          "reason": "different product (\"kids\")"
+        },
+        {
+          "keyword": "baby mouth cleaner newborn",
+          "volume": 1376,
+          "sponsored_rank": 39,
+          "reason": "different product (\"newborn\")"
+        }
+      ],
+      "sponsored_terms": 37,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B072XHLRC9",
+      "parent_asin": "B0H249XMYS",
+      "title": "Matchstick Monkey, Antimicrobial Silicone Teether, Easy To Grip, BPA Free, 3 Months Old+, 10 cm, Green Mini Monkey",
+      "family_revenue_30d": 14603,
+      "family_size": 8,
+      "family_revenue_keepa": 3934,
+      "units_30d": 4506,
+      "price": 7.19,
+      "list_price": 8.99,
+      "sellers": 3,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Teethers",
+      "product_type": null,
+      "rating": 4.8,
+      "reviews": 2266,
+      "sales_rank": 61.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "114 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 400 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "2264 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 83,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 21s"
+          },
+          "title_on_mobile": {
+            "status": "warn",
+            "detail": "cut off on mobile before the size/pack"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "baby rattles 0-6 months",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 9141,
+          "organic_rank": 56,
+          "sponsored_rank": null,
+          "cpc": 1.29
+        },
+        {
+          "keyword": "teething powder",
+          "tier": "category",
+          "status": "push",
+          "volume": 7180,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "3 month old baby toys",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 6767,
+          "organic_rank": 48,
+          "sponsored_rank": null,
+          "cpc": 1.25
+        },
+        {
+          "keyword": "4 month old baby toys",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4077,
+          "organic_rank": 54,
+          "sponsored_rank": null,
+          "cpc": 0.51
+        },
+        {
+          "keyword": "mini silicone baby",
+          "tier": "category",
+          "status": "push",
+          "volume": 2671,
+          "organic_rank": 23,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "5 month old baby toys",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2613,
+          "organic_rank": 56,
+          "sponsored_rank": null,
+          "cpc": 0.61
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "baby gifts",
+          "volume": 23360,
+          "sponsored_rank": 34,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "ashton and parsons teething powder",
+          "volume": 6571,
+          "sponsored_rank": 19,
+          "reason": "different product (\"ashton\")"
+        },
+        {
+          "keyword": "dummies 6-18 months",
+          "volume": 5288,
+          "sponsored_rank": 16,
+          "reason": "different product (\"dummies\")"
+        },
+        {
+          "keyword": "stocking fillers for 1 year old",
+          "volume": 1987,
+          "sponsored_rank": 16,
+          "reason": "different product (\"year\")"
+        },
+        {
+          "keyword": "baby tous 6-12 month",
+          "volume": 1971,
+          "sponsored_rank": 18,
+          "reason": "different product (\"tous\")"
+        },
+        {
+          "keyword": "sensory toys baby",
+          "volume": 1708,
+          "sponsored_rank": 19,
+          "reason": "different product (\"sensory\")"
+        },
+        {
+          "keyword": "tommee tippee 6-18 month dummies",
+          "volume": 1532,
+          "sponsored_rank": 26,
+          "reason": "competitor's brand: worth reviewing"
+        }
+      ],
+      "sponsored_terms": 41,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09R414M3N",
+      "parent_asin": "B0CVQC6X3C",
+      "title": "Matchstick Monkey, Bathtime Slide Set, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory Learning - Slide Set (1 Slide + 3 Fun Animal Character Rocks), 12 Months Old+, Blue",
+      "family_revenue_30d": 9031,
+      "family_size": 3,
+      "family_revenue_keepa": 3997,
+      "units_30d": 904,
+      "price": 14.99,
+      "list_price": 20.99,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Bath Toys",
+      "product_type": null,
+      "rating": 4.4,
+      "reviews": 473,
+      "sales_rank": 2054.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "6 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "173 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 229 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "473 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 brand video(s), shortest 19s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "1 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "bath toys for 1 year old",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 24298,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": 1.29
+        },
+        {
+          "keyword": "slides",
+          "tier": "category",
+          "status": "push",
+          "volume": 4790,
+          "organic_rank": 46,
+          "sponsored_rank": null,
+          "cpc": 0.18
+        },
+        {
+          "keyword": "baby bath toy",
+          "tier": "category",
+          "status": "push",
+          "volume": 4393,
+          "organic_rank": 40,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "disney bath toys",
+          "tier": "category",
+          "status": "push",
+          "volume": 3795,
+          "organic_rank": 50,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "toddler slide",
+          "tier": "category",
+          "status": "push",
+          "volume": 3588,
+          "organic_rank": 40,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath toys 6 months",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3368,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": 0.45
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "kids bath",
+          "volume": 2637,
+          "sponsored_rank": 53,
+          "reason": "different product (\"kids\")"
+        },
+        {
+          "keyword": "light up bath cubes",
+          "volume": 2364,
+          "sponsored_rank": 51,
+          "reason": "different product (\"cubes\")"
+        },
+        {
+          "keyword": "baby stocking fillers 6-12 months",
+          "volume": 2130,
+          "sponsored_rank": 23,
+          "reason": "different product (\"fillers\")"
+        },
+        {
+          "keyword": "sophie la giraffe",
+          "volume": 717,
+          "sponsored_rank": 28,
+          "reason": "different product (\"giraffe\")"
+        },
+        {
+          "keyword": "teething monkey",
+          "volume": 631,
+          "sponsored_rank": 4,
+          "reason": "different product (\"teething\")"
+        },
+        {
+          "keyword": "large rubber duck",
+          "volume": 593,
+          "sponsored_rank": 50,
+          "reason": "different product (\"duck\")"
+        }
+      ],
+      "sponsored_terms": 18,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09R3TKL2V",
+      "parent_asin": "B0CVPWCVPC",
+      "title": "Matchstick Monkey, Bathtime Wobblers, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory Learning - 2 Wobblers, 12 Months Old+, Grey and Green",
+      "family_revenue_30d": 7758,
+      "family_size": 4,
+      "family_revenue_keepa": null,
+      "units_30d": 594,
+      "price": 10.0,
+      "list_price": 19.99,
+      "sellers": 3,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Bath Toys",
+      "product_type": null,
+      "rating": 4.7,
+      "reviews": 183,
+      "sales_rank": 3640.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "142 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 224 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "183 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 21s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "1 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "7 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "baby einstein",
+          "tier": "category",
+          "status": "push",
+          "volume": 18502,
+          "organic_rank": 44,
+          "sponsored_rank": null,
+          "cpc": 0.44
+        },
+        {
+          "keyword": "baby bath toys 0-6 months",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4254,
+          "organic_rank": 55,
+          "sponsored_rank": null,
+          "cpc": 2.73
+        },
+        {
+          "keyword": "baby stocking fillers",
+          "tier": "core",
+          "status": "push",
+          "volume": 3594,
+          "organic_rank": 8,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "matchstick monkey teething toy",
+          "tier": "brand",
+          "status": "push",
+          "volume": 3589,
+          "organic_rank": 29,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "mould free bath toys",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3556,
+          "organic_rank": 48,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath toys 6 months",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3368,
+          "organic_rank": 13,
+          "sponsored_rank": null,
+          "cpc": 0.45
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "bath ducks",
+          "volume": 1761,
+          "sponsored_rank": 19,
+          "reason": "different product (\"ducks\")"
+        },
+        {
+          "keyword": "pink dinosaur",
+          "volume": 1654,
+          "sponsored_rank": 52,
+          "reason": "different product (\"dinosaur\")"
+        },
+        {
+          "keyword": "bath toys toddler",
+          "volume": 950,
+          "sponsored_rank": 17,
+          "reason": "different product (\"toddler\")"
+        },
+        {
+          "keyword": "bluey toys age 1",
+          "volume": 864,
+          "sponsored_rank": 13,
+          "reason": "different product (\"age\")"
+        },
+        {
+          "keyword": "toddler bath toy",
+          "volume": 851,
+          "sponsored_rank": 51,
+          "reason": "different product (\"toddler\")"
+        },
+        {
+          "keyword": "bath toys for kids",
+          "volume": 799,
+          "sponsored_rank": 51,
+          "reason": "different product (\"kids\")"
+        },
+        {
+          "keyword": "bath toys for toddlers",
+          "volume": 752,
+          "sponsored_rank": 16,
+          "reason": "different product (\"toddlers\")"
+        },
+        {
+          "keyword": "rubber ducks bath toys",
+          "volume": 572,
+          "sponsored_rank": 20,
+          "reason": "different product (\"ducks\")"
+        }
+      ],
+      "sponsored_terms": 20,
+      "mobile_sheet": null
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [
+      [
+        {
+          "asin": "B0CDX4RHKN",
+          "title": "Matchstick Monkey Animal Teether with Gel Applicator, Teddy Tiger",
+          "revenue_30d": 25918.88
+        },
+        {
+          "asin": "B0CDX4JM5P",
+          "title": "Matchstick Monkey Animal Teether with Gel Applicator, Teddy Tiger",
+          "revenue_30d": 1961.49
+        }
+      ],
+      [
+        {
+          "asin": "B0CZ9LR1XX",
+          "title": "Matchstick Monkey Baby Electric Sonic Toothbrush, Ludo Lion",
+          "revenue_30d": 17094.84
+        },
+        {
+          "asin": "B0DB8Q7M35",
+          "title": "Matchstick Monkey Baby Electric Sonic Toothbrush, Ludo Lion",
+          "revenue_30d": 623.52
+        },
+        {
+          "asin": "B0GMRGX4SQ",
+          "title": "Matchstick Monkey Baby Electric Sonic Toothbrush, Ludo Lion",
+          "revenue_30d": 441.66
+        }
+      ],
+      [
+        {
+          "asin": "B0CG7KTCXX",
+          "title": "Matchstick Monkey, Playtime Wooden Pull Along Toy, Race or Push to Encourage Ima",
+          "revenue_30d": 57.96
+        },
+        {
+          "asin": "B0CG7RSGWZ",
+          "title": "Matchstick Monkey, Playtime Wooden Pull Along Toy, Race or Push to Encourage Ima",
+          "revenue_30d": 47.96
+        }
+      ]
+    ],
+    "clutter": [],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 169,
+    "fetched": 15,
+    "parents": 6,
+    "categories": {
+      "Baby Products": 9,
+      "Toys & Games": 4,
+      "Health & Personal Care": 2
+    },
+    "asins": [
+      {
+        "asin": "B0FXBXDLPZ",
+        "parent_asin": "B0HP143L8Q",
+        "title": "Matchstick Monkey Original Teether with Gel Applicator, Hearts",
+        "price": 10.99,
+        "rating": 4.8,
+        "review_count": 8758,
+        "monthly_sold": 600,
+        "sales_rank": 26.0,
+        "listed_since": "2025-11-21",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 6594
+      },
+      {
+        "asin": "B0DTJ6LHSJ",
+        "parent_asin": "B0H8X54DBY",
+        "title": "Matchstick Monkey Baby Electric Sonic Toothbrush, Dusty Pink",
+        "price": 12.99,
+        "rating": 4.3,
+        "review_count": 428,
+        "monthly_sold": 400,
+        "sales_rank": 2406.0,
+        "listed_since": "2025-01-20",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 5196
+      },
+      {
+        "asin": "B072XHLRC9",
+        "parent_asin": "B0H249XMYS",
+        "title": "Matchstick Monkey, Antimicrobial Silicone Teether, Easy To Grip, BPA Free, 3 Months Old+, 10 cm, Green Mini Monkey",
+        "price": 7.19,
+        "rating": 4.8,
+        "review_count": 2264,
+        "monthly_sold": 500,
+        "sales_rank": 61.0,
+        "listed_since": "2017-08-10",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 3595
+      },
+      {
+        "asin": "B09R414M3N",
+        "parent_asin": "B0CVQC6X3C",
+        "title": "Matchstick Monkey, Bathtime Slide Set, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory Learning - Slide Set (1 Slide + 3 Fun Animal Character Rocks), 12 Months Old+, Blue",
+        "price": 14.99,
+        "rating": 4.4,
+        "review_count": 473,
+        "monthly_sold": 200,
+        "sales_rank": 2054.0,
+        "listed_since": "2021-01-28",
+        "root_category": "Toys & Games",
+        "est_monthly_revenue": 2998
+      },
+      {
+        "asin": "B07YXDNZSG",
+        "parent_asin": "B0H4RP87J2",
+        "title": "Matchstick Monkey Animal Teether with Gel Applicator, Ludo Lion",
+        "price": 9.34,
+        "rating": 4.8,
+        "review_count": 2953,
+        "monthly_sold": 200,
+        "sales_rank": 130.0,
+        "listed_since": "2019-11-28",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 1868
+      },
+      {
+        "asin": "B079G4DGP6",
+        "parent_asin": "B0HP143L8Q",
+        "title": "Matchstick Monkey, Original Teether & Gel Applicator, Antimicrobial Silicone Teething Toys for Baby, Easy to Grip, BPA Free, 3 Months Old+, 10.5 cm, Green Monkey",
+        "price": 5.99,
+        "rating": 4.8,
+        "review_count": 8758,
+        "monthly_sold": 200,
+        "sales_rank": 26.0,
+        "listed_since": "2018-02-01",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 1198
+      },
+      {
+        "asin": "B0CHYSP38F",
+        "parent_asin": "B0CVQC6X3C",
+        "title": "Matchstick Monkey Baby Toys, 1 Slide Plus 3 Animal Rocks, 12 Months Old+, No Holes, No Mould (Pink)",
+        "price": 9.99,
+        "rating": 4.4,
+        "review_count": 474,
+        "monthly_sold": 100,
+        "sales_rank": 1927.0,
+        "listed_since": "2023-09-13",
+        "root_category": "Toys & Games",
+        "est_monthly_revenue": 999
+      },
+      {
+        "asin": "B0DZPCSN1H",
+        "parent_asin": "B0HP143L8Q",
+        "title": "Matchstick Monkey Original Teether with Gel Applicator, Confetti Cream",
+        "price": 10.99,
+        "rating": 4.8,
+        "review_count": 8754,
+        "monthly_sold": 50,
+        "sales_rank": 26.0,
+        "listed_since": "2025-03-07",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 550
+      },
+      {
+        "asin": "B0G39VGL73",
+        "parent_asin": "B0H249XMYS",
+        "title": "Matchstick Monkey Mini Teether with Gel Applicator, Mint Green",
+        "price": 6.79,
+        "rating": 4.8,
+        "review_count": 2263,
+        "monthly_sold": 50,
+        "sales_rank": 63.0,
+        "listed_since": "2025-11-21",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 340
+      },
+      {
+        "asin": "B0GRW5G6HK",
+        "parent_asin": "B0H249XMYS",
+        "title": "Matchstick Monkey Mini Teether with Gel Applicator, Banana",
+        "price": 7.99,
+        "rating": 4.8,
+        "review_count": 2267,
+        "monthly_sold": null,
+        "sales_rank": 61.0,
+        "listed_since": "2026-03-09",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0H4RP87J2",
+        "parent_asin": "B0H4RP87J2",
+        "title": "Matchstick Monkey, Antimicrobial Silicone Teether & Gel Applicator, Easy to Grip, BPA Free, 3 Months Old+, 11 cm",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 124.0,
+        "listed_since": "2026-04-16",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0C5XZL34T",
+        "parent_asin": "B0H4RP87J2",
+        "title": "Matchstick Monkey Animal Teether with Gel Applicator, Polar Bear",
+        "price": 9.31,
+        "rating": 4.8,
+        "review_count": 2953,
+        "monthly_sold": null,
+        "sales_rank": 130.0,
+        "listed_since": "2023-05-22",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0H8X54DBY",
+        "parent_asin": "B0H8X54DBY",
+        "title": "Matchstick Monkey Baby Electric Sonic Toothbrush, Antimicrobial Protection, Suitable from 3 Months",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 2430.0,
+        "listed_since": "2024-07-26",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B09R3TKL2V",
+        "parent_asin": "B0CVPWCVPC",
+        "title": "Matchstick Monkey, Bathtime Wobblers, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory Learning - 2 Wobblers, 12 Months Old+, Grey and Green",
+        "price": 10.0,
+        "rating": 4.7,
+        "review_count": 183,
+        "monthly_sold": null,
+        "sales_rank": 3640.0,
+        "listed_since": "2021-01-28",
+        "root_category": "Toys & Games",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0CVPWCVPC",
+        "parent_asin": "B0CVPWCVPC",
+        "title": "Matchstick Monkey, Bathtime Wobblers, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory Learning - 2 Wobblers, 12 Months Old+, No Holes, No Mould",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 3668.0,
+        "listed_since": "2024-02-15",
+        "root_category": "Toys & Games",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 15,
+    "launches_by_quarter": {
+      "2024-Q1": 1,
+      "2024-Q3": 1,
+      "2025-Q1": 2,
+      "2025-Q4": 2,
+      "2026-Q1": 1,
+      "2026-Q2": 1
+    },
+    "launches_last_12m": 4,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 23337,
+    "top3_revenue_share": 0.66,
+    "bsr_trend_top_parents": {
+      "median_bsr_now": 1273.0,
+      "median_bsr_year_ago": 1489.0,
+      "improved": true,
+      "change_pct": -15
+    },
+    "reviews_gained_12m": 6687
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 72,
+      "share_under_7_images": 0.0,
+      "share_no_video": 0.27,
+      "share_no_aplus": 0.53,
+      "share_under_5_bullets": 0.2,
+      "share_rating_below_4_2": 0.0,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B079G4DGP6",
+        "title": "Matchstick Monkey, Original Teether & Gel Applicator, Antimicrobial Silicone Teething Toys for Baby, Easy to Grip, BPA Free, 3 Months Old+, 10.5 cm, Green Monkey",
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "9 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "161 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 400 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "8758 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0H4RP87J2",
+        "title": "Matchstick Monkey, Antimicrobial Silicone Teether & Gel Applicator, Easy to Grip, BPA Free, 3 Months Old+, 11 cm",
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "112 chars"
+          },
+          "bullets": {
+            "status": "fail",
+            "detail": "1 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 252 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0H8X54DBY",
+        "title": "Matchstick Monkey Baby Electric Sonic Toothbrush, Antimicrobial Protection, Suitable from 3 Months",
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "98 chars"
+          },
+          "bullets": {
+            "status": "fail",
+            "detail": "2 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 264 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0G39VGL73",
+        "title": "Matchstick Monkey Mini Teether with Gel Applicator, Mint Green",
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "62 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 400 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "2263 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09R414M3N",
+        "title": "Matchstick Monkey, Bathtime Slide Set, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory Learning - Slide Set (1 Slide + 3 Fun Animal Character Rocks), 12 Months Old+, Blue",
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "6 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "173 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 229 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "473 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0CVPWCVPC",
+        "title": "Matchstick Monkey, Bathtime Wobblers, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory Learning - 2 Wobblers, 12 Months Old+, No Holes, No Mould",
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "146 chars"
+          },
+          "bullets": {
+            "status": "fail",
+            "detail": "1 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 263 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 6,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.2,
+    "est_monthly_spend_on_sampled_terms": {
+      "low": 264,
+      "high": 661
+    },
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "Oral-B",
+        "avg_sov": 0.086,
+        "avg_sponsored_sov": 0.074,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Tommee Tippee",
+        "avg_sov": 0.082,
+        "avg_sponsored_sov": 0.082,
+        "keywords_present": 3,
+        "is_prospect": false
+      },
+      {
+        "brand": "GINNO",
+        "avg_sov": 0.05,
+        "avg_sponsored_sov": 0.061,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "URMYWO",
+        "avg_sov": 0.049,
+        "avg_sponsored_sov": 0.057,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "HahaGift",
+        "avg_sov": 0.049,
+        "avg_sponsored_sov": 0.048,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "Matchstick Monkey",
+        "avg_sov": 0.045,
+        "avg_sponsored_sov": 0.047,
+        "keywords_present": 12,
+        "is_prospect": true
+      },
+      {
+        "brand": "Toomies",
+        "avg_sov": 0.038,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "Fokky",
+        "avg_sov": 0.032,
+        "avg_sponsored_sov": 0.04,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Joyreal",
+        "avg_sov": 0.028,
+        "avg_sponsored_sov": 0.035,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "tonies",
+        "avg_sov": 0.027,
+        "avg_sponsored_sov": 0.034,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "MACALOCA",
+        "avg_sov": 0.025,
+        "avg_sponsored_sov": 0.031,
+        "keywords_present": 3,
+        "is_prospect": false
+      },
+      {
+        "brand": "Warne Scope Mounts",
+        "avg_sov": 0.025,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Wootoyz",
+        "avg_sov": 0.024,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "Rodzon",
+        "avg_sov": 0.022,
+        "avg_sponsored_sov": 0.028,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "hifunti",
+        "avg_sov": 0.022,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 3,
+        "is_prospect": false
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [
+      {
+        "keyword": "matchstick monkey",
+        "asin": "B0H36SQ44R",
+        "brand_guess": "Montessori Toys",
+        "title": "Montessori Toys Wooden Board Games for Kids Age 3+ with Sticks, Balls | Dice color sorting",
+        "position": 20
+      },
+      {
+        "keyword": "matchstick monkey",
+        "asin": "B0H36SQ44R",
+        "brand_guess": "Montessori Toys",
+        "title": "Montessori Toys Wooden Board Games for Kids Age 3+ with Sticks, Balls | Dice color sorting",
+        "position": 55
+      },
+      {
+        "keyword": "matchstickmonkey",
+        "asin": "B0G1TLVL5F",
+        "brand_guess": "6 PCS",
+        "title": "6 PCS Sensory Chew Necklace, Meet Children\u2019s Bite Needs, BPA-Free | Silicone Chew Necklace",
+        "position": 15
+      },
+      {
+        "keyword": "matchstickmonkey",
+        "asin": "B00MBFWMZI",
+        "brand_guess": "My Carry",
+        "title": "My Carry Potty Toddler Travel Potty 18 Months to 3 Years, Ladybird | Portable Leak-Proof T",
+        "position": 50
+      }
+    ],
+    "prospect_sponsored_on_own_brand": true,
+    "positioning_page1": {
+      "our_median_price": 6.54,
+      "competitor_median_price": 13.99,
+      "our_median_rating": 4.8,
+      "competitor_median_rating": 4.6
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "baby toys",
+        "tier": "category",
+        "volume": 143897,
+        "organic_rank": 89,
+        "sponsored_rank": null,
+        "cpc": 0.4,
+        "status": "missing",
+        "priority": 151092
+      },
+      {
+        "keyword": "bath toys",
+        "tier": "category",
+        "volume": 115565,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.43,
+        "status": "missing",
+        "priority": 112877
+      },
+      {
+        "keyword": "toothbrush",
+        "tier": "category",
+        "volume": 161084,
+        "organic_rank": 108,
+        "sponsored_rank": null,
+        "cpc": 0.77,
+        "status": "missing",
+        "priority": 87864
+      },
+      {
+        "keyword": "baby toothbrush",
+        "tier": "category",
+        "volume": 16988,
+        "organic_rank": 21,
+        "sponsored_rank": null,
+        "cpc": 0.14,
+        "status": "push",
+        "priority": 59458
+      },
+      {
+        "keyword": "kids electric toothbrush",
+        "tier": "category",
+        "volume": 72042,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 50429
+      },
+      {
+        "keyword": "newborn toys",
+        "tier": "category",
+        "volume": 15339,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "missing",
+        "priority": 32212
+      },
+      {
+        "keyword": "baby einstein",
+        "tier": "category",
+        "volume": 18502,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": 0.44,
+        "status": "push",
+        "priority": 29435
+      },
+      {
+        "keyword": "baby gifts",
+        "tier": "category",
+        "volume": 23360,
+        "organic_rank": 42,
+        "sponsored_rank": 11,
+        "cpc": 0.18,
+        "status": "sponsored_support",
+        "priority": 24528
+      },
+      {
+        "keyword": "baby rattle",
+        "tier": "category",
+        "volume": 7261,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 23103
+      },
+      {
+        "keyword": "baby toy",
+        "tier": "category",
+        "volume": 17415,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": 0.55,
+        "status": "push",
+        "priority": 22165
+      },
+      {
+        "keyword": "baby gift",
+        "tier": "category",
+        "volume": 12019,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": 0.47,
+        "status": "push",
+        "priority": 17901
+      },
+      {
+        "keyword": "baby shower gifts",
+        "tier": "category",
+        "volume": 41807,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 17559
+      },
+      {
+        "keyword": "slides",
+        "tier": "category",
+        "volume": 4790,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "push",
+        "priority": 16765
+      },
+      {
+        "keyword": "baby bath toys",
+        "tier": "category",
+        "volume": 34626,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 14543
+      },
+      {
+        "keyword": "baby sensory",
+        "tier": "category",
+        "volume": 7478,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": 0.24,
+        "status": "missing",
+        "priority": 13086
+      },
+      {
+        "keyword": "baby toys 0-6 months",
+        "tier": "long_tail",
+        "volume": 47855,
+        "organic_rank": 111,
+        "sponsored_rank": 15,
+        "cpc": 0.76,
+        "status": "sponsored_only",
+        "priority": 12593
+      },
+      {
+        "keyword": "baby girl toys",
+        "tier": "category",
+        "volume": 13991,
+        "organic_rank": 82,
+        "sponsored_rank": null,
+        "cpc": 0.47,
+        "status": "missing",
+        "priority": 12503
+      },
+      {
+        "keyword": "monkey",
+        "tier": "category",
+        "volume": 8137,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 0.46,
+        "status": "push",
+        "priority": 12382
+      },
+      {
+        "keyword": "newborn baby toys",
+        "tier": "category",
+        "volume": 3206,
+        "organic_rank": 38,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "push",
+        "priority": 11221
+      },
+      {
+        "keyword": "new baby gifts",
+        "tier": "category",
+        "volume": 15243,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 10670
+      },
+      {
+        "keyword": "lamaze",
+        "tier": "category",
+        "volume": 3588,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": 0.25,
+        "status": "push",
+        "priority": 10046
+      },
+      {
+        "keyword": "bath toys for 1 year old",
+        "tier": "long_tail",
+        "volume": 24298,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": 1.29,
+        "status": "push",
+        "priority": 9418
+      },
+      {
+        "keyword": "baby items",
+        "tier": "category",
+        "volume": 5153,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": 0.4,
+        "status": "push",
+        "priority": 9018
+      },
+      {
+        "keyword": "chew toys",
+        "tier": "category",
+        "volume": 2565,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": 0.17,
+        "status": "push",
+        "priority": 8977
+      },
+      {
+        "keyword": "kids toothbrushes",
+        "tier": "core",
+        "volume": 21907,
+        "organic_rank": 140,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 8763
+      },
+      {
+        "keyword": "baby girl gift",
+        "tier": "category",
+        "volume": 20493,
+        "organic_rank": 68,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 8607
+      },
+      {
+        "keyword": "baby sensory toys",
+        "tier": "category",
+        "volume": 19999,
+        "organic_rank": 141,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 8400
+      },
+      {
+        "keyword": "sensory toys for babies",
+        "tier": "long_tail",
+        "volume": 25874,
+        "organic_rank": 93,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 7762
+      },
+      {
+        "keyword": "moonkie",
+        "tier": "category",
+        "volume": 11005,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7703
+      },
+      {
+        "keyword": "electric toothbrush kids",
+        "tier": "category",
+        "volume": 23014,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 2.31,
+        "status": "push",
+        "priority": 6974
+      },
+      {
+        "keyword": "baby boy gift",
+        "tier": "category",
+        "volume": 3265,
+        "organic_rank": 122,
+        "sponsored_rank": null,
+        "cpc": 0.16,
+        "status": "missing",
+        "priority": 6856
+      },
+      {
+        "keyword": "tommee tippee dummies",
+        "tier": "competitor",
+        "volume": 37474,
+        "organic_rank": 96,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 6745
+      },
+      {
+        "keyword": "little dutch",
+        "tier": "core",
+        "volume": 9430,
+        "organic_rank": 20,
+        "sponsored_rank": null,
+        "cpc": 1.45,
+        "status": "push",
+        "priority": 6503
+      },
+      {
+        "keyword": "bath toy",
+        "tier": "category",
+        "volume": 14371,
+        "organic_rank": 71,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 6036
+      },
+      {
+        "keyword": "oral b kids electric toothbrushes",
+        "tier": "long_tail",
+        "volume": 7893,
+        "organic_rank": 115,
+        "sponsored_rank": null,
+        "cpc": 0.41,
+        "status": "missing",
+        "priority": 5775
+      },
+      {
+        "keyword": "glo pals",
+        "tier": "core",
+        "volume": 4800,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4800
+      },
+      {
+        "keyword": "toddler toothbrush",
+        "tier": "core",
+        "volume": 15610,
+        "organic_rank": 21,
+        "sponsored_rank": 16,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 4683
+      },
+      {
+        "keyword": "teether",
+        "tier": "core",
+        "volume": 10710,
+        "organic_rank": 3,
+        "sponsored_rank": 1,
+        "cpc": 0.23,
+        "status": "own",
+        "priority": 4657
+      },
+      {
+        "keyword": "kids oral b electric toothbrush",
+        "tier": "long_tail",
+        "volume": 5449,
+        "organic_rank": 93,
+        "sponsored_rank": null,
+        "cpc": 0.37,
+        "status": "missing",
+        "priority": 4418
+      },
+      {
+        "keyword": "bath toys for 1+ year old",
+        "tier": "long_tail",
+        "volume": 13504,
+        "organic_rank": 82,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4051
+      },
+      {
+        "keyword": "4 month old baby toys",
+        "tier": "long_tail",
+        "volume": 4077,
+        "organic_rank": 39,
+        "sponsored_rank": null,
+        "cpc": 0.51,
+        "status": "push",
+        "priority": 3997
+      },
+      {
+        "keyword": "toys for babies",
+        "tier": "category",
+        "volume": 3173,
+        "organic_rank": 62,
+        "sponsored_rank": null,
+        "cpc": 0.34,
+        "status": "missing",
+        "priority": 3920
+      },
+      {
+        "keyword": "bath toys for 2 year olds",
+        "tier": "long_tail",
+        "volume": 12012,
+        "organic_rank": 78,
+        "sponsored_rank": null,
+        "cpc": 0.95,
+        "status": "missing",
+        "priority": 3793
+      },
+      {
+        "keyword": "toddler bath toys",
+        "tier": "category",
+        "volume": 8926,
+        "organic_rank": 62,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3749
+      },
+      {
+        "keyword": "bath toys 6 months",
+        "tier": "long_tail",
+        "volume": 3368,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": 0.45,
+        "status": "push",
+        "priority": 3742
+      },
+      {
+        "keyword": "baby stocking fillers",
+        "tier": "core",
+        "volume": 3594,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3594
+      },
+      {
+        "keyword": "baby rattles 0-6 months",
+        "tier": "long_tail",
+        "volume": 9141,
+        "organic_rank": 52,
+        "sponsored_rank": null,
+        "cpc": 1.29,
+        "status": "push",
+        "priority": 3543
+      },
+      {
+        "keyword": "rattle",
+        "tier": "category",
+        "volume": 2560,
+        "organic_rank": 28,
+        "sponsored_rank": null,
+        "cpc": 0.51,
+        "status": "push",
+        "priority": 3514
+      },
+      {
+        "keyword": "nuby",
+        "tier": "category",
+        "volume": 6014,
+        "organic_rank": null,
+        "sponsored_rank": 7,
+        "cpc": 0.53,
+        "status": "sponsored_only",
+        "priority": 3177
+      },
+      {
+        "keyword": "kids bath toys",
+        "tier": "category",
+        "volume": 7454,
+        "organic_rank": 69,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3131
+      },
+      {
+        "keyword": "baby shower gift",
+        "tier": "core",
+        "volume": 5015,
+        "organic_rank": 111,
+        "sponsored_rank": 13,
+        "cpc": 0.66,
+        "status": "sponsored_only",
+        "priority": 3039
+      },
+      {
+        "keyword": "toothbrushes",
+        "tier": "category",
+        "volume": 9036,
+        "organic_rank": 83,
+        "sponsored_rank": null,
+        "cpc": 1.31,
+        "status": "missing",
+        "priority": 2897
+      },
+      {
+        "keyword": "matchsticks",
+        "tier": "core",
+        "volume": 2856,
+        "organic_rank": 24,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2856
+      },
+      {
+        "keyword": "toys for 3 month old baby",
+        "tier": "long_tail",
+        "volume": 2447,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": 0.43,
+        "status": "push",
+        "priority": 2845
+      },
+      {
+        "keyword": "teething gel",
+        "tier": "core",
+        "volume": 9426,
+        "organic_rank": 22,
+        "sponsored_rank": 8,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2828
+      },
+      {
+        "keyword": "hape toys",
+        "tier": "category",
+        "volume": 1615,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.25,
+        "status": "missing",
+        "priority": 2713
+      },
+      {
+        "keyword": "3 month old baby toys",
+        "tier": "long_tail",
+        "volume": 6767,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 1.25,
+        "status": "push",
+        "priority": 2707
+      },
+      {
+        "keyword": "sensory chews",
+        "tier": "category",
+        "volume": 3865,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2706
+      },
+      {
+        "keyword": "bath toys for 4 year olds",
+        "tier": "long_tail",
+        "volume": 5574,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": 0.62,
+        "status": "missing",
+        "priority": 2697
+      },
+      {
+        "keyword": "matchstick monkey",
+        "tier": "brand",
+        "volume": 9433,
+        "organic_rank": 1,
+        "sponsored_rank": 1,
+        "cpc": 0.35,
+        "status": "own",
+        "priority": 2695
+      },
+      {
+        "keyword": "bright starts",
+        "tier": "category",
+        "volume": 2619,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": 0.41,
+        "status": "missing",
+        "priority": 2683
+      },
+      {
+        "keyword": "disney bath toys",
+        "tier": "category",
+        "volume": 3795,
+        "organic_rank": 50,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2656
+      },
+      {
+        "keyword": "ordo",
+        "tier": "category",
+        "volume": 3752,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2626
+      },
+      {
+        "keyword": "taf toys",
+        "tier": "category",
+        "volume": 1207,
+        "organic_rank": 73,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "missing",
+        "priority": 2535
+      },
+      {
+        "keyword": "childrens electric toothbrush",
+        "tier": "category",
+        "volume": 3605,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2524
+      },
+      {
+        "keyword": "toddler slide",
+        "tier": "category",
+        "volume": 3588,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2512
+      },
+      {
+        "keyword": "nuby teether",
+        "tier": "core",
+        "volume": 2008,
+        "organic_rank": 13,
+        "sponsored_rank": 1,
+        "cpc": 0.24,
+        "status": "sponsored_support",
+        "priority": 2510
+      },
+      {
+        "keyword": "bluey bath toys",
+        "tier": "category",
+        "volume": 5888,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2473
+      },
+      {
+        "keyword": "baby sensory toys 6-12 months",
+        "tier": "long_tail",
+        "volume": 7258,
+        "organic_rank": 126,
+        "sponsored_rank": null,
+        "cpc": 0.89,
+        "status": "missing",
+        "priority": 2447
+      },
+      {
+        "keyword": "teething toys for baby",
+        "tier": "long_tail",
+        "volume": 48828,
+        "organic_rank": 2,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 2441
+      },
+      {
+        "keyword": "toys under 10 pounds",
+        "tier": "long_tail",
+        "volume": 3331,
+        "organic_rank": 63,
+        "sponsored_rank": null,
+        "cpc": 0.41,
+        "status": "missing",
+        "priority": 2437
+      },
+      {
+        "keyword": "brush baby",
+        "tier": "core",
+        "volume": 1587,
+        "organic_rank": 29,
+        "sponsored_rank": 26,
+        "cpc": 0.17,
+        "status": "sponsored_support",
+        "priority": 2380
+      },
+      {
+        "keyword": "baby sensory toys 0 6 months",
+        "tier": "long_tail",
+        "volume": 13111,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": 1.66,
+        "status": "missing",
+        "priority": 2369
+      },
+      {
+        "keyword": "teething ring",
+        "tier": "core",
+        "volume": 2425,
+        "organic_rank": 6,
+        "sponsored_rank": 1,
+        "cpc": 0.31,
+        "status": "sponsored_support",
+        "priority": 2347
+      },
+      {
+        "keyword": "new baby gift",
+        "tier": "category",
+        "volume": 3344,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2341
+      },
+      {
+        "keyword": "bath baby",
+        "tier": "category",
+        "volume": 1700,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 2231
+      },
+      {
+        "keyword": "chew toys for autistic children",
+        "tier": "long_tail",
+        "volume": 14488,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": 3.3,
+        "status": "push",
+        "priority": 2195
+      },
+      {
+        "keyword": "bath toys for 2 + year olds",
+        "tier": "long_tail",
+        "volume": 7273,
+        "organic_rank": 74,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2182
+      },
+      {
+        "keyword": "sophie the giraffe",
+        "tier": "core",
+        "volume": 7242,
+        "organic_rank": 22,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2173
+      },
+      {
+        "keyword": "teething powder",
+        "tier": "core",
+        "volume": 7180,
+        "organic_rank": 11,
+        "sponsored_rank": 19,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2154
+      },
+      {
+        "keyword": "baby rattles",
+        "tier": "category",
+        "volume": 2779,
+        "organic_rank": 52,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1945
+      },
+      {
+        "keyword": "baby teether",
+        "tier": "core",
+        "volume": 8144,
+        "organic_rank": 2,
+        "sponsored_rank": 1,
+        "cpc": 0.42,
+        "status": "own",
+        "priority": 1939
+      },
+      {
+        "keyword": "shnuggle baby bath",
+        "tier": "category",
+        "volume": 2727,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1909
+      },
+      {
+        "keyword": "mini silicone baby",
+        "tier": "category",
+        "volume": 2671,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1870
+      },
+      {
+        "keyword": "chew buddy",
+        "tier": "category",
+        "volume": 4376,
+        "organic_rank": 86,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1838
+      },
+      {
+        "keyword": "lamaze toys for babies",
+        "tier": "long_tail",
+        "volume": 6021,
+        "organic_rank": 79,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1806
+      },
+      {
+        "keyword": "baby toys 6 months",
+        "tier": "long_tail",
+        "volume": 5926,
+        "organic_rank": 144,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1778
+      },
+      {
+        "keyword": "mould free bath toys",
+        "tier": "long_tail",
+        "volume": 3556,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1778
+      },
+      {
+        "keyword": "dummies 6-18 months",
+        "tier": "category",
+        "volume": 5288,
+        "organic_rank": null,
+        "sponsored_rank": 16,
+        "cpc": 0.84,
+        "status": "sponsored_only",
+        "priority": 1763
+      },
+      {
+        "keyword": "bath toys for 3 year olds",
+        "tier": "long_tail",
+        "volume": 9133,
+        "organic_rank": 96,
+        "sponsored_rank": null,
+        "cpc": 1.57,
+        "status": "missing",
+        "priority": 1745
+      },
+      {
+        "keyword": "monkey teddy",
+        "tier": "category",
+        "volume": 4127,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1733
+      },
+      {
+        "keyword": "sensory chew toys",
+        "tier": "core",
+        "volume": 1723,
+        "organic_rank": 19,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1723
+      },
+      {
+        "keyword": "6 months+ baby toys",
+        "tier": "long_tail",
+        "volume": 5630,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1689
+      },
+      {
+        "keyword": "toddler bath",
+        "tier": "category",
+        "volume": 4017,
+        "organic_rank": 70,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1687
+      },
+      {
+        "keyword": "oball toys",
+        "tier": "core",
+        "volume": 1675,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1675
+      },
+      {
+        "keyword": "new born toys",
+        "tier": "category",
+        "volume": 2371,
+        "organic_rank": 52,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1660
+      },
+      {
+        "keyword": "rattle toys for babies 0-6 months",
+        "tier": "long_tail",
+        "volume": 3313,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1656
+      },
+      {
+        "keyword": "toy baby",
+        "tier": "category",
+        "volume": 2106,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": 0.55,
+        "status": "missing",
+        "priority": 1608
+      },
+      {
+        "keyword": "bath toys for 4+ year olds",
+        "tier": "long_tail",
+        "volume": 5332,
+        "organic_rank": 144,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1600
+      },
+      {
+        "keyword": "giraffe gifts",
+        "tier": "core",
+        "volume": 5217,
+        "organic_rank": 17,
+        "sponsored_rank": 21,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 1565
+      },
+      {
+        "keyword": "bath seat baby",
+        "tier": "category",
+        "volume": 1835,
+        "organic_rank": 107,
+        "sponsored_rank": null,
+        "cpc": 0.5,
+        "status": "missing",
+        "priority": 1541
+      },
+      {
+        "keyword": "toys for 6 month old girls",
+        "tier": "long_tail",
+        "volume": 2461,
+        "organic_rank": 69,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "missing",
+        "priority": 1538
+      },
+      {
+        "keyword": "bath toys for 3+ year olds",
+        "tier": "long_tail",
+        "volume": 5090,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1527
+      },
+      {
+        "keyword": "sensory chew",
+        "tier": "core",
+        "volume": 1505,
+        "organic_rank": 20,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1505
+      },
+      {
+        "keyword": "6-12 month toys",
+        "tier": "category",
+        "volume": 3564,
+        "organic_rank": 104,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1497
+      },
+      {
+        "keyword": "snuffle babe",
+        "tier": "category",
+        "volume": 5336,
+        "organic_rank": null,
+        "sponsored_rank": 8,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1494
+      },
+      {
+        "keyword": "teething",
+        "tier": "core",
+        "volume": 7872,
+        "organic_rank": 4,
+        "sponsored_rank": 2,
+        "cpc": 0.53,
+        "status": "own",
+        "priority": 1485
+      },
+      {
+        "keyword": "baby toys 12-18 months",
+        "tier": "long_tail",
+        "volume": 3847,
+        "organic_rank": 125,
+        "sponsored_rank": null,
+        "cpc": 0.8,
+        "status": "missing",
+        "priority": 1443
+      },
+      {
+        "keyword": "sonic electric toothbrushes",
+        "tier": "category",
+        "volume": 3226,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1355
+      },
+      {
+        "keyword": "tooth brushes",
+        "tier": "category",
+        "volume": 3219,
+        "organic_rank": 90,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1352
+      },
+      {
+        "keyword": "no mould bath toys",
+        "tier": "long_tail",
+        "volume": 2361,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 0.88,
+        "status": "push",
+        "priority": 1341
+      },
+      {
+        "keyword": "telly tubby toys",
+        "tier": "category",
+        "volume": 1907,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1335
+      },
+      {
+        "keyword": "brush baby replacement heads",
+        "tier": "long_tail",
+        "volume": 2606,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1303
+      },
+      {
+        "keyword": "ordo toothbrush",
+        "tier": "category",
+        "volume": 3086,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1296
+      },
+      {
+        "keyword": "baby teething toy",
+        "tier": "core",
+        "volume": 12924,
+        "organic_rank": 2,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 1292
+      },
+      {
+        "keyword": "ashton and parsons teething powder",
+        "tier": "long_tail",
+        "volume": 6571,
+        "organic_rank": 10,
+        "sponsored_rank": 9,
+        "cpc": 0.77,
+        "status": "sponsored_support",
+        "priority": 1280
+      },
+      {
+        "keyword": "baby remote control toy",
+        "tier": "long_tail",
+        "volume": 2548,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1274
+      },
+      {
+        "keyword": "suction toys",
+        "tier": "category",
+        "volume": 2912,
+        "organic_rank": 116,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1223
+      },
+      {
+        "keyword": "babies toys",
+        "tier": "category",
+        "volume": 1724,
+        "organic_rank": 55,
+        "sponsored_rank": null,
+        "cpc": 1.01,
+        "status": "push",
+        "priority": 1195
+      },
+      {
+        "keyword": "water bob for bath",
+        "tier": "long_tail",
+        "volume": 2323,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1162
+      },
+      {
+        "keyword": "baby toys 3 months",
+        "tier": "long_tail",
+        "volume": 2313,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1156
+      },
+      {
+        "keyword": "electric toothbrush kids 6-12",
+        "tier": "long_tail",
+        "volume": 3810,
+        "organic_rank": 134,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1143
+      },
+      {
+        "keyword": "finger toothbrush",
+        "tier": "category",
+        "volume": 2712,
+        "organic_rank": 109,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1139
+      },
+      {
+        "keyword": "sensory bath toys",
+        "tier": "category",
+        "volume": 1620,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1134
+      },
+      {
+        "keyword": "toys under 5 pounds",
+        "tier": "long_tail",
+        "volume": 3752,
+        "organic_rank": 105,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1126
+      },
+      {
+        "keyword": "baby teething",
+        "tier": "core",
+        "volume": 2989,
+        "organic_rank": 12,
+        "sponsored_rank": 2,
+        "cpc": 0.8,
+        "status": "sponsored_support",
+        "priority": 1121
+      },
+      {
+        "keyword": "yookidoo bath toys",
+        "tier": "core",
+        "volume": 1111,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1111
+      },
+      {
+        "keyword": "childrens toothbrush",
+        "tier": "category",
+        "volume": 2570,
+        "organic_rank": 113,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1079
+      },
+      {
+        "keyword": "o balls for baby",
+        "tier": "long_tail",
+        "volume": 2124,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1062
+      },
+      {
+        "keyword": "girls electric toothbrush",
+        "tier": "category",
+        "volume": 2511,
+        "organic_rank": 106,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1055
+      },
+      {
+        "keyword": "baby slide",
+        "tier": "category",
+        "volume": 2055,
+        "organic_rank": 45,
+        "sponsored_rank": null,
+        "cpc": 1.37,
+        "status": "push",
+        "priority": 1050
+      },
+      {
+        "keyword": "0-3 months baby toys",
+        "tier": "long_tail",
+        "volume": 2282,
+        "organic_rank": 49,
+        "sponsored_rank": null,
+        "cpc": 1.1,
+        "status": "push",
+        "priority": 1037
+      },
+      {
+        "keyword": "newborn toy",
+        "tier": "category",
+        "volume": 1477,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1034
+      },
+      {
+        "keyword": "baby toys 3+ months",
+        "tier": "long_tail",
+        "volume": 2062,
+        "organic_rank": 56,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1031
+      },
+      {
+        "keyword": "bath barista",
+        "tier": "core",
+        "volume": 1012,
+        "organic_rank": 28,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1012
+      },
+      {
+        "keyword": "toddler toothpaste",
+        "tier": "category",
+        "volume": 3598,
+        "organic_rank": null,
+        "sponsored_rank": 31,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1007
+      },
+      {
+        "keyword": "frozen bath toys",
+        "tier": "core",
+        "volume": 1006,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1006
+      },
+      {
+        "keyword": "baby bath set",
+        "tier": "category",
+        "volume": 2378,
+        "organic_rank": 89,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 999
+      },
+      {
+        "keyword": "boys electric toothbrush",
+        "tier": "category",
+        "volume": 2327,
+        "organic_rank": 138,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 977
+      },
+      {
+        "keyword": "toomies bath toys",
+        "tier": "competitor",
+        "volume": 3236,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 971
+      },
+      {
+        "keyword": "toys 6 months+",
+        "tier": "category",
+        "volume": 2312,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 971
+      },
+      {
+        "keyword": "highchair toy",
+        "tier": "category",
+        "volume": 3452,
+        "organic_rank": 85,
+        "sponsored_rank": 28,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 967
+      },
+      {
+        "keyword": "kids toothbrush heads",
+        "tier": "category",
+        "volume": 2279,
+        "organic_rank": 137,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 957
+      },
+      {
+        "keyword": "kids battery toothbrush",
+        "tier": "category",
+        "volume": 2245,
+        "organic_rank": 125,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 943
+      },
+      {
+        "keyword": "mold free bath toys for kids",
+        "tier": "long_tail",
+        "volume": 1884,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 942
+      },
+      {
+        "keyword": "fisher price duck",
+        "tier": "core",
+        "volume": 939,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 939
+      },
+      {
+        "keyword": "7 months baby toys",
+        "tier": "long_tail",
+        "volume": 1877,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 938
+      },
+      {
+        "keyword": "teething toys",
+        "tier": "core",
+        "volume": 9362,
+        "organic_rank": 2,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 936
+      },
+      {
+        "keyword": "kids electric toothbrushes 6-12",
+        "tier": "long_tail",
+        "volume": 3092,
+        "organic_rank": 85,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 928
+      },
+      {
+        "keyword": "baby bath toy",
+        "tier": "category",
+        "volume": 4393,
+        "organic_rank": 27,
+        "sponsored_rank": 28,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 923
+      }
+    ],
+    "tiers": {
+      "category": {
+        "keywords": 163,
+        "volume": 1094535,
+        "gaps": 136
+      },
+      "long_tail": {
+        "keywords": 152,
+        "volume": 522907,
+        "gaps": 95
+      },
+      "core": {
+        "keywords": 60,
+        "volume": 212307,
+        "gaps": 16
+      },
+      "competitor": {
+        "keywords": 7,
+        "volume": 46867,
+        "gaps": 5
+      },
+      "brand": {
+        "keywords": 5,
+        "volume": 15614,
+        "gaps": 2
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "baby toys",
+        "tier": "category",
+        "volume": 143897,
+        "organic_rank": 89,
+        "sponsored_rank": null,
+        "cpc": 0.4,
+        "status": "missing",
+        "priority": 151092
+      },
+      {
+        "keyword": "bath toys",
+        "tier": "category",
+        "volume": 115565,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.43,
+        "status": "missing",
+        "priority": 112877
+      },
+      {
+        "keyword": "toothbrush",
+        "tier": "category",
+        "volume": 161084,
+        "organic_rank": 108,
+        "sponsored_rank": null,
+        "cpc": 0.77,
+        "status": "missing",
+        "priority": 87864
+      },
+      {
+        "keyword": "baby toothbrush",
+        "tier": "category",
+        "volume": 16988,
+        "organic_rank": 21,
+        "sponsored_rank": null,
+        "cpc": 0.14,
+        "status": "push",
+        "priority": 59458
+      },
+      {
+        "keyword": "kids electric toothbrush",
+        "tier": "category",
+        "volume": 72042,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 50429
+      },
+      {
+        "keyword": "newborn toys",
+        "tier": "category",
+        "volume": 15339,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "missing",
+        "priority": 32212
+      },
+      {
+        "keyword": "baby einstein",
+        "tier": "category",
+        "volume": 18502,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": 0.44,
+        "status": "push",
+        "priority": 29435
+      },
+      {
+        "keyword": "baby rattle",
+        "tier": "category",
+        "volume": 7261,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 23103
+      },
+      {
+        "keyword": "baby toy",
+        "tier": "category",
+        "volume": 17415,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": 0.55,
+        "status": "push",
+        "priority": 22165
+      },
+      {
+        "keyword": "baby gift",
+        "tier": "category",
+        "volume": 12019,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": 0.47,
+        "status": "push",
+        "priority": 17901
+      },
+      {
+        "keyword": "baby shower gifts",
+        "tier": "category",
+        "volume": 41807,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 17559
+      },
+      {
+        "keyword": "slides",
+        "tier": "category",
+        "volume": 4790,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "push",
+        "priority": 16765
+      },
+      {
+        "keyword": "baby bath toys",
+        "tier": "category",
+        "volume": 34626,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 14543
+      },
+      {
+        "keyword": "baby sensory",
+        "tier": "category",
+        "volume": 7478,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": 0.24,
+        "status": "missing",
+        "priority": 13086
+      },
+      {
+        "keyword": "baby girl toys",
+        "tier": "category",
+        "volume": 13991,
+        "organic_rank": 82,
+        "sponsored_rank": null,
+        "cpc": 0.47,
+        "status": "missing",
+        "priority": 12503
+      },
+      {
+        "keyword": "monkey",
+        "tier": "category",
+        "volume": 8137,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 0.46,
+        "status": "push",
+        "priority": 12382
+      },
+      {
+        "keyword": "newborn baby toys",
+        "tier": "category",
+        "volume": 3206,
+        "organic_rank": 38,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "push",
+        "priority": 11221
+      },
+      {
+        "keyword": "new baby gifts",
+        "tier": "category",
+        "volume": 15243,
+        "organic_rank": 35,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 10670
+      },
+      {
+        "keyword": "lamaze",
+        "tier": "category",
+        "volume": 3588,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": 0.25,
+        "status": "push",
+        "priority": 10046
+      },
+      {
+        "keyword": "bath toys for 1 year old",
+        "tier": "long_tail",
+        "volume": 24298,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": 1.29,
+        "status": "push",
+        "priority": 9418
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "category": 3311,
+        "long_tail": 564
+      },
+      "monthly_by_ad_type": {
+        "SP": 2220,
+        "SB": 828,
+        "SBV": 828,
+        "SD (remarketing/retention)": 431
+      },
+      "monthly_total": 4306,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.1
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.0,
+      "multipack_share": 0.0,
+      "consumable_category": true,
+      "likelihood": "medium"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Baby Products",
+    "available": false
+  },
+  "job_ad_present": false
+}

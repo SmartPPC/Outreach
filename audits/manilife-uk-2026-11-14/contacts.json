@@ -1,0 +1,45 @@
+{
+  "website": null,
+  "note": "brand website not found; pass --website",
+  "emails": [],
+  "organisations": [
+    {
+      "name": "ManiLife",
+      "kind": "brand"
+    }
+  ],
+  "companies_house": [],
+  "linkedin_profiles": [],
+  "linkedin_searches": [
+    {
+      "org": "ManiLife",
+      "role": "founder",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22ManiLife%22%20founder"
+    },
+    {
+      "org": "ManiLife",
+      "role": "ecommerce",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22ManiLife%22%20ecommerce"
+    },
+    {
+      "org": "ManiLife",
+      "role": "amazon",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22ManiLife%22%20amazon"
+    },
+    {
+      "org": "ManiLife",
+      "role": "marketing",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22ManiLife%22%20marketing"
+    }
+  ],
+  "apollo": {
+    "organisation": {
+      "name": "ManiLife | B Corp",
+      "domain": "mani-life.com",
+      "id": "5b80cbd3324d4422a0c07453",
+      "people_search": "https://app.apollo.io/#/people?organizationIds[]=5b80cbd3324d4422a0c07453"
+    },
+    "people": [],
+    "note": "Apollo free plan: people search and email reveal blocked; open the link to reveal (1 credit)."
+  }
+}

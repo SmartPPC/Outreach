@@ -1,0 +1,209 @@
+<title>Matchstick Monkey Amazon Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the five recommendations lead, evidence sections follow in the order the email cites them. */
+:root {
+  --bg: #f6f1e7;
+  --paper: #fffdf8;
+  --ink: #1a1a18;
+  --ink-soft: #4a4842;
+  --muted: #7d7a72;
+  --rule: #d9d2c3;
+  --accent: #d85a30;
+  --accent-soft: #f3d9cc;
+  --bar: #4a4842;
+  --s0: #d85a30; --s1: #2a78d6; --s2: #1baf7a; --s3: #c98500; --s4: #6250d6; --s5: #e87ba4;
+  --good: #0a7d0a; --warn: #a86a00; --fail: #c03434;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+    --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+    --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+    --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+  --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+  --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+  --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 56px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
+h3 { font-size: 17px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow, .tag, .stat-label, th, .tick, small { font-family: var(--mono); }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+section { display: grid; gap: 20px; min-width: 0; }
+section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 14px; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.subject:empty { display: none; }
+.subject { font-size: 17px; color: var(--ink-soft); max-width: 70ch; }
+.headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
+
+/* Recommendations: numbered because they are in priority order */
+.points { list-style: none; counter-reset: pt; margin: 0; padding: 0; display: grid; gap: 14px; }
+.point { counter-increment: pt; display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 14px; padding: 20px 20px 18px 16px; }
+.point::before { content: counter(pt); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); text-align: center; }
+.point-body { display: grid; gap: 8px; min-width: 0; }
+.tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.quote { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--ink-soft); font-size: 15px; }
+details summary { cursor: pointer; color: var(--ink-soft); font-size: 14px; }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14px; display: grid; gap: 4px; }
+
+/* Stats */
+.stats { break-inside: avoid; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.stat { background: var(--paper); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.stat-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat-note { font-size: 13px; color: var(--muted); }
+
+/* Charts */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.two > * { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.chart { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--bar); }
+.chart .bar:hover { fill: var(--accent); }
+.chart .grid { stroke: var(--rule); stroke-dasharray: 2 4; }
+.chart .axis { stroke: var(--muted); }
+.chart .tick { fill: var(--muted); font-size: 11px; }
+.empty { color: var(--muted); font-style: italic; }
+.hbars { display: grid; gap: 8px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 160px) 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.hbar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; background: var(--rule); border-radius: 5px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+.hbar.mine { font-weight: 600; }
+.hbar.mine .hbar-fill { background: var(--accent); }
+.hbar-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.stack { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; }
+.seg, .sw { background: var(--s0); }
+.s1 { background: var(--s1); } .s2 { background: var(--s2); } .s3 { background: var(--s3); } .s4 { background: var(--s4); } .s5 { background: var(--s5); }
+.legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend small { color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.budget-total { font-family: var(--serif); font-size: 26px; }
+
+/* Tables */
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child > * { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+table.content td { white-space: nowrap; }
+table.content th[scope="row"] { text-transform: none; letter-spacing: 0; color: var(--ink); font-size: 13px; min-width: 180px; }
+table.content th[scope="row"] small { display: block; color: var(--muted); font-family: var(--sans); white-space: normal; }
+.chip { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; color: var(--paper); }
+.chip.good { background: var(--good); } .chip.warn { background: var(--warn); } .chip.fail { background: var(--fail); }
+.kw-status { font-size: 13px; color: var(--ink-soft); }
+.kw-status.push, .kw-status.brand_defence_gap { color: var(--accent); font-weight: 600; }
+.attackers { padding-left: 18px; margin: 0; display: grid; gap: 6px; }
+.attackers small { display: block; color: var(--muted); font-family: var(--sans); }
+ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.hero-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px; align-content: start; min-width: 0; }
+.hero-card header { display: grid; gap: 4px; }
+.hero-card header a { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.hero-meta { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.hero-card h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); }
+.hero-card ul { padding-left: 0; list-style: none; font-size: 14px; gap: 4px; }
+.hero-card ul small, .quick small { display: block; color: var(--muted); }
+.hero-card p { font-size: 14px; }
+.hero-card .action { font-weight: 600; border-left: 2px solid var(--accent); padding-left: 10px; }
+.flags li { display: flex; gap: 8px; align-items: baseline; }
+.flags li.verdict { display: block; font-style: italic; color: var(--ink-soft); }
+.quick { font-size: 14px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
+</style>
+
+<main class="page">
+  <div class="hero">
+    <span class="eyebrow">Smart PPC · Amazon audit</span>
+    <h1>Matchstick Monkey</h1>
+    <p class="subject"></p>
+    <div class="meta"><span>amazon.co.uk</span><span>Prepared 2026-11-14</span></div>
+    <p class="headline">Matchstick Monkey&#x27;s teethers own &quot;teething toys for baby&quot;, but the sonic toothbrush and the mid-page teething searches have no ads near the top, and two best-sellers are split across duplicate listings.</p>
+  </div>
+
+  <section>
+    <header><span class="eyebrow">Priorities</span><h2>What I would do first</h2></header>
+    <ol class="points"><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Sonic toothbrush: push &quot;baby toothbrush&quot;, &quot;toddler toothbrush&quot; and &quot;electric toothbrush kids&quot;</h3><p>The toothbrush (~£18,000 a month) ranks #21 for &quot;baby toothbrush&quot; (17,000 searches a month) and &quot;toddler toothbrush&quot; (15,600), and #30 for &quot;electric toothbrush kids&quot; (23,000), with no ads near the top on the first and third.</p><details><summary>What we saw</summary><ul><li>baby toothbrush: 16,988/mo, organic #21, no sponsored rank (Jungle Scout)</li><li>toddler toothbrush: 15,610/mo, organic #21, sponsored #16</li><li>electric toothbrush kids: 23,014/mo, organic #30, no sponsored rank</li><li>Family revenue ~£18,355/mo, 1,330 units, 4.3★ (Jungle Scout estimate)</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Animal teether: push &quot;baby teething toy&quot; and &quot;teething toys&quot; from page one to the top</h3><p>The Ludo Lion teether ranks #6 for &quot;baby teething toy&quot; (12,900 a month) and #8 for &quot;teething toys&quot; (9,400) with no ads near the top. You already own &quot;teething toys for baby&quot; (#2 organic, #1 sponsored), so these are the next ones to win.</p><details><summary>What we saw</summary><ul><li>baby teething toy: 12,924/mo, organic #6, no sponsored rank</li><li>teething toys: 9,362/mo, organic #8; teething toy: 4,107/mo, #5</li><li>teething toys for baby: 48,828/mo, organic #2, sponsored #1</li><li>Animal teether family ~£18,599/mo, 4.8★ from 2,942 reviews (Jungle Scout estimate)</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">catalogue</span><h3>Tidy-up: Teddy Tiger teether and Ludo Lion toothbrush are listed more than once</h3><p>The Teddy Tiger teether sits on two separate listings (2,952 reviews on one, 281 on the other), and the Ludo Lion toothbrush on three. Merging them puts the reviews and sales history in one place.</p><details><summary>What we saw</summary><ul><li>Teddy Tiger teether: B0CDX4RHKN (~£25,919/mo, 2,952 reviews) and B0CDX4JM5P (~£1,961/mo, 281 reviews), different parent listings</li><li>Ludo Lion sonic toothbrush: B0CZ9LR1XX (~£17,095/mo, 422 reviews), B0DB8Q7M35 and B0GMRGX4SQ (26 reviews)</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Teethers and bath toys: cut ads on gifts, dummies and other brands</h3><p>The teethers show sponsored on searches for different products: &quot;nuby&quot; (6,000 a month), &quot;giraffe gifts&quot;, &quot;snuffle babe&quot;, &quot;baby shower gift&quot;, MAM dummies and Bonjela gel, where they don&#x27;t rank organically. Negatives free budget for the teething searches above.</p><details><summary>What we saw</summary><ul><li>Original teether B0FXBXDLPZ: nuby (6,014/mo), giraffe gifts (5,217), mam newborn dummies (2,329), ashton parsons teething gel (1,594)</li><li>Animal teether B07YXDNZSG: snuffle babe (5,336), baby shower gift (5,015), highchair toy (3,452), bonjela baby teething gel (1,916)</li><li>Toothbrush: kids toothbrushes (21,907/mo) sponsored with organic #140</li></ul></details></div></li></ol>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Snapshot</span><h2>The business today</h2></header>
+    <div class="stats"><div class="stat"><span class="stat-label">ASINs listed</span><span class="stat-value">169</span><span class="stat-note">99 live and selling</span></div><div class="stat"><span class="stat-label">Best-sellers</span><span class="stat-value">6</span><span class="stat-note">product families making 81% of revenue</span></div><div class="stat"><span class="stat-label">Est. monthly revenue</span><span class="stat-value">£136,779</span><span class="stat-note">Jungle Scout 30-day estimate</span></div><div class="stat"><span class="stat-label">Sponsored coverage</span><span class="stat-value">20%</span><span class="stat-note">of their top 30 keywords</span></div><div class="stat"><span class="stat-label">Mobile-ready best-sellers</span><span class="stat-value">6 of 6</span><span class="stat-note">zoom, video, title, bullets and A+ on a phone</span></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Best-sellers</span><h2>Where the money is</h2>
+      <p>The products below make most of the revenue, so every recommendation starts here.</p></header>
+    <div class="heroes"><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0FXBXDLPZ">B0FXBXDLPZ</a><h3>Matchstick Monkey Original Teether with Gel Applicator, Hearts</h3><span class="hero-meta">£42,188/mo · 7,043 units · £10.99 · 4.8★ (8,750)</span></header><p class="action">Shorten the 5 long bullets; negate nuby, giraffe gifts and dummy searches.</p><div><h4>Push</h4><ul><li>“baby gifts” <small>23,360/mo · organic #42 · £0.18 CPC</small></li><li>“baby toy” <small>17,415/mo · organic #37 · £0.55 CPC</small></li><li>“new baby gifts” <small>15,243/mo · organic #35</small></li></ul></div><div><h4>Cut</h4><p>“nuby”, “giraffe gifts”, “baby wishlist list”, “mam newborn dummies”, “baby essentials for newborn girl”</p></div><div><h4>Mobile · 88/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (1800px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 5 bullet(s) over 250 characters; mobile shows these collapsed</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B07YXDNZSG">B07YXDNZSG</a><h3>Matchstick Monkey Animal Teether with Gel Applicator, Ludo Lion</h3><span class="hero-meta">£18,599/mo · 2,932 units · £9.34 · 4.8★ (2,942)</span></header><p class="action">Push baby teething toy (#6) and teething toys (#8).</p><div><h4>Push</h4><ul><li>“baby teething toy” <small>12,924/mo · organic #6</small></li><li>“teething toys” <small>9,362/mo · organic #8</small></li><li>“teething” <small>7,872/mo · organic #38 · £0.53 CPC</small></li></ul></div><div><h4>Cut</h4><p>“snuffle babe”, “baby shower gift”, “highchair toy”, “baby presents”, “baby wishlist list”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 2 brand video(s), shortest 21s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 5 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0DTJ6LHSJ">B0DTJ6LHSJ</a><h3>Matchstick Monkey Baby Electric Sonic Toothbrush, Dusty Pink</h3><span class="hero-meta">£18,355/mo · 1,330 units · £12.99 · 4.3★ (428)</span></header><p class="action">Push baby toothbrush, toddler toothbrush and electric toothbrush kids; merge the duplicate Ludo Lion listings.</p><div><h4>Push</h4><ul><li>“kids electric toothbrush” <small>72,042/mo · organic #41</small></li><li>“electric toothbrush kids” <small>23,014/mo · organic #30 · £2.31 CPC</small></li><li>“baby toothbrush” <small>16,988/mo · organic #21 · £0.14 CPC</small></li></ul></div><div><h4>Cut</h4><p>“kids toothbrushes”, “oral b kids toothbrush”, “oral b toothbrush kids”, “baby tongue cleaner newborn”, “finger toothbrush baby”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 2 brand video(s), shortest 27s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 5 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 6 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B072XHLRC9">B072XHLRC9</a><h3>Matchstick Monkey, Antimicrobial Silicone Teether, Easy To Grip, BPA Free, 3 Months Old+, </h3><span class="hero-meta">£14,603/mo · 4,506 units · £7.19 · 4.8★ (2,266)</span></header><p class="action">Fix the title so the size shows on mobile; push teething powder (#26).</p><div><h4>Push</h4><ul><li>“baby rattles 0-6 months” <small>9,141/mo · organic #56 · £1.29 CPC</small></li><li>“teething powder” <small>7,180/mo · organic #26</small></li><li>“3 month old baby toys” <small>6,767/mo · organic #48 · £1.25 CPC</small></li></ul></div><div><h4>Cut</h4><p>“baby gifts”, “ashton and parsons teething powder”, “dummies 6-18 months”, “stocking fillers for 1 year old”, “baby tous 6-12 month”</p></div><div><h4>Mobile · 83/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 21s</li><li><span class="chip warn" title="Needs work">!</span> Title in search: cut off on mobile before the size/pack</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 5 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B09R414M3N">B09R414M3N</a><h3>Matchstick Monkey, Bathtime Slide Set, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory </h3><span class="hero-meta">£9,031/mo · 904 units · £14.99 · 4.4★ (473)</span></header><p class="action">Negate light-up and duck searches; test bath toys for 1 year old.</p><div><h4>Push</h4><ul><li>“bath toys for 1 year old” <small>24,298/mo · organic #51 · £1.29 CPC</small></li><li>“slides” <small>4,790/mo · organic #46 · £0.18 CPC</small></li><li>“baby bath toy” <small>4,393/mo · organic #40</small></li></ul></div><div><h4>Cut</h4><p>“kids bath”, “light up bath cubes”, “baby stocking fillers 6-12 months”, “sophie la giraffe”, “teething monkey”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 3 brand video(s), shortest 19s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 1 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B09R3TKL2V">B09R3TKL2V</a><h3>Matchstick Monkey, Bathtime Wobblers, Antimicrobial Baby Bath Toy, Easy To Grip, Sensory L</h3><span class="hero-meta">£7,758/mo · 594 units · £10.00 · 4.7★ (183)</span></header><p class="action">Push bath toys 6 months (#13) and baby stocking fillers (#8).</p><div><h4>Push</h4><ul><li>“baby einstein” <small>18,502/mo · organic #44 · £0.44 CPC</small></li><li>“baby bath toys 0-6 months” <small>4,254/mo · organic #55 · £2.73 CPC</small></li><li>“baby stocking fillers” <small>3,594/mo · organic #8</small></li></ul></div><div><h4>Cut</h4><p>“bath ducks”, “pink dinosaur”, “bath toys toddler”, “bluey toys age 1”, “toddler bath toy”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2000px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 21s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 1 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 7 A+ images with light, phone-friendly text</li></ul></div></article></div>
+  </section>
+
+  <section><header><span class="eyebrow">Quick wins</span><h2>Catalogue tidy-up</h2></header><ul class="quick"><li>Duplicate listings: B0CDX4RHKN / B0CDX4JM5P <small>Matchstick Monkey Animal Teether with Gel Applicator, Teddy Tiger</small></li><li>Duplicate listings: B0CZ9LR1XX / B0DB8Q7M35 / B0GMRGX4SQ <small>Matchstick Monkey Baby Electric Sonic Toothbrush, Ludo Lion</small></li><li>Duplicate listings: B0CG7KTCXX / B0CG7RSGWZ <small>Matchstick Monkey, Playtime Wooden Pull Along Toy, Race or Push to Encourage Ima</small></li></ul></section>
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Content on the best-sellers</h2><p>Strong ratings (4.3–4.8★) and good mobile scores (83–92). Across the range, bullets run over 250 characters and collapse on a phone; the silicone teether&#x27;s title cuts off before the size.</p></header>
+    <div class="scroll"><table class="content"><thead><tr><th>Listing</th><th>Score</th><th>Images</th><th>Video</th><th>A Plus</th><th>Title</th><th>Bullets</th><th>Bullet Depth</th><th>Rating</th><th>Reviews</th></tr></thead><tbody><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B079G4DGP6">B079G4DGP6</a><small>Matchstick Monkey, Original Teether &amp; Gel Applicator, Antimi</small></th><td class="num">100</td><td><span class="chip good" title="Good">✓</span> 9 images</td><td><span class="chip good" title="Good">✓</span> 1 video</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 161 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 400 chars</td><td><span class="chip good" title="Good">✓</span> 4.8★</td><td><span class="chip good" title="Good">✓</span> 8758 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0H4RP87J2">B0H4RP87J2</a><small>Matchstick Monkey, Antimicrobial Silicone Teether &amp; Gel Appl</small></th><td class="num">50</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip good" title="Good">✓</span> 112 chars</td><td><span class="chip fail" title="Missing">✕</span> 1 bullets</td><td><span class="chip good" title="Good">✓</span> avg 252 chars</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0H8X54DBY">B0H8X54DBY</a><small>Matchstick Monkey Baby Electric Sonic Toothbrush, Antimicrob</small></th><td class="num">50</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip good" title="Good">✓</span> 98 chars</td><td><span class="chip fail" title="Missing">✕</span> 2 bullets</td><td><span class="chip good" title="Good">✓</span> avg 264 chars</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0G39VGL73">B0G39VGL73</a><small>Matchstick Monkey Mini Teether with Gel Applicator, Mint Gre</small></th><td class="num">81</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip good" title="Good">✓</span> 3 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip warn" title="Needs work">!</span> 62 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 400 chars</td><td><span class="chip good" title="Good">✓</span> 4.8★</td><td><span class="chip good" title="Good">✓</span> 2263 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B09R414M3N">B09R414M3N</a><small>Matchstick Monkey, Bathtime Slide Set, Antimicrobial Baby Ba</small></th><td class="num">100</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip good" title="Good">✓</span> 6 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 173 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 229 chars</td><td><span class="chip good" title="Good">✓</span> 4.4★</td><td><span class="chip good" title="Good">✓</span> 473 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0CVPWCVPC">B0CVPWCVPC</a><small>Matchstick Monkey, Bathtime Wobblers, Antimicrobial Baby Bat</small></th><td class="num">50</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip good" title="Good">✓</span> 146 chars</td><td><span class="chip fail" title="Missing">✕</span> 1 bullets</td><td><span class="chip good" title="Good">✓</span> avg 263 chars</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Advertising</span><h2>Keyword map and where to spend</h2><p>Ads show on 6 of the top 30 searches. Fund the toothbrush searches and the page-one teething searches, paid for by cutting gift, dummy and rival-brand drift. Indicative ~£4,300/mo across the account.</p></header>
+    <div class="two">
+      <div><h3>Keywords by tier</h3><div class="scroll"><table><thead><tr><th>Tier</th><th class="num">Keywords</th><th class="num">Searches/mo</th><th class="num">Gaps</th></tr></thead><tbody><tr><td>Category</td><td class="num">163</td><td class="num">1,094,535</td><td class="num">136</td></tr><tr><td>Long-tail</td><td class="num">152</td><td class="num">522,907</td><td class="num">95</td></tr><tr><td>Core</td><td class="num">60</td><td class="num">212,307</td><td class="num">16</td></tr><tr><td>Competitor</td><td class="num">7</td><td class="num">46,867</td><td class="num">5</td></tr><tr><td>Brand</td><td class="num">5</td><td class="num">15,614</td><td class="num">2</td></tr></tbody></table></div></div>
+      <div><h3>Indicative monthly budget</h3><span class="budget-total">£4,306</span><div class="stack"><span class="seg s0" style="flex:2220" title="SP: £2,220"></span><span class="seg s1" style="flex:828" title="SB: £828"></span><span class="seg s2" style="flex:828" title="SBV: £828"></span><span class="seg s3" style="flex:431" title="SD (remarketing/retention): £431"></span></div><ul class="legend"><li><span class="sw s0"></span>SP <b>£2,220</b> <small>52%</small></li><li><span class="sw s1"></span>SB <b>£828</b> <small>19%</small></li><li><span class="sw s2"></span>SBV <b>£828</b> <small>19%</small></li><li><span class="sw s3"></span>SD (remarketing/retention) <b>£431</b> <small>10%</small></li></ul></div>
+    </div>
+    <h3>Focus keywords</h3>
+    <div class="scroll"><table><thead><tr><th>Keyword</th><th>Tier</th><th class="num">Searches/mo</th><th class="num">Organic</th><th class="num">Sponsored</th><th class="num">CPC</th><th>Status</th></tr></thead><tbody><tr><td>baby toys</td><td>Category</td><td class="num">143,897</td><td class="num">89</td><td class="num">–</td><td class="num">£0.40</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>bath toys</td><td>Category</td><td class="num">115,565</td><td class="num">95</td><td class="num">–</td><td class="num">£0.43</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>toothbrush</td><td>Category</td><td class="num">161,084</td><td class="num">108</td><td class="num">–</td><td class="num">£0.77</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby toothbrush</td><td>Category</td><td class="num">16,988</td><td class="num">21</td><td class="num">–</td><td class="num">£0.14</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>kids electric toothbrush</td><td>Category</td><td class="num">72,042</td><td class="num">41</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>newborn toys</td><td>Category</td><td class="num">15,339</td><td class="num">72</td><td class="num">–</td><td class="num">£0.19</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby einstein</td><td>Category</td><td class="num">18,502</td><td class="num">44</td><td class="num">–</td><td class="num">£0.44</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>baby rattle</td><td>Category</td><td class="num">7,261</td><td class="num">44</td><td class="num">–</td><td class="num">£0.22</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>baby toy</td><td>Category</td><td class="num">17,415</td><td class="num">37</td><td class="num">–</td><td class="num">£0.55</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>baby gift</td><td>Category</td><td class="num">12,019</td><td class="num">35</td><td class="num">–</td><td class="num">£0.47</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>baby shower gifts</td><td>Category</td><td class="num">41,807</td><td class="num">67</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>slides</td><td>Category</td><td class="num">4,790</td><td class="num">46</td><td class="num">–</td><td class="num">£0.18</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>baby bath toys</td><td>Category</td><td class="num">34,626</td><td class="num">61</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby sensory</td><td>Category</td><td class="num">7,478</td><td class="num">94</td><td class="num">–</td><td class="num">£0.24</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby girl toys</td><td>Category</td><td class="num">13,991</td><td class="num">82</td><td class="num">–</td><td class="num">£0.47</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>monkey</td><td>Category</td><td class="num">8,137</td><td class="num">30</td><td class="num">–</td><td class="num">£0.46</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>newborn baby toys</td><td>Category</td><td class="num">3,206</td><td class="num">38</td><td class="num">–</td><td class="num">£0.15</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>new baby gifts</td><td>Category</td><td class="num">15,243</td><td class="num">35</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>lamaze</td><td>Category</td><td class="num">3,588</td><td class="num">57</td><td class="num">–</td><td class="num">£0.25</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>bath toys for 1 year old</td><td>Long-tail</td><td class="num">24,298</td><td class="num">51</td><td class="num">–</td><td class="num">£1.29</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Competitors</span><h2>Who is taking the clicks</h2></header>
+    <div class="two">
+      <div><h3>Share of voice across category searches</h3><div class="hbars"><div class="hbar"><span class="hbar-label">Oral-B</span><span class="hbar-track"><span class="hbar-fill" style="width:100.0%" title="Oral-B: 9%"></span></span><span class="hbar-value">9%</span></div><div class="hbar"><span class="hbar-label">Tommee Tippee</span><span class="hbar-track"><span class="hbar-fill" style="width:95.3%" title="Tommee Tippee: 8%"></span></span><span class="hbar-value">8%</span></div><div class="hbar"><span class="hbar-label">GINNO</span><span class="hbar-track"><span class="hbar-fill" style="width:58.1%" title="GINNO: 5%"></span></span><span class="hbar-value">5%</span></div><div class="hbar"><span class="hbar-label">URMYWO</span><span class="hbar-track"><span class="hbar-fill" style="width:57.0%" title="URMYWO: 5%"></span></span><span class="hbar-value">5%</span></div><div class="hbar"><span class="hbar-label">HahaGift</span><span class="hbar-track"><span class="hbar-fill" style="width:57.0%" title="HahaGift: 5%"></span></span><span class="hbar-value">5%</span></div><div class="hbar mine"><span class="hbar-label">Matchstick Monkey</span><span class="hbar-track"><span class="hbar-fill" style="width:52.3%" title="Matchstick Monkey: 4%"></span></span><span class="hbar-value">4%</span></div><div class="hbar"><span class="hbar-label">Toomies</span><span class="hbar-track"><span class="hbar-fill" style="width:44.2%" title="Toomies: 4%"></span></span><span class="hbar-value">4%</span></div><div class="hbar"><span class="hbar-label">Fokky</span><span class="hbar-track"><span class="hbar-fill" style="width:37.2%" title="Fokky: 3%"></span></span><span class="hbar-value">3%</span></div></div></div>
+      <div><h3>Ads on their brand name</h3><ul class="attackers"><li><b>Montessori Toys</b> sponsored at position 20 on “matchstick monkey”<small>Montessori Toys Wooden Board Games for Kids Age 3+ with Sticks, Balls | Dice color sorting</small></li><li><b>Montessori Toys</b> sponsored at position 55 on “matchstick monkey”<small>Montessori Toys Wooden Board Games for Kids Age 3+ with Sticks, Balls | Dice color sorting</small></li><li><b>6 PCS</b> sponsored at position 15 on “matchstickmonkey”<small>6 PCS Sensory Chew Necklace, Meet Children’s Bite Needs, BPA-Free | Silicone Chew Necklace</small></li><li><b>My Carry</b> sponsored at position 50 on “matchstickmonkey”<small>My Carry Potty Toddler Travel Potty 18 Months to 3 Years, Ladybird | Portable Leak-Proof T</small></li></ul><p>They do appear in their own brand-term ads.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Amazon Marketing Cloud</span><h2>Path to purchase and repeat buying</h2></header>
+    <p>Repeat-purchase signals: medium (Subscribe &amp; Save on 0% of ASINs, multipacks 0%, consumable category).</p><div class="two"><div><h3>What we expect AMC to show</h3><ul><li>Teething and first toothbrush follow each other in the same months; AMC would show how many teether buyers go on to buy the toothbrush.</li></ul></div><div><h3>Questions we would answer in week one</h3><ol><li>Which product do new customers buy first?</li><li>How many teether buyers come back for a second product?</li><li>What share of ad-driven sales are new to Matchstick Monkey?</li></ol></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Method</span><h2>How this was put together</h2></header>
+    <div class="method"><p>Built from public marketplace data (Keepa, Jungle Scout, DataForSEO, Amazon catalogue and bid recommendations) on 2026-11-14. We have not seen this brand's Seller Central or advertising account, so spend and budget figures are estimates.</p><p>Budget model: search volume × 12% of searches producing an ad click × target sponsored share of voice by tier × CPC benchmark, plus 10% for remarketing.</p><details><summary>Data gaps in this run</summary><ul><li>images: can&#x27;t reach m.media-amazon.com (&lt;urlopen error Tunnel connection failed: 403 Forbidden&gt;); add it to Allowed domains</li><li>spapi.items: SP-API not configured</li><li>ads.bids: Ads API not configured; using Jungle Scout PPC bids</li></ul></details></div>
+  </section>
+
+  <footer>Smart PPC · smartppc.ai</footer>
+</main>

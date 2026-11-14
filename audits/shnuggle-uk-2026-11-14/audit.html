@@ -1,0 +1,209 @@
+<title>Shnuggle Amazon Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the five recommendations lead, evidence sections follow in the order the email cites them. */
+:root {
+  --bg: #f6f1e7;
+  --paper: #fffdf8;
+  --ink: #1a1a18;
+  --ink-soft: #4a4842;
+  --muted: #7d7a72;
+  --rule: #d9d2c3;
+  --accent: #d85a30;
+  --accent-soft: #f3d9cc;
+  --bar: #4a4842;
+  --s0: #d85a30; --s1: #2a78d6; --s2: #1baf7a; --s3: #c98500; --s4: #6250d6; --s5: #e87ba4;
+  --good: #0a7d0a; --warn: #a86a00; --fail: #c03434;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+    --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+    --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+    --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+  --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+  --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+  --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 56px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
+h3 { font-size: 17px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow, .tag, .stat-label, th, .tick, small { font-family: var(--mono); }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+section { display: grid; gap: 20px; min-width: 0; }
+section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 14px; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.subject:empty { display: none; }
+.subject { font-size: 17px; color: var(--ink-soft); max-width: 70ch; }
+.headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
+
+/* Recommendations: numbered because they are in priority order */
+.points { list-style: none; counter-reset: pt; margin: 0; padding: 0; display: grid; gap: 14px; }
+.point { counter-increment: pt; display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 14px; padding: 20px 20px 18px 16px; }
+.point::before { content: counter(pt); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); text-align: center; }
+.point-body { display: grid; gap: 8px; min-width: 0; }
+.tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.quote { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--ink-soft); font-size: 15px; }
+details summary { cursor: pointer; color: var(--ink-soft); font-size: 14px; }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14px; display: grid; gap: 4px; }
+
+/* Stats */
+.stats { break-inside: avoid; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.stat { background: var(--paper); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.stat-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat-note { font-size: 13px; color: var(--muted); }
+
+/* Charts */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.two > * { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.chart { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--bar); }
+.chart .bar:hover { fill: var(--accent); }
+.chart .grid { stroke: var(--rule); stroke-dasharray: 2 4; }
+.chart .axis { stroke: var(--muted); }
+.chart .tick { fill: var(--muted); font-size: 11px; }
+.empty { color: var(--muted); font-style: italic; }
+.hbars { display: grid; gap: 8px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 160px) 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.hbar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; background: var(--rule); border-radius: 5px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+.hbar.mine { font-weight: 600; }
+.hbar.mine .hbar-fill { background: var(--accent); }
+.hbar-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.stack { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; }
+.seg, .sw { background: var(--s0); }
+.s1 { background: var(--s1); } .s2 { background: var(--s2); } .s3 { background: var(--s3); } .s4 { background: var(--s4); } .s5 { background: var(--s5); }
+.legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend small { color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.budget-total { font-family: var(--serif); font-size: 26px; }
+
+/* Tables */
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child > * { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+table.content td { white-space: nowrap; }
+table.content th[scope="row"] { text-transform: none; letter-spacing: 0; color: var(--ink); font-size: 13px; min-width: 180px; }
+table.content th[scope="row"] small { display: block; color: var(--muted); font-family: var(--sans); white-space: normal; }
+.chip { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; color: var(--paper); }
+.chip.good { background: var(--good); } .chip.warn { background: var(--warn); } .chip.fail { background: var(--fail); }
+.kw-status { font-size: 13px; color: var(--ink-soft); }
+.kw-status.push, .kw-status.brand_defence_gap { color: var(--accent); font-weight: 600; }
+.attackers { padding-left: 18px; margin: 0; display: grid; gap: 6px; }
+.attackers small { display: block; color: var(--muted); font-family: var(--sans); }
+ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.hero-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px; align-content: start; min-width: 0; }
+.hero-card header { display: grid; gap: 4px; }
+.hero-card header a { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.hero-meta { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.hero-card h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); }
+.hero-card ul { padding-left: 0; list-style: none; font-size: 14px; gap: 4px; }
+.hero-card ul small, .quick small { display: block; color: var(--muted); }
+.hero-card p { font-size: 14px; }
+.hero-card .action { font-weight: 600; border-left: 2px solid var(--accent); padding-left: 10px; }
+.flags li { display: flex; gap: 8px; align-items: baseline; }
+.flags li.verdict { display: block; font-style: italic; color: var(--ink-soft); }
+.quick { font-size: 14px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
+</style>
+
+<main class="page">
+  <div class="hero">
+    <span class="eyebrow">Smart PPC · Amazon audit</span>
+    <h1>Shnuggle</h1>
+    <p class="subject"></p>
+    <div class="meta"><span>amazon.co.uk</span><span>Prepared 2026-11-14</span></div>
+    <p class="headline">Shnuggle&#x27;s baby bath and changing mat lead the range, but ads are leaking into other bath products and the brand search shows rival products in five of the first 13 slots.</p>
+  </div>
+
+  <section>
+    <header><span class="eyebrow">Priorities</span><h2>What I would do first</h2></header>
+    <ol class="points"><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Baby bath, rinse cup and Ellie storage: cut ads on other bath products</h3><p>The bath range shows sponsored on searches for different products: foldable, collapsible and inflatable baths, bath chairs and cushions, Aveeno shampoo, and &quot;bath water storage bag&quot; (8,600 a month) on the Ellie toy scoop. Negatives free budget for the searches below.</p><details><summary>What we saw</summary><ul><li>Baby bath B084PP9W5F sponsored on: foldable baby bath (3,089/mo), baby bath chair (1,898), collapsible baby bath (1,638), baby bath cushion (1,406), inflatable baby bath (864) (Jungle Scout)</li><li>Rinse cup B0C9R3Z3YJ sponsored on: baby bath support (3,855), aveeno baby shampoo (1,138), aveeno baby wash (983)</li><li>Ellie B0C5RHGNTS sponsored on: bath water storage bag (8,595/mo)</li><li>Nappy bin B0GMQVL2SD sponsored on: snuggle ups (3,689/mo)</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">content</span><h3>Baby bath: add a brand-made video and shorten the bullets</h3><p>The baby bath (~£56,000 a month, 4.7★ from 3,675 reviews) has 7 videos, all from influencers or customers, none made by Shnuggle, and 2 bullets over 250 characters that collapse on a phone. A short brand video showing the bum bump and backrest would lift conversion.</p><details><summary>What we saw</summary><ul><li>B084PP9W5F: 7 videos, all influencer or customer (Keepa)</li><li>2 bullets over 250 characters; mobile score 75</li><li>Family revenue ~£56,121/mo, 2,283 units (Jungle Scout estimate)</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Squishy changing mat: push &quot;baby mat&quot;, &quot;changing table&quot; and &quot;anti roll changing mat&quot;</h3><p>The changing mat (~£58,000 a month) already ranks #5 for &quot;changing mat&quot;, but &quot;baby mat&quot; (8,800 a month, #15), &quot;anti roll changing mat&quot; (#14) and &quot;changing table&quot; (7,900, #28) have no ads near the top.</p><details><summary>What we saw</summary><ul><li>baby mat: 8,756 searches/mo, organic #15, no sponsored rank</li><li>changing table: 7,933/mo, organic #28; baby changing table: 7,367/mo, #28</li><li>anti roll changing mat: 2,894/mo, organic #14</li><li>Family revenue ~£57,967/mo, 1,451 units (Jungle Scout estimate)</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">competitors</span><h3>Brand search: show the rest of the range in the slots rivals are taking</h3><p>Shnuggle is #1 on its own name, but rival products (swaddle sacks, a nappy bin set, sleeping bags) take sponsored slots 4, 5, 11, 12 and 13 on &quot;shnuggle&quot;, and a foldable bath takes slot 12 on &quot;shnuggle baby bath&quot;. A brand headline ad showing the nappy bin, mat and bath keeps those shoppers in the range.</p><details><summary>What we saw</summary><ul><li>shnuggle: Cozyganoosh #4, Transitional Swaddle #5, 6-Way Omni Swaddle #11, Transitional Swaddle #12, Twist &amp; Click nappy bin set #13 (DataForSEO)</li><li>shnuggle baby bath: SUPERBE BEBE foldable bath #12</li><li>shnuggle: 1,232 searches/mo, organic #1, sponsored #1</li></ul></details></div></li></ol>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Snapshot</span><h2>The business today</h2></header>
+    <div class="stats"><div class="stat"><span class="stat-label">ASINs listed</span><span class="stat-value">150</span><span class="stat-note">58 live and selling</span></div><div class="stat"><span class="stat-label">Best-sellers</span><span class="stat-value">6</span><span class="stat-note">product families making 80% of revenue</span></div><div class="stat"><span class="stat-label">Est. monthly revenue</span><span class="stat-value">£238,392</span><span class="stat-note">Jungle Scout 30-day estimate</span></div><div class="stat"><span class="stat-label">Sponsored coverage</span><span class="stat-value">27%</span><span class="stat-note">of their top 30 keywords</span></div><div class="stat"><span class="stat-label">Mobile-ready best-sellers</span><span class="stat-value">6 of 6</span><span class="stat-note">zoom, video, title, bullets and A+ on a phone</span></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Best-sellers</span><h2>Where the money is</h2>
+      <p>The products below make most of the revenue, so every recommendation starts here.</p></header>
+    <div class="heroes"><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0CDLW5K89">B0CDLW5K89</a><h3>Shnuggle Squishy Baby Changing Mat | Soft and Warm Foam Material is Nicer for Babies | Per</h3><span class="hero-meta">£57,967/mo · 1,451 units · £42.70 · 4.2★ (767)</span></header><p class="action">Push baby mat, changing table and anti roll changing mat.</p><div><h4>Push</h4><ul><li>“baby mat” <small>8,756/mo · organic #15 · £0.44 CPC</small></li><li>“changing table” <small>7,933/mo · organic #28</small></li><li>“baby changing table” <small>7,367/mo · organic #28</small></li></ul></div><div><h4>Cut</h4><p>“folding changing mat”, “snuggle”, “snuggleups”, “snuggle bath”, “fold up changing mat”</p></div><div><h4>Mobile · 100/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 8 images zoomable (2500px+)</li><li><span class="chip good" title="Good">✓</span> Images: 8 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 59s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 65 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 6 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B084PP9W5F">B084PP9W5F</a><h3>Shnuggle Baby Bath Tub Featuring Ergonomic Bum Bump Support, Soft Foam Backrest and an Int</h3><span class="hero-meta">£56,121/mo · 2,283 units · £16.99 · 4.7★ (3,675)</span></header><p class="action">Add a brand video, shorten bullets, negate foldable and inflatable bath searches.</p><div><h4>Push</h4><ul><li>“baby bath jug” <small>2,877/mo · organic #40</small></li><li>“angel care baby bath seat” <small>2,681/mo · organic #17 · £0.72 CPC</small></li><li>“foldable bath” <small>2,541/mo · organic #43</small></li></ul></div><div><h4>Cut</h4><p>“foldable baby bath”, “baby bath chair”, “collapsible baby bath”, “baby bath cushion”, “top and tail bowl”</p></div><div><h4>Mobile · 75/100</h4><ul class="flags"><li><span class="chip warn" title="Needs work">!</span> Zoom: all zoomable, but 1 under 1600px look soft when pinched</li><li><span class="chip good" title="Good">✓</span> Images: 8 gallery images</li><li><span class="chip warn" title="Needs work">!</span> Video: 7 video(s), all influencer or customer: no brand-made video</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip warn" title="Needs work">!</span> Bullets: 2 bullet(s) over 250 characters; mobile shows these collapsed</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 5 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0GMQVL2SD">B0GMQVL2SD</a><h3>Shnuggle Eco-Touch Nappy Bin (Diaper Pail) | Eco-Friendly Nappy Disposal System | No Costl</h3><span class="hero-meta">£30,589/mo · 1,018 units · £29.96 · 4.2★ (342)</span></header><p class="action">Negate nappy bag and Snuggle Ups searches.</p><div><h4>Push</h4><ul><li>“diaper bag” <small>8,220/mo · organic #38 · £0.47 CPC</small></li><li>“bin for bedroom” <small>7,936/mo · organic #37</small></li><li>“nappy bucket with lid” <small>962/mo · organic #28</small></li></ul></div><div><h4>Cut</h4><p>“snuggle ups”, “nappy disposal bags”, “nappy bag dispenser”, “naty nappy bags”, “baby nappy bags”</p></div><div><h4>Mobile · 88/100</h4><ul class="flags"><li><span class="chip warn" title="Needs work">!</span> Zoom: all zoomable, but 1 under 1600px look soft when pinched</li><li><span class="chip good" title="Good">✓</span> Images: 10 gallery images</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 6 bullets, first is 158 characters</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0861ZL7KV">B0861ZL7KV</a><h3>Shnuggle Toddler Bath Tub for Growing Children, Comfortable Spacious Design with Foam Supp</h3><span class="hero-meta">£21,541/mo · 512 units · £32.95 · 4.8★ (1,759)</span></header><p class="action">Push &quot;bath tub&quot; (#15) and &quot;baby bathtub&quot; (#15).</p><div><h4>Push</h4><ul><li>“bath seat baby 6+ months” <small>4,838/mo · organic #28</small></li><li>“bath tub” <small>4,128/mo · organic #15 · £0.46 CPC</small></li><li>“baby bath jug” <small>2,877/mo · organic #58</small></li></ul></div><div><h4>Cut</h4><p>“newborn bath”, “bath toy storage anti mould”, “baby bath newborn”, “bath toy basket”, “bath storage for toys”</p></div><div><h4>Mobile · 100/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 11 images zoomable (2500px+)</li><li><span class="chip good" title="Good">✓</span> Images: 11 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 22s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 6 bullets, first is 127 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 4 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0C9R3Z3YJ">B0C9R3Z3YJ</a><h3>Shnuggle Baby Bath Rinse Cup, Soft Rim Shampoo Rinser and Hair Wash Jug, No Tears Design f</h3><span class="hero-meta">£16,708/mo · 3,060 units · £5.95 · 4.6★ (373)</span></header><p class="action">Negate Aveeno and bath support searches.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> shampoo listed under Bathing</li></ul></div><div><h4>Push</h4><ul><li>“baby grooming kit newborn” <small>4,176/mo · organic #44</small></li><li>“baby essentials for newborn girl” <small>2,110/mo · organic #26 · £1.04 CPC</small></li><li>“bath toy storage anti mould” <small>1,871/mo · organic #22</small></li></ul></div><div><h4>Cut</h4><p>“baby bath support”, “foldable baby bath”, “baby bath with stand”, “baby baths”, “baby care kit”</p></div><div><h4>Mobile · 100/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 10 images zoomable (2500px+)</li><li><span class="chip good" title="Good">✓</span> Images: 10 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 28s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 200 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 5 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0C5RHGNTS">B0C5RHGNTS</a><h3>Shnuggle Ellie Bath Toy Storage Scoop &amp; Organiser | Baby &amp; Toddler Bath Toy Drying Caddy w</h3><span class="hero-meta">£8,746/mo · 833 units · £10.50 · 4.6★ (383)</span></header><p class="action">Negate bath water storage bag; push &quot;bath storage&quot; (#29).</p><div><h4>Push</h4><ul><li>“bath storage” <small>2,720/mo · organic #29</small></li><li>“bath toy net” <small>1,588/mo · organic #52</small></li><li>“bath tidy” <small>680/mo · organic #45</small></li></ul></div><div><h4>Cut</h4><p>“bath water storage bag”, “bath jug”, “baby bath jug”, “newborn bath”, “bath boats”</p></div><div><h4>Mobile · 100/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 8 images zoomable (2500px+)</li><li><span class="chip good" title="Good">✓</span> Images: 8 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 42s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 175 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 5 A+ images with light, phone-friendly text</li></ul></div></article></div>
+  </section>
+
+  <section><header><span class="eyebrow">Quick wins</span><h2>Catalogue tidy-up</h2></header><p class="empty">No duplicate or untidy listings found among live products.</p></section>
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Content on the best-sellers</h2><p>Most best-sellers score 88–100 on mobile. The baby bath is the exception: no brand video and long bullets.</p></header>
+    <div class="scroll"><table class="content"><thead><tr><th>Listing</th><th>Score</th><th>Images</th><th>Video</th><th>A Plus</th><th>Title</th><th>Bullets</th><th>Bullet Depth</th><th>Rating</th><th>Reviews</th></tr></thead><tbody><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0CDLW5K89">B0CDLW5K89</a><small>Shnuggle Squishy Baby Changing Mat | Soft and Warm Foam Mate</small></th><td class="num">81</td><td><span class="chip good" title="Good">✓</span> 8 images</td><td><span class="chip good" title="Good">✓</span> 3 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 165 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip fail" title="Missing">✕</span> avg 68 chars</td><td><span class="chip warn" title="Needs work">!</span> 4.2★</td><td><span class="chip good" title="Good">✓</span> 767 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0BYFKM1RP">B0BYFKM1RP</a><small>Shnuggle Newborn Baby Bath and Washy Rinsing Jug Bundle | Th</small></th><td class="num">50</td><td><span class="chip good" title="Good">✓</span> 8 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip good" title="Good">✓</span> 131 chars</td><td><span class="chip warn" title="Needs work">!</span> bullets not captured</td><td><span class="chip warn" title="Needs work">!</span> not captured</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B09TTJ8LX4">B09TTJ8LX4</a><small>Shnuggle Eco-Touch Nappy Bin (Diaper Pail) | Eco-Friendly Na</small></th><td class="num">94</td><td><span class="chip good" title="Good">✓</span> 8 images</td><td><span class="chip good" title="Good">✓</span> 6 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 175 chars</td><td><span class="chip good" title="Good">✓</span> 6 bullets</td><td><span class="chip good" title="Good">✓</span> avg 142 chars</td><td><span class="chip warn" title="Needs work">!</span> 4.2★</td><td><span class="chip good" title="Good">✓</span> 346 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0BYPC7T28">B0BYPC7T28</a><small>Shnuggle Toddler Bath</small></th><td class="num">38</td><td><span class="chip good" title="Good">✓</span> 9 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip warn" title="Needs work">!</span> 21 chars</td><td><span class="chip fail" title="Missing">✕</span> 1 bullets</td><td><span class="chip warn" title="Needs work">!</span> avg 106 chars</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0CRRV4J26">B0CRRV4J26</a><small>Shnuggle Baby Bath Rinse Cup, Soft Rim Shampoo Rinser and Ha</small></th><td class="num">100</td><td><span class="chip good" title="Good">✓</span> 10 images</td><td><span class="chip good" title="Good">✓</span> 3 videos</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 195 chars</td><td><span class="chip good" title="Good">✓</span> 6 bullets</td><td><span class="chip good" title="Good">✓</span> avg 166 chars</td><td><span class="chip good" title="Good">✓</span> 4.6★</td><td><span class="chip good" title="Good">✓</span> 375 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0C5RHGNTS">B0C5RHGNTS</a><small>Shnuggle Ellie Bath Toy Storage Scoop &amp; Organiser | Baby &amp; T</small></th><td class="num">100</td><td><span class="chip good" title="Good">✓</span> 8 images</td><td><span class="chip good" title="Good">✓</span> 1 video</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 171 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 170 chars</td><td><span class="chip good" title="Good">✓</span> 4.6★</td><td><span class="chip good" title="Good">✓</span> 384 reviews</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Advertising</span><h2>Keyword map and where to spend</h2><p>Ads show on 8 of the top 30 searches. Prune drift into other bath products, push the mid-page changing mat and bath searches, and use a brand headline ad on &quot;shnuggle&quot;. Indicative ~£1,500/mo on the gaps.</p></header>
+    <div class="two">
+      <div><h3>Keywords by tier</h3><div class="scroll"><table><thead><tr><th>Tier</th><th class="num">Keywords</th><th class="num">Searches/mo</th><th class="num">Gaps</th></tr></thead><tbody><tr><td>Category</td><td class="num">141</td><td class="num">752,633</td><td class="num">110</td></tr><tr><td>Core</td><td class="num">77</td><td class="num">309,848</td><td class="num">16</td></tr><tr><td>Long-tail</td><td class="num">195</td><td class="num">260,694</td><td class="num">104</td></tr><tr><td>Competitor</td><td class="num">10</td><td class="num">9,535</td><td class="num">5</td></tr><tr><td>Brand</td><td class="num">13</td><td class="num">9,837</td><td class="num">2</td></tr></tbody></table></div></div>
+      <div><h3>Indicative monthly budget</h3><span class="budget-total">£1,542</span><div class="stack"><span class="seg s0" style="flex:704" title="SP: £704"></span><span class="seg s1" style="flex:342" title="SB: £342"></span><span class="seg s2" style="flex:342" title="SBV: £342"></span><span class="seg s3" style="flex:154" title="SD (remarketing/retention): £154"></span></div><ul class="legend"><li><span class="sw s0"></span>SP <b>£704</b> <small>46%</small></li><li><span class="sw s1"></span>SB <b>£342</b> <small>22%</small></li><li><span class="sw s2"></span>SBV <b>£342</b> <small>22%</small></li><li><span class="sw s3"></span>SD (remarketing/retention) <b>£154</b> <small>10%</small></li></ul></div>
+    </div>
+    <h3>Focus keywords</h3>
+    <div class="scroll"><table><thead><tr><th>Keyword</th><th>Tier</th><th class="num">Searches/mo</th><th class="num">Organic</th><th class="num">Sponsored</th><th class="num">CPC</th><th>Status</th></tr></thead><tbody><tr><td>bin</td><td>Category</td><td class="num">114,786</td><td class="num">92</td><td class="num">–</td><td class="num">£0.27</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>nappies</td><td>Category</td><td class="num">26,760</td><td class="num">128</td><td class="num">–</td><td class="num">£0.33</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>washing up bowl</td><td>Category</td><td class="num">66,568</td><td class="num">123</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby essentials for newborn</td><td>Long-tail</td><td class="num">91,716</td><td class="num">85</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>bath</td><td>Category</td><td class="num">15,375</td><td class="num">76</td><td class="num">–</td><td class="num">£0.25</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>nappy bags</td><td>Category</td><td class="num">42,746</td><td class="num">128</td><td class="num">–</td><td class="num">£0.73</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>foam mats</td><td>Category</td><td class="num">10,199</td><td class="num">68</td><td class="num">–</td><td class="num">£0.19</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>bins</td><td>Category</td><td class="num">16,134</td><td class="num">125</td><td class="num">–</td><td class="num">£0.32</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby mat</td><td>Core</td><td class="num">8,756</td><td class="num">15</td><td class="num">–</td><td class="num">£0.44</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>newborn essentials</td><td>Category</td><td class="num">42,937</td><td class="num">74</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>mats</td><td>Category</td><td class="num">4,607</td><td class="num">60</td><td class="num">–</td><td class="num">£0.20</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>nappy sacks</td><td>Category</td><td class="num">18,928</td><td class="num">136</td><td class="num">–</td><td class="num">£0.63</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>happy nappy</td><td>Category</td><td class="num">9,420</td><td class="num">64</td><td class="num">–</td><td class="num">£0.32</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>diaper bag</td><td>Category</td><td class="num">8,220</td><td class="num">38</td><td class="num">–</td><td class="num">£0.47</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>bath caddy</td><td>Category</td><td class="num">5,267</td><td class="num">111</td><td class="num">–</td><td class="num">£0.15</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby wash</td><td>Category</td><td class="num">7,887</td><td class="num">80</td><td class="num">–</td><td class="num">£0.32</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>baby essentials</td><td>Category</td><td class="num">18,691</td><td class="num">105</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>changing mat baby</td><td>Core</td><td class="num">1,562</td><td class="num">8</td><td class="num">–</td><td class="num">£0.22</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>baby accessories</td><td>Category</td><td class="num">5,994</td><td class="num">112</td><td class="num">–</td><td class="num">£0.38</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>bin for bedroom</td><td>Category</td><td class="num">7,936</td><td class="num">37</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Competitors</span><h2>Who is taking the clicks</h2></header>
+    <div class="two">
+      <div><h3>Share of voice across category searches</h3><div class="hbars"><div class="hbar"><span class="hbar-label">Pampers</span><span class="hbar-track"><span class="hbar-fill" style="width:100.0%" title="Pampers: 12%"></span></span><span class="hbar-value">12%</span></div><div class="hbar"><span class="hbar-label">Tommee Tippee</span><span class="hbar-track"><span class="hbar-fill" style="width:75.8%" title="Tommee Tippee: 9%"></span></span><span class="hbar-value">9%</span></div><div class="hbar mine"><span class="hbar-label">Shnuggle</span><span class="hbar-track"><span class="hbar-fill" style="width:71.0%" title="Shnuggle: 9%"></span></span><span class="hbar-value">9%</span></div><div class="hbar"><span class="hbar-label">WaterWipes</span><span class="hbar-track"><span class="hbar-fill" style="width:43.5%" title="WaterWipes: 5%"></span></span><span class="hbar-value">5%</span></div><div class="hbar"><span class="hbar-label">JVEOO</span><span class="hbar-track"><span class="hbar-fill" style="width:37.9%" title="JVEOO: 5%"></span></span><span class="hbar-value">5%</span></div><div class="hbar"><span class="hbar-label">Buyockss</span><span class="hbar-track"><span class="hbar-fill" style="width:29.8%" title="Buyockss: 4%"></span></span><span class="hbar-value">4%</span></div><div class="hbar"><span class="hbar-label">Angelcare</span><span class="hbar-track"><span class="hbar-fill" style="width:25.0%" title="Angelcare: 3%"></span></span><span class="hbar-value">3%</span></div><div class="hbar"><span class="hbar-label">VTL</span><span class="hbar-track"><span class="hbar-fill" style="width:24.2%" title="VTL: 3%"></span></span><span class="hbar-value">3%</span></div></div></div>
+      <div><h3>Ads on their brand name</h3><ul class="attackers"><li><b>Cozyganoosh -</b> sponsored at position 4 on “shnuggle”<small>Cozyganoosh - Stella (Grey)</small></li><li><b>Transitional Swaddle</b> sponsored at position 5 on “shnuggle”<small>Transitional Swaddle Sack, Baby Swaddles for Newborn with Arms Up Half-Length Sleeves &amp; Mi</small></li><li><b>6-Way Omni</b> sponsored at position 11 on “shnuggle”<small>6-Way Omni Swaddle Sack Arms Up Swaddle for Newborn, More Options to Calm Startle Reflex, </small></li><li><b>Transitional Swaddle</b> sponsored at position 12 on “shnuggle”<small>Transitional Swaddle Sack, Baby Swaddles for Newborn with Arms Up Half-Length Sleeves &amp; Mi</small></li><li><b>Twist &amp;</b> sponsored at position 13 on “shnuggle”<small>Twist &amp; Click Nappy Bin Set + 6x 10.5m Refill Cassettes</small></li><li><b>Sleep Bag</b> sponsored at position 19 on “shnuggle”<small>Sleep Bag with Feet, 4 Years, Bees Olive, 2.5 Tog</small></li><li><b>Baby Sleeping</b> sponsored at position 20 on “shnuggle”<small>Baby Sleeping Bag 0-6 Months, 1.5 Tog Wearable Blanket, Giraffe, S</small></li><li><b>Sleep Bag</b> sponsored at position 21 on “shnuggle”<small>Sleep Bag | Long Sleeve, Lightweight Wearable Blanket &amp; Quilt | 2.5 TOG Ideal for Winter &amp;</small></li></ul><p>They do appear in their own brand-term ads.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Amazon Marketing Cloud</span><h2>Path to purchase and repeat buying</h2></header>
+    <p>Repeat-purchase signals: medium (Subscribe &amp; Save on 0% of ASINs, multipacks 7%, consumable category).</p><div class="two"><div><h3>What we expect AMC to show</h3><ul><li>Baby products are bought in a sequence (bath, mat, nappy bin, toddler bath); AMC would show how often a first purchase leads to a second Shnuggle product.</li></ul></div><div><h3>Questions we would answer in week one</h3><ol><li>Which product do new customers buy first?</li><li>How many go on to buy the toddler bath?</li><li>What share of ad-driven sales are new to Shnuggle?</li></ol></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Method</span><h2>How this was put together</h2></header>
+    <div class="method"><p>Built from public marketplace data (Keepa, Jungle Scout, DataForSEO, Amazon catalogue and bid recommendations) on 2026-11-14. We have not seen this brand's Seller Central or advertising account, so spend and budget figures are estimates.</p><p>Budget model: search volume × 12% of searches producing an ad click × target sponsored share of voice by tier × CPC benchmark, plus 10% for remarketing.</p><details><summary>Data gaps in this run</summary><ul><li>images: can&#x27;t reach m.media-amazon.com (&lt;urlopen error Tunnel connection failed: 403 Forbidden&gt;); add it to Allowed domains</li><li>spapi.items: SP-API not configured</li><li>ads.bids: Ads API not configured; using Jungle Scout PPC bids</li></ul></details></div>
+  </section>
+
+  <footer>Smart PPC · smartppc.ai</footer>
+</main>

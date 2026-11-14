@@ -1,0 +1,209 @@
+<title>ManiLife Amazon Audit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; the five recommendations lead, evidence sections follow in the order the email cites them. */
+:root {
+  --bg: #f6f1e7;
+  --paper: #fffdf8;
+  --ink: #1a1a18;
+  --ink-soft: #4a4842;
+  --muted: #7d7a72;
+  --rule: #d9d2c3;
+  --accent: #d85a30;
+  --accent-soft: #f3d9cc;
+  --bar: #4a4842;
+  --s0: #d85a30; --s1: #2a78d6; --s2: #1baf7a; --s3: #c98500; --s4: #6250d6; --s5: #e87ba4;
+  --good: #0a7d0a; --warn: #a86a00; --fail: #c03434;
+  --serif: "Lora", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+    --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+    --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+    --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #191815; --paper: #22201c; --ink: #f0ebe0; --ink-soft: #c9c3b6; --muted: #9a958a; --rule: #3a3731;
+  --accent: #ea7a50; --accent-soft: #4a2a1d; --bar: #c9c3b6;
+  --s0: #ea7a50; --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #9085e9; --s5: #d55181;
+  --good: #3cc23c; --warn: #f0b03a; --fail: #ef6b6b;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 56px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; }
+h2 { font-size: clamp(26px, 4vw, 34px); line-height: 1.2; }
+h3 { font-size: 17px; font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow, .tag, .stat-label, th, .tick, small { font-family: var(--mono); }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+section { display: grid; gap: 20px; min-width: 0; }
+section > header { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 24px; }
+
+/* Hero */
+.hero { display: grid; gap: 14px; }
+.hero .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--ink-soft); font-family: var(--mono); font-size: 13px; }
+.subject:empty { display: none; }
+.subject { font-size: 17px; color: var(--ink-soft); max-width: 70ch; }
+.headline { font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-soft); max-width: 60ch; }
+
+/* Recommendations: numbered because they are in priority order */
+.points { list-style: none; counter-reset: pt; margin: 0; padding: 0; display: grid; gap: 14px; }
+.point { counter-increment: pt; display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 14px; padding: 20px 20px 18px 16px; }
+.point::before { content: counter(pt); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); text-align: center; }
+.point-body { display: grid; gap: 8px; min-width: 0; }
+.tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.quote { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--ink-soft); font-size: 15px; }
+details summary { cursor: pointer; color: var(--ink-soft); font-size: 14px; }
+details ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); font-size: 14px; display: grid; gap: 4px; }
+
+/* Stats */
+.stats { break-inside: avoid; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.stat { background: var(--paper); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.stat-label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat-value { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat-note { font-size: 13px; color: var(--muted); }
+
+/* Charts */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.two > * { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.chart { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--bar); }
+.chart .bar:hover { fill: var(--accent); }
+.chart .grid { stroke: var(--rule); stroke-dasharray: 2 4; }
+.chart .axis { stroke: var(--muted); }
+.chart .tick { fill: var(--muted); font-size: 11px; }
+.empty { color: var(--muted); font-style: italic; }
+.hbars { display: grid; gap: 8px; }
+.hbar { display: grid; grid-template-columns: minmax(90px, 160px) 1fr 52px; gap: 10px; align-items: center; font-size: 14px; }
+.hbar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hbar-track { height: 10px; background: var(--rule); border-radius: 5px; overflow: hidden; }
+.hbar-fill { display: block; height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; }
+.hbar.mine { font-weight: 600; }
+.hbar.mine .hbar-fill { background: var(--accent); }
+.hbar-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.stack { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; }
+.seg, .sw { background: var(--s0); }
+.s1 { background: var(--s1); } .s2 { background: var(--s2); } .s3 { background: var(--s3); } .s4 { background: var(--s4); } .s5 { background: var(--s5); }
+.legend { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend small { color: var(--muted); }
+.sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.budget-total { font-family: var(--serif); font-size: 26px; }
+
+/* Tables */
+.scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); text-align: left; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr:last-child > * { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+table.content td { white-space: nowrap; }
+table.content th[scope="row"] { text-transform: none; letter-spacing: 0; color: var(--ink); font-size: 13px; min-width: 180px; }
+table.content th[scope="row"] small { display: block; color: var(--muted); font-family: var(--sans); white-space: normal; }
+.chip { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; font-weight: 700; color: var(--paper); }
+.chip.good { background: var(--good); } .chip.warn { background: var(--warn); } .chip.fail { background: var(--fail); }
+.kw-status { font-size: 13px; color: var(--ink-soft); }
+.kw-status.push, .kw-status.brand_defence_gap { color: var(--accent); font-weight: 600; }
+.attackers { padding-left: 18px; margin: 0; display: grid; gap: 6px; }
+.attackers small { display: block; color: var(--muted); font-family: var(--sans); }
+ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.method { font-size: 14px; color: var(--ink-soft); display: grid; gap: 10px; }
+footer { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.hero-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; padding: 18px;
+  display: grid; gap: 12px; align-content: start; min-width: 0; }
+.hero-card header { display: grid; gap: 4px; }
+.hero-card header a { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.hero-meta { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.hero-card h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted); }
+.hero-card ul { padding-left: 0; list-style: none; font-size: 14px; gap: 4px; }
+.hero-card ul small, .quick small { display: block; color: var(--muted); }
+.hero-card p { font-size: 14px; }
+.hero-card .action { font-weight: 600; border-left: 2px solid var(--accent); padding-left: 10px; }
+.flags li { display: flex; gap: 8px; align-items: baseline; }
+.flags li.verdict { display: block; font-style: italic; color: var(--ink-soft); }
+.quick { font-size: 14px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .point { grid-template-columns: 1fr; } .point::before { text-align: left; } .hbar { grid-template-columns: 96px 1fr 44px; } }
+</style>
+
+<main class="page">
+  <div class="hero">
+    <span class="eyebrow">Smart PPC · Amazon audit</span>
+    <h1>ManiLife</h1>
+    <p class="subject"></p>
+    <div class="meta"><span>amazon.co.uk</span><span>Prepared 2026-11-14</span></div>
+    <p class="headline">ManiLife&#x27;s ads are drifting into dairy butter and supermarket searches, and a reseller is charging £11.99 for a jar you sell at £5.95 elsewhere.</p>
+  </div>
+
+  <section>
+    <header><span class="eyebrow">Priorities</span><h2>What I would do first</h2></header>
+    <ol class="points"><li class="point"><div class="point-body"><span class="tag">advertising</span><h3>Deep Roast Crunchy and Original Roast Smooth: cut ads on butter, hummus and Morrisons searches</h3><p>Both best-sellers show sponsored on searches for other products: &quot;butter&quot; (173,000 a month, organic #64), &quot;morrisons&quot; (46,000), &quot;hummus&quot; (17,000), &quot;margarine&quot; and &quot;garlic butter&quot;. Negatives on these free budget for peanut butter searches.</p><details><summary>What we saw</summary><ul><li>butter: 173,146 searches/mo, sponsored #12, organic #64 (Jungle Scout)</li><li>morrisons: 45,974/mo, sponsored #22, not ranked organically</li><li>hummus: 17,448/mo, sponsored #16, not ranked</li><li>margarine: 7,568/mo, sponsored #17, not ranked</li><li>Also sponsored on spread, cashew butter, garlic butter, anchor butter, president butter</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">catalogue</span><h3>Original Roast Smooth: a reseller holds the Buy Box at £11.99</h3><p>On the Original Roast Smooth jar (~£18,000 a month) the Buy Box is held by NBR TRAD£RS at £11.99, above the £9.00 list price, with 11 sellers, while the sister jars sell through Amazon at £5.95. Worth checking supply to Amazon and Brand Registry protection.</p><details><summary>What we saw</summary><ul><li>B0BCQCKK12: Buy Box owner NBR TRAD£RS, 11 sellers, price £11.99 vs list £9.00 (Keepa)</li><li>Deep Roast Crunchy B0BCQ91KNW: £5.95 via Amazon</li><li>Family revenue ~£18,380/mo (Jungle Scout estimate); Keepa sees ~£3,570, consistent with lost sales</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">competitors</span><h3>Go after Pip &amp; Nut shoppers on price</h3><p>Pip &amp; Nut leads share of voice across your searches (16% vs ManiLife&#x27;s 6%), and &quot;pip and nut&quot; (9,000 searches a month) has ManiLife at #22 with no ads near the top. At £5.95 against a £7.38 page-one median, the price makes the case for you.</p><details><summary>What we saw</summary><ul><li>Share of voice: Pip &amp; Nut 15.8%, Morrisons 12.2%, Nutella 9.0%, ManiLife 5.9% (Jungle Scout)</li><li>pip and nut: 8,994 searches/mo, organic #22, no sponsored rank</li><li>Median page-one price: ManiLife £5.95 vs competitors £7.38</li></ul></details></div></li><li class="point"><div class="point-body"><span class="tag">content</span><h3>Deep Roast Crunchy: add a seventh gallery image</h3><p>The best-seller has 6 gallery images, one short of what shoppers swipe through on a phone. A comparison image (protein and ingredients against the big brands) would do the most work.</p><details><summary>What we saw</summary><ul><li>B0BCQ91KNW: 6 gallery images, mobile score 92 (Keepa)</li><li>Family revenue ~£28,536/mo, 4,796 units, 4.4★ from 638 reviews (Jungle Scout estimate)</li></ul></details></div></li></ol>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Snapshot</span><h2>The business today</h2></header>
+    <div class="stats"><div class="stat"><span class="stat-label">ASINs listed</span><span class="stat-value">33</span><span class="stat-note">15 live and selling</span></div><div class="stat"><span class="stat-label">Best-sellers</span><span class="stat-value">2</span><span class="stat-note">product families making 99% of revenue</span></div><div class="stat"><span class="stat-label">Est. monthly revenue</span><span class="stat-value">£47,361</span><span class="stat-note">Jungle Scout 30-day estimate</span></div><div class="stat"><span class="stat-label">Sponsored coverage</span><span class="stat-value">53%</span><span class="stat-note">of their top 30 keywords</span></div><div class="stat"><span class="stat-label">Mobile-ready best-sellers</span><span class="stat-value">2 of 2</span><span class="stat-note">zoom, video, title, bullets and A+ on a phone</span></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Best-sellers</span><h2>Where the money is</h2>
+      <p>The products below make most of the revenue, so every recommendation starts here.</p></header>
+    <div class="heroes"><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0BCQ91KNW">B0BCQ91KNW</a><h3>ManiLife Deep Roast Crunchy Natural Peanut Butter 900g | High Protein, No Palm Oil &amp; No Ad</h3><span class="hero-meta">£28,536/mo · 4,796 units · £5.95 · 4.4★ (638)</span></header><p class="action">Negate butter, hummus, margarine and Morrisons searches; add a 7th image.</p><div><h4>Push</h4><ul><li>“peanut butter powder” <small>10,763/mo · organic #12 · £0.20 CPC</small></li><li>“crunchy butter” <small>7,001/mo · organic #6</small></li><li>“salted butter” <small>5,153/mo · organic #27</small></li></ul></div><div><h4>Cut</h4><p>“nutella”, “hummus”, “spread”, “cashew butter”, “anchor butter”</p></div><div><h4>Mobile · 92/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 6 images zoomable (2560px+)</li><li><span class="chip warn" title="Needs work">!</span> Images: 6 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 35s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 172 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 8 A+ images with light, phone-friendly text</li></ul></div></article><article class="hero-card"><header><a href="https://www.amazon.co.uk/dp/B0BCQCKK12">B0BCQCKK12</a><h3>ManiLife Original Roast Smooth Natural Peanut Butter 900g | High Protein, No Palm Oil &amp; No</h3><span class="hero-meta">£18,380/mo · 1,575 units · £11.99 · 4.3★ (224)</span></header><p class="action">Win the Buy Box back from the reseller before spending on ads.</p><div><h4>Fix</h4><ul class="flags"><li><span class="chip warn" title="Issue">!</span> Buy Box held by NBR TRAD£RS</li><li><span class="chip warn" title="Issue">!</span> 11 sellers on the listing</li><li><span class="chip warn" title="Issue">!</span> selling above list price (11.99 vs 9.00)</li></ul></div><div><h4>Push</h4><ul><li>“peanut butter powder” <small>10,763/mo · organic #13 · £0.20 CPC</small></li><li>“nut butter” <small>3,353/mo · organic #46 · £0.28 CPC</small></li><li>“pb fit peanut butter powder” <small>2,830/mo · organic #41 · £0.38 CPC</small></li></ul></div><div><h4>Cut</h4><p>“morrisons”, “nutella”, “margarine”, “president butter”, “eat great stay full”</p></div><div><h4>Mobile · 100/100</h4><ul class="flags"><li><span class="chip good" title="Good">✓</span> Zoom: all 7 images zoomable (2560px+)</li><li><span class="chip good" title="Good">✓</span> Images: 7 gallery images</li><li><span class="chip good" title="Good">✓</span> Video: 1 brand video(s), shortest 35s</li><li><span class="chip good" title="Good">✓</span> Title in search: first 80 characters carry brand, product and size</li><li><span class="chip good" title="Good">✓</span> Bullets: 5 bullets, first is 191 characters</li><li><span class="chip good" title="Good">✓</span> A+ on a phone: 8 A+ images with light, phone-friendly text</li></ul></div></article></div>
+  </section>
+
+  <section><header><span class="eyebrow">Quick wins</span><h2>Catalogue tidy-up</h2></header><ul class="quick"><li>Duplicate listings: B0BCQ91KNW / B0BCQCKK12 / B0GKB7P1HW / B0BCQ8LPB9 <small>ManiLife Deep Roast Crunchy Natural Peanut Butter 900g | High Protein, No Palm O</small></li><li>Duplicate listings: B073XS5XXQ / B072L8BWKY <small>Manilife Peanut Butter Original Roast Crunchy – All Natural, No Palm Oil, No Add</small></li><li>Duplicate listings: B07LG82BMP / B08W3D6XFS <small>ManiLife Peanut Butter Original Roast Smooth - All Natural, No Palm Oil, No Adde</small></li></ul></section>
+
+  <section>
+    <header><span class="eyebrow">Listings</span><h2>Content on the best-sellers</h2><p>Listings are strong on mobile (scores 92–100). The only gap is 6 images on the Deep Roast Crunchy gallery.</p></header>
+    <div class="scroll"><table class="content"><thead><tr><th>Listing</th><th>Score</th><th>Images</th><th>Video</th><th>A Plus</th><th>Title</th><th>Bullets</th><th>Bullet Depth</th><th>Rating</th><th>Reviews</th></tr></thead><tbody><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0BCQ91KNW">B0BCQ91KNW</a><small>ManiLife Deep Roast Crunchy Natural Peanut Butter 900g | Hig</small></th><td class="num">94</td><td><span class="chip warn" title="Needs work">!</span> 6 images</td><td><span class="chip good" title="Good">✓</span> 1 video</td><td><span class="chip good" title="Good">✓</span> A+ with 1 modules</td><td><span class="chip good" title="Good">✓</span> 172 chars</td><td><span class="chip good" title="Good">✓</span> 5 bullets</td><td><span class="chip good" title="Good">✓</span> avg 153 chars</td><td><span class="chip good" title="Good">✓</span> 4.4★</td><td><span class="chip good" title="Good">✓</span> 656 reviews</td></tr><tr><th scope="row"><a href="https://www.amazon.co.uk/dp/B0GKB7P1HW">B0GKB7P1HW</a><small>ManiLife Smooth Peanut Butter, 900g Tub - Small Batch Vegan </small></th><td class="num">50</td><td><span class="chip good" title="Good">✓</span> 7 images</td><td><span class="chip fail" title="Missing">✕</span> 0 videos</td><td><span class="chip fail" title="Missing">✕</span> no A+</td><td><span class="chip good" title="Good">✓</span> 162 chars</td><td><span class="chip fail" title="Missing">✕</span> 1 bullets</td><td><span class="chip good" title="Good">✓</span> avg 178 chars</td><td><span class="chip warn" title="Needs work">!</span> –★</td><td><span class="chip warn" title="Needs work">!</span> 0 reviews</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Advertising</span><h2>Keyword map and where to spend</h2><p>Ads already cover about half of the top 30 searches and ManiLife is #1 sponsored on &quot;peanut butter&quot;. The job is pruning: cut the butter, spread and supermarket searches, and test Pip &amp; Nut and Whole Earth searches with the price advantage. Indicative budget is small (~£550/mo on the gaps).</p></header>
+    <div class="two">
+      <div><h3>Keywords by tier</h3><div class="scroll"><table><thead><tr><th>Tier</th><th class="num">Keywords</th><th class="num">Searches/mo</th><th class="num">Gaps</th></tr></thead><tbody><tr><td>Core</td><td class="num">37</td><td class="num">389,570</td><td class="num">8</td></tr><tr><td>Category</td><td class="num">38</td><td class="num">106,803</td><td class="num">25</td></tr><tr><td>Competitor</td><td class="num">9</td><td class="num">78,376</td><td class="num">2</td></tr><tr><td>Long-tail</td><td class="num">42</td><td class="num">33,334</td><td class="num">15</td></tr><tr><td>Brand</td><td class="num">2</td><td class="num">3,028</td><td class="num">0</td></tr></tbody></table></div></div>
+      <div><h3>Indicative monthly budget</h3><span class="budget-total">£546</span><div class="stack"><span class="seg s0" style="flex:271" title="SP: £271"></span><span class="seg s1" style="flex:96" title="SB: £96.00"></span><span class="seg s2" style="flex:96" title="SBV: £96.00"></span><span class="seg s3" style="flex:82" title="SD (remarketing/retention): £82.00"></span></div><ul class="legend"><li><span class="sw s0"></span>SP <b>£271</b> <small>50%</small></li><li><span class="sw s1"></span>SB <b>£96.00</b> <small>18%</small></li><li><span class="sw s2"></span>SBV <b>£96.00</b> <small>18%</small></li><li><span class="sw s3"></span>SD (remarketing/retention) <b>£82.00</b> <small>15%</small></li></ul></div>
+    </div>
+    <h3>Focus keywords</h3>
+    <div class="scroll"><table><thead><tr><th>Keyword</th><th>Tier</th><th class="num">Searches/mo</th><th class="num">Organic</th><th class="num">Sponsored</th><th class="num">CPC</th><th>Status</th></tr></thead><tbody><tr><td>peanuts</td><td>Core</td><td class="num">29,011</td><td class="num">95</td><td class="num">–</td><td class="num">£0.23</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>peanut butter powder</td><td>Core</td><td class="num">10,763</td><td class="num">12</td><td class="num">–</td><td class="num">£0.20</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>pb2</td><td>Core</td><td class="num">2,090</td><td class="num">16</td><td class="num">–</td><td class="num">£0.18</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>peanut</td><td>Category</td><td class="num">4,160</td><td class="num">64</td><td class="num">–</td><td class="num">£0.20</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>nut butter</td><td>Category</td><td class="num">3,353</td><td class="num">36</td><td class="num">–</td><td class="num">£0.28</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>crunchy butter</td><td>Core</td><td class="num">7,001</td><td class="num">6</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>almond butter</td><td>Category</td><td class="num">14,303</td><td class="num">81</td><td class="num">–</td><td class="num">£0.92</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>pip and nut</td><td>Category</td><td class="num">8,994</td><td class="num">22</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>roast</td><td>Category</td><td class="num">3,338</td><td class="num">50</td><td class="num">–</td><td class="num">£0.50</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>pb2 powdered peanut butter</td><td>Long-tail</td><td class="num">2,554</td><td class="num">36</td><td class="num">–</td><td class="num">£0.29</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>crunchy peanut</td><td>Core</td><td class="num">3,921</td><td class="num">53</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>pb fit peanut butter powder</td><td>Long-tail</td><td class="num">2,830</td><td class="num">41</td><td class="num">–</td><td class="num">£0.38</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>salted butter</td><td>Category</td><td class="num">5,153</td><td class="num">27</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>jif peanut butter</td><td>Core</td><td class="num">671</td><td class="num">10</td><td class="num">–</td><td class="num">£0.17</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>powder peanut butter</td><td>Core</td><td class="num">546</td><td class="num">11</td><td class="num">–</td><td class="num">£0.20</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>butter portions</td><td>Category</td><td class="num">3,604</td><td class="num">41</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>peanut butter m&amp;m&#x27;s</td><td>Core</td><td class="num">2,169</td><td class="num">34</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr><tr><td>peanut butter chocolate</td><td>Category</td><td class="num">1,412</td><td class="num">134</td><td class="num">–</td><td class="num">£0.34</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>spreadable butter</td><td>Category</td><td class="num">3,925</td><td class="num">65</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status missing">Not visible</span></td></tr><tr><td>clover butter</td><td>Category</td><td class="num">2,311</td><td class="num">33</td><td class="num">–</td><td class="num">–</td><td><span class="kw-status push">Ranks page 1–2, no ads: push to top</span></td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Competitors</span><h2>Who is taking the clicks</h2></header>
+    <div class="two">
+      <div><h3>Share of voice across category searches</h3><div class="hbars"><div class="hbar"><span class="hbar-label">Pip &amp; Nut</span><span class="hbar-track"><span class="hbar-fill" style="width:100.0%" title="Pip &amp; Nut: 16%"></span></span><span class="hbar-value">16%</span></div><div class="hbar"><span class="hbar-label">Morrisons</span><span class="hbar-track"><span class="hbar-fill" style="width:77.2%" title="Morrisons: 12%"></span></span><span class="hbar-value">12%</span></div><div class="hbar"><span class="hbar-label">Nutella</span><span class="hbar-track"><span class="hbar-fill" style="width:57.0%" title="Nutella: 9%"></span></span><span class="hbar-value">9%</span></div><div class="hbar"><span class="hbar-label">PBfit</span><span class="hbar-track"><span class="hbar-fill" style="width:45.6%" title="PBfit: 7%"></span></span><span class="hbar-value">7%</span></div><div class="hbar"><span class="hbar-label">MANÍLIFE</span><span class="hbar-track"><span class="hbar-fill" style="width:37.3%" title="MANÍLIFE: 6%"></span></span><span class="hbar-value">6%</span></div><div class="hbar"><span class="hbar-label">Grenade</span><span class="hbar-track"><span class="hbar-fill" style="width:15.2%" title="Grenade: 2%"></span></span><span class="hbar-value">2%</span></div><div class="hbar"><span class="hbar-label">Anchor</span><span class="hbar-track"><span class="hbar-fill" style="width:13.3%" title="Anchor: 2%"></span></span><span class="hbar-value">2%</span></div><div class="hbar"><span class="hbar-label">Cutting It Vine</span><span class="hbar-track"><span class="hbar-fill" style="width:13.3%" title="Cutting It Vine: 2%"></span></span><span class="hbar-value">2%</span></div></div></div>
+      <div><h3>Ads on their brand name</h3><ul class="attackers"><li><b>Wellness CORE</b> sponsored at position 37 on “manilife”<small>Wellness CORE Original 10 kg, Chicken &amp; Turkey – Dry Dog Food | for Medium Breeds, Grain-F</small></li><li><b>PBfit Classic</b> sponsored at position 50 on “manilife peanut butter”<small>PBfit Classic Peanut Butter Powder 225g, with 8g Protein, 3g Fibre</small></li></ul><p>They do appear in their own brand-term ads.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Amazon Marketing Cloud</span><h2>Path to purchase and repeat buying</h2></header>
+    <p>Repeat-purchase signals: high (Subscribe &amp; Save on 75% of ASINs, multipacks 0%, consumable category).</p><div class="two"><div><h3>What we expect AMC to show</h3><ul><li>75% of the live range offers Subscribe &amp; Save in a consumable category, so in this category repeat buyers typically drive most revenue.</li></ul></div><div><h3>Questions we would answer in week one</h3><ol><li>How many ManiLife buyers reorder, and after how many days?</li><li>Which flavour do new customers start with, and what do they buy next?</li><li>What share of ad-driven sales are new to the brand?</li></ol></div></div>
+  </section>
+
+  <section>
+    <header><span class="eyebrow">Method</span><h2>How this was put together</h2></header>
+    <div class="method"><p>Built from public marketplace data (Keepa, Jungle Scout, DataForSEO, Amazon catalogue and bid recommendations) on 2026-11-14. We have not seen this brand's Seller Central or advertising account, so spend and budget figures are estimates.</p><p>Budget model: search volume × 12% of searches producing an ad click × target sponsored share of voice by tier × CPC benchmark, plus 15% for remarketing.</p><details><summary>Data gaps in this run</summary><ul><li>images: can&#x27;t reach m.media-amazon.com (&lt;urlopen error Tunnel connection failed: 403 Forbidden&gt;); add it to Allowed domains</li><li>spapi.items: SP-API not configured</li><li>ads.bids: Ads API not configured; using Jungle Scout PPC bids</li></ul></details></div>
+  </section>
+
+  <footer>Smart PPC · smartppc.ai</footer>
+</main>

@@ -1,0 +1,3737 @@
+{
+  "prospect": {
+    "brand": "Shnuggle",
+    "marketplace": "uk",
+    "domain": "amazon.co.uk",
+    "currency": "\u00a3",
+    "input": "Shnuggle",
+    "seller_name": null,
+    "landing_asin": null
+  },
+  "generated": "2026-11-14",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 43,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog.spellings",
+        "status": "ok",
+        "searched": [
+          "Shnuggle"
+        ]
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 150
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 58,
+        "hero_families": 6,
+        "revenue_share": 0.8
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 14,
+        "waited_min": 0.0
+      },
+      {
+        "step": "images",
+        "status": "skipped",
+        "reason": "can't reach m.media-amazon.com (<urlopen error Tunnel connection failed: 403 Forbidden>); add it to Allowed domains"
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 6,
+        "keywords": 436
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 10
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": "https://www.shnuggle.com",
+        "emails": 1
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 28,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 21,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 12.399999999999995,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      },
+      "apollo_search": {
+        "used": 0,
+        "limit": 10.0
+      },
+      "apollo_credits": {
+        "used": 0,
+        "limit": 3.0
+      }
+    },
+    "collected_at": "2026-11-14T08:19:34.632535+00:00"
+  },
+  "focus": {
+    "total_asins": 150,
+    "live_asins": 58,
+    "families": 26,
+    "hero_families": 6,
+    "hero_revenue_share": 0.8,
+    "est_monthly_revenue": 238392
+  },
+  "heroes": [
+    {
+      "asin": "B0CDLW5K89",
+      "parent_asin": "B0CJH2GR5P",
+      "title": "Shnuggle Squishy Baby Changing Mat | Soft and Warm Foam Material is Nicer for Babies | Perfect for Nappy/Diaper Changing Time | Anti-Slip Easy Clean Wipeable (Taupe)",
+      "family_revenue_30d": 57967,
+      "family_size": 5,
+      "family_revenue_keepa": 25620,
+      "units_30d": 1451,
+      "price": 42.7,
+      "list_price": 59.95,
+      "sellers": 3,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Mats",
+      "product_type": null,
+      "rating": 4.2,
+      "reviews": 767,
+      "sales_rank": 352.0,
+      "content": {
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "165 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "fail",
+            "detail": "avg 68 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "767 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 8 images zoomable (2500px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "8 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 59s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 65 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "6 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "baby mat",
+          "tier": "core",
+          "status": "push",
+          "volume": 8756,
+          "organic_rank": 15,
+          "sponsored_rank": null,
+          "cpc": 0.44
+        },
+        {
+          "keyword": "changing table",
+          "tier": "category",
+          "status": "push",
+          "volume": 7933,
+          "organic_rank": 28,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "baby changing table",
+          "tier": "category",
+          "status": "push",
+          "volume": 7367,
+          "organic_rank": 28,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "baby changing unit",
+          "tier": "category",
+          "status": "push",
+          "volume": 4659,
+          "organic_rank": 27,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "changing mat foldable",
+          "tier": "category",
+          "status": "push",
+          "volume": 3111,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "anti roll changing mat",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2894,
+          "organic_rank": 14,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "folding changing mat",
+          "volume": 1314,
+          "sponsored_rank": 31,
+          "reason": "different product (\"folding\")"
+        },
+        {
+          "keyword": "snuggle",
+          "volume": 1002,
+          "sponsored_rank": 3,
+          "reason": "different product (\"snuggle\")"
+        },
+        {
+          "keyword": "snuggleups",
+          "volume": 834,
+          "sponsored_rank": 3,
+          "reason": "different product (\"snuggleups\")"
+        },
+        {
+          "keyword": "snuggle bath",
+          "volume": 556,
+          "sponsored_rank": 36,
+          "reason": "different product (\"snuggle\")"
+        },
+        {
+          "keyword": "fold up changing mat",
+          "volume": 529,
+          "sponsored_rank": 20,
+          "reason": "different product (\"fold\")"
+        }
+      ],
+      "sponsored_terms": 33,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B084PP9W5F",
+      "parent_asin": "B0BYFKM1RP",
+      "title": "Shnuggle Baby Bath Tub Featuring Ergonomic Bum Bump Support, Soft Foam Backrest and an Integrated Plug. A Compact, Space-Saving Bathing Solution for Newborns up to 12 Months - White",
+      "family_revenue_30d": 56121,
+      "family_size": 5,
+      "family_revenue_keepa": 16990,
+      "units_30d": 2283,
+      "price": 16.99,
+      "list_price": 25.95,
+      "sellers": 3,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Bathing Tubs & Seats",
+      "product_type": null,
+      "rating": 4.7,
+      "reviews": 3675,
+      "sales_rank": 181.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "7 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "181 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 244 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "3675 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "8 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "7 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "2 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "5 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "baby bath jug",
+          "tier": "category",
+          "status": "push",
+          "volume": 2877,
+          "organic_rank": 40,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "angel care baby bath seat",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2681,
+          "organic_rank": 17,
+          "sponsored_rank": null,
+          "cpc": 0.72
+        },
+        {
+          "keyword": "foldable bath",
+          "tier": "category",
+          "status": "push",
+          "volume": 2541,
+          "organic_rank": 43,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "baby bath set",
+          "tier": "category",
+          "status": "push",
+          "volume": 2378,
+          "organic_rank": 40,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "newborn essentials bath",
+          "tier": "category",
+          "status": "push",
+          "volume": 1197,
+          "organic_rank": 28,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "baby born bath",
+          "tier": "category",
+          "status": "push",
+          "volume": 1193,
+          "organic_rank": 40,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "foldable baby bath",
+          "volume": 3089,
+          "sponsored_rank": 54,
+          "reason": "different product (\"foldable\")"
+        },
+        {
+          "keyword": "baby bath chair",
+          "volume": 1898,
+          "sponsored_rank": 20,
+          "reason": "different product (\"chair\")"
+        },
+        {
+          "keyword": "collapsible baby bath",
+          "volume": 1638,
+          "sponsored_rank": 28,
+          "reason": "different product (\"collapsible\")"
+        },
+        {
+          "keyword": "baby bath cushion",
+          "volume": 1406,
+          "sponsored_rank": 8,
+          "reason": "different product (\"cushion\")"
+        },
+        {
+          "keyword": "top and tail bowl",
+          "volume": 1303,
+          "sponsored_rank": 11,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "bath jug for baby washing",
+          "volume": 1189,
+          "sponsored_rank": 4,
+          "reason": "different product (\"washing\")"
+        },
+        {
+          "keyword": "inflatable baby bath",
+          "volume": 864,
+          "sponsored_rank": 30,
+          "reason": "different product (\"inflatable\")"
+        },
+        {
+          "keyword": "baby bath pillow",
+          "volume": 793,
+          "sponsored_rank": 5,
+          "reason": "different product (\"pillow\")"
+        }
+      ],
+      "sponsored_terms": 57,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0GMQVL2SD",
+      "parent_asin": "B0GQV4VSKL",
+      "title": "Shnuggle Eco-Touch Nappy Bin (Diaper Pail) | Eco-Friendly Nappy Disposal System | No Costly Refills \u2013 Use Any Bag | Dual-Seal Odour Lock | Easy-Clean, One-Hand Drop-and-Go Bin",
+      "family_revenue_30d": 30589,
+      "family_size": 2,
+      "family_revenue_keepa": 29960,
+      "units_30d": 1018,
+      "price": 29.96,
+      "list_price": 39.95,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Nappy Bins",
+      "product_type": null,
+      "rating": 4.2,
+      "reviews": 342,
+      "sales_rank": 542.0,
+      "content": {
+        "score": 69,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "10 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "175 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "6 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 142 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "346 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 88,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "10 gallery images"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "6 bullets, first is 158 characters"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "diaper bag",
+          "tier": "category",
+          "status": "push",
+          "volume": 8220,
+          "organic_rank": 38,
+          "sponsored_rank": null,
+          "cpc": 0.47
+        },
+        {
+          "keyword": "bin for bedroom",
+          "tier": "category",
+          "status": "push",
+          "volume": 7936,
+          "organic_rank": 37,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "nappy bucket with lid",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 962,
+          "organic_rank": 28,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "self sealing bin",
+          "tier": "category",
+          "status": "push",
+          "volume": 824,
+          "organic_rank": 37,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "angel care nappy bin",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 20,
+          "sponsored_rank": null,
+          "cpc": 0.33
+        },
+        {
+          "keyword": "fly proof bin",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 18,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "snuggle ups",
+          "volume": 3689,
+          "sponsored_rank": 7,
+          "reason": "different product (\"ups\")"
+        },
+        {
+          "keyword": "nappy disposal bags",
+          "volume": 807,
+          "sponsored_rank": 63,
+          "reason": "different product (\"bags\")"
+        },
+        {
+          "keyword": "nappy bag dispenser",
+          "volume": 757,
+          "sponsored_rank": 1,
+          "reason": "different product (\"dispenser\")"
+        },
+        {
+          "keyword": "naty nappy bags",
+          "volume": 620,
+          "sponsored_rank": 43,
+          "reason": "different product (\"naty\")"
+        },
+        {
+          "keyword": "baby nappy bags",
+          "volume": 563,
+          "sponsored_rank": 62,
+          "reason": "different product (\"bags\")"
+        },
+        {
+          "keyword": "nappy bags biodegradable",
+          "volume": 531,
+          "sponsored_rank": 26,
+          "reason": "different product (\"biodegradable\")"
+        },
+        {
+          "keyword": "large nappy bags",
+          "volume": 482,
+          "sponsored_rank": 66,
+          "reason": "different product (\"bags\")"
+        },
+        {
+          "keyword": "cream pedal bin",
+          "volume": 450,
+          "sponsored_rank": 61,
+          "reason": "different product (\"cream\")"
+        }
+      ],
+      "sponsored_terms": 52,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0861ZL7KV",
+      "parent_asin": "B0BYPC7T28",
+      "title": "Shnuggle Toddler Bath Tub for Growing Children, Comfortable Spacious Design with Foam Support, Grippy Anti Slip Surface and Easy Drain Plug, White with Light Grey Backrest",
+      "family_revenue_30d": 21541,
+      "family_size": 4,
+      "family_revenue_keepa": 6590,
+      "units_30d": 512,
+      "price": 32.95,
+      "list_price": 44.95,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Bathing Tubs & Seats",
+      "product_type": null,
+      "rating": 4.8,
+      "reviews": 1759,
+      "sales_rank": 1151.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "11 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "6 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "171 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "6 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 127 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1762 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 11 images zoomable (2500px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "11 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 22s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "6 bullets, first is 127 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "bath seat baby 6+ months",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4838,
+          "organic_rank": 28,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath tub",
+          "tier": "core",
+          "status": "push",
+          "volume": 4128,
+          "organic_rank": 15,
+          "sponsored_rank": null,
+          "cpc": 0.46
+        },
+        {
+          "keyword": "baby bath jug",
+          "tier": "category",
+          "status": "push",
+          "volume": 2877,
+          "organic_rank": 58,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "angel care baby bath seat",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2681,
+          "organic_rank": 43,
+          "sponsored_rank": null,
+          "cpc": 0.72
+        },
+        {
+          "keyword": "baby bathtub",
+          "tier": "core",
+          "status": "push",
+          "volume": 2299,
+          "organic_rank": 15,
+          "sponsored_rank": null,
+          "cpc": 0.02
+        },
+        {
+          "keyword": "bathtub",
+          "tier": "category",
+          "status": "push",
+          "volume": 2024,
+          "organic_rank": 56,
+          "sponsored_rank": null,
+          "cpc": 0.37
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "newborn bath",
+          "volume": 2182,
+          "sponsored_rank": 26,
+          "reason": "different product (\"newborn\")"
+        },
+        {
+          "keyword": "bath toy storage anti mould",
+          "volume": 1871,
+          "sponsored_rank": 19,
+          "reason": "different product (\"mould\")"
+        },
+        {
+          "keyword": "baby bath newborn",
+          "volume": 1232,
+          "sponsored_rank": 8,
+          "reason": "different product (\"newborn\")"
+        },
+        {
+          "keyword": "bath toy basket",
+          "volume": 808,
+          "sponsored_rank": 19,
+          "reason": "different product (\"basket\")"
+        },
+        {
+          "keyword": "bath storage for toys",
+          "volume": 666,
+          "sponsored_rank": 22,
+          "reason": "different product (\"storage\")"
+        },
+        {
+          "keyword": "baby batg",
+          "volume": 562,
+          "sponsored_rank": 4,
+          "reason": "different product (\"batg\")"
+        },
+        {
+          "keyword": "baby barh",
+          "volume": 450,
+          "sponsored_rank": 5,
+          "reason": "different product (\"barh\")"
+        },
+        {
+          "keyword": "baby bath inflatable",
+          "volume": 450,
+          "sponsored_rank": 3,
+          "reason": "different product (\"inflatable\")"
+        }
+      ],
+      "sponsored_terms": 37,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0C9R3Z3YJ",
+      "parent_asin": "B0CXVF5DCQ",
+      "title": "Shnuggle Baby Bath Rinse Cup, Soft Rim Shampoo Rinser and Hair Wash Jug, No Tears Design for Newborn and Toddler Bath Time, Easy Grip Handle, Gentle Washing Accessory, Suitable from Birth. Taupe.",
+      "family_revenue_30d": 16708,
+      "family_size": 5,
+      "family_revenue_keepa": 9525,
+      "units_30d": 3060,
+      "price": 5.95,
+      "list_price": 7.95,
+      "sellers": 1,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Bathing",
+      "product_type": "shampoo",
+      "rating": 4.6,
+      "reviews": 373,
+      "sales_rank": 116.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "10 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "195 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 160 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "375 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 10 images zoomable (2500px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "10 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 28s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 200 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "5 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "wrong_category",
+          "detail": "shampoo listed under Bathing"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "baby grooming kit newborn",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4176,
+          "organic_rank": 44,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "baby essentials for newborn girl",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2110,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": 1.04
+        },
+        {
+          "keyword": "bath toy storage anti mould",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 1871,
+          "organic_rank": 22,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "baby bath newborn",
+          "tier": "category",
+          "status": "push",
+          "volume": 1232,
+          "organic_rank": 44,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "newborn essentials bath",
+          "tier": "core",
+          "status": "push",
+          "volume": 1197,
+          "organic_rank": 10,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "baby born bath",
+          "tier": "category",
+          "status": "push",
+          "volume": 1193,
+          "organic_rank": 44,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "baby bath support",
+          "volume": 3855,
+          "sponsored_rank": 9,
+          "reason": "different product (\"support\")"
+        },
+        {
+          "keyword": "foldable baby bath",
+          "volume": 3089,
+          "sponsored_rank": 64,
+          "reason": "different product (\"foldable\")"
+        },
+        {
+          "keyword": "baby bath with stand",
+          "volume": 2277,
+          "sponsored_rank": 29,
+          "reason": "different product (\"stand\")"
+        },
+        {
+          "keyword": "baby baths",
+          "volume": 1418,
+          "sponsored_rank": 31,
+          "reason": "different product (\"baths\")"
+        },
+        {
+          "keyword": "baby care kit",
+          "volume": 1397,
+          "sponsored_rank": 61,
+          "reason": "different product (\"kit\")"
+        },
+        {
+          "keyword": "baby cleansing water",
+          "volume": 1158,
+          "sponsored_rank": 16,
+          "reason": "different product (\"water\")"
+        },
+        {
+          "keyword": "aveeno baby shampoo",
+          "volume": 1138,
+          "sponsored_rank": 26,
+          "reason": "different product (\"aveeno\")"
+        },
+        {
+          "keyword": "aveeno baby wash",
+          "volume": 983,
+          "sponsored_rank": 25,
+          "reason": "different product (\"aveeno\")"
+        }
+      ],
+      "sponsored_terms": 42,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0C5RHGNTS",
+      "parent_asin": "B0C869T515",
+      "title": "Shnuggle Ellie Bath Toy Storage Scoop & Organiser | Baby & Toddler Bath Toy Drying Caddy with Drip Tray | Made from 98% Recycled Plastic | Dries Better Than a Bath Toy Net",
+      "family_revenue_30d": 8746,
+      "family_size": 5,
+      "family_revenue_keepa": 6876,
+      "units_30d": 833,
+      "price": 10.5,
+      "list_price": 18.95,
+      "sellers": 2,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Bathing",
+      "product_type": null,
+      "rating": 4.6,
+      "reviews": 383,
+      "sales_rank": 873.0,
+      "content": {
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "171 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 170 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "384 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 8 images zoomable (2500px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "8 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 42s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 175 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "5 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "bath storage",
+          "tier": "category",
+          "status": "push",
+          "volume": 2720,
+          "organic_rank": 29,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath toy net",
+          "tier": "category",
+          "status": "push",
+          "volume": 1588,
+          "organic_rank": 52,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath tidy",
+          "tier": "category",
+          "status": "push",
+          "volume": 680,
+          "organic_rank": 45,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath net for toys",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 502,
+          "organic_rank": 46,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath basket",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 18,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath buddy shelf",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "bath water storage bag",
+          "volume": 8595,
+          "sponsored_rank": 29,
+          "reason": "different product (\"water\")"
+        },
+        {
+          "keyword": "bath jug",
+          "volume": 3133,
+          "sponsored_rank": 19,
+          "reason": "different product (\"jug\")"
+        },
+        {
+          "keyword": "baby bath jug",
+          "volume": 2877,
+          "sponsored_rank": 19,
+          "reason": "different product (\"jug\")"
+        },
+        {
+          "keyword": "newborn bath",
+          "volume": 2182,
+          "sponsored_rank": 34,
+          "reason": "different product (\"newborn\")"
+        },
+        {
+          "keyword": "bath boats",
+          "volume": 735,
+          "sponsored_rank": 63,
+          "reason": "different product (\"boats\")"
+        },
+        {
+          "keyword": "suction baby toys",
+          "volume": 621,
+          "sponsored_rank": 11,
+          "reason": "different product (\"suction\")"
+        },
+        {
+          "keyword": "baby hair wash jug",
+          "volume": 450,
+          "sponsored_rank": 21,
+          "reason": "different product (\"wash\")"
+        },
+        {
+          "keyword": "bath kneeler and elbow rest pad",
+          "volume": 450,
+          "sponsored_rank": 16,
+          "reason": "different product (\"kneeler\")"
+        }
+      ],
+      "sponsored_terms": 43,
+      "mobile_sheet": null
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [],
+    "clutter": [],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 150,
+    "fetched": 14,
+    "parents": 6,
+    "categories": {
+      "Baby Products": 14
+    },
+    "asins": [
+      {
+        "asin": "B0CDLW5K89",
+        "parent_asin": "B0CJH2GR5P",
+        "title": "Shnuggle Squishy Baby Changing Mat | Soft and Warm Foam Material is Nicer for Babies | Perfect for Nappy/Diaper Changing Time | Anti-Slip Easy Clean Wipeable (Taupe)",
+        "price": 42.7,
+        "rating": 4.2,
+        "review_count": 767,
+        "monthly_sold": 500,
+        "sales_rank": 352.0,
+        "listed_since": "2023-08-20",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 21350
+      },
+      {
+        "asin": "B0GMQVL2SD",
+        "parent_asin": "B0GQV4VSKL",
+        "title": "Shnuggle Eco-Touch Nappy Bin (Diaper Pail) | Eco-Friendly Nappy Disposal System | No Costly Refills \u2013 Use Any Bag | Dual-Seal Odour Lock | Easy-Clean, One-Hand Drop-and-Go Bin",
+        "price": 29.96,
+        "rating": 4.2,
+        "review_count": 346,
+        "monthly_sold": 700,
+        "sales_rank": 542.0,
+        "listed_since": "2026-02-25",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 20972
+      },
+      {
+        "asin": "B084PP9W5F",
+        "parent_asin": "B0BYFKM1RP",
+        "title": "Shnuggle Baby Bath Tub Featuring Ergonomic Bum Bump Support, Soft Foam Backrest and an Integrated Plug. A Compact, Space-Saving Bathing Solution for Newborns up to 12 Months - White",
+        "price": 16.99,
+        "rating": 4.7,
+        "review_count": 3675,
+        "monthly_sold": 1000,
+        "sales_rank": 181.0,
+        "listed_since": "2020-03-11",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 16990
+      },
+      {
+        "asin": "B09TTJ8LX4",
+        "parent_asin": "B0GQV4VSKL",
+        "title": "Shnuggle Eco-Touch Nappy Bin (Diaper Pail) | Eco-Friendly Nappy Disposal System | No Costly Refills \u2013 Use Any Bag | Dual-Seal Odour Lock | Easy-Clean, One-Hand Drop-and-Go Bin",
+        "price": 29.96,
+        "rating": 4.2,
+        "review_count": 346,
+        "monthly_sold": 300,
+        "sales_rank": 542.0,
+        "listed_since": "2022-04-17",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 8988
+      },
+      {
+        "asin": "B0861ZL7KV",
+        "parent_asin": "B0BYPC7T28",
+        "title": "Shnuggle Toddler Bath Tub for Growing Children, Comfortable Spacious Design with Foam Support, Grippy Anti Slip Surface and Easy Drain Plug, White with Light Grey Backrest",
+        "price": 32.95,
+        "rating": 4.8,
+        "review_count": 1762,
+        "monthly_sold": 200,
+        "sales_rank": 1151.0,
+        "listed_since": "2020-03-11",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 6590
+      },
+      {
+        "asin": "B0C9R3Z3YJ",
+        "parent_asin": "B0CXVF5DCQ",
+        "title": "Shnuggle Baby Bath Rinse Cup, Soft Rim Shampoo Rinser and Hair Wash Jug, No Tears Design for Newborn and Toddler Bath Time, Easy Grip Handle, Gentle Washing Accessory, Suitable from Birth. Taupe.",
+        "price": 5.95,
+        "rating": 4.6,
+        "review_count": 375,
+        "monthly_sold": 1000,
+        "sales_rank": 116.0,
+        "listed_since": "2023-09-18",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 5950
+      },
+      {
+        "asin": "B0GHS317YZ",
+        "parent_asin": "B0CJH2GR5P",
+        "title": "Shnuggle Squishy Baby Changing Mat | Soft and Warm Foam Material is Nicer for Babies | Perfect for Nappy/Diaper Changing Time | Anti-Slip Easy Clean Wipeable (Ivory)",
+        "price": 42.7,
+        "rating": 4.2,
+        "review_count": 767,
+        "monthly_sold": 100,
+        "sales_rank": 352.0,
+        "listed_since": "2026-01-20",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 4270
+      },
+      {
+        "asin": "B0C5RHGNTS",
+        "parent_asin": "B0C869T515",
+        "title": "Shnuggle Ellie Bath Toy Storage Scoop & Organiser | Baby & Toddler Bath Toy Drying Caddy with Drip Tray | Made from 98% Recycled Plastic | Dries Better Than a Bath Toy Net",
+        "price": 10.5,
+        "rating": 4.6,
+        "review_count": 384,
+        "monthly_sold": 400,
+        "sales_rank": 873.0,
+        "listed_since": "2023-05-31",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 4200
+      },
+      {
+        "asin": "B0CRRV4J26",
+        "parent_asin": "B0CXVF5DCQ",
+        "title": "Shnuggle Baby Bath Rinse Cup, Soft Rim Shampoo Rinser and Hair Wash Jug, No Tears Design for Newborn and Toddler Bath Time, Easy Grip Handle, Gentle Washing Accessory, Suitable from Birth. White.",
+        "price": 5.95,
+        "rating": 4.6,
+        "review_count": 375,
+        "monthly_sold": 500,
+        "sales_rank": 116.0,
+        "listed_since": "2024-01-08",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 2975
+      },
+      {
+        "asin": "B0C5N91DVG",
+        "parent_asin": "B0C869T515",
+        "title": "Shnuggle Ellie Bath Toy Storage Scoop & Organiser | Baby & Toddler Bath Toy Drying Caddy with Drip Tray | Made from 98% Recycled Plastic | Dries Better Than a Bath Toy Net",
+        "price": 13.81,
+        "rating": 4.6,
+        "review_count": 384,
+        "monthly_sold": 100,
+        "sales_rank": 687.0,
+        "listed_since": "2023-05-31",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 1381
+      },
+      {
+        "asin": "B0C5N8GL8Z",
+        "parent_asin": "B0C869T515",
+        "title": "Shnuggle Ellie Bath Toy Storage Scoop and Organiser, Baby and Toddler Bath Toy Drying Caddy with Drip Tray, 98% Recycled Plastic, Easy Scoop Design, Helps Keep Bath Toys Dry and Organised. Grey",
+        "price": 12.95,
+        "rating": 4.6,
+        "review_count": 383,
+        "monthly_sold": 100,
+        "sales_rank": 687.0,
+        "listed_since": "2023-05-31",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 1295
+      },
+      {
+        "asin": "B0FB9MDPQ3",
+        "parent_asin": "B0CXVF5DCQ",
+        "title": "Shnuggle Baby Bath Rinse Cup, Soft Rim Shampoo Rinser and Hair Wash Jug, No Tears Design for Newborn and Toddler Bath Time, Easy Grip Handle, 98% Recycled Plastic, Suitable from Birth. Eco Collection",
+        "price": 6.0,
+        "rating": 4.6,
+        "review_count": 374,
+        "monthly_sold": 100,
+        "sales_rank": 116.0,
+        "listed_since": "2025-05-29",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": 600
+      },
+      {
+        "asin": "B0BYFKM1RP",
+        "parent_asin": "B0BYFKM1RP",
+        "title": "Shnuggle Newborn Baby Bath and Washy Rinsing Jug Bundle | The Perfect Baby Bath Partnership | Newborn Support and Rinse jug | Taupe",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 181.0,
+        "listed_since": "2023-03-14",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0BYPC7T28",
+        "parent_asin": "B0BYPC7T28",
+        "title": "Shnuggle Toddler Bath",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 1151.0,
+        "listed_since": "2023-03-16",
+        "root_category": "Baby Products",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 14,
+    "launches_by_quarter": {
+      "2024-Q1": 1,
+      "2025-Q2": 1,
+      "2026-Q1": 2
+    },
+    "launches_last_12m": 2,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 95561,
+    "top3_revenue_share": 0.62,
+    "bsr_trend_top_parents": {
+      "median_bsr_now": 546.5,
+      "median_bsr_year_ago": 914.0,
+      "improved": true,
+      "change_pct": -40
+    },
+    "reviews_gained_12m": 2383
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 77,
+      "share_under_7_images": 0.0,
+      "share_no_video": 0.21,
+      "share_no_aplus": 0.29,
+      "share_under_5_bullets": 0.14,
+      "share_rating_below_4_2": 0.0,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B0CDLW5K89",
+        "title": "Shnuggle Squishy Baby Changing Mat | Soft and Warm Foam Material is Nicer for Babies | Perfect for Nappy/Diaper Changing Time | Anti-Slip Easy Clean Wipeable (Taupe)",
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "165 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "fail",
+            "detail": "avg 68 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "767 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0BYFKM1RP",
+        "title": "Shnuggle Newborn Baby Bath and Washy Rinsing Jug Bundle | The Perfect Baby Bath Partnership | Newborn Support and Rinse jug | Taupe",
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "131 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09TTJ8LX4",
+        "title": "Shnuggle Eco-Touch Nappy Bin (Diaper Pail) | Eco-Friendly Nappy Disposal System | No Costly Refills \u2013 Use Any Bag | Dual-Seal Odour Lock | Easy-Clean, One-Hand Drop-and-Go Bin",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "6 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "175 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "6 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 142 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "346 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0BYPC7T28",
+        "title": "Shnuggle Toddler Bath",
+        "score": 38,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "9 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "21 chars"
+          },
+          "bullets": {
+            "status": "fail",
+            "detail": "1 bullets"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "avg 106 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0CRRV4J26",
+        "title": "Shnuggle Baby Bath Rinse Cup, Soft Rim Shampoo Rinser and Hair Wash Jug, No Tears Design for Newborn and Toddler Bath Time, Easy Grip Handle, Gentle Washing Accessory, Suitable from Birth. White.",
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "10 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "195 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "6 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 166 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "375 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0C5RHGNTS",
+        "title": "Shnuggle Ellie Bath Toy Storage Scoop & Organiser | Baby & Toddler Bath Toy Drying Caddy with Drip Tray | Made from 98% Recycled Plastic | Dries Better Than a Bath Toy Net",
+        "score": 100,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "171 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 170 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "384 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 8,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.27,
+    "est_monthly_spend_on_sampled_terms": {
+      "low": 1184,
+      "high": 2959
+    },
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "Pampers",
+        "avg_sov": 0.124,
+        "avg_sponsored_sov": 0.14,
+        "keywords_present": 3,
+        "is_prospect": false
+      },
+      {
+        "brand": "Tommee Tippee",
+        "avg_sov": 0.094,
+        "avg_sponsored_sov": 0.092,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "Shnuggle",
+        "avg_sov": 0.088,
+        "avg_sponsored_sov": 0.094,
+        "keywords_present": 12,
+        "is_prospect": true
+      },
+      {
+        "brand": "WaterWipes",
+        "avg_sov": 0.054,
+        "avg_sponsored_sov": 0.049,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "JVEOO",
+        "avg_sov": 0.047,
+        "avg_sponsored_sov": 0.058,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Buyockss",
+        "avg_sov": 0.037,
+        "avg_sponsored_sov": 0.046,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Angelcare",
+        "avg_sov": 0.031,
+        "avg_sponsored_sov": 0.036,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "VTL",
+        "avg_sov": 0.03,
+        "avg_sponsored_sov": 0.034,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Ingenuity",
+        "avg_sov": 0.022,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "Optimal Products",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "DTD QUALITY MATTERS",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "PWgoods",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 3,
+        "is_prospect": false
+      },
+      {
+        "brand": "Addis",
+        "avg_sov": 0.018,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "REQUISITE NEEDS",
+        "avg_sov": 0.018,
+        "avg_sponsored_sov": 0.02,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Easy Shopping",
+        "avg_sov": 0.017,
+        "avg_sponsored_sov": 0.021,
+        "keywords_present": 2,
+        "is_prospect": false
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [
+      {
+        "keyword": "shnuggle",
+        "asin": "B08GLKCPBG",
+        "brand_guess": "Cozyganoosh -",
+        "title": "Cozyganoosh - Stella (Grey)",
+        "position": 4
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0C6FXFP98",
+        "brand_guess": "Transitional Swaddle",
+        "title": "Transitional Swaddle Sack, Baby Swaddles for Newborn with Arms Up Half-Length Sleeves & Mi",
+        "position": 5
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B07X7CR9YR",
+        "brand_guess": "6-Way Omni",
+        "title": "6-Way Omni Swaddle Sack Arms Up Swaddle for Newborn, More Options to Calm Startle Reflex, ",
+        "position": 11
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0CNQ9ZTNP",
+        "brand_guess": "Transitional Swaddle",
+        "title": "Transitional Swaddle Sack, Baby Swaddles for Newborn with Arms Up Half-Length Sleeves & Mi",
+        "position": 12
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0HGR5G3F2",
+        "brand_guess": "Twist &",
+        "title": "Twist & Click Nappy Bin Set + 6x 10.5m Refill Cassettes",
+        "position": 13
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0FLP2M5GD",
+        "brand_guess": "Sleep Bag",
+        "title": "Sleep Bag with Feet, 4 Years, Bees Olive, 2.5 Tog",
+        "position": 19
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0G432W42D",
+        "brand_guess": "Baby Sleeping",
+        "title": "Baby Sleeping Bag 0-6 Months, 1.5 Tog Wearable Blanket, Giraffe, S",
+        "position": 20
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0F9MS2PJT",
+        "brand_guess": "Sleep Bag",
+        "title": "Sleep Bag | Long Sleeve, Lightweight Wearable Blanket & Quilt | 2.5 TOG Ideal for Winter &",
+        "position": 21
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0F8BCTG5Z",
+        "brand_guess": "Naty BioEmbrace",
+        "title": "Naty BioEmbrace Newborn Nappies, Sensitive Skin, Size 1 (2\u20135kg), 100 Count | Hypoallergeni",
+        "position": 22
+      },
+      {
+        "keyword": "shnuggle",
+        "asin": "B0GQ4XZKXJ",
+        "brand_guess": "MAM Easy",
+        "title": "MAM Easy to Drink Sippy Cup, 1x 290ml, 360\u00b0 Rim, Cheetah | Clear Like Glass, Easy to Hold,",
+        "position": 62
+      },
+      {
+        "keyword": "shnuggle baby bath",
+        "asin": "B0BK5L5SJY",
+        "brand_guess": "SUPERBE BEBE",
+        "title": "SUPERBE BEBE Foldable Baby Bath with Non-Slip Bath Cushion/Bath with Thermometer for Water",
+        "position": 12
+      },
+      {
+        "keyword": "shnuggle baby bath",
+        "asin": "B0BP5NGCYR",
+        "brand_guess": "Baby Bath",
+        "title": "Baby Bath Tub with Non-Slip Bath Seat and Thermometer - Toddler Bath - Foldable Baby Bath ",
+        "position": 50
+      }
+    ],
+    "prospect_sponsored_on_own_brand": true,
+    "positioning_page1": {
+      "our_median_price": 39.95,
+      "competitor_median_price": 12.95,
+      "our_median_rating": 4.2,
+      "competitor_median_rating": 4.6
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "bin",
+        "tier": "category",
+        "volume": 114786,
+        "organic_rank": 92,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 178556
+      },
+      {
+        "keyword": "changing mat",
+        "tier": "core",
+        "volume": 46772,
+        "organic_rank": 5,
+        "sponsored_rank": 4,
+        "cpc": 0.29,
+        "status": "sponsored_support",
+        "priority": 48385
+      },
+      {
+        "keyword": "nappies",
+        "tier": "category",
+        "volume": 26760,
+        "organic_rank": 128,
+        "sponsored_rank": null,
+        "cpc": 0.33,
+        "status": "missing",
+        "priority": 34058
+      },
+      {
+        "keyword": "washing up bowl",
+        "tier": "category",
+        "volume": 66568,
+        "organic_rank": 123,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 27959
+      },
+      {
+        "keyword": "baby essentials for newborn",
+        "tier": "long_tail",
+        "volume": 91716,
+        "organic_rank": 85,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 27515
+      },
+      {
+        "keyword": "bath",
+        "tier": "category",
+        "volume": 15375,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": 0.25,
+        "status": "missing",
+        "priority": 25830
+      },
+      {
+        "keyword": "nappy bags",
+        "tier": "category",
+        "volume": 42746,
+        "organic_rank": 128,
+        "sponsored_rank": null,
+        "cpc": 0.73,
+        "status": "missing",
+        "priority": 24594
+      },
+      {
+        "keyword": "foam mats",
+        "tier": "category",
+        "volume": 10199,
+        "organic_rank": 68,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "missing",
+        "priority": 21418
+      },
+      {
+        "keyword": "bins",
+        "tier": "category",
+        "volume": 16134,
+        "organic_rank": 125,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 21176
+      },
+      {
+        "keyword": "baby bath seat",
+        "tier": "category",
+        "volume": 35777,
+        "organic_rank": 70,
+        "sponsored_rank": 10,
+        "cpc": 0.49,
+        "status": "sponsored_only",
+        "priority": 20444
+      },
+      {
+        "keyword": "baby mat",
+        "tier": "core",
+        "volume": 8756,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.44,
+        "status": "push",
+        "priority": 19900
+      },
+      {
+        "keyword": "newborn essentials",
+        "tier": "category",
+        "volume": 42937,
+        "organic_rank": 74,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 18034
+      },
+      {
+        "keyword": "baby bath",
+        "tier": "core",
+        "volume": 68962,
+        "organic_rank": 4,
+        "sponsored_rank": 2,
+        "cpc": 0.42,
+        "status": "own",
+        "priority": 16420
+      },
+      {
+        "keyword": "mats",
+        "tier": "category",
+        "volume": 4607,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 16124
+      },
+      {
+        "keyword": "baby changing mat",
+        "tier": "core",
+        "volume": 37872,
+        "organic_rank": 4,
+        "sponsored_rank": 3,
+        "cpc": 0.25,
+        "status": "own",
+        "priority": 15149
+      },
+      {
+        "keyword": "nappy sacks",
+        "tier": "category",
+        "volume": 18928,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": 0.63,
+        "status": "missing",
+        "priority": 12619
+      },
+      {
+        "keyword": "happy nappy",
+        "tier": "category",
+        "volume": 9420,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 12364
+      },
+      {
+        "keyword": "diaper bag",
+        "tier": "category",
+        "volume": 8220,
+        "organic_rank": 38,
+        "sponsored_rank": null,
+        "cpc": 0.47,
+        "status": "push",
+        "priority": 12243
+      },
+      {
+        "keyword": "bath caddy",
+        "tier": "category",
+        "volume": 5267,
+        "organic_rank": 111,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "missing",
+        "priority": 11061
+      },
+      {
+        "keyword": "baby wash",
+        "tier": "category",
+        "volume": 7887,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 10352
+      },
+      {
+        "keyword": "baby bath tub",
+        "tier": "core",
+        "volume": 11321,
+        "organic_rank": 13,
+        "sponsored_rank": 1,
+        "cpc": 0.42,
+        "status": "sponsored_support",
+        "priority": 8086
+      },
+      {
+        "keyword": "baby essentials",
+        "tier": "category",
+        "volume": 18691,
+        "organic_rank": 105,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 7850
+      },
+      {
+        "keyword": "changing mat baby",
+        "tier": "core",
+        "volume": 1562,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 7100
+      },
+      {
+        "keyword": "baby accessories",
+        "tier": "category",
+        "volume": 5994,
+        "organic_rank": 112,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "missing",
+        "priority": 6625
+      },
+      {
+        "keyword": "bin for bedroom",
+        "tier": "category",
+        "volume": 7936,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5555
+      },
+      {
+        "keyword": "changing table",
+        "tier": "category",
+        "volume": 7933,
+        "organic_rank": 28,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5553
+      },
+      {
+        "keyword": "baby items",
+        "tier": "category",
+        "volume": 5153,
+        "organic_rank": 106,
+        "sponsored_rank": null,
+        "cpc": 0.4,
+        "status": "missing",
+        "priority": 5411
+      },
+      {
+        "keyword": "baby changing table",
+        "tier": "category",
+        "volume": 7367,
+        "organic_rank": 28,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5157
+      },
+      {
+        "keyword": "travel changing mat",
+        "tier": "category",
+        "volume": 11772,
+        "organic_rank": 86,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4944
+      },
+      {
+        "keyword": "new born baby essentials",
+        "tier": "long_tail",
+        "volume": 16335,
+        "organic_rank": 117,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4900
+      },
+      {
+        "keyword": "tubs",
+        "tier": "category",
+        "volume": 3548,
+        "organic_rank": 82,
+        "sponsored_rank": null,
+        "cpc": 0.31,
+        "status": "missing",
+        "priority": 4807
+      },
+      {
+        "keyword": "baby change mat",
+        "tier": "core",
+        "volume": 1929,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 0.41,
+        "status": "push",
+        "priority": 4705
+      },
+      {
+        "keyword": "bathroom caddy",
+        "tier": "category",
+        "volume": 10911,
+        "organic_rank": 134,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4583
+      },
+      {
+        "keyword": "nalas baby",
+        "tier": "category",
+        "volume": 10260,
+        "organic_rank": 119,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4309
+      },
+      {
+        "keyword": "bath accessories",
+        "tier": "category",
+        "volume": 4074,
+        "organic_rank": 143,
+        "sponsored_rank": null,
+        "cpc": 0.41,
+        "status": "missing",
+        "priority": 4173
+      },
+      {
+        "keyword": "toddler cup",
+        "tier": "category",
+        "volume": 9431,
+        "organic_rank": 131,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3961
+      },
+      {
+        "keyword": "baby seat",
+        "tier": "category",
+        "volume": 7682,
+        "organic_rank": 127,
+        "sponsored_rank": null,
+        "cpc": 0.84,
+        "status": "missing",
+        "priority": 3841
+      },
+      {
+        "keyword": "bathtub",
+        "tier": "category",
+        "volume": 2024,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": 0.37,
+        "status": "push",
+        "priority": 3829
+      },
+      {
+        "keyword": "toddler bath toys",
+        "tier": "category",
+        "volume": 8926,
+        "organic_rank": 138,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3749
+      },
+      {
+        "keyword": "baby bath support",
+        "tier": "core",
+        "volume": 3855,
+        "organic_rank": 33,
+        "sponsored_rank": 3,
+        "cpc": 0.33,
+        "status": "sponsored_support",
+        "priority": 3505
+      },
+      {
+        "keyword": "baby bathtub",
+        "tier": "core",
+        "volume": 2299,
+        "organic_rank": 12,
+        "sponsored_rank": 1,
+        "cpc": 0.02,
+        "status": "sponsored_support",
+        "priority": 3448
+      },
+      {
+        "keyword": "newborn baby",
+        "tier": "category",
+        "volume": 2081,
+        "organic_rank": 77,
+        "sponsored_rank": null,
+        "cpc": 0.26,
+        "status": "missing",
+        "priority": 3362
+      },
+      {
+        "keyword": "baby changing unit",
+        "tier": "category",
+        "volume": 4659,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3261
+      },
+      {
+        "keyword": "portable changing mat",
+        "tier": "category",
+        "volume": 7248,
+        "organic_rank": 100,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3044
+      },
+      {
+        "keyword": "nappy",
+        "tier": "category",
+        "volume": 3523,
+        "organic_rank": 103,
+        "sponsored_rank": null,
+        "cpc": 0.49,
+        "status": "missing",
+        "priority": 3020
+      },
+      {
+        "keyword": "baby products",
+        "tier": "category",
+        "volume": 1900,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 2956
+      },
+      {
+        "keyword": "pop up bath",
+        "tier": "category",
+        "volume": 3088,
+        "organic_rank": 107,
+        "sponsored_rank": null,
+        "cpc": 0.44,
+        "status": "missing",
+        "priority": 2948
+      },
+      {
+        "keyword": "babys",
+        "tier": "category",
+        "volume": 807,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "push",
+        "priority": 2824
+      },
+      {
+        "keyword": "bath storage",
+        "tier": "core",
+        "volume": 2720,
+        "organic_rank": 29,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2720
+      },
+      {
+        "keyword": "bath tub",
+        "tier": "core",
+        "volume": 4128,
+        "organic_rank": 15,
+        "sponsored_rank": 50,
+        "cpc": 0.46,
+        "status": "sponsored_support",
+        "priority": 2692
+      },
+      {
+        "keyword": "cradle cap brush",
+        "tier": "category",
+        "volume": 6265,
+        "organic_rank": 70,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2631
+      },
+      {
+        "keyword": "kids toy storage",
+        "tier": "category",
+        "volume": 5809,
+        "organic_rank": 118,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2440
+      },
+      {
+        "keyword": "baby bubble bath",
+        "tier": "category",
+        "volume": 5314,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2232
+      },
+      {
+        "keyword": "nappy bin",
+        "tier": "core",
+        "volume": 22023,
+        "organic_rank": 3,
+        "sponsored_rank": 5,
+        "cpc": null,
+        "status": "own",
+        "priority": 2202
+      },
+      {
+        "keyword": "changing mat foldable",
+        "tier": "category",
+        "volume": 3111,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2178
+      },
+      {
+        "keyword": "portable bath",
+        "tier": "category",
+        "volume": 5030,
+        "organic_rank": 63,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2113
+      },
+      {
+        "keyword": "baby grooming kit newborn",
+        "tier": "long_tail",
+        "volume": 4176,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2088
+      },
+      {
+        "keyword": "baby bath wash",
+        "tier": "category",
+        "volume": 4768,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2003
+      },
+      {
+        "keyword": "tub",
+        "tier": "category",
+        "volume": 2102,
+        "organic_rank": 69,
+        "sponsored_rank": null,
+        "cpc": 0.45,
+        "status": "missing",
+        "priority": 1962
+      },
+      {
+        "keyword": "jugs",
+        "tier": "category",
+        "volume": 4623,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1942
+      },
+      {
+        "keyword": "bath toy storage",
+        "tier": "core",
+        "volume": 19376,
+        "organic_rank": 3,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "own",
+        "priority": 1938
+      },
+      {
+        "keyword": "sitz bath",
+        "tier": "category",
+        "volume": 4546,
+        "organic_rank": 116,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1909
+      },
+      {
+        "keyword": "angel care baby bath seat",
+        "tier": "long_tail",
+        "volume": 2681,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": 0.72,
+        "status": "push",
+        "priority": 1862
+      },
+      {
+        "keyword": "baby travel essentials",
+        "tier": "category",
+        "volume": 4420,
+        "organic_rank": 71,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1856
+      },
+      {
+        "keyword": "baby changing",
+        "tier": "core",
+        "volume": 1048,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "organic_top_unprotected",
+        "priority": 1807
+      },
+      {
+        "keyword": "foldable bath",
+        "tier": "category",
+        "volume": 2541,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1779
+      },
+      {
+        "keyword": "sanitary bin",
+        "tier": "category",
+        "volume": 4227,
+        "organic_rank": 105,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1775
+      },
+      {
+        "keyword": "baby bath cushion",
+        "tier": "core",
+        "volume": 1406,
+        "organic_rank": 72,
+        "sponsored_rank": 8,
+        "cpc": 0.32,
+        "status": "sponsored_only",
+        "priority": 1758
+      },
+      {
+        "keyword": "toddler cups",
+        "tier": "category",
+        "volume": 4095,
+        "organic_rank": 89,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1720
+      },
+      {
+        "keyword": "bath water storage bag",
+        "tier": "long_tail",
+        "volume": 8595,
+        "organic_rank": null,
+        "sponsored_rank": 29,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1719
+      },
+      {
+        "keyword": "baby bath sponge",
+        "tier": "category",
+        "volume": 3995,
+        "organic_rank": 70,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1678
+      },
+      {
+        "keyword": "baby sponges for bath",
+        "tier": "long_tail",
+        "volume": 5585,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1676
+      },
+      {
+        "keyword": "bathroom storage basket",
+        "tier": "category",
+        "volume": 3892,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1635
+      },
+      {
+        "keyword": "bath baby",
+        "tier": "core",
+        "volume": 1700,
+        "organic_rank": 8,
+        "sponsored_rank": 30,
+        "cpc": 0.32,
+        "status": "sponsored_support",
+        "priority": 1594
+      },
+      {
+        "keyword": "white bin",
+        "tier": "category",
+        "volume": 3722,
+        "organic_rank": 68,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1563
+      },
+      {
+        "keyword": "baby water cup",
+        "tier": "category",
+        "volume": 1259,
+        "organic_rank": 92,
+        "sponsored_rank": null,
+        "cpc": 0.35,
+        "status": "missing",
+        "priority": 1511
+      },
+      {
+        "keyword": "anti roll changing mat",
+        "tier": "long_tail",
+        "volume": 2894,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1447
+      },
+      {
+        "keyword": "baby grooming",
+        "tier": "category",
+        "volume": 1143,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": 0.56,
+        "status": "push",
+        "priority": 1429
+      },
+      {
+        "keyword": "baby nappies",
+        "tier": "category",
+        "volume": 3357,
+        "organic_rank": 119,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1410
+      },
+      {
+        "keyword": "aveeno baby wash",
+        "tier": "category",
+        "volume": 983,
+        "organic_rank": null,
+        "sponsored_rank": 25,
+        "cpc": 0.16,
+        "status": "sponsored_only",
+        "priority": 1376
+      },
+      {
+        "keyword": "toy storage basket",
+        "tier": "category",
+        "volume": 3195,
+        "organic_rank": 102,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1342
+      },
+      {
+        "keyword": "baby changing mats",
+        "tier": "core",
+        "volume": 1267,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1267
+      },
+      {
+        "keyword": "newborn essentials bath",
+        "tier": "core",
+        "volume": 1197,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1197
+      },
+      {
+        "keyword": "roll mat",
+        "tier": "core",
+        "volume": 1183,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1183
+      },
+      {
+        "keyword": "shower bath",
+        "tier": "category",
+        "volume": 1653,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1157
+      },
+      {
+        "keyword": "baby tub",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "push",
+        "priority": 1125
+      },
+      {
+        "keyword": "portable bathtub",
+        "tier": "category",
+        "volume": 1606,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1124
+      },
+      {
+        "keyword": "toy organiser",
+        "tier": "category",
+        "volume": 2647,
+        "organic_rank": 106,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1112
+      },
+      {
+        "keyword": "bath toy net",
+        "tier": "category",
+        "volume": 1588,
+        "organic_rank": 52,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1112
+      },
+      {
+        "keyword": "stokke bath",
+        "tier": "long_tail",
+        "volume": 485,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 1102
+      },
+      {
+        "keyword": "bathing products",
+        "tier": "category",
+        "volume": 1561,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1093
+      },
+      {
+        "keyword": "nappy changing mat",
+        "tier": "core",
+        "volume": 3629,
+        "organic_rank": 8,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 1089
+      },
+      {
+        "keyword": "diaper changing mat",
+        "tier": "core",
+        "volume": 1079,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1079
+      },
+      {
+        "keyword": "snuggle ups",
+        "tier": "category",
+        "volume": 3689,
+        "organic_rank": null,
+        "sponsored_rank": 7,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1033
+      },
+      {
+        "keyword": "bathtub baby",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 1023
+      },
+      {
+        "keyword": "baby essentials for newborn girl",
+        "tier": "long_tail",
+        "volume": 2110,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": 1.04,
+        "status": "push",
+        "priority": 1014
+      },
+      {
+        "keyword": "baby bath seat 6 months plus",
+        "tier": "long_tail",
+        "volume": 6688,
+        "organic_rank": 42,
+        "sponsored_rank": 5,
+        "cpc": 1.03,
+        "status": "sponsored_support",
+        "priority": 974
+      },
+      {
+        "keyword": "inflatable bath",
+        "tier": "category",
+        "volume": 2289,
+        "organic_rank": 89,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 961
+      },
+      {
+        "keyword": "changing tables",
+        "tier": "category",
+        "volume": 1371,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 960
+      },
+      {
+        "keyword": "wedge changing mat",
+        "tier": "core",
+        "volume": 3150,
+        "organic_rank": 14,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 945
+      },
+      {
+        "keyword": "baby toiletries",
+        "tier": "category",
+        "volume": 2200,
+        "organic_rank": 84,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 924
+      },
+      {
+        "keyword": "baby changing mat travel",
+        "tier": "long_tail",
+        "volume": 3077,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 923
+      },
+      {
+        "keyword": "baby pod",
+        "tier": "category",
+        "volume": 2181,
+        "organic_rank": 74,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 916
+      },
+      {
+        "keyword": "squishy baby",
+        "tier": "core",
+        "volume": 911,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 911
+      },
+      {
+        "keyword": "baby pads",
+        "tier": "category",
+        "volume": 793,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": 0.37,
+        "status": "missing",
+        "priority": 900
+      },
+      {
+        "keyword": "angelcare bath seat",
+        "tier": "competitor",
+        "volume": 2952,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 886
+      },
+      {
+        "keyword": "snuggle",
+        "tier": "category",
+        "volume": 1002,
+        "organic_rank": null,
+        "sponsored_rank": 3,
+        "cpc": 0.32,
+        "status": "sponsored_only",
+        "priority": 877
+      },
+      {
+        "keyword": "foldable changing mat",
+        "tier": "category",
+        "volume": 3121,
+        "organic_rank": null,
+        "sponsored_rank": 43,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 874
+      },
+      {
+        "keyword": "baby water mat",
+        "tier": "category",
+        "volume": 2440,
+        "organic_rank": 115,
+        "sponsored_rank": null,
+        "cpc": 1.18,
+        "status": "missing",
+        "priority": 868
+      },
+      {
+        "keyword": "foldable baby bath",
+        "tier": "category",
+        "volume": 3089,
+        "organic_rank": 66,
+        "sponsored_rank": 54,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 865
+      },
+      {
+        "keyword": "baby cups",
+        "tier": "category",
+        "volume": 2057,
+        "organic_rank": 127,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 864
+      },
+      {
+        "keyword": "smart bin",
+        "tier": "category",
+        "volume": 2047,
+        "organic_rank": 91,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 860
+      },
+      {
+        "keyword": "water bladder for bath tub",
+        "tier": "long_tail",
+        "volume": 2810,
+        "organic_rank": 125,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 843
+      },
+      {
+        "keyword": "baby born bath",
+        "tier": "category",
+        "volume": 1193,
+        "organic_rank": 40,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 835
+      },
+      {
+        "keyword": "nappy bin bags",
+        "tier": "category",
+        "volume": 1945,
+        "organic_rank": 92,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 817
+      },
+      {
+        "keyword": "newborn baby essentials",
+        "tier": "category",
+        "volume": 1929,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 810
+      },
+      {
+        "keyword": "bath seat baby",
+        "tier": "category",
+        "volume": 1835,
+        "organic_rank": 54,
+        "sponsored_rank": 8,
+        "cpc": 0.5,
+        "status": "sponsored_support",
+        "priority": 771
+      },
+      {
+        "keyword": "hair wash caps no water rinse free",
+        "tier": "long_tail",
+        "volume": 2432,
+        "organic_rank": 112,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 730
+      },
+      {
+        "keyword": "bath seat baby 6+ months",
+        "tier": "long_tail",
+        "volume": 4838,
+        "organic_rank": 28,
+        "sponsored_rank": 25,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 726
+      },
+      {
+        "keyword": "toy storage organiser",
+        "tier": "category",
+        "volume": 1726,
+        "organic_rank": 103,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 725
+      },
+      {
+        "keyword": "baby storage basket",
+        "tier": "category",
+        "volume": 1686,
+        "organic_rank": 75,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 708
+      },
+      {
+        "keyword": "baby changing mat waterproof",
+        "tier": "long_tail",
+        "volume": 1409,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 704
+      },
+      {
+        "keyword": "folding bathtub",
+        "tier": "category",
+        "volume": 1666,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 700
+      },
+      {
+        "keyword": "diaper bags",
+        "tier": "category",
+        "volume": 1659,
+        "organic_rank": 114,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 697
+      },
+      {
+        "keyword": "change mat",
+        "tier": "core",
+        "volume": 950,
+        "organic_rank": 9,
+        "sponsored_rank": 17,
+        "cpc": 0.41,
+        "status": "sponsored_support",
+        "priority": 695
+      },
+      {
+        "keyword": "baby changing pads",
+        "tier": "core",
+        "volume": 688,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 688
+      },
+      {
+        "keyword": "maxi cosi bath",
+        "tier": "core",
+        "volume": 687,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 687
+      },
+      {
+        "keyword": "vapour bath baby",
+        "tier": "core",
+        "volume": 822,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 1.2,
+        "status": "push",
+        "priority": 685
+      },
+      {
+        "keyword": "angel care nappy bin",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 20,
+        "sponsored_rank": null,
+        "cpc": 0.33,
+        "status": "push",
+        "priority": 682
+      },
+      {
+        "keyword": "baby care kit",
+        "tier": "category",
+        "volume": 1397,
+        "organic_rank": null,
+        "sponsored_rank": 61,
+        "cpc": 0.58,
+        "status": "sponsored_only",
+        "priority": 674
+      },
+      {
+        "keyword": "changing mat travel",
+        "tier": "category",
+        "volume": 1597,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 671
+      },
+      {
+        "keyword": "baby bathing essentials",
+        "tier": "core",
+        "volume": 657,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 657
+      },
+      {
+        "keyword": "newborn bath",
+        "tier": "core",
+        "volume": 2182,
+        "organic_rank": 7,
+        "sponsored_rank": 6,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 655
+      },
+      {
+        "keyword": "storage for toys",
+        "tier": "category",
+        "volume": 1539,
+        "organic_rank": 141,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 646
+      },
+      {
+        "keyword": "aveeno baby shampoo",
+        "tier": "category",
+        "volume": 1138,
+        "organic_rank": null,
+        "sponsored_rank": 26,
+        "cpc": 0.5,
+        "status": "sponsored_only",
+        "priority": 637
+      },
+      {
+        "keyword": "munchkin bath toys",
+        "tier": "category",
+        "volume": 1503,
+        "organic_rank": 126,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 631
+      },
+      {
+        "keyword": "cot top changer",
+        "tier": "core",
+        "volume": 605,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 605
+      },
+      {
+        "keyword": "travel changing mats baby",
+        "tier": "long_tail",
+        "volume": 1970,
+        "organic_rank": 84,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 591
+      },
+      {
+        "keyword": "baby bath seats",
+        "tier": "category",
+        "volume": 1373,
+        "organic_rank": 70,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 577
+      },
+      {
+        "keyword": "self sealing bin",
+        "tier": "category",
+        "volume": 824,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 577
+      },
+      {
+        "keyword": "bath for baby",
+        "tier": "core",
+        "volume": 880,
+        "organic_rank": 8,
+        "sponsored_rank": 7,
+        "cpc": 0.46,
+        "status": "sponsored_support",
+        "priority": 574
+      },
+      {
+        "keyword": "portable changing mats baby",
+        "tier": "long_tail",
+        "volume": 1911,
+        "organic_rank": 117,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 573
+      },
+      {
+        "keyword": "changing mat wedge",
+        "tier": "category",
+        "volume": 806,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 564
+      },
+      {
+        "keyword": "changing mats",
+        "tier": "core",
+        "volume": 562,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 562
+      },
+      {
+        "keyword": "bath seat baby 6 months",
+        "tier": "long_tail",
+        "volume": 2803,
+        "organic_rank": 75,
+        "sponsored_rank": 24,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 561
+      },
+      {
+        "keyword": "baby holiday essentials",
+        "tier": "category",
+        "volume": 795,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 556
+      },
+      {
+        "keyword": "bath support baby",
+        "tier": "core",
+        "volume": 582,
+        "organic_rank": 45,
+        "sponsored_rank": 2,
+        "cpc": 0.32,
+        "status": "sponsored_support",
+        "priority": 546
+      },
+      {
+        "keyword": "twistshake baby bath",
+        "tier": "category",
+        "volume": 775,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 542
+      },
+      {
+        "keyword": "kokoso baby wash",
+        "tier": "long_tail",
+        "volume": 492,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": 0.46,
+        "status": "push",
+        "priority": 535
+      },
+      {
+        "keyword": "baby bath products",
+        "tier": "category",
+        "volume": 752,
+        "organic_rank": 23,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 526
+      }
+    ],
+    "tiers": {
+      "category": {
+        "keywords": 141,
+        "volume": 752633,
+        "gaps": 110
+      },
+      "core": {
+        "keywords": 77,
+        "volume": 309848,
+        "gaps": 16
+      },
+      "long_tail": {
+        "keywords": 195,
+        "volume": 260694,
+        "gaps": 104
+      },
+      "competitor": {
+        "keywords": 10,
+        "volume": 9535,
+        "gaps": 5
+      },
+      "brand": {
+        "keywords": 13,
+        "volume": 9837,
+        "gaps": 2
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "bin",
+        "tier": "category",
+        "volume": 114786,
+        "organic_rank": 92,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 178556
+      },
+      {
+        "keyword": "nappies",
+        "tier": "category",
+        "volume": 26760,
+        "organic_rank": 128,
+        "sponsored_rank": null,
+        "cpc": 0.33,
+        "status": "missing",
+        "priority": 34058
+      },
+      {
+        "keyword": "washing up bowl",
+        "tier": "category",
+        "volume": 66568,
+        "organic_rank": 123,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 27959
+      },
+      {
+        "keyword": "baby essentials for newborn",
+        "tier": "long_tail",
+        "volume": 91716,
+        "organic_rank": 85,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 27515
+      },
+      {
+        "keyword": "bath",
+        "tier": "category",
+        "volume": 15375,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": 0.25,
+        "status": "missing",
+        "priority": 25830
+      },
+      {
+        "keyword": "nappy bags",
+        "tier": "category",
+        "volume": 42746,
+        "organic_rank": 128,
+        "sponsored_rank": null,
+        "cpc": 0.73,
+        "status": "missing",
+        "priority": 24594
+      },
+      {
+        "keyword": "foam mats",
+        "tier": "category",
+        "volume": 10199,
+        "organic_rank": 68,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "missing",
+        "priority": 21418
+      },
+      {
+        "keyword": "bins",
+        "tier": "category",
+        "volume": 16134,
+        "organic_rank": 125,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 21176
+      },
+      {
+        "keyword": "baby mat",
+        "tier": "core",
+        "volume": 8756,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.44,
+        "status": "push",
+        "priority": 19900
+      },
+      {
+        "keyword": "newborn essentials",
+        "tier": "category",
+        "volume": 42937,
+        "organic_rank": 74,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 18034
+      },
+      {
+        "keyword": "mats",
+        "tier": "category",
+        "volume": 4607,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 16124
+      },
+      {
+        "keyword": "nappy sacks",
+        "tier": "category",
+        "volume": 18928,
+        "organic_rank": 136,
+        "sponsored_rank": null,
+        "cpc": 0.63,
+        "status": "missing",
+        "priority": 12619
+      },
+      {
+        "keyword": "happy nappy",
+        "tier": "category",
+        "volume": 9420,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 12364
+      },
+      {
+        "keyword": "diaper bag",
+        "tier": "category",
+        "volume": 8220,
+        "organic_rank": 38,
+        "sponsored_rank": null,
+        "cpc": 0.47,
+        "status": "push",
+        "priority": 12243
+      },
+      {
+        "keyword": "bath caddy",
+        "tier": "category",
+        "volume": 5267,
+        "organic_rank": 111,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "missing",
+        "priority": 11061
+      },
+      {
+        "keyword": "baby wash",
+        "tier": "category",
+        "volume": 7887,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 10352
+      },
+      {
+        "keyword": "baby essentials",
+        "tier": "category",
+        "volume": 18691,
+        "organic_rank": 105,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 7850
+      },
+      {
+        "keyword": "changing mat baby",
+        "tier": "core",
+        "volume": 1562,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 7100
+      },
+      {
+        "keyword": "baby accessories",
+        "tier": "category",
+        "volume": 5994,
+        "organic_rank": 112,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "missing",
+        "priority": 6625
+      },
+      {
+        "keyword": "bin for bedroom",
+        "tier": "category",
+        "volume": 7936,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5555
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "category": 1287,
+        "core": 101
+      },
+      "monthly_by_ad_type": {
+        "SP": 704,
+        "SB": 342,
+        "SBV": 342,
+        "SD (remarketing/retention)": 154
+      },
+      "monthly_total": 1542,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.1
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.0,
+      "multipack_share": 0.07,
+      "consumable_category": true,
+      "likelihood": "medium"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Baby Products",
+    "available": false
+  },
+  "job_ad_present": false
+}
