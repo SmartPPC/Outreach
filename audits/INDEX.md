@@ -7,3 +7,4 @@
 | 2026-10-21 | Super Facialist | amazon.co.uk | £102,395 | https://claude.ai/artifact/Y5r9e7Q48kLy7uQ9rXGBbT | [super-facialist-uk-2026-10-20](super-facialist-uk-2026-10-20/) |
 | 2026-10-21 | W7 | amazon.co.uk | £76,525 | https://claude.ai/artifact/RMZfhsrZPxFxBgoaaNXBvV | [w7-b0gtrfkfv5-uk-2026-10-21](w7-b0gtrfkfv5-uk-2026-10-21/) |
 | 2026-10-21 | W7 | amazon.com | $148,181 | https://claude.ai/artifact/XAP4v6rFedzrHW2Y32nu1A | [w7-b0gtrfkfv5-us-2026-10-21](w7-b0gtrfkfv5-us-2026-10-21/) |
+| 2026-11-13 | BetterYou | amazon.co.uk | £551,994 | https://claude.ai/artifact/LNxE4aMyZydjMn4v1U3F5h | [betteryou-uk-2026-11-13](betteryou-uk-2026-11-13/) |

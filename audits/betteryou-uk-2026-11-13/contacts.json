@@ -1,0 +1,86 @@
+{
+  "website": "https://betteryou.com",
+  "domain": "betteryou.com",
+  "pages_checked": [
+    "https://betteryou.com/",
+    "https://betteryou.com/pages/contact",
+    "https://betteryou.com/contact",
+    "https://betteryou.com/contact-us",
+    "https://betteryou.com/pages/contact-us",
+    "https://betteryou.com/pages/about",
+    "https://betteryou.com/pages/about-us",
+    "https://betteryou.com/about"
+  ],
+  "emails": [],
+  "people": [],
+  "company": {
+    "name": null,
+    "number": "05541287"
+  },
+  "email_format": null,
+  "suggested": [],
+  "recommended_to": null,
+  "only_generic": false,
+  "organisations": [
+    {
+      "name": "BetterYou",
+      "kind": "brand"
+    }
+  ],
+  "companies_house": [
+    {
+      "number": "05541287",
+      "name": "BETTERYOU LIMITED",
+      "address": "Unit 24, Shortwood Court Shortwood Business Park, Dearne Valley Parkway, Barnsley, South Yorkshire, S74 9LH",
+      "active": true,
+      "status": "Incorporated on 19 August 2005",
+      "people": [
+        "EVERATT, Judi Anne",
+        "HILL, Antony Jason",
+        "JULIAN, Jennifer Emily",
+        "PEEL, Sarah",
+        "REAY, William Stephen",
+        "ROUTLEY, Andrew John",
+        "SAMPSON, Deana Wendy",
+        "SHENTON, Gary Lee",
+        "SPRINGER, Lindsey",
+        "THOMAS, Andrew Richard",
+        "WHITBREAD, Robin"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/05541287/officers"
+    }
+  ],
+  "linkedin_profiles": [],
+  "linkedin_searches": [
+    {
+      "org": "BetterYou",
+      "role": "founder",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterYou%22%20founder"
+    },
+    {
+      "org": "BetterYou",
+      "role": "ecommerce",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterYou%22%20ecommerce"
+    },
+    {
+      "org": "BetterYou",
+      "role": "amazon",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterYou%22%20amazon"
+    },
+    {
+      "org": "BetterYou",
+      "role": "marketing",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterYou%22%20marketing"
+    }
+  ],
+  "apollo": {
+    "organisation": {
+      "name": "BetterYou Ltd",
+      "domain": "betteryou.com",
+      "id": "54a11fb369702d9a8b350902",
+      "people_search": "https://app.apollo.io/#/people?organizationIds[]=54a11fb369702d9a8b350902"
+    },
+    "people": [],
+    "note": "Apollo free plan: people search and email reveal blocked; open the link to reveal (1 credit)."
+  }
+}

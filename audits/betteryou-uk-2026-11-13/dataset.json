@@ -1,0 +1,4935 @@
+{
+  "prospect": {
+    "brand": "BetterYou",
+    "marketplace": "uk",
+    "domain": "amazon.co.uk",
+    "currency": "\u00a3",
+    "input": "BetterYou",
+    "seller_name": null,
+    "landing_asin": null
+  },
+  "generated": "2026-11-13",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 12,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog.spellings",
+        "status": "ok",
+        "searched": [
+          "BetterYou",
+          "Better You"
+        ]
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 190
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 103,
+        "hero_families": 12,
+        "revenue_share": 0.79
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 21,
+        "waited_min": 29.7
+      },
+      {
+        "step": "images",
+        "status": "skipped",
+        "reason": "can't reach m.media-amazon.com (<urlopen error Tunnel connection failed: 403 Forbidden>); add it to Allowed domains"
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 12,
+        "keywords": 735
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 10
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": "https://betteryou.com",
+        "emails": 0
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 42,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 28,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 11.999999999999996,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      },
+      "apollo_search": {
+        "used": 0,
+        "limit": 10.0
+      },
+      "apollo_credits": {
+        "used": 0,
+        "limit": 3.0
+      }
+    },
+    "collected_at": "2026-11-13T19:33:15.937888+00:00"
+  },
+  "focus": {
+    "total_asins": 190,
+    "live_asins": 103,
+    "families": 72,
+    "hero_families": 12,
+    "hero_revenue_share": 0.79,
+    "est_monthly_revenue": 551994
+  },
+  "heroes": [
+    {
+      "asin": "B0FS76SH7T",
+      "parent_asin": "B0G1N1STJB",
+      "title": "BetterYou Vitamin D3 1200IU and K2 MK-7 25\u03bcg Optimal Strength Oral Spray",
+      "family_revenue_30d": 122780,
+      "family_size": 4,
+      "family_revenue_keepa": 2697,
+      "units_30d": 15334,
+      "price": 8.99,
+      "list_price": 8.99,
+      "sellers": 4,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Vitamin D",
+      "product_type": null,
+      "rating": 4.7,
+      "reviews": 26,
+      "sales_rank": 69.0,
+      "content": {
+        "score": 62,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "10 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "72 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "4 bullets"
+          },
+          "bullet_depth": {
+            "status": "fail",
+            "detail": "avg 39 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "26 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "10 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "4 bullets, first is 19 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "vitamin d",
+          "tier": "core",
+          "status": "push",
+          "volume": 199150,
+          "organic_rank": 13,
+          "sponsored_rank": null,
+          "cpc": 1.1
+        },
+        {
+          "keyword": "vitamins",
+          "tier": "category",
+          "status": "push",
+          "volume": 28914,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": 0.2
+        },
+        {
+          "keyword": "d3 and k2 vitamin",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 11798,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "vitamin d gummies",
+          "tier": "core",
+          "status": "push",
+          "volume": 8088,
+          "organic_rank": 16,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "vitamin k2",
+          "tier": "core",
+          "status": "push",
+          "volume": 8080,
+          "organic_rank": 11,
+          "sponsored_rank": null,
+          "cpc": 0.38
+        },
+        {
+          "keyword": "vitamin",
+          "tier": "category",
+          "status": "push",
+          "volume": 7388,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": 1.32
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "wit",
+          "volume": 6411,
+          "sponsored_rank": 1,
+          "reason": "different product (\"wit\")"
+        },
+        {
+          "keyword": "bettervits",
+          "volume": 4690,
+          "sponsored_rank": 51,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "wellkid",
+          "volume": 2678,
+          "sponsored_rank": 44,
+          "reason": "different product (\"wellkid\")"
+        }
+      ],
+      "sponsored_terms": 14,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B008FMBNZG",
+      "parent_asin": "B07CS1PKWJ",
+      "title": "BetterYou Vitamin B12 Oral Spray, High Strength Methylcobalamin Supplement",
+      "family_revenue_30d": 98327,
+      "family_size": 2,
+      "family_revenue_keepa": 44940,
+      "units_30d": 5598,
+      "price": 7.49,
+      "list_price": 11.95,
+      "sellers": 20,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Vitamin B12",
+      "product_type": "supplement",
+      "rating": 4.6,
+      "reviews": 7052,
+      "sales_rank": 448.0,
+      "content": {
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "6 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "74 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "9 bullets"
+          },
+          "bullet_depth": {
+            "status": "fail",
+            "detail": "avg 59 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "7056 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 5 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "5 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 35s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "9 bullets, first is 40 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "vitamin b12",
+          "tier": "core",
+          "status": "push",
+          "volume": 38052,
+          "organic_rank": 11,
+          "sponsored_rank": null,
+          "cpc": 1.25
+        },
+        {
+          "keyword": "vitamin b",
+          "tier": "category",
+          "status": "push",
+          "volume": 6517,
+          "organic_rank": 55,
+          "sponsored_rank": null,
+          "cpc": 1.49
+        },
+        {
+          "keyword": "better you vitamin d spray",
+          "tier": "brand",
+          "status": "push",
+          "volume": 3893,
+          "organic_rank": 16,
+          "sponsored_rank": null,
+          "cpc": 0.83
+        },
+        {
+          "keyword": "vit b12",
+          "tier": "core",
+          "status": "push",
+          "volume": 2104,
+          "organic_rank": 7,
+          "sponsored_rank": null,
+          "cpc": 0.86
+        },
+        {
+          "keyword": "vit d spray",
+          "tier": "category",
+          "status": "push",
+          "volume": 2076,
+          "organic_rank": 37,
+          "sponsored_rank": null,
+          "cpc": 0.5
+        },
+        {
+          "keyword": "better you magnesium spray",
+          "tier": "brand",
+          "status": "push",
+          "volume": 1793,
+          "organic_rank": 29,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "vitamin b12 tablets",
+          "volume": 1997,
+          "sponsored_rank": 14,
+          "reason": "different product (\"tablets\")"
+        },
+        {
+          "keyword": "nutrition geeks b12",
+          "volume": 1027,
+          "sponsored_rank": 8,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "b12 vitamin tablets",
+          "volume": 450,
+          "sponsored_rank": 9,
+          "reason": "different product (\"tablets\")"
+        }
+      ],
+      "sponsored_terms": 25,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B00AWNART4",
+      "parent_asin": "B0BTW885R2",
+      "title": "BetterYou Vitamin D3 Oral Spray 3000 IU, 3-Month Supply, Peppermint Flavour",
+      "family_revenue_30d": 60565,
+      "family_size": 3,
+      "family_revenue_keepa": 64090,
+      "units_30d": 12644,
+      "price": 5.69,
+      "list_price": 9.45,
+      "sellers": 18,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Vitamin D",
+      "product_type": null,
+      "rating": 4.7,
+      "reviews": 11584,
+      "sales_rank": 115.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "9 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "9 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "75 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 285 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "11588 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 9 images zoomable (1600px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "9 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 brand video(s), shortest 16s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "vitamin d",
+          "tier": "category",
+          "status": "push",
+          "volume": 199150,
+          "organic_rank": 22,
+          "sponsored_rank": null,
+          "cpc": 1.1
+        },
+        {
+          "keyword": "vitamin d3",
+          "tier": "category",
+          "status": "push",
+          "volume": 41490,
+          "organic_rank": 56,
+          "sponsored_rank": null,
+          "cpc": 2.83
+        },
+        {
+          "keyword": "vitamin d gummies",
+          "tier": "core",
+          "status": "push",
+          "volume": 8088,
+          "organic_rank": 14,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "vitamin d 1000iu",
+          "tier": "core",
+          "status": "push",
+          "volume": 5068,
+          "organic_rank": 10,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "vitamin d drops",
+          "tier": "category",
+          "status": "push",
+          "volume": 4197,
+          "organic_rank": 50,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "vitamin d3 4000 iu",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3432,
+          "organic_rank": 29,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "nutrigen vitamixin sprinkles",
+          "volume": 1171,
+          "sponsored_rank": 30,
+          "reason": "different product (\"sprinkles\")"
+        }
+      ],
+      "sponsored_terms": 9,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B002VPDX4W",
+      "parent_asin": "B002VPDX4W",
+      "title": "BetterYou Magnesium Chloride Oil Body Spray Supplement For Joints & Muscles",
+      "family_revenue_30d": 23816,
+      "family_size": 1,
+      "family_revenue_keepa": 26640,
+      "units_30d": 3576,
+      "price": 6.66,
+      "list_price": 14.99,
+      "sellers": 15,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Magnesium",
+      "product_type": "supplement",
+      "rating": 4.3,
+      "reviews": 10834,
+      "sales_rank": 827.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "10 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "75 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 225 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.3\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "10834 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 8 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "8 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "4 brand video(s), shortest 14s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 248 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "wrong_category",
+          "detail": "supplement listed under Magnesium"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "magnesium spray",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 11434,
+          "organic_rank": 1,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium cream",
+          "tier": "category",
+          "status": "push",
+          "volume": 8604,
+          "organic_rank": 48,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium oil spray",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 4063,
+          "organic_rank": 1,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium oil",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 3674,
+          "organic_rank": 1,
+          "sponsored_rank": null,
+          "cpc": 0.43
+        },
+        {
+          "keyword": "magnesium cream for muscle pain",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3275,
+          "organic_rank": 25,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium kids",
+          "tier": "category",
+          "status": "push",
+          "volume": 2146,
+          "organic_rank": 55,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "nura calm magnesium cream",
+          "volume": 606,
+          "sponsored_rank": 20,
+          "reason": "different product (\"nura\")"
+        },
+        {
+          "keyword": "magnesium freeze cream",
+          "volume": 498,
+          "sponsored_rank": 10,
+          "reason": "different product (\"freeze\")"
+        }
+      ],
+      "sponsored_terms": 6,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0831JFV9G",
+      "parent_asin": "B097C72F5Q",
+      "title": "BetterYou Iron 10mcg Liquid Oral Spray Supplement Pomegranate Flavour",
+      "family_revenue_30d": 21643,
+      "family_size": 3,
+      "family_revenue_keepa": 24460,
+      "units_30d": 5607,
+      "price": 5.15,
+      "list_price": 25.8,
+      "sellers": 20,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Iron",
+      "product_type": "supplement",
+      "rating": 4.6,
+      "reviews": 1172,
+      "sales_rank": 417.0,
+      "content": {
+        "score": 88,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "5 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "69 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 300 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.6\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1184 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 34s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "wrong_category",
+          "detail": "supplement listed under Iron"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "ferritin supplements",
+          "tier": "core",
+          "status": "push",
+          "volume": 5840,
+          "organic_rank": 11,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "liquid iron",
+          "tier": "core",
+          "status": "push",
+          "volume": 3521,
+          "organic_rank": 8,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "iron tablets high strength",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3126,
+          "organic_rank": 52,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "iron spray",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 2730,
+          "organic_rank": 1,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "better you magnesium spray",
+          "tier": "brand",
+          "status": "push",
+          "volume": 1793,
+          "organic_rank": 17,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "better you iron spray",
+          "tier": "brand",
+          "status": "organic_top_unprotected",
+          "volume": 1649,
+          "organic_rank": 1,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "healthy metal",
+          "volume": 4978,
+          "sponsored_rank": 21,
+          "reason": "different product (\"healthy\")"
+        },
+        {
+          "keyword": "iron water",
+          "volume": 3950,
+          "sponsored_rank": 20,
+          "reason": "different product (\"water\")"
+        },
+        {
+          "keyword": "feroglobin liquid",
+          "volume": 2290,
+          "sponsored_rank": 7,
+          "reason": "different product (\"feroglobin\")"
+        },
+        {
+          "keyword": "iron tablets women",
+          "volume": 1838,
+          "sponsored_rank": 28,
+          "reason": "different product (\"tablets\")"
+        },
+        {
+          "keyword": "ferrous sulphate",
+          "volume": 1518,
+          "sponsored_rank": 23,
+          "reason": "different product (\"ferrous\")"
+        },
+        {
+          "keyword": "spatone iron sachets with vitamin c",
+          "volume": 1144,
+          "sponsored_rank": 9,
+          "reason": "different product (\"vitamin\")"
+        },
+        {
+          "keyword": "liposomal iron",
+          "volume": 796,
+          "sponsored_rank": 30,
+          "reason": "different product (\"liposomal\")"
+        },
+        {
+          "keyword": "iron energy nutrition geeks",
+          "volume": 786,
+          "sponsored_rank": 23,
+          "reason": "competitor's brand: worth reviewing"
+        }
+      ],
+      "sponsored_terms": 44,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B07DW6TPKP",
+      "parent_asin": "B0H3WWTMXK",
+      "title": "BetterYou Magnesium Sleep Body Lotion with Lavender, 180ml",
+      "family_revenue_30d": 19227,
+      "family_size": 2,
+      "family_revenue_keepa": 8950,
+      "units_30d": 1353,
+      "price": 8.28,
+      "list_price": 11.95,
+      "sellers": 20,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Lotions",
+      "product_type": "body lotion",
+      "rating": 4.2,
+      "reviews": 4871,
+      "sales_rank": 2887.0,
+      "content": {
+        "score": 88,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "5 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "58 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 213 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "4872 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 100,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 7 images zoomable (1600px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 60s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 241 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "magnesium cream",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 8604,
+          "organic_rank": 3,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium for sleep",
+          "tier": "core",
+          "status": "push",
+          "volume": 3943,
+          "organic_rank": 12,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium sleep",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 3358,
+          "organic_rank": 4,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium cream for muscle pain",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3275,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium drink for sleep",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2962,
+          "organic_rank": 14,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "milk of magnesia",
+          "tier": "core",
+          "status": "push",
+          "volume": 2011,
+          "organic_rank": 7,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 2,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0CQCZ6JPX",
+      "parent_asin": "B0CQTF94JB",
+      "title": "BetterYou Hydrate Magnesium Water 3-in-1 Citrus and Botanicals Flavour",
+      "family_revenue_30d": 16644,
+      "family_size": 4,
+      "family_revenue_keepa": 3580,
+      "units_30d": 238,
+      "price": 17.9,
+      "list_price": 23.88,
+      "sellers": 1,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Magnesium",
+      "product_type": null,
+      "rating": 4.3,
+      "reviews": 148,
+      "sales_rank": 11320.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "70 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 221 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.3\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "148 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 83,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "7 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "3 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 216 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "6 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "magnesium spray",
+          "tier": "core",
+          "status": "push",
+          "volume": 11434,
+          "organic_rank": 15,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "healthy metal magnesium drink",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 10052,
+          "organic_rank": 50,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium drink",
+          "tier": "core",
+          "status": "push",
+          "volume": 3380,
+          "organic_rank": 9,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium drink for sleep",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2962,
+          "organic_rank": 36,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium flakes",
+          "tier": "core",
+          "status": "push",
+          "volume": 2132,
+          "organic_rank": 13,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium glycinate drink",
+          "tier": "category",
+          "status": "push",
+          "volume": 2110,
+          "organic_rank": 36,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "boxed water",
+          "volume": 744,
+          "sponsored_rank": 48,
+          "reason": "different product (\"boxed\")"
+        },
+        {
+          "keyword": "water morrisons",
+          "volume": 461,
+          "sponsored_rank": 16,
+          "reason": "different product (\"morrisons\")"
+        },
+        {
+          "keyword": "oshee vitamin water",
+          "volume": 376,
+          "sponsored_rank": 22,
+          "reason": "different product (\"oshee\")"
+        },
+        {
+          "keyword": "britannic",
+          "volume": 349,
+          "sponsored_rank": 4,
+          "reason": "different product (\"britannic\")"
+        }
+      ],
+      "sponsored_terms": 12,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09T3TWBQP",
+      "parent_asin": "B0F7RY5H8X",
+      "title": "BetterYou Vitamin D3 + K2 Kids Sugar Free Blueberry & Bubblegum Oral Spray",
+      "family_revenue_30d": 15694,
+      "family_size": 1,
+      "family_revenue_keepa": 11980,
+      "units_30d": 2620,
+      "price": 5.99,
+      "list_price": 11.95,
+      "sellers": 11,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Vitamin D3 & K2 Combinations",
+      "product_type": null,
+      "rating": 4.8,
+      "reviews": 468,
+      "sales_rank": 1161.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "4 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "74 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 306 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "479 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 92,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 8 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "8 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 brand video(s), shortest 19s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "4 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "8 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "vitamin d3 k2",
+          "tier": "core",
+          "status": "push",
+          "volume": 56674,
+          "organic_rank": 9,
+          "sponsored_rank": null,
+          "cpc": 2.37
+        },
+        {
+          "keyword": "kids vitamins",
+          "tier": "category",
+          "status": "push",
+          "volume": 20461,
+          "organic_rank": 58,
+          "sponsored_rank": null,
+          "cpc": 0.22
+        },
+        {
+          "keyword": "vitamin d spray",
+          "tier": "core",
+          "status": "push",
+          "volume": 12848,
+          "organic_rank": 12,
+          "sponsored_rank": null,
+          "cpc": 0.24
+        },
+        {
+          "keyword": "vitamin d drops baby",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4244,
+          "organic_rank": 48,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "better you vitamin d spray",
+          "tier": "brand",
+          "status": "push",
+          "volume": 3893,
+          "organic_rank": 9,
+          "sponsored_rank": null,
+          "cpc": 0.83
+        },
+        {
+          "keyword": "vitamin d for kids",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3582,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "baby ddrops",
+          "volume": 450,
+          "sponsored_rank": 22,
+          "reason": "different product (\"ddrops\")"
+        }
+      ],
+      "sponsored_terms": 5,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B002VPDX56",
+      "parent_asin": "B09QSZ4T8M",
+      "title": "BetterYou Magnesium Sleep Oil Body Spray Supplement with Lavender, 100ml",
+      "family_revenue_30d": 15588,
+      "family_size": 1,
+      "family_revenue_keepa": 15980,
+      "units_30d": 1951,
+      "price": 7.99,
+      "list_price": 14.99,
+      "sellers": 15,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Magnesium",
+      "product_type": "supplement",
+      "rating": 4.2,
+      "reviews": 5988,
+      "sales_rank": 1595.0,
+      "content": {
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "10 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "72 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 230 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "5990 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 83,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 brand video(s), shortest 24s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 234 characters"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "wrong_category",
+          "detail": "supplement listed under Magnesium"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "magnesium",
+          "tier": "core",
+          "status": "push",
+          "volume": 127458,
+          "organic_rank": 16,
+          "sponsored_rank": null,
+          "cpc": 0.74
+        },
+        {
+          "keyword": "sleep",
+          "tier": "category",
+          "status": "push",
+          "volume": 21252,
+          "organic_rank": 34,
+          "sponsored_rank": null,
+          "cpc": 0.29
+        },
+        {
+          "keyword": "sleep aid",
+          "tier": "category",
+          "status": "push",
+          "volume": 14547,
+          "organic_rank": 34,
+          "sponsored_rank": null,
+          "cpc": 0.49
+        },
+        {
+          "keyword": "magnesium spray",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 11434,
+          "organic_rank": 2,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium cream",
+          "tier": "core",
+          "status": "push",
+          "volume": 8604,
+          "organic_rank": 15,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "sleep spray",
+          "tier": "core",
+          "status": "push",
+          "volume": 6626,
+          "organic_rank": 8,
+          "sponsored_rank": null,
+          "cpc": 0.54
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 3,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B00477782K",
+      "parent_asin": "B0H3WL199C",
+      "title": "BetterYou Magnesium Bath Flakes, Pure Source Bath Salts Muscle Soak - 1kg",
+      "family_revenue_30d": 15504,
+      "family_size": 2,
+      "family_revenue_keepa": 16920,
+      "units_30d": 1839,
+      "price": 8.46,
+      "list_price": 10.95,
+      "sellers": 15,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Magnesium",
+      "product_type": null,
+      "rating": 4.7,
+      "reviews": 4601,
+      "sales_rank": 1798.0,
+      "content": {
+        "score": 88,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "73 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 271 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "4602 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 83,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 5 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "5 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 60s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "2 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "bath salts",
+          "tier": "category",
+          "status": "push",
+          "volume": 38587,
+          "organic_rank": 25,
+          "sponsored_rank": null,
+          "cpc": 0.48
+        },
+        {
+          "keyword": "bath salt",
+          "tier": "category",
+          "status": "push",
+          "volume": 5991,
+          "organic_rank": 30,
+          "sponsored_rank": null,
+          "cpc": 0.2
+        },
+        {
+          "keyword": "epsom salts for bath",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4573,
+          "organic_rank": 54,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "magnesium bath salts",
+          "tier": "core",
+          "status": "organic_top_unprotected",
+          "volume": 4137,
+          "organic_rank": 2,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "muscle soak",
+          "tier": "category",
+          "status": "push",
+          "volume": 3245,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bath salts muscle soak",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2869,
+          "organic_rank": 25,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 3,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B084WNHC73",
+      "parent_asin": "B0H3XQK66X",
+      "title": "BetterYou B-Complex Vitamin Oral Spray Supplement, High Strength",
+      "family_revenue_30d": 14225,
+      "family_size": 2,
+      "family_revenue_keepa": 8280,
+      "units_30d": 1718,
+      "price": 8.28,
+      "list_price": 20.6,
+      "sellers": 13,
+      "buy_box_owner": "RDB Ltd",
+      "sold_by": "RDB Ltd",
+      "category": "Vitamin B-Complex",
+      "product_type": "supplement",
+      "rating": 4.5,
+      "reviews": 1019,
+      "sales_rank": 1988.0,
+      "content": {
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "64 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "4 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 252 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1026 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 5 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "5 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 brand video(s), shortest 34s"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "1 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "warn",
+            "detail": "1 of 4 A+ images are text-heavy for a phone screen"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "sellers",
+          "detail": "Buy Box held by RDB Ltd"
+        },
+        {
+          "type": "sellers",
+          "detail": "13 sellers on the listing"
+        },
+        {
+          "type": "price",
+          "detail": "discounted 60% off list (8.28 vs 20.60)"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "vitamin b complex",
+          "tier": "category",
+          "status": "push",
+          "volume": 17900,
+          "organic_rank": 32,
+          "sponsored_rank": null,
+          "cpc": 0.62
+        },
+        {
+          "keyword": "b complex",
+          "tier": "category",
+          "status": "push",
+          "volume": 7597,
+          "organic_rank": 33,
+          "sponsored_rank": null,
+          "cpc": 0.38
+        },
+        {
+          "keyword": "vitamin b",
+          "tier": "category",
+          "status": "push",
+          "volume": 6517,
+          "organic_rank": 22,
+          "sponsored_rank": null,
+          "cpc": 1.49
+        },
+        {
+          "keyword": "better you vitamin d spray",
+          "tier": "brand",
+          "status": "push",
+          "volume": 3893,
+          "organic_rank": 22,
+          "sponsored_rank": null,
+          "cpc": 0.83
+        },
+        {
+          "keyword": "b12 spray",
+          "tier": "core",
+          "status": "push",
+          "volume": 3664,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": 0.5
+        },
+        {
+          "keyword": "b vitamins",
+          "tier": "category",
+          "status": "push",
+          "volume": 2025,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": 0.21
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 0,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B077J2D3RD",
+      "parent_asin": "B09QT19F2P",
+      "title": "BetterYou Vitamin D Spray for Kids, Vitamin D 400 IU Junior Oral Spray, Fast Acting Vitamin D3 Supplement for Children, 3-Month Supply, Natural Peppermint Flavour, Made in the UK",
+      "family_revenue_30d": 10683,
+      "family_size": 1,
+      "family_revenue_keepa": 11720,
+      "units_30d": 1823,
+      "price": 5.86,
+      "list_price": 8.45,
+      "sellers": 10,
+      "buy_box_owner": "Amazon",
+      "sold_by": "Amazon",
+      "category": "Vitamin D",
+      "product_type": "supplement",
+      "rating": 4.7,
+      "reviews": 2215,
+      "sales_rank": 1655.0,
+      "content": {
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "4 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "178 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 287 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "2215 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 58,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "2 brand video(s), shortest 19s"
+          },
+          "title_on_mobile": {
+            "status": "fail",
+            "detail": "cut off on mobile before the product type"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "4 bullet(s) over 250 characters; mobile shows these collapsed"
+          },
+          "a_plus_on_mobile": {
+            "status": "good",
+            "detail": "4 A+ images with light, phone-friendly text"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "vitamin d spray",
+          "tier": "core",
+          "status": "push",
+          "volume": 12848,
+          "organic_rank": 8,
+          "sponsored_rank": null,
+          "cpc": 0.24
+        },
+        {
+          "keyword": "vitamin d kids",
+          "tier": "core",
+          "status": "push",
+          "volume": 4790,
+          "organic_rank": 7,
+          "sponsored_rank": null,
+          "cpc": 1.06
+        },
+        {
+          "keyword": "vitamin d drops baby",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 4244,
+          "organic_rank": 46,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "better you vitamin d spray",
+          "tier": "brand",
+          "status": "push",
+          "volume": 3893,
+          "organic_rank": 7,
+          "sponsored_rank": null,
+          "cpc": 0.83
+        },
+        {
+          "keyword": "vitamin d for kids",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3582,
+          "organic_rank": 8,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "vitamin d 400iu",
+          "tier": "core",
+          "status": "push",
+          "volume": 3079,
+          "organic_rank": 6,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "frozen vitamins kids",
+          "volume": 450,
+          "sponsored_rank": 8,
+          "reason": "different product (\"frozen\")"
+        }
+      ],
+      "sponsored_terms": 6,
+      "mobile_sheet": null
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [
+      [
+        {
+          "asin": "B00477782K",
+          "title": "BetterYou Magnesium Bath Flakes, Pure Source Bath Salts Muscle Soak - 1kg",
+          "revenue_30d": 15557.94
+        },
+        {
+          "asin": "B08NFRGQ5Y",
+          "title": "BetterYou Magnesium Muscle Bath Flakes, Pure Source Bath Salts Soak - 1kg",
+          "revenue_30d": 2796.09
+        }
+      ],
+      [
+        {
+          "asin": "B0773NZJ8H",
+          "title": "BetterYou DLux+ Vitamin D+K2 - 12ml (Pack of 4)",
+          "revenue_30d": 6856.4
+        },
+        {
+          "asin": "B0773QN5SY",
+          "title": "BetterYou DLux+ Vitamin D+K2-12ml (Pack of 3)",
+          "revenue_30d": 3318.34
+        }
+      ],
+      [
+        {
+          "asin": "B075NN7DBS",
+          "title": "Better You | Boost B12 Oral Spray | 2 x 25ml",
+          "revenue_30d": 4285.32
+        },
+        {
+          "asin": "B01068Y5OM",
+          "title": "Better You | Boost B12 Oral Spray | 6 x 25ml",
+          "revenue_30d": 1406.0
+        },
+        {
+          "asin": "B01M4RK5PB",
+          "title": "Better You | Boost B12 Oral Spray | 4 x 25ml",
+          "revenue_30d": 135.36
+        }
+      ],
+      [
+        {
+          "asin": "B0GX1Y8Z4Z",
+          "title": "BetterYou Magnesium Glycinate, Citrate and Malate Sleep Powder Supplement",
+          "revenue_30d": 4165.2
+        },
+        {
+          "asin": "B0DSJVGSSJ",
+          "title": "BetterYou Magnesium 3-in-1 Glycinate, Citrate & Malate Supplement Powder",
+          "revenue_30d": 1894.78
+        }
+      ],
+      [
+        {
+          "asin": "B07HM21FWY",
+          "title": "Better You Iron Daily Oral Spray 25ml (Pack of 3)",
+          "revenue_30d": 849.15
+        },
+        {
+          "asin": "B0D6ZC4T13",
+          "title": "BetterYou Iron 10 Daily Oral Spray 6 x 25 ml (6)",
+          "revenue_30d": 219.96
+        }
+      ],
+      [
+        {
+          "asin": "B07Z41WRRM",
+          "title": "BetterYou Vitamin K2 Oral Spray 25ml (Pack of 2)",
+          "revenue_30d": 579.42
+        },
+        {
+          "asin": "B07Z3ZQGPD",
+          "title": "BetterYou Vitamin K2 Oral Spray 25ml (Pack of 4)",
+          "revenue_30d": 141.72
+        }
+      ],
+      [
+        {
+          "asin": "B07L5KDNGM",
+          "title": "Better You Magnesium Oil Joint Spray 100ml (Pack of 2)",
+          "revenue_30d": 539.7
+        },
+        {
+          "asin": "B07L5JVV35",
+          "title": "Better You Magnesium Oil Joint Spray 100ml (Pack of 3)",
+          "revenue_30d": 83.88
+        }
+      ],
+      [
+        {
+          "asin": "B082ST17C7",
+          "title": "BetterYou Iron 10 - Daily Oral Spray 25ml",
+          "revenue_30d": 507.45
+        },
+        {
+          "asin": "B0BY74NTSK",
+          "title": "BetterYou Zinc Daily Oral Spray 50ml & BetterYou Iron Daily Oral Spray, 25ml",
+          "revenue_30d": 47.56
+        }
+      ],
+      [
+        {
+          "asin": "B084SYJJ57",
+          "title": "Better You Magnesium Oil Original Spray 100ml (Pack of 2)",
+          "revenue_30d": 303.84
+        },
+        {
+          "asin": "B084SVXL4X",
+          "title": "Better You Magnesium Oil Original Spray 100ml (Pack of 3)",
+          "revenue_30d": 92.36
+        },
+        {
+          "asin": "B084SXWCDV",
+          "title": "Better You Magnesium Oil Original Spray 100ml (Pack of 4)",
+          "revenue_30d": 57.3
+        },
+        {
+          "asin": "B08247VVQM",
+          "title": "BetterYou Magnesium Oil Spray Original, 100ml - Pack of 2",
+          "revenue_30d": 47.02
+        }
+      ],
+      [
+        {
+          "asin": "B0DHF9Q4JZ",
+          "title": "BetterYou Boost Vitamin B12 Daily Oral Spray Vitamin Spray Supplement for Energy",
+          "revenue_30d": 104.3
+        },
+        {
+          "asin": "B0DHF7SVN3",
+          "title": "BetterYou Boost Vitamin B12 Daily Oral Spray Vitamin Spray Supplement for Energy",
+          "revenue_30d": 102.92
+        },
+        {
+          "asin": "B0DHDS99YW",
+          "title": "BetterYou Boost Vitamin B12 Daily Oral Spray Vitamin Spray Supplement for Energy",
+          "revenue_30d": 59.48
+        }
+      ]
+    ],
+    "clutter": [
+      {
+        "asin": "B0FPCJRN8M",
+        "title": "Vitamin D3 4000 iu and K2 MK-7 100\u03bcg Max Strength Oral Spray Supplement",
+        "issue": "brand name missing from title"
+      },
+      {
+        "asin": "B007DIJJ0O",
+        "title": "Vitamin D3 3000iu and Vitamin K2 MK-7 75\u03bcg, High Strength Oral Spray",
+        "issue": "brand name missing from title"
+      },
+      {
+        "asin": "B08G57MJW9",
+        "title": "Vitamin D3 4000 IU Oral Spray, High Strength Supplement, 3-month Supply",
+        "issue": "brand name missing from title"
+      },
+      {
+        "asin": "B00JNGA2S2",
+        "title": "Magnesium Flakes (1000g) - x 3 Pack Savers Deal",
+        "issue": "brand name missing from title"
+      }
+    ],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 190,
+    "fetched": 21,
+    "parents": 12,
+    "categories": {
+      "Health & Personal Care": 19,
+      "Beauty": 2
+    },
+    "asins": [
+      {
+        "asin": "B008FMBNZG",
+        "parent_asin": "B07CS1PKWJ",
+        "title": "BetterYou Vitamin B12 Oral Spray, High Strength Methylcobalamin Supplement",
+        "price": 7.49,
+        "rating": 4.6,
+        "review_count": 7056,
+        "monthly_sold": 6000,
+        "sales_rank": 448.0,
+        "listed_since": "2012-01-27",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 44940
+      },
+      {
+        "asin": "B00AWNART4",
+        "parent_asin": "B0BTW885R2",
+        "title": "BetterYou Vitamin D3 Oral Spray 3000 IU, 3-Month Supply, Peppermint Flavour",
+        "price": 5.69,
+        "rating": 4.7,
+        "review_count": 11588,
+        "monthly_sold": 6000,
+        "sales_rank": 115.0,
+        "listed_since": "2011-09-20",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 34140
+      },
+      {
+        "asin": "B08G57MJW9",
+        "parent_asin": "B0BTW885R2",
+        "title": "Vitamin D3 4000 IU Oral Spray, High Strength Supplement, 3-month Supply",
+        "price": 5.99,
+        "rating": 4.6,
+        "review_count": 2982,
+        "monthly_sold": 5000,
+        "sales_rank": 115.0,
+        "listed_since": "2020-08-18",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 29950
+      },
+      {
+        "asin": "B002VPDX4W",
+        "parent_asin": "B002VPDX4W",
+        "title": "BetterYou Magnesium Chloride Oil Body Spray Supplement For Joints & Muscles",
+        "price": 6.66,
+        "rating": 4.3,
+        "review_count": 10834,
+        "monthly_sold": 4000,
+        "sales_rank": 827.0,
+        "listed_since": "2011-04-10",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 26640
+      },
+      {
+        "asin": "B0831JFV9G",
+        "parent_asin": "B097C72F5Q",
+        "title": "BetterYou Iron 10mcg Liquid Oral Spray Supplement Pomegranate Flavour",
+        "price": 5.15,
+        "rating": 4.6,
+        "review_count": 1184,
+        "monthly_sold": 4000,
+        "sales_rank": 417.0,
+        "listed_since": "2019-12-23",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 20600
+      },
+      {
+        "asin": "B00477782K",
+        "parent_asin": "B0H3WL199C",
+        "title": "BetterYou Magnesium Bath Flakes, Pure Source Bath Salts Muscle Soak - 1kg",
+        "price": 8.46,
+        "rating": 4.7,
+        "review_count": 4602,
+        "monthly_sold": 2000,
+        "sales_rank": 1798.0,
+        "listed_since": "2011-04-10",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 16920
+      },
+      {
+        "asin": "B002VPDX56",
+        "parent_asin": "B09QSZ4T8M",
+        "title": "BetterYou Magnesium Sleep Oil Body Spray Supplement with Lavender, 100ml",
+        "price": 7.99,
+        "rating": 4.2,
+        "review_count": 5990,
+        "monthly_sold": 2000,
+        "sales_rank": 1595.0,
+        "listed_since": "2011-04-10",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 15980
+      },
+      {
+        "asin": "B09T3TWBQP",
+        "parent_asin": "B0F7RY5H8X",
+        "title": "BetterYou Vitamin D3 + K2 Kids Sugar Free Blueberry & Bubblegum Oral Spray",
+        "price": 5.99,
+        "rating": 4.8,
+        "review_count": 479,
+        "monthly_sold": 2000,
+        "sales_rank": 1161.0,
+        "listed_since": "2022-02-22",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 11980
+      },
+      {
+        "asin": "B077J2D3RD",
+        "parent_asin": "B09QT19F2P",
+        "title": "BetterYou Vitamin D Spray for Kids, Vitamin D 400 IU Junior Oral Spray, Fast Acting Vitamin D3 Supplement for Children, 3-Month Supply, Natural Peppermint Flavour, Made in the UK",
+        "price": 5.86,
+        "rating": 4.7,
+        "review_count": 2215,
+        "monthly_sold": 2000,
+        "sales_rank": 1655.0,
+        "listed_since": "2017-11-26",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 11720
+      },
+      {
+        "asin": "B07DW6TPKP",
+        "parent_asin": "B0H3WWTMXK",
+        "title": "BetterYou Magnesium Sleep Body Lotion with Lavender, 180ml",
+        "price": 8.95,
+        "rating": 4.2,
+        "review_count": 4872,
+        "monthly_sold": 1000,
+        "sales_rank": 2887.0,
+        "listed_since": "2018-06-20",
+        "root_category": "Beauty",
+        "est_monthly_revenue": 8950
+      },
+      {
+        "asin": "B084WNHC73",
+        "parent_asin": "B0H3XQK66X",
+        "title": "BetterYou B-Complex Vitamin Oral Spray Supplement, High Strength",
+        "price": 8.28,
+        "rating": 4.5,
+        "review_count": 1026,
+        "monthly_sold": 1000,
+        "sales_rank": 1988.0,
+        "listed_since": "2020-02-18",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 8280
+      },
+      {
+        "asin": "B07DWKW4WS",
+        "parent_asin": "B097C72F5Q",
+        "title": "BetterYou Iron 5mcg Liquid Oral Spray Supplement Pomegranate Flavour",
+        "price": 3.86,
+        "rating": 4.5,
+        "review_count": 2145,
+        "monthly_sold": 1000,
+        "sales_rank": 416.0,
+        "listed_since": "2018-06-20",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 3860
+      },
+      {
+        "asin": "B0CQCZ6JPX",
+        "parent_asin": "B0CQTF94JB",
+        "title": "BetterYou Hydrate Magnesium Water 3-in-1 Citrus and Botanicals Flavour",
+        "price": 17.9,
+        "rating": 4.3,
+        "review_count": 148,
+        "monthly_sold": 200,
+        "sales_rank": 11320.0,
+        "listed_since": "2023-12-15",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 3580
+      },
+      {
+        "asin": "B0FS76SH7T",
+        "parent_asin": "B0G1N1STJB",
+        "title": "BetterYou Vitamin D3 1200IU and K2 MK-7 25\u03bcg Optimal Strength Oral Spray",
+        "price": 8.99,
+        "rating": 4.7,
+        "review_count": 26,
+        "monthly_sold": 300,
+        "sales_rank": 69.0,
+        "listed_since": "2025-09-23",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 2697
+      },
+      {
+        "asin": "B0G1N1STJB",
+        "parent_asin": "B0G1N1STJB",
+        "title": "BetterYou Vitamin D3 K2 Oral Spray",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 69.0,
+        "listed_since": "2025-11-10",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B097C72F5Q",
+        "parent_asin": "B097C72F5Q",
+        "title": "Better You 5mg Iron Daily Oral Spray Mouth Spray",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 417.0,
+        "listed_since": "2021-06-16",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B07CS1PKWJ",
+        "parent_asin": "B07CS1PKWJ",
+        "title": "Better You Boost B12 Oral Spray 25ml",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 449.0,
+        "listed_since": "2018-05-01",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0H3WL199C",
+        "parent_asin": "B0H3WL199C",
+        "title": "BetterYou Magnesium Original Bath Flakes, Natural Source of Zechstein Magnesium, Mineral Bath Flakes, Cleansing Bath Salts, Vegan & Palm-Oil Free, 1kg",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 1799.0,
+        "listed_since": "2026-06-03",
+        "root_category": "Beauty",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0H3XQK66X",
+        "parent_asin": "B0H3XQK66X",
+        "title": "BetterYou B-Complete Oral Spray, Fast Acting B-Complex Supplement, High Strength Blend of All 8 B-Vitamins, Natural Peach, Plum & Raspberry Flavour, 1-Month Supply",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 1988.0,
+        "listed_since": "2026-06-03",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0H3WWTMXK",
+        "parent_asin": "B0H3WWTMXK",
+        "title": "BetterYou Magnesium Sleep Lotion, Transdermal Magnesium Chloride Lotion Infused with Lavender & Chamomile to Support Sleep & Natural Muscle Relaxation, 180ml",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 2887.0,
+        "listed_since": "2026-06-03",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      },
+      {
+        "asin": "B0CQTF94JB",
+        "parent_asin": "B0CQTF94JB",
+        "title": "BetterYou Magnesium Mineral Water",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 11318.0,
+        "listed_since": "2023-12-22",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 21,
+    "launches_by_quarter": {
+      "2023-Q4": 2,
+      "2025-Q3": 1,
+      "2025-Q4": 1,
+      "2026-Q2": 3
+    },
+    "launches_last_12m": 4,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 240237,
+    "top3_revenue_share": 0.45,
+    "bsr_trend_top_parents": {
+      "median_bsr_now": 1545.0,
+      "median_bsr_year_ago": 1366.5,
+      "improved": false,
+      "change_pct": 13
+    },
+    "reviews_gained_12m": 2359
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 68,
+      "share_under_7_images": 0.71,
+      "share_no_video": 0.33,
+      "share_no_aplus": 0.33,
+      "share_under_5_bullets": 0.43,
+      "share_rating_below_4_2": 0.0,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B0G1N1STJB",
+        "title": "BetterYou Vitamin D3 K2 Oral Spray",
+        "score": 38,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "34 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B07CS1PKWJ",
+        "title": "Better You Boost B12 Oral Spray 25ml",
+        "score": 38,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "36 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B00AWNART4",
+        "title": "BetterYou Vitamin D3 Oral Spray 3000 IU, 3-Month Supply, Peppermint Flavour",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "9 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "9 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "75 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 285 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "11588 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B002VPDX4W",
+        "title": "BetterYou Magnesium Chloride Oil Body Spray Supplement For Joints & Muscles",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "10 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "75 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 225 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.3\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "10834 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B097C72F5Q",
+        "title": "Better You 5mg Iron Daily Oral Spray Mouth Spray",
+        "score": 38,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "48 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B07DW6TPKP",
+        "title": "BetterYou Magnesium Sleep Body Lotion with Lavender, 180ml",
+        "score": 88,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "7 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "5 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "58 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 213 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "4872 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0CQTF94JB",
+        "title": "BetterYou Magnesium Mineral Water",
+        "score": 38,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "33 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09T3TWBQP",
+        "title": "BetterYou Vitamin D3 + K2 Kids Sugar Free Blueberry & Bubblegum Oral Spray",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "4 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "74 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 306 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.8\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "479 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B002VPDX56",
+        "title": "BetterYou Magnesium Sleep Oil Body Spray Supplement with Lavender, 100ml",
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "10 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "72 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 230 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "5990 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0H3WL199C",
+        "title": "BetterYou Magnesium Original Bath Flakes, Natural Source of Zechstein Magnesium, Mineral Bath Flakes, Cleansing Bath Salts, Vegan & Palm-Oil Free, 1kg",
+        "score": 44,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "150 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B084WNHC73",
+        "title": "BetterYou B-Complex Vitamin Oral Spray Supplement, High Strength",
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "64 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "4 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 252 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "1026 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B077J2D3RD",
+        "title": "BetterYou Vitamin D Spray for Kids, Vitamin D 400 IU Junior Oral Spray, Fast Acting Vitamin D3 Supplement for Children, 3-Month Supply, Natural Peppermint Flavour, Made in the UK",
+        "score": 94,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "4 videos"
+          },
+          "a_plus": {
+            "status": "good",
+            "detail": "A+ with 1 modules"
+          },
+          "title": {
+            "status": "good",
+            "detail": "178 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 287 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.7\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "2215 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 5,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.17,
+    "est_monthly_spend_on_sampled_terms": {
+      "low": 1366,
+      "high": 3416
+    },
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "Nutrition Geeks",
+        "avg_sov": 0.152,
+        "avg_sponsored_sov": 0.139,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "Solgar",
+        "avg_sov": 0.132,
+        "avg_sponsored_sov": 0.142,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "The Intelligent Health",
+        "avg_sov": 0.089,
+        "avg_sponsored_sov": 0.104,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "WeightWorld",
+        "avg_sov": 0.06,
+        "avg_sponsored_sov": 0.038,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Vitabiotics Ultra",
+        "avg_sov": 0.048,
+        "avg_sponsored_sov": 0.022,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "Nutravita",
+        "avg_sov": 0.047,
+        "avg_sponsored_sov": 0.045,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "DOVE MEN + CARE",
+        "avg_sov": 0.031,
+        "avg_sponsored_sov": 0.038,
+        "keywords_present": 1,
+        "is_prospect": false
+      },
+      {
+        "brand": "Metagenics",
+        "avg_sov": 0.03,
+        "avg_sponsored_sov": 0.077,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "NEW LEAF PRODUCTS",
+        "avg_sov": 0.026,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "EVO NUTRITION",
+        "avg_sov": 0.025,
+        "avg_sponsored_sov": 0.025,
+        "keywords_present": 6,
+        "is_prospect": false
+      },
+      {
+        "brand": "Westlab",
+        "avg_sov": 0.025,
+        "avg_sponsored_sov": 0.0,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "BeLive",
+        "avg_sov": 0.023,
+        "avg_sponsored_sov": 0.029,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "Nutriburst",
+        "avg_sov": 0.022,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Hexeal",
+        "avg_sov": 0.022,
+        "avg_sponsored_sov": 0.024,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Vicks",
+        "avg_sov": 0.021,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 1,
+        "is_prospect": false
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [
+      {
+        "keyword": "betteryou",
+        "asin": "B01H08EUT6",
+        "brand_guess": "Inessa Advanced",
+        "title": "Inessa Advanced Multivitamin for Men & Women - Methylated, 60 Tablets | One tablet a day c",
+        "position": 50
+      },
+      {
+        "keyword": "better you vitamin d spray",
+        "asin": "B0FZLS21Q8",
+        "brand_guess": "Vitamin D3-10ml",
+        "title": "Vitamin D3-10ml (200 Sprays) | High-Strength Daily Support for Immunity, Bones & Muscles |",
+        "position": 10
+      },
+      {
+        "keyword": "better you vitamin d spray",
+        "asin": "B0FZLS21Q8",
+        "brand_guess": "Vitamin D3-10ml",
+        "title": "Vitamin D3-10ml (200 Sprays) | High-Strength Daily Support for Immunity, Bones & Muscles |",
+        "position": 50
+      }
+    ],
+    "prospect_sponsored_on_own_brand": true,
+    "positioning_page1": {
+      "our_median_price": 6.89,
+      "competitor_median_price": 8.89,
+      "our_median_rating": 4.5,
+      "competitor_median_rating": 4.6
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "vitamin d",
+        "tier": "core",
+        "volume": 199150,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": 1.1,
+        "status": "push",
+        "priority": 181045
+      },
+      {
+        "keyword": "magnesium",
+        "tier": "core",
+        "volume": 127458,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": 0.74,
+        "status": "push",
+        "priority": 172241
+      },
+      {
+        "keyword": "b",
+        "tier": "category",
+        "volume": 59144,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": 0.31,
+        "status": "push",
+        "priority": 133551
+      },
+      {
+        "keyword": "vitamins",
+        "tier": "category",
+        "volume": 28914,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 101199
+      },
+      {
+        "keyword": "kids vitamins",
+        "tier": "category",
+        "volume": 20461,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 65103
+      },
+      {
+        "keyword": "bath salts",
+        "tier": "category",
+        "volume": 38587,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "push",
+        "priority": 56273
+      },
+      {
+        "keyword": "sleep",
+        "tier": "category",
+        "volume": 21252,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "push",
+        "priority": 51298
+      },
+      {
+        "keyword": "epsom salts",
+        "tier": "category",
+        "volume": 37371,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 49049
+      },
+      {
+        "keyword": "vitamin b12",
+        "tier": "core",
+        "volume": 38052,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 1.25,
+        "status": "push",
+        "priority": 30442
+      },
+      {
+        "keyword": "body spray",
+        "tier": "category",
+        "volume": 39086,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": 0.54,
+        "status": "missing",
+        "priority": 30400
+      },
+      {
+        "keyword": "vitamin b complex",
+        "tier": "core",
+        "volume": 17900,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": 0.62,
+        "status": "push",
+        "priority": 28871
+      },
+      {
+        "keyword": "vitamin k2",
+        "tier": "core",
+        "volume": 8080,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 21263
+      },
+      {
+        "keyword": "bath salt",
+        "tier": "category",
+        "volume": 5991,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 20968
+      },
+      {
+        "keyword": "sleep aid",
+        "tier": "category",
+        "volume": 14547,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": 0.49,
+        "status": "push",
+        "priority": 20781
+      },
+      {
+        "keyword": "body oil",
+        "tier": "category",
+        "volume": 22676,
+        "organic_rank": 78,
+        "sponsored_rank": null,
+        "cpc": 0.63,
+        "status": "missing",
+        "priority": 15117
+      },
+      {
+        "keyword": "b complex",
+        "tier": "category",
+        "volume": 7597,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 13994
+      },
+      {
+        "keyword": "k2",
+        "tier": "core",
+        "volume": 6707,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.5,
+        "status": "push",
+        "priority": 13414
+      },
+      {
+        "keyword": "sleep spray",
+        "tier": "core",
+        "volume": 6626,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 0.54,
+        "status": "push",
+        "priority": 12270
+      },
+      {
+        "keyword": "b12",
+        "tier": "core",
+        "volume": 27378,
+        "organic_rank": 8,
+        "sponsored_rank": 15,
+        "cpc": 0.7,
+        "status": "sponsored_support",
+        "priority": 11733
+      },
+      {
+        "keyword": "supplements",
+        "tier": "category",
+        "volume": 8619,
+        "organic_rank": 112,
+        "sponsored_rank": null,
+        "cpc": 0.31,
+        "status": "missing",
+        "priority": 11677
+      },
+      {
+        "keyword": "epsom bath salts",
+        "tier": "category",
+        "volume": 12423,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": 0.49,
+        "status": "missing",
+        "priority": 10648
+      },
+      {
+        "keyword": "vitamin d3",
+        "tier": "category",
+        "volume": 41490,
+        "organic_rank": 56,
+        "sponsored_rank": null,
+        "cpc": 2.83,
+        "status": "push",
+        "priority": 10263
+      },
+      {
+        "keyword": "mineral oil",
+        "tier": "category",
+        "volume": 5816,
+        "organic_rank": 92,
+        "sponsored_rank": null,
+        "cpc": 0.24,
+        "status": "missing",
+        "priority": 10178
+      },
+      {
+        "keyword": "b vitamin complex",
+        "tier": "core",
+        "volume": 1985,
+        "organic_rank": 20,
+        "sponsored_rank": null,
+        "cpc": 0.17,
+        "status": "push",
+        "priority": 9925
+      },
+      {
+        "keyword": "iron supplements",
+        "tier": "core",
+        "volume": 30345,
+        "organic_rank": 24,
+        "sponsored_rank": 4,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 9104
+      },
+      {
+        "keyword": "vitamin d gummies",
+        "tier": "core",
+        "volume": 8088,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 8088
+      },
+      {
+        "keyword": "wit",
+        "tier": "core",
+        "volume": 6411,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": 0.35,
+        "status": "sponsored_only",
+        "priority": 7327
+      },
+      {
+        "keyword": "b vitamins",
+        "tier": "category",
+        "volume": 2025,
+        "organic_rank": 26,
+        "sponsored_rank": null,
+        "cpc": 0.21,
+        "status": "push",
+        "priority": 6750
+      },
+      {
+        "keyword": "vegan vitamin d",
+        "tier": "core",
+        "volume": 1386,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 6300
+      },
+      {
+        "keyword": "ferritin",
+        "tier": "core",
+        "volume": 2445,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 0.41,
+        "status": "push",
+        "priority": 5963
+      },
+      {
+        "keyword": "d3 and k2 vitamin",
+        "tier": "long_tail",
+        "volume": 11798,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5899
+      },
+      {
+        "keyword": "vitamin d tablets",
+        "tier": "category",
+        "volume": 14031,
+        "organic_rank": 117,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 5893
+      },
+      {
+        "keyword": "ferritin supplements",
+        "tier": "core",
+        "volume": 5840,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5840
+      },
+      {
+        "keyword": "magnesium spray",
+        "tier": "core",
+        "volume": 11434,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 5717
+      },
+      {
+        "keyword": "magnesium butter",
+        "tier": "core",
+        "volume": 1425,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 0.26,
+        "status": "push",
+        "priority": 5481
+      },
+      {
+        "keyword": "vitamin d spray",
+        "tier": "core",
+        "volume": 12848,
+        "organic_rank": 1,
+        "sponsored_rank": 30,
+        "cpc": 0.24,
+        "status": "own",
+        "priority": 5353
+      },
+      {
+        "keyword": "vitamin k2 mk7",
+        "tier": "core",
+        "volume": 2260,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": 0.43,
+        "status": "push",
+        "priority": 5256
+      },
+      {
+        "keyword": "vit b complex",
+        "tier": "core",
+        "volume": 1773,
+        "organic_rank": 44,
+        "sponsored_rank": null,
+        "cpc": 0.34,
+        "status": "push",
+        "priority": 5215
+      },
+      {
+        "keyword": "vitamin d 1000iu",
+        "tier": "core",
+        "volume": 5068,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5068
+      },
+      {
+        "keyword": "healthy metal magnesium drink",
+        "tier": "long_tail",
+        "volume": 10052,
+        "organic_rank": 50,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5026
+      },
+      {
+        "keyword": "b12 tablets high strength",
+        "tier": "long_tail",
+        "volume": 16596,
+        "organic_rank": 106,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4979
+      },
+      {
+        "keyword": "bath soak",
+        "tier": "category",
+        "volume": 11026,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4631
+      },
+      {
+        "keyword": "magnesium liquid",
+        "tier": "core",
+        "volume": 914,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "push",
+        "priority": 4570
+      },
+      {
+        "keyword": "magnesium cream",
+        "tier": "core",
+        "volume": 8604,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 4302
+      },
+      {
+        "keyword": "liquid magnesium",
+        "tier": "core",
+        "volume": 857,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": 0.19,
+        "status": "push",
+        "priority": 4285
+      },
+      {
+        "keyword": "magnesium oil",
+        "tier": "core",
+        "volume": 3674,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": 0.43,
+        "status": "organic_top_unprotected",
+        "priority": 4272
+      },
+      {
+        "keyword": "vitamin d drops",
+        "tier": "core",
+        "volume": 4197,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4197
+      },
+      {
+        "keyword": "oil spray",
+        "tier": "category",
+        "volume": 4994,
+        "organic_rank": 96,
+        "sponsored_rank": null,
+        "cpc": 0.51,
+        "status": "missing",
+        "priority": 4113
+      },
+      {
+        "keyword": "k2 vitamin supplements",
+        "tier": "core",
+        "volume": 4011,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 4011
+      },
+      {
+        "keyword": "vitamins kids",
+        "tier": "category",
+        "volume": 2983,
+        "organic_rank": 76,
+        "sponsored_rank": 36,
+        "cpc": 0.21,
+        "status": "sponsored_only",
+        "priority": 3977
+      },
+      {
+        "keyword": "magnesium for sleep",
+        "tier": "core",
+        "volume": 3943,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3943
+      },
+      {
+        "keyword": "vitamin",
+        "tier": "category",
+        "volume": 7388,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": 1.32,
+        "status": "push",
+        "priority": 3918
+      },
+      {
+        "keyword": "spatone",
+        "tier": "core",
+        "volume": 3904,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3904
+      },
+      {
+        "keyword": "magnesium chloride",
+        "tier": "core",
+        "volume": 1224,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": 0.33,
+        "status": "push",
+        "priority": 3709
+      },
+      {
+        "keyword": "liquid iron",
+        "tier": "core",
+        "volume": 3521,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3521
+      },
+      {
+        "keyword": "flakes",
+        "tier": "category",
+        "volume": 1659,
+        "organic_rank": 69,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "missing",
+        "priority": 3484
+      },
+      {
+        "keyword": "d3 k2",
+        "tier": "core",
+        "volume": 3887,
+        "organic_rank": 5,
+        "sponsored_rank": null,
+        "cpc": 1.14,
+        "status": "push",
+        "priority": 3410
+      },
+      {
+        "keyword": "magnesium drink",
+        "tier": "core",
+        "volume": 3380,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3380
+      },
+      {
+        "keyword": "vit d",
+        "tier": "core",
+        "volume": 7812,
+        "organic_rank": 9,
+        "sponsored_rank": 16,
+        "cpc": 0.71,
+        "status": "sponsored_support",
+        "priority": 3301
+      },
+      {
+        "keyword": "vitamin d 400iu",
+        "tier": "core",
+        "volume": 3079,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 3079
+      },
+      {
+        "keyword": "vitamin b",
+        "tier": "category",
+        "volume": 6517,
+        "organic_rank": 22,
+        "sponsored_rank": null,
+        "cpc": 1.49,
+        "status": "push",
+        "priority": 3062
+      },
+      {
+        "keyword": "nuracalm magnesium cream",
+        "tier": "category",
+        "volume": 6766,
+        "organic_rank": 73,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2842
+      },
+      {
+        "keyword": "d3k2",
+        "tier": "core",
+        "volume": 690,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.26,
+        "status": "push",
+        "priority": 2654
+      },
+      {
+        "keyword": "vit b",
+        "tier": "core",
+        "volume": 767,
+        "organic_rank": 22,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "push",
+        "priority": 2645
+      },
+      {
+        "keyword": "muscle pain relief",
+        "tier": "category",
+        "volume": 6191,
+        "organic_rank": 117,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2600
+      },
+      {
+        "keyword": "d3",
+        "tier": "category",
+        "volume": 5369,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 1.48,
+        "status": "push",
+        "priority": 2539
+      },
+      {
+        "keyword": "vit b12",
+        "tier": "core",
+        "volume": 2104,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": 0.86,
+        "status": "push",
+        "priority": 2447
+      },
+      {
+        "keyword": "vitamin d3 k2",
+        "tier": "core",
+        "volume": 56674,
+        "organic_rank": 4,
+        "sponsored_rank": 4,
+        "cpc": 2.37,
+        "status": "own",
+        "priority": 2391
+      },
+      {
+        "keyword": "vitamin d baby",
+        "tier": "core",
+        "volume": 1396,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": 0.6,
+        "status": "push",
+        "priority": 2327
+      },
+      {
+        "keyword": "dr berg supplements",
+        "tier": "core",
+        "volume": 2299,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2299
+      },
+      {
+        "keyword": "epsom salts for bath",
+        "tier": "long_tail",
+        "volume": 4573,
+        "organic_rank": 54,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2286
+      },
+      {
+        "keyword": "muscle soak",
+        "tier": "category",
+        "volume": 3245,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2272
+      },
+      {
+        "keyword": "vitamin d3 400iu",
+        "tier": "core",
+        "volume": 2256,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2256
+      },
+      {
+        "keyword": "better you magnesium",
+        "tier": "brand",
+        "volume": 1074,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": 0.24,
+        "status": "organic_top_unprotected",
+        "priority": 2238
+      },
+      {
+        "keyword": "floradix liquid iron",
+        "tier": "core",
+        "volume": 7371,
+        "organic_rank": 5,
+        "sponsored_rank": 7,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2211
+      },
+      {
+        "keyword": "baby vitamins",
+        "tier": "category",
+        "volume": 3122,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2185
+      },
+      {
+        "keyword": "vitamin d drops baby",
+        "tier": "long_tail",
+        "volume": 4244,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2122
+      },
+      {
+        "keyword": "magnesium glycinate drink",
+        "tier": "core",
+        "volume": 2110,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2110
+      },
+      {
+        "keyword": "vit d3",
+        "tier": "core",
+        "volume": 2122,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": 1.01,
+        "status": "push",
+        "priority": 2101
+      },
+      {
+        "keyword": "vitamin d 4000 iu",
+        "tier": "long_tail",
+        "volume": 2140,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 0.51,
+        "status": "push",
+        "priority": 2098
+      },
+      {
+        "keyword": "magnesium bath salts",
+        "tier": "core",
+        "volume": 4137,
+        "organic_rank": 2,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 2068
+      },
+      {
+        "keyword": "spatone iron sachets",
+        "tier": "core",
+        "volume": 6861,
+        "organic_rank": 9,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2058
+      },
+      {
+        "keyword": "salt bath",
+        "tier": "category",
+        "volume": 646,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 2055
+      },
+      {
+        "keyword": "magnesium oil spray",
+        "tier": "core",
+        "volume": 4063,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 2032
+      },
+      {
+        "keyword": "vit d3 k2",
+        "tier": "core",
+        "volume": 4043,
+        "organic_rank": 4,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 2022
+      },
+      {
+        "keyword": "vitabiotics vitamin d",
+        "tier": "category",
+        "volume": 2882,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2017
+      },
+      {
+        "keyword": "milk of magnesia",
+        "tier": "core",
+        "volume": 2011,
+        "organic_rank": 7,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2011
+      },
+      {
+        "keyword": "vitamins for kids",
+        "tier": "category",
+        "volume": 7163,
+        "organic_rank": 78,
+        "sponsored_rank": 39,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 2006
+      },
+      {
+        "keyword": "vitamin b12 tablets high strength",
+        "tier": "long_tail",
+        "volume": 6515,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1954
+      },
+      {
+        "keyword": "kids vitamins multivitamins",
+        "tier": "category",
+        "volume": 4500,
+        "organic_rank": 124,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1890
+      },
+      {
+        "keyword": "bettervits",
+        "tier": "core",
+        "volume": 4690,
+        "organic_rank": null,
+        "sponsored_rank": 51,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1876
+      },
+      {
+        "keyword": "daily deals",
+        "tier": "category",
+        "volume": 2679,
+        "organic_rank": 51,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1875
+      },
+      {
+        "keyword": "vitamin water",
+        "tier": "core",
+        "volume": 3113,
+        "organic_rank": 82,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1868
+      },
+      {
+        "keyword": "magnesium patches",
+        "tier": "core",
+        "volume": 1844,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1844
+      },
+      {
+        "keyword": "sleep aids",
+        "tier": "category",
+        "volume": 2598,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1819
+      },
+      {
+        "keyword": "sleep supplement",
+        "tier": "category",
+        "volume": 2592,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1814
+      },
+      {
+        "keyword": "iron supplement",
+        "tier": "core",
+        "volume": 3433,
+        "organic_rank": 11,
+        "sponsored_rank": 7,
+        "cpc": 0.57,
+        "status": "sponsored_support",
+        "priority": 1807
+      },
+      {
+        "keyword": "vitamin d for kids",
+        "tier": "long_tail",
+        "volume": 3582,
+        "organic_rank": 6,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1791
+      },
+      {
+        "keyword": "toddler vitamins",
+        "tier": "category",
+        "volume": 2555,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1788
+      },
+      {
+        "keyword": "vitamin b2",
+        "tier": "category",
+        "volume": 4207,
+        "organic_rank": 144,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1767
+      },
+      {
+        "keyword": "vitamin d3 4000 iu",
+        "tier": "long_tail",
+        "volume": 3432,
+        "organic_rank": 29,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1716
+      },
+      {
+        "keyword": "the k2",
+        "tier": "core",
+        "volume": 1692,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1692
+      },
+      {
+        "keyword": "d3 vitamins",
+        "tier": "category",
+        "volume": 2403,
+        "organic_rank": 39,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1682
+      },
+      {
+        "keyword": "magnesium sleep",
+        "tier": "core",
+        "volume": 3358,
+        "organic_rank": 4,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 1679
+      },
+      {
+        "keyword": "high strength vitamin d",
+        "tier": "long_tail",
+        "volume": 3343,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1672
+      },
+      {
+        "keyword": "magnesium cream for muscle pain",
+        "tier": "long_tail",
+        "volume": 3275,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1638
+      },
+      {
+        "keyword": "iron water",
+        "tier": "core",
+        "volume": 3950,
+        "organic_rank": null,
+        "sponsored_rank": 20,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1580
+      },
+      {
+        "keyword": "iron tablets high strength",
+        "tier": "long_tail",
+        "volume": 3126,
+        "organic_rank": 52,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1563
+      },
+      {
+        "keyword": "magnesium powder",
+        "tier": "category",
+        "volume": 3716,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1561
+      },
+      {
+        "keyword": "vitamin d 2000iu",
+        "tier": "core",
+        "volume": 1554,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1554
+      },
+      {
+        "keyword": "gummies vitamins d",
+        "tier": "core",
+        "volume": 1539,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1539
+      },
+      {
+        "keyword": "magnesium for kids",
+        "tier": "category",
+        "volume": 3627,
+        "organic_rank": 62,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1523
+      },
+      {
+        "keyword": "k2 mk7",
+        "tier": "core",
+        "volume": 1512,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1512
+      },
+      {
+        "keyword": "magnesium kids",
+        "tier": "category",
+        "volume": 2146,
+        "organic_rank": 55,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1502
+      },
+      {
+        "keyword": "vit k2",
+        "tier": "core",
+        "volume": 969,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": 0.65,
+        "status": "push",
+        "priority": 1491
+      },
+      {
+        "keyword": "magnesium drink for sleep",
+        "tier": "long_tail",
+        "volume": 2962,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1481
+      },
+      {
+        "keyword": "mineral water multipack",
+        "tier": "core",
+        "volume": 2467,
+        "organic_rank": 89,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1480
+      },
+      {
+        "keyword": "vitamin d3 1000 iu",
+        "tier": "long_tail",
+        "volume": 2656,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": 0.9,
+        "status": "push",
+        "priority": 1476
+      },
+      {
+        "keyword": "baby vitamin d drops",
+        "tier": "long_tail",
+        "volume": 2883,
+        "organic_rank": 37,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1442
+      },
+      {
+        "keyword": "bath salts muscle soak",
+        "tier": "long_tail",
+        "volume": 2869,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1434
+      },
+      {
+        "keyword": "westlab",
+        "tier": "competitor",
+        "volume": 1306,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": 0.28,
+        "status": "push",
+        "priority": 1399
+      },
+      {
+        "keyword": "healthy metal",
+        "tier": "category",
+        "volume": 4978,
+        "organic_rank": null,
+        "sponsored_rank": 21,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1394
+      },
+      {
+        "keyword": "calcium magnesium zinc and vitamin d",
+        "tier": "long_tail",
+        "volume": 2789,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1394
+      },
+      {
+        "keyword": "super b complex",
+        "tier": "category",
+        "volume": 657,
+        "organic_rank": 71,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "missing",
+        "priority": 1380
+      },
+      {
+        "keyword": "restless legs relief",
+        "tier": "core",
+        "volume": 2739,
+        "organic_rank": 3,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 1370
+      },
+      {
+        "keyword": "iron spray",
+        "tier": "core",
+        "volume": 2730,
+        "organic_rank": 1,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "organic_top_unprotected",
+        "priority": 1365
+      },
+      {
+        "keyword": "vitamin d kids",
+        "tier": "core",
+        "volume": 4790,
+        "organic_rank": 6,
+        "sponsored_rank": 2,
+        "cpc": 1.06,
+        "status": "sponsored_support",
+        "priority": 1356
+      },
+      {
+        "keyword": "body sprays",
+        "tier": "category",
+        "volume": 3221,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1353
+      },
+      {
+        "keyword": "epson salt",
+        "tier": "category",
+        "volume": 577,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": 0.3,
+        "status": "push",
+        "priority": 1346
+      },
+      {
+        "keyword": "tonic vitamins",
+        "tier": "core",
+        "volume": 2204,
+        "organic_rank": 126,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1322
+      },
+      {
+        "keyword": "radox bath salts",
+        "tier": "category",
+        "volume": 3129,
+        "organic_rank": 88,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1314
+      },
+      {
+        "keyword": "vitamin d3 2000iu",
+        "tier": "core",
+        "volume": 1280,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": 0.98,
+        "status": "push",
+        "priority": 1306
+      },
+      {
+        "keyword": "vitamin d pregnancy",
+        "tier": "core",
+        "volume": 1282,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1282
+      },
+      {
+        "keyword": "vitamins d",
+        "tier": "core",
+        "volume": 1007,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": 0.81,
+        "status": "push",
+        "priority": 1243
+      },
+      {
+        "keyword": "magnesium sleep gummies",
+        "tier": "core",
+        "volume": 1238,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1238
+      },
+      {
+        "keyword": "vitamin d supplements",
+        "tier": "core",
+        "volume": 1237,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1237
+      },
+      {
+        "keyword": "vitamin c liposomal",
+        "tier": "category",
+        "volume": 1316,
+        "organic_rank": 126,
+        "sponsored_rank": null,
+        "cpc": 0.45,
+        "status": "missing",
+        "priority": 1228
+      },
+      {
+        "keyword": "a better you hydrogen tablets",
+        "tier": "brand",
+        "volume": 1218,
+        "organic_rank": 19,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1218
+      },
+      {
+        "keyword": "vegan b12",
+        "tier": "long_tail",
+        "volume": 482,
+        "organic_rank": 5,
+        "sponsored_rank": null,
+        "cpc": 0.17,
+        "status": "push",
+        "priority": 1205
+      },
+      {
+        "keyword": "kids vitamin d",
+        "tier": "core",
+        "volume": 4326,
+        "organic_rank": 5,
+        "sponsored_rank": 2,
+        "cpc": 1.1,
+        "status": "sponsored_support",
+        "priority": 1180
+      },
+      {
+        "keyword": "b12 tablets",
+        "tier": "category",
+        "volume": 2765,
+        "organic_rank": 117,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1161
+      },
+      {
+        "keyword": "retro bath pearls",
+        "tier": "category",
+        "volume": 1634,
+        "organic_rank": 27,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1144
+      },
+      {
+        "keyword": "better you",
+        "tier": "brand",
+        "volume": 3430,
+        "organic_rank": 1,
+        "sponsored_rank": 10,
+        "cpc": 0.3,
+        "status": "own",
+        "priority": 1143
+      },
+      {
+        "keyword": "boost energy",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": 0.18,
+        "status": "push",
+        "priority": 1125
+      },
+      {
+        "keyword": "energy boost",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "push",
+        "priority": 1125
+      },
+      {
+        "keyword": "made in uk",
+        "tier": "long_tail",
+        "volume": 450,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": 0.14,
+        "status": "push",
+        "priority": 1125
+      },
+      {
+        "keyword": "vitamin d high strength",
+        "tier": "long_tail",
+        "volume": 2219,
+        "organic_rank": 14,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1110
+      },
+      {
+        "keyword": "body oil spray",
+        "tier": "core",
+        "volume": 1107,
+        "organic_rank": 19,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1107
+      },
+      {
+        "keyword": "vitamin d 4000",
+        "tier": "core",
+        "volume": 1104,
+        "organic_rank": 10,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1104
+      },
+      {
+        "keyword": "folic acid and vitamin d",
+        "tier": "long_tail",
+        "volume": 2160,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": 0.99,
+        "status": "push",
+        "priority": 1091
+      }
+    ],
+    "tiers": {
+      "core": {
+        "keywords": 172,
+        "volume": 838178,
+        "gaps": 105
+      },
+      "category": {
+        "keywords": 133,
+        "volume": 581308,
+        "gaps": 125
+      },
+      "long_tail": {
+        "keywords": 372,
+        "volume": 317866,
+        "gaps": 293
+      },
+      "brand": {
+        "keywords": 41,
+        "volume": 30742,
+        "gaps": 15
+      },
+      "competitor": {
+        "keywords": 17,
+        "volume": 19090,
+        "gaps": 10
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "vitamin d",
+        "tier": "core",
+        "volume": 199150,
+        "organic_rank": 13,
+        "sponsored_rank": null,
+        "cpc": 1.1,
+        "status": "push",
+        "priority": 181045
+      },
+      {
+        "keyword": "magnesium",
+        "tier": "core",
+        "volume": 127458,
+        "organic_rank": 16,
+        "sponsored_rank": null,
+        "cpc": 0.74,
+        "status": "push",
+        "priority": 172241
+      },
+      {
+        "keyword": "b",
+        "tier": "category",
+        "volume": 59144,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": 0.31,
+        "status": "push",
+        "priority": 133551
+      },
+      {
+        "keyword": "vitamins",
+        "tier": "category",
+        "volume": 28914,
+        "organic_rank": 41,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 101199
+      },
+      {
+        "keyword": "kids vitamins",
+        "tier": "category",
+        "volume": 20461,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 65103
+      },
+      {
+        "keyword": "bath salts",
+        "tier": "category",
+        "volume": 38587,
+        "organic_rank": 25,
+        "sponsored_rank": null,
+        "cpc": 0.48,
+        "status": "push",
+        "priority": 56273
+      },
+      {
+        "keyword": "sleep",
+        "tier": "category",
+        "volume": 21252,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "push",
+        "priority": 51298
+      },
+      {
+        "keyword": "epsom salts",
+        "tier": "category",
+        "volume": 37371,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": 0.32,
+        "status": "missing",
+        "priority": 49049
+      },
+      {
+        "keyword": "vitamin b12",
+        "tier": "core",
+        "volume": 38052,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 1.25,
+        "status": "push",
+        "priority": 30442
+      },
+      {
+        "keyword": "body spray",
+        "tier": "category",
+        "volume": 39086,
+        "organic_rank": 66,
+        "sponsored_rank": null,
+        "cpc": 0.54,
+        "status": "missing",
+        "priority": 30400
+      },
+      {
+        "keyword": "vitamin b complex",
+        "tier": "core",
+        "volume": 17900,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": 0.62,
+        "status": "push",
+        "priority": 28871
+      },
+      {
+        "keyword": "vitamin k2",
+        "tier": "core",
+        "volume": 8080,
+        "organic_rank": 11,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 21263
+      },
+      {
+        "keyword": "bath salt",
+        "tier": "category",
+        "volume": 5991,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": 0.2,
+        "status": "push",
+        "priority": 20968
+      },
+      {
+        "keyword": "sleep aid",
+        "tier": "category",
+        "volume": 14547,
+        "organic_rank": 34,
+        "sponsored_rank": null,
+        "cpc": 0.49,
+        "status": "push",
+        "priority": 20781
+      },
+      {
+        "keyword": "body oil",
+        "tier": "category",
+        "volume": 22676,
+        "organic_rank": 78,
+        "sponsored_rank": null,
+        "cpc": 0.63,
+        "status": "missing",
+        "priority": 15117
+      },
+      {
+        "keyword": "b complex",
+        "tier": "category",
+        "volume": 7597,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 13994
+      },
+      {
+        "keyword": "k2",
+        "tier": "core",
+        "volume": 6707,
+        "organic_rank": 15,
+        "sponsored_rank": null,
+        "cpc": 0.5,
+        "status": "push",
+        "priority": 13414
+      },
+      {
+        "keyword": "sleep spray",
+        "tier": "core",
+        "volume": 6626,
+        "organic_rank": 8,
+        "sponsored_rank": null,
+        "cpc": 0.54,
+        "status": "push",
+        "priority": 12270
+      },
+      {
+        "keyword": "supplements",
+        "tier": "category",
+        "volume": 8619,
+        "organic_rank": 112,
+        "sponsored_rank": null,
+        "cpc": 0.31,
+        "status": "missing",
+        "priority": 11677
+      },
+      {
+        "keyword": "epsom bath salts",
+        "tier": "category",
+        "volume": 12423,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": 0.49,
+        "status": "missing",
+        "priority": 10648
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "core": 9169,
+        "category": 1448
+      },
+      "monthly_by_ad_type": {
+        "SP": 6225,
+        "SB": 2196,
+        "SBV": 2196,
+        "SD (remarketing/retention)": 1874
+      },
+      "monthly_total": 12490,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.15
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.62,
+      "multipack_share": 0.0,
+      "consumable_category": true,
+      "likelihood": "high"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Health & Personal Care",
+    "available": false
+  },
+  "job_ad_present": false
+}

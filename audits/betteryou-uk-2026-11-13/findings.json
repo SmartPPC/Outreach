@@ -1,0 +1,91 @@
+{
+  "headline": "BetterYou already owns the spray searches; the growth is in the biggest generic searches, \"vitamin d\" and \"magnesium\", where the best-sellers sit on page one but no ads show near the top.",
+  "points": [
+    {
+      "category": "advertising",
+      "title": "Vitamin D sprays: push into \"vitamin d\" (199,000 searches a month)",
+      "detail": "The D3 + K2 spray ranks #13 and the D3 3000 IU spray #22 for \"vitamin d\", with no BetterYou ads showing near the top; \"vitamin d3\" (41,000 a month) has the 3000 IU spray at #56. Exact-match top-of-search campaigns on the core vitamin D terms are the biggest single lever in the account.",
+      "evidence": [
+        "vitamin d: 199,150 searches/mo, D3+K2 spray organic #13, D3 3000 IU spray organic #22, no sponsored rank (Jungle Scout)",
+        "vitamin d3: 41,490 searches/mo, organic #56, no sponsored rank, CPC ~£2.83",
+        "d3 and k2 vitamin: 11,798 searches/mo, organic #6, no sponsored rank",
+        "Vitamin D3 3000 IU spray (B00AWNART4): ~£60,565/mo, 12,644 units, 4.7★ from 11,584 reviews (Jungle Scout estimate)",
+        "Sponsored ranking seen on 5 of the top 30 keywords (17%)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Magnesium sprays and flakes: take #1 on the spray searches into \"magnesium\" and \"bath salts\"",
+      "detail": "The magnesium oil spray already ranks #1 for \"magnesium spray\", \"magnesium oil spray\" and \"magnesium oil\", so those need no extra spend. The bigger prizes are \"magnesium\" (127,000 searches a month, Sleep spray #16) and \"bath salts\" (39,000, bath flakes #25), both with no ads showing near the top.",
+      "evidence": [
+        "magnesium: 127,458 searches/mo, Magnesium Sleep spray (B002VPDX56) organic #16, no sponsored rank, CPC ~£0.74",
+        "magnesium spray: 11,434/mo, organic #1; magnesium oil spray 4,063/mo, #1; magnesium oil 3,674/mo, #1",
+        "bath salts: 38,587 searches/mo, Magnesium Bath Flakes (B00477782K) organic #25, no sponsored rank",
+        "Magnesium family estimates: oil spray ~£23,816/mo, lotion ~£19,227/mo, sleep spray ~£15,588/mo, bath flakes ~£15,504/mo (Jungle Scout)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "catalogue",
+      "title": "B-Complex spray: a reseller holds the Buy Box, 60% below list price",
+      "detail": "On the B-Complex spray (~£14,000 a month) the Buy Box is held by RDB Ltd rather than Amazon or BetterYou, with 13 sellers and the price at £8.28 against a £20.60 list price. Worth checking supply and Brand Registry protection, since a reseller is setting the price shoppers see.",
+      "evidence": [
+        "B084WNHC73: Buy Box owner RDB Ltd, 13 sellers (Keepa)",
+        "Price £8.28 vs list £20.60, 60% below list (Keepa)",
+        "Family revenue ~£14,225/mo, 1,718 units, 4.5★ from 1,019 reviews (Jungle Scout estimate)",
+        "Elsewhere in the range Amazon holds the Buy Box, so pricing there is Amazon's call and not raised"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "catalogue",
+      "title": "Tidy-up: brand name missing from four titles, a duplicate bath flakes listing, and a lookalike on your brand search",
+      "detail": "Two of the D3 + K2 sprays, including the 3000 IU version with 6,094 reviews, plus the D3 4000 IU spray and a flakes 3-pack don't say \"BetterYou\" in the title, so the brand is invisible in mobile search. The bath flakes are listed twice, and an unbranded \"Vitamin D3 10ml\" spray takes an ad slot on \"better you vitamin d spray\".",
+      "evidence": [
+        "Brand missing from title: B007DIJJ0O (D3 3000 IU + K2, 6,094 reviews), B0FPCJRN8M (D3 4000 IU + K2), B08G57MJW9 (D3 4000 IU spray), B00JNGA2S2 (flakes 3-pack)",
+        "Duplicate: B00477782K Magnesium Bath Flakes 1kg (~£15,558/mo) and B08NFRGQ5Y Magnesium Muscle Bath Flakes 1kg (~£2,796/mo)",
+        "Lookalike B0FZLS21Q8 \"Vitamin D3-10ml\" sponsored at position 10 on \"better you vitamin d spray\" (3,893 searches/mo) (DataForSEO)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Iron spray and Hydrate: cut ads on searches for other products",
+      "detail": "The iron spray shows sponsored on searches like \"iron water\", \"healthy metal\" and \"liposomal iron\", where it doesn't rank organically, and Hydrate magnesium water on \"boxed water\" and \"water morrisons\". Negatives on these free budget for the vitamin D and magnesium terms above.",
+      "evidence": [
+        "Iron spray (B0831JFV9G) sponsored on: healthy metal (4,978/mo), iron water (3,950), feroglobin liquid (2,290), ferrous sulphate (1,518), liposomal iron (796) (Jungle Scout)",
+        "Hydrate (B0CQCZ6JPX) sponsored on: boxed water (744/mo), water morrisons (461), oshee vitamin water (376), britannic (349)",
+        "Iron spray family ~£21,643/mo; Hydrate ~£16,644/mo (Jungle Scout estimates)"
+      ],
+      "job_ad_quote": null
+    }
+  ],
+  "mobile_review": {},
+  "hero_actions": {
+    "B0FS76SH7T": "Exact-match top-of-search on \"vitamin d\" and \"d3 and k2 vitamin\"; put \"BetterYou\" in the titles of the sister listings.",
+    "B008FMBNZG": "Push \"vitamin b12\" (38,052/mo, organic #11, no ads near the top).",
+    "B00AWNART4": "Fund \"vitamin d\" (#22) and \"vitamin d3\" (#56) at the top of search.",
+    "B002VPDX4W": "Already #1 on the spray searches; move spend to \"magnesium cream\" via the lotion, which ranks #3.",
+    "B0831JFV9G": "Negate the off-target iron searches; push \"ferritin supplements\" (#11) and \"liquid iron\" (#8).",
+    "B07DW6TPKP": "Push \"magnesium for sleep\" (#12) and \"magnesium sleep\" (#4).",
+    "B0CQCZ6JPX": "Negate the bottled-water searches; test \"magnesium drink\" (#9).",
+    "B09T3TWBQP": "Push \"vitamin d3 k2\" (56,674/mo) where it ranks #9.",
+    "B002VPDX56": "Fund \"magnesium\" (127,458/mo, #16) and \"sleep spray\" (#8).",
+    "B00477782K": "Merge the duplicate flakes listing and push \"bath salts\" (#25).",
+    "B084WNHC73": "Win back the Buy Box from the reseller before spending on ads.",
+    "B077J2D3RD": "Rewrite the title so \"vitamin D spray\" shows before the mobile cut-off."
+  },
+  "content_note": "Content is strong across the range: most best-sellers score 75–100 on the mobile checks with video and phone-friendly A+. Gaps are minor: a few galleries under 7 images or under 1600px, and the kids' vitamin D spray title cuts off before the product type on mobile.",
+  "ad_strategy_summary": "Sponsored rankings show on only 5 of the top 30 keywords. Fund the core vitamin D, B12 and magnesium terms where the best-sellers already rank on page one (indicative ~£12,500/mo across the account), paid for partly by negatives on off-target iron and water searches. Leave the spray searches BetterYou already owns at #1 alone.",
+  "amc_hypotheses": [
+    "62% of the live range offers Subscribe & Save in a consumable category, so in this category repeat buyers typically drive most revenue on the sprays.",
+    "Shoppers often enter through vitamin D and move to magnesium or B12; AMC would show whether that path is happening here."
+  ],
+  "amc_questions": [
+    "What share of vitamin D spray buyers come back, and after how many days?",
+    "Which product do new-to-brand customers buy first, and what do they buy next?",
+    "What share of ad-driven sales on generic terms are new to BetterYou?",
+    "How many shoppers searching \"better you\" end up buying a lookalike?"
+  ]
+}

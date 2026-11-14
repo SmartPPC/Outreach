@@ -63,6 +63,7 @@ The Python collectors handle data and arithmetic, and their numbers are the sour
 - **Conflicts.** Check `contacts.company` against the user's own employer. If the brand belongs to the
   company the user works for, flag it and don't draft outreach.
 - **Amazon itself is blocked** in cloud sessions. Never claim to have looked at a live listing. Verify
+  claims against Keepa, Jungle Scout or DataForSEO data instead.
 - **Don't pitch ads to "defend" a #1 ranking.** If the listing is already #1 organically and nothing sits above
   it, spend there buys little. Only suggest brand or #1 defence when a competitor ad is shown above the listing.
   Point budget at big searches where it ranks #2–10 instead.
@@ -70,7 +71,6 @@ The Python collectors handle data and arithmetic, and their numbers are the sour
   heavy spend on those searches. Write "ads not showing near the top" rather than "no ads".
 - **Two marketplaces:** compare category and, where known, conversion between them. The same product in the
   right category in one market is the strongest evidence for a category fix in the other.
-  claims against Keepa, Jungle Scout or DataForSEO data instead.
 
 **Contacts**
 - **The Apollo free plan** blocks people search and email reveal, through both the API and the connector.
