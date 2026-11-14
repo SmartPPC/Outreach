@@ -1,0 +1,105 @@
+{
+  "website": "https://bettervits.co.uk",
+  "domain": "bettervits.co.uk",
+  "pages_checked": [
+    "https://bettervits.co.uk/",
+    "https://bettervits.co.uk/pages/contact",
+    "https://bettervits.co.uk/pages/about",
+    "https://bettervits.co.uk/policies/terms-of-service",
+    "https://bettervits.co.uk/policies/privacy-policy"
+  ],
+  "emails": [
+    {
+      "email": "care@bettervits.co.uk",
+      "type": "generic",
+      "source": "https://bettervits.co.uk/pages/contact",
+      "on_domain": true
+    }
+  ],
+  "people": [],
+  "company": {
+    "name": "BetterCo Ltd",
+    "number": null
+  },
+  "email_format": null,
+  "suggested": [],
+  "recommended_to": "care@bettervits.co.uk",
+  "only_generic": true,
+  "organisations": [
+    {
+      "name": "Bettervits",
+      "kind": "brand"
+    },
+    {
+      "name": "BetterCo Ltd",
+      "kind": "website operator"
+    }
+  ],
+  "companies_house": [
+    {
+      "number": "SC693954",
+      "name": "BETTERCO LTD",
+      "address": "93 George Street George Street, Edinburgh, Scotland, EH2 3ES",
+      "active": true,
+      "status": "Incorporated on 30 March 2021",
+      "people": [
+        "ELTORKEY, Andrew",
+        "TALJAARDT, Jadine Lauren"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC693954/officers"
+    }
+  ],
+  "linkedin_profiles": [],
+  "linkedin_searches": [
+    {
+      "org": "Bettervits",
+      "role": "founder",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Bettervits%22%20founder"
+    },
+    {
+      "org": "Bettervits",
+      "role": "ecommerce",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Bettervits%22%20ecommerce"
+    },
+    {
+      "org": "Bettervits",
+      "role": "amazon",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Bettervits%22%20amazon"
+    },
+    {
+      "org": "Bettervits",
+      "role": "marketing",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22Bettervits%22%20marketing"
+    },
+    {
+      "org": "BetterCo Ltd",
+      "role": "founder",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterCo%20Ltd%22%20founder"
+    },
+    {
+      "org": "BetterCo Ltd",
+      "role": "ecommerce",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterCo%20Ltd%22%20ecommerce"
+    },
+    {
+      "org": "BetterCo Ltd",
+      "role": "amazon",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterCo%20Ltd%22%20amazon"
+    },
+    {
+      "org": "BetterCo Ltd",
+      "role": "marketing",
+      "url": "https://www.linkedin.com/search/results/people/?keywords=%22BetterCo%20Ltd%22%20marketing"
+    }
+  ],
+  "apollo": {
+    "organisation": {
+      "name": "Bettervits",
+      "domain": "bettervits.co.uk",
+      "id": "61ec819b91b2d700018cc788",
+      "people_search": "https://app.apollo.io/#/people?organizationIds[]=61ec819b91b2d700018cc788"
+    },
+    "people": [],
+    "note": "Apollo free plan: people search and email reveal blocked; open the link to reveal (1 credit)."
+  }
+}

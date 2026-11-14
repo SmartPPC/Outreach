@@ -1,0 +1,85 @@
+{
+  "headline": "Bettervits advertises across most of its range, but its Marine Collagen (~£26k a month) has no ads at all, and spend is leaking onto searches like \"c\", \"zinc supplements\" and even a socket set.",
+  "points": [
+    {
+      "category": "advertising",
+      "title": "Marine Collagen: start advertising it on the collagen searches",
+      "detail": "Marine Collagen (~£26,000 a month) shows no sponsored rankings at all, while it sits at #32 for \"collagen supplements for women\" (53,000 searches a month), #31 for \"collagen tablets\" and #47 for \"marine collagen\". It was also out of stock 13% of the last 90 days, so stock and ads need lining up together.",
+      "evidence": [
+        "B09W82SY2B: 0 sponsored terms (Jungle Scout)",
+        "collagen supplements for women: 53,196/mo, organic #32; collagen tablets: 25,740/mo, #31; marine collagen: 27,799/mo, #47; collagen: 161,213/mo, #60",
+        "Out of stock 13% of the last 90 days (Keepa)",
+        "Family revenue ~£25,683/mo, 734 units, 4.1★ from 655 reviews (Jungle Scout estimate)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "advertising",
+      "title": "Creatine, Magnesium, Glucosamine and Omega 3: cut ads on unrelated searches",
+      "detail": "The best-sellers show sponsored on searches they don't rank for: Glucosamine on \"c\" (120,000 a month) and \"turmeric\", Magnesium on \"zinc supplements\" (28,000) and \"mag\", Creatine on \"creatine tablets\", \"pre\" and \"fitness\", and Omega 3 on \"3/8 impact socket set\". This looks like auto or broad campaigns drifting; negatives free budget for Marine Collagen.",
+      "evidence": [
+        "Glucosamine B09W7VZJ9Z: c (120,184/mo, sponsored #9), turmeric (20,543), mens vitamins (5,279) (Jungle Scout)",
+        "Magnesium B09W7TBGPH: zinc supplements (27,782, sponsored #13), mag (16,983), magnesium tablets (15,192)",
+        "Creatine B0CJ9TZ4V8: creatine tablets (21,877, sponsored #9, organic #102), pre (17,428), fitness (12,138), creatine capsules (9,030)",
+        "Omega 3 B0BJL68DMK: 3/8 impact socket set (1,651)"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "content",
+      "title": "Every best-seller: add a brand video, a 7th image and shorter bullets",
+      "detail": "Creatine, Magnesium, Glucosamine, Turmeric, Vitamin D3 and Biotics each have only influencer or customer videos, 5–6 gallery images and bullets that collapse on a phone. Creatine scores 60/100 on our mobile checks, with the title cut off before the size.",
+      "evidence": [
+        "No brand-made video: Creatine, Magnesium, Glucosamine, Turmeric, Vitamin D3 + K2, Biotics (Keepa)",
+        "Gallery images: 5–6 on every best-seller",
+        "Bullets over 250 characters: Creatine (4), Magnesium (5), Glucosamine (5), Turmeric (5), Marine Collagen (5), Omega 3 (5)",
+        "Creatine B0CJ9TZ4V8: mobile score 60, title cut off before the size"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "catalogue",
+      "title": "Metabolic+: build reviews behind a fast launch",
+      "detail": "Metabolic+ is already selling an estimated ~£24,000 a month but has only 4 reviews. Enrolling it in Amazon Vine and review requests now protects conversion as ad spend scales.",
+      "evidence": [
+        "B0HJ2W239T: 4 reviews, 4.5★ (Keepa)",
+        "Family revenue ~£24,213/mo, 692 units (Jungle Scout estimate); Keepa ~£17,495",
+        "Sponsored on 75 terms"
+      ],
+      "job_ad_quote": null
+    },
+    {
+      "category": "competitors",
+      "title": "Nutrition Geeks owns the shelf",
+      "detail": "Nutrition Geeks takes 22% of the visibility on Bettervits' main searches against Bettervits' 3%. Their brand name (99,000 searches a month) already carries a Bettervits ad, so the comparison story (price per serving, strength) is worth putting in the images too.",
+      "evidence": [
+        "Share of voice: Nutrition Geeks 21.9%, Solgar 6.1%, WeightWorld 5.6%, Bettervits 3.3% (Jungle Scout)",
+        "nutrition geeks: 99,091/mo, sponsored #64"
+      ],
+      "job_ad_quote": null
+    }
+  ],
+  "mobile_review": {},
+  "hero_actions": {
+    "B0CJ9TZ4V8": "Negate tablets, capsules, pre and fitness; fix the mobile title; add a brand video.",
+    "B09W7TBGPH": "Negate zinc and mag searches; push magnesium malate (#57).",
+    "B09W7VZJ9Z": "Negate \"c\" and turmeric; push msm (#36).",
+    "B09W82SY2B": "Launch ads on collagen supplements for women, collagen tablets and marine collagen once stock is steady.",
+    "B0HJ2W239T": "Enrol in Vine; negate patches, tea and berberine searches.",
+    "B09W86YYV3": "Push turmeric capsules (#27); add a 6th and 7th image.",
+    "B09XJLZYDC": "Negate spray and other-strength searches; push vitamin d k2.",
+    "B09W7K2Y6L": "Push gut health (#39); negate prebiotic searches.",
+    "B0BJL68DMK": "Negate the socket set and Seven Seas searches.",
+    "B0DB2MVGBX": "Push womens intimate probiotics (#21)."
+  },
+  "content_note": "Content is the weak spot: every best-seller has 5–6 images, no brand-made video and long bullets. Mobile scores run 60–88.",
+  "ad_strategy_summary": "Ads already show on 21 of the top 30 searches (70%), so the job is redirecting, not adding: cut the drift onto unrelated searches and move that money to Marine Collagen, which has no ads. Indicative ~£9,200/mo across the account.",
+  "amc_hypotheses": [
+    "55% of the live range offers Subscribe & Save in a consumable category, so repeat buyers are probably a large share of revenue on magnesium and creatine."
+  ],
+  "amc_questions": [
+    "Which product do new customers buy first, and what do they add next?",
+    "How many creatine and magnesium buyers reorder, and when?",
+    "What share of ad-driven sales are new to Bettervits?"
+  ]
+}

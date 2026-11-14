@@ -1,0 +1,4379 @@
+{
+  "prospect": {
+    "brand": "Bettervits",
+    "marketplace": "uk",
+    "domain": "amazon.co.uk",
+    "currency": "\u00a3",
+    "input": "BetterVits",
+    "seller_name": null,
+    "landing_asin": null
+  },
+  "generated": "2026-11-14",
+  "coverage": {
+    "steps": [
+      {
+        "step": "keepa.token",
+        "status": "ok",
+        "tokens_left": 15,
+        "per_minute": 1
+      },
+      {
+        "step": "js.catalog.spellings",
+        "status": "ok",
+        "searched": [
+          "BetterVits",
+          "Better Vits"
+        ]
+      },
+      {
+        "step": "js.catalog",
+        "status": "ok",
+        "asins": 46
+      },
+      {
+        "step": "focus",
+        "status": "ok",
+        "live": 30,
+        "hero_families": 10,
+        "revenue_share": 0.83
+      },
+      {
+        "step": "keepa.heroes",
+        "status": "ok",
+        "fetched": 11,
+        "waited_min": 7.3
+      },
+      {
+        "step": "images",
+        "status": "skipped",
+        "reason": "can't reach m.media-amazon.com (<urlopen error Tunnel connection failed: 403 Forbidden>); add it to Allowed domains"
+      },
+      {
+        "step": "spapi.items",
+        "status": "skipped",
+        "reason": "SP-API not configured"
+      },
+      {
+        "step": "keywords",
+        "status": "ok",
+        "heroes": 10,
+        "keywords": 894
+      },
+      {
+        "step": "js.sov",
+        "status": "ok",
+        "keywords": 13
+      },
+      {
+        "step": "d4s.serp",
+        "status": "ok",
+        "keywords": 10
+      },
+      {
+        "step": "ads.bids",
+        "status": "skipped",
+        "reason": "Ads API not configured; using Jungle Scout PPC bids"
+      },
+      {
+        "step": "contacts",
+        "status": "ok",
+        "website": "https://bettervits.co.uk",
+        "emails": 1
+      }
+    ],
+    "budget": {
+      "keepa": {
+        "used": 22,
+        "limit": 400.0
+      },
+      "junglescout": {
+        "used": 25,
+        "limit": 60.0
+      },
+      "dataforseo": {
+        "used": 12.399999999999995,
+        "limit": 40.0
+      },
+      "spapi": {
+        "used": 0,
+        "limit": 60.0
+      },
+      "ads": {
+        "used": 0,
+        "limit": 20.0
+      },
+      "apollo_search": {
+        "used": 0,
+        "limit": 10.0
+      },
+      "apollo_credits": {
+        "used": 0,
+        "limit": 3.0
+      }
+    },
+    "collected_at": "2026-11-14T15:48:44.536840+00:00"
+  },
+  "focus": {
+    "total_asins": 46,
+    "live_asins": 30,
+    "families": 28,
+    "hero_families": 10,
+    "hero_revenue_share": 0.83,
+    "est_monthly_revenue": 293069
+  },
+  "heroes": [
+    {
+      "asin": "B0CJ9TZ4V8",
+      "parent_asin": "B0CJ9TZ4V8",
+      "title": "Bettervits Creatine Monohydrate Powder | Ideal for Muscle Growth & Recovery - Unflavoured Creatine 5g | 100% Pure Micronised Creatine Powder | Supports Strength Performance | 60 Servings",
+      "family_revenue_30d": 54090,
+      "family_size": 1,
+      "family_revenue_keepa": 30000,
+      "units_30d": 1803,
+      "price": 30.0,
+      "list_price": 35.0,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Creatine",
+      "product_type": null,
+      "rating": 4.5,
+      "reviews": 531,
+      "sales_rank": 1677.0,
+      "content": {
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "186 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 300 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "531 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 60,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 6 images zoomable (1973px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "1 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "warn",
+            "detail": "cut off on mobile before the size/pack"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "4 bullet(s) over 250 characters; mobile shows these collapsed"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "creatine and collagen powder",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 1799,
+          "organic_rank": 60,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "creatine my protein",
+          "tier": "category",
+          "status": "push",
+          "volume": 984,
+          "organic_rank": 35,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "creatine hcl",
+          "tier": "category",
+          "status": "push",
+          "volume": 948,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": 2.69
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "nutrition geeks",
+          "volume": 99091,
+          "sponsored_rank": 64,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "creatine tablets",
+          "volume": 21877,
+          "sponsored_rank": 9,
+          "reason": "different product (\"tablets\")"
+        },
+        {
+          "keyword": "pre",
+          "volume": 17428,
+          "sponsored_rank": 1,
+          "reason": "different product (\"pre\")"
+        },
+        {
+          "keyword": "fitness",
+          "volume": 12138,
+          "sponsored_rank": 11,
+          "reason": "different product (\"fitness\")"
+        },
+        {
+          "keyword": "creatine capsules",
+          "volume": 9030,
+          "sponsored_rank": 47,
+          "reason": "different product (\"capsules\")"
+        },
+        {
+          "keyword": "based bodyworks",
+          "volume": 8758,
+          "sponsored_rank": 28,
+          "reason": "different product (\"based\")"
+        },
+        {
+          "keyword": "supplements",
+          "volume": 8619,
+          "sponsored_rank": 23,
+          "reason": "different product (\"supplements\")"
+        },
+        {
+          "keyword": "warrior creatine",
+          "volume": 6454,
+          "sponsored_rank": 35,
+          "reason": "competitor's brand: worth reviewing"
+        }
+      ],
+      "sponsored_terms": 82,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09W7TBGPH",
+      "parent_asin": "B0GW18GLKR",
+      "title": "Bettervits Triple Magnesium Glycinate Complex, Malate, Citrate | 60 Caps",
+      "family_revenue_30d": 49560,
+      "family_size": 2,
+      "family_revenue_keepa": 35000,
+      "units_30d": 1294,
+      "price": 35.0,
+      "list_price": null,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Magnesium",
+      "product_type": null,
+      "rating": 4.4,
+      "reviews": 489,
+      "sales_rank": 2199.0,
+      "content": {
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "3 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "72 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 312 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "490 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 70,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 6 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "3 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "magnesium malate",
+          "tier": "category",
+          "status": "push",
+          "volume": 4233,
+          "organic_rank": 57,
+          "sponsored_rank": null,
+          "cpc": 0.15
+        },
+        {
+          "keyword": "magnesium 3 in 1",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 1176,
+          "organic_rank": 49,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "zinc and magnesium",
+          "tier": "category",
+          "status": "push",
+          "volume": 904,
+          "organic_rank": 33,
+          "sponsored_rank": null,
+          "cpc": 0.4
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "zinc supplements",
+          "volume": 27782,
+          "sponsored_rank": 13,
+          "reason": "different product (\"supplements\")"
+        },
+        {
+          "keyword": "magnesium bisglycinate",
+          "volume": 26154,
+          "sponsored_rank": 31,
+          "reason": "different product (\"bisglycinate\")"
+        },
+        {
+          "keyword": "mag",
+          "volume": 16983,
+          "sponsored_rank": 6,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "magnesium tablets",
+          "volume": 15192,
+          "sponsored_rank": 34,
+          "reason": "different product (\"tablets\")"
+        },
+        {
+          "keyword": "nutrition geeks magnesium",
+          "volume": 9879,
+          "sponsored_rank": 10,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "vitabiotics",
+          "volume": 7344,
+          "sponsored_rank": 9,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "geeks magnesium glycinate 3-in-1",
+          "volume": 7046,
+          "sponsored_rank": 9,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "zinc tablets",
+          "volume": 4546,
+          "sponsored_rank": 28,
+          "reason": "different product (\"tablets\")"
+        }
+      ],
+      "sponsored_terms": 74,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09W7VZJ9Z",
+      "parent_asin": "B0HMJY612V",
+      "title": "Bettervits Glucosamine and Chondroitin High Strength, MSM | 90 Capsules",
+      "family_revenue_30d": 26425,
+      "family_size": 1,
+      "family_revenue_keepa": 21000,
+      "units_30d": 755,
+      "price": 35.0,
+      "list_price": 40.0,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Combinations",
+      "product_type": null,
+      "rating": 4.1,
+      "reviews": 519,
+      "sales_rank": 4324.0,
+      "content": {
+        "score": 69,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "71 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 327 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.1\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "519 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 70,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 6 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "1 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "msm",
+          "tier": "category",
+          "status": "push",
+          "volume": 3340,
+          "organic_rank": 36,
+          "sponsored_rank": null,
+          "cpc": 0.38
+        },
+        {
+          "keyword": "chondroitin",
+          "tier": "category",
+          "status": "push",
+          "volume": 752,
+          "organic_rank": 50,
+          "sponsored_rank": null,
+          "cpc": 0.43
+        },
+        {
+          "keyword": "flexyn joint support capsules",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 605,
+          "organic_rank": 42,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "glucosamine complex",
+          "tier": "long_tail",
+          "status": "organic_top_unprotected",
+          "volume": 458,
+          "organic_rank": 2,
+          "sponsored_rank": null,
+          "cpc": 0.61
+        },
+        {
+          "keyword": "allura joint support glucosamine chondroitin msm, hyaluronic acid",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 21,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bettervits turmeric and black pepper capsules",
+          "tier": "brand",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 12,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "c",
+          "volume": 120184,
+          "sponsored_rank": 9,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "turmeric",
+          "volume": 20543,
+          "sponsored_rank": 66,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "mens vitamins",
+          "volume": 5279,
+          "sponsored_rank": 36,
+          "reason": "different product (\"mens\")"
+        },
+        {
+          "keyword": "seven seas joint care",
+          "volume": 4221,
+          "sponsored_rank": 15,
+          "reason": "different product (\"seven\")"
+        },
+        {
+          "keyword": "nova curcumin and boswellia",
+          "volume": 4058,
+          "sponsored_rank": 65,
+          "reason": "different product (\"boswellia\")"
+        },
+        {
+          "keyword": "glucosamine sulphate",
+          "volume": 3727,
+          "sponsored_rank": 12,
+          "reason": "different product (\"sulphate\")"
+        },
+        {
+          "keyword": "boswellia",
+          "volume": 2474,
+          "sponsored_rank": 10,
+          "reason": "different product (\"boswellia\")"
+        },
+        {
+          "keyword": "joint",
+          "volume": 2057,
+          "sponsored_rank": 6,
+          "reason": "unrelated to the product"
+        }
+      ],
+      "sponsored_terms": 67,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09W82SY2B",
+      "parent_asin": "B09W82SY2B",
+      "title": "Bettervits Marine Collagen Supplements for Women and Men | 60 Capsules",
+      "family_revenue_30d": 25683,
+      "family_size": 1,
+      "family_revenue_keepa": 27992,
+      "units_30d": 734,
+      "price": 34.99,
+      "list_price": null,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Collagen",
+      "product_type": "supplement",
+      "rating": 4.1,
+      "reviews": 655,
+      "sales_rank": 4036.0,
+      "content": {
+        "score": 56,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "70 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 330 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.1\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "655 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 6 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          }
+        }
+      },
+      "flags": [
+        {
+          "type": "wrong_category",
+          "detail": "supplement listed under Collagen"
+        },
+        {
+          "type": "stock",
+          "detail": "out of stock 13% of the last 90 days"
+        }
+      ],
+      "targets": [
+        {
+          "keyword": "collagen",
+          "tier": "category",
+          "status": "push",
+          "volume": 161213,
+          "organic_rank": 60,
+          "sponsored_rank": null,
+          "cpc": 1.35
+        },
+        {
+          "keyword": "collagen supplements for women",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 53196,
+          "organic_rank": 32,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "marine collagen",
+          "tier": "category",
+          "status": "push",
+          "volume": 27799,
+          "organic_rank": 47,
+          "sponsored_rank": null,
+          "cpc": 3.22
+        },
+        {
+          "keyword": "collagen tablets",
+          "tier": "category",
+          "status": "push",
+          "volume": 25740,
+          "organic_rank": 31,
+          "sponsored_rank": null,
+          "cpc": 0.29
+        },
+        {
+          "keyword": "marine collagen capsules",
+          "tier": "category",
+          "status": "push",
+          "volume": 9451,
+          "organic_rank": 58,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "collagen supplements",
+          "tier": "category",
+          "status": "push",
+          "volume": 3711,
+          "organic_rank": 56,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [],
+      "sponsored_terms": 0,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0HJ2W239T",
+      "parent_asin": "B0HJ2W239T",
+      "title": "Bettervits Metabolic+ Appetite Suppressants For Women & Men | 90 Caps",
+      "family_revenue_30d": 24213,
+      "family_size": 1,
+      "family_revenue_keepa": 17495,
+      "units_30d": 692,
+      "price": 34.99,
+      "list_price": 34.99,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Fat Burners",
+      "product_type": null,
+      "rating": 4.5,
+      "reviews": 4,
+      "sales_rank": 4087.0,
+      "content": {
+        "score": 56,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "69 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 209 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "fail",
+            "detail": "4 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 88,
+        "checks": {
+          "zoom": {
+            "status": "warn",
+            "detail": "all zoomable, but 1 under 1600px look soft when pinched"
+          },
+          "image_count": {
+            "status": "good",
+            "detail": "8 gallery images"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 221 characters"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "medic glp metabolic balance",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 3339,
+          "organic_rank": 9,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "metabolic balance",
+          "tier": "core",
+          "status": "push",
+          "volume": 1781,
+          "organic_rank": 5,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bettervits metabolic plus",
+          "tier": "brand",
+          "status": "organic_top_unprotected",
+          "volume": 1241,
+          "organic_rank": 1,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "appetite booster",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 9,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "kind patches weight loss",
+          "volume": 5575,
+          "sponsored_rank": 25,
+          "reason": "different product (\"kind\")"
+        },
+        {
+          "keyword": "berberine weight loss",
+          "volume": 4585,
+          "sponsored_rank": 12,
+          "reason": "different product (\"berberine\")"
+        },
+        {
+          "keyword": "dr siana herbal tea for weight loss",
+          "volume": 3762,
+          "sponsored_rank": 34,
+          "reason": "different product (\"tea\")"
+        },
+        {
+          "keyword": "fat burner",
+          "volume": 2981,
+          "sponsored_rank": 17,
+          "reason": "different product (\"fat\")"
+        },
+        {
+          "keyword": "neuaura bloatburn for weight loss",
+          "volume": 2948,
+          "sponsored_rank": 9,
+          "reason": "different product (\"neuaura\")"
+        },
+        {
+          "keyword": "bloating relief and weight loss",
+          "volume": 2818,
+          "sponsored_rank": 16,
+          "reason": "different product (\"relief\")"
+        },
+        {
+          "keyword": "glp1 weight loss patches",
+          "volume": 1853,
+          "sponsored_rank": 12,
+          "reason": "different product (\"patches\")"
+        },
+        {
+          "keyword": "lose weight",
+          "volume": 1715,
+          "sponsored_rank": 2,
+          "reason": "different product (\"lose\")"
+        }
+      ],
+      "sponsored_terms": 75,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09W86YYV3",
+      "parent_asin": "B09W86YYV3",
+      "title": "Bettervits Turmeric & Black Pepper Capsules with Boswellia - 60 Ct.",
+      "family_revenue_30d": 18270,
+      "family_size": 1,
+      "family_revenue_keepa": 14000,
+      "units_30d": 522,
+      "price": 35.0,
+      "list_price": null,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Turmeric",
+      "product_type": null,
+      "rating": 4.3,
+      "reviews": 318,
+      "sales_rank": 7170.0,
+      "content": {
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "67 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 307 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.3\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "318 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 70,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 5 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "5 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "1 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "turmeric capsules",
+          "tier": "category",
+          "status": "push",
+          "volume": 3112,
+          "organic_rank": 27,
+          "sponsored_rank": null,
+          "cpc": 0.39
+        },
+        {
+          "keyword": "bio root labs pure turmeric",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 809,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bio roots lab pure turmeric curcumin 95",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 523,
+          "organic_rank": 33,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "fineroot pure turmeric curcumin 95 1000 mg",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 511,
+          "organic_rank": 31,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "bio root labs pure turmeric curcumin 95",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 37,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "glucosamine and turmeric supplements",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "tumeric",
+          "volume": 7817,
+          "sponsored_rank": 13,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "curcumin",
+          "volume": 6513,
+          "sponsored_rank": 16,
+          "reason": "unrelated to the product"
+        },
+        {
+          "keyword": "bioroot labs pure turmeric curcmin95",
+          "volume": 4319,
+          "sponsored_rank": 15,
+          "reason": "different product (\"pure\")"
+        },
+        {
+          "keyword": "nutrition geeks turmeric",
+          "volume": 3874,
+          "sponsored_rank": 50,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "boswellia serrata",
+          "volume": 2521,
+          "sponsored_rank": 17,
+          "reason": "different product (\"serrata\")"
+        },
+        {
+          "keyword": "pure turmeric curcumin 95 1000 mg",
+          "volume": 2078,
+          "sponsored_rank": 37,
+          "reason": "different product (\"pure\")"
+        },
+        {
+          "keyword": "curcumin capsules high strength with black pepper",
+          "volume": 1968,
+          "sponsored_rank": 46,
+          "reason": "different product (\"high\")"
+        },
+        {
+          "keyword": "medicube turmeric",
+          "volume": 1807,
+          "sponsored_rank": 49,
+          "reason": "different product (\"medicube\")"
+        }
+      ],
+      "sponsored_terms": 75,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09XJLZYDC",
+      "parent_asin": "B09XJLZYDC",
+      "title": "Bettervits Vitamin D3 4000IU with K2 MK-7 Supplements | 60 Capsules",
+      "family_revenue_30d": 12660,
+      "family_size": 1,
+      "family_revenue_keepa": 12000,
+      "units_30d": 422,
+      "price": 30.0,
+      "list_price": null,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Vitamin D",
+      "product_type": "supplement",
+      "rating": 4.4,
+      "reviews": 233,
+      "sales_rank": 7546.0,
+      "content": {
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "67 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 174 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "233 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 80,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 6 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "1 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 182 characters"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "vitamin d k2",
+          "tier": "category",
+          "status": "push",
+          "volume": 3055,
+          "organic_rank": 58,
+          "sponsored_rank": null,
+          "cpc": 1.86
+        },
+        {
+          "keyword": "d vitamin",
+          "tier": "category",
+          "status": "push",
+          "volume": 887,
+          "organic_rank": 42,
+          "sponsored_rank": null,
+          "cpc": 3.29
+        },
+        {
+          "keyword": "vitamina d",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 460,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "high strength vitamin d",
+          "volume": 3343,
+          "sponsored_rank": 10,
+          "reason": "different product (\"high\")"
+        },
+        {
+          "keyword": "vitabiotics vitamin d",
+          "volume": 2882,
+          "sponsored_rank": 31,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "vitamin d3 400iu",
+          "volume": 2256,
+          "sponsored_rank": 33,
+          "reason": "different product (\"400iu\")"
+        },
+        {
+          "keyword": "nutrition geeks vitamin d3 k2",
+          "volume": 2236,
+          "sponsored_rank": 26,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "vitamin d high strength",
+          "volume": 2219,
+          "sponsored_rank": 12,
+          "reason": "different product (\"high\")"
+        },
+        {
+          "keyword": "vit d spray",
+          "volume": 2076,
+          "sponsored_rank": 33,
+          "reason": "different product (\"spray\")"
+        },
+        {
+          "keyword": "vitamin d3 k2 10000iu high strength",
+          "volume": 2054,
+          "sponsored_rank": 16,
+          "reason": "different product (\"high\")"
+        },
+        {
+          "keyword": "vitamin d 2000iu",
+          "volume": 1554,
+          "sponsored_rank": 14,
+          "reason": "different product (\"2000iu\")"
+        }
+      ],
+      "sponsored_terms": 73,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B09W7K2Y6L",
+      "parent_asin": "B0GW1K78W4",
+      "title": "Bettervits Biotics for Gut Health, 30 Billion CFU, 10 Strains | 30 Caps",
+      "family_revenue_30d": 12110,
+      "family_size": 1,
+      "family_revenue_keepa": 10500,
+      "units_30d": 346,
+      "price": 35.0,
+      "list_price": 40.0,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Lactobacillus",
+      "product_type": null,
+      "rating": 4.2,
+      "reviews": 783,
+      "sales_rank": 8108.0,
+      "content": {
+        "score": 69,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "71 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 149 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "785 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 80,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 5 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "5 gallery images"
+          },
+          "video": {
+            "status": "warn",
+            "detail": "1 video(s), all influencer or customer: no brand-made video"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 217 characters"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "gut health",
+          "tier": "category",
+          "status": "push",
+          "volume": 10820,
+          "organic_rank": 39,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "biomel complete gut",
+          "tier": "category",
+          "status": "push",
+          "volume": 732,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "best probiotics for gut health",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 26,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "better gut",
+          "tier": "long_tail",
+          "status": "organic_top_unprotected",
+          "volume": 450,
+          "organic_rank": 2,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "better gut menopause",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 23,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "complete gut",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 37,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "gut health supplements",
+          "volume": 4562,
+          "sponsored_rank": 4,
+          "reason": "different product (\"supplements\")"
+        },
+        {
+          "keyword": "prebiotics",
+          "volume": 2688,
+          "sponsored_rank": 7,
+          "reason": "different product (\"prebiotics\")"
+        },
+        {
+          "keyword": "oral probiotics",
+          "volume": 1653,
+          "sponsored_rank": 41,
+          "reason": "different product (\"oral\")"
+        },
+        {
+          "keyword": "pre and probiotics for gut health",
+          "volume": 1606,
+          "sponsored_rank": 10,
+          "reason": "different product (\"pre\")"
+        },
+        {
+          "keyword": "lactobacillus reuteri",
+          "volume": 1432,
+          "sponsored_rank": 17,
+          "reason": "different product (\"lactobacillus\")"
+        },
+        {
+          "keyword": "acidophilus probiotic",
+          "volume": 1395,
+          "sponsored_rank": 15,
+          "reason": "different product (\"acidophilus\")"
+        },
+        {
+          "keyword": "proven probiotics",
+          "volume": 964,
+          "sponsored_rank": 9,
+          "reason": "different product (\"proven\")"
+        },
+        {
+          "keyword": "prebiotic and probiotic supplements",
+          "volume": 884,
+          "sponsored_rank": 14,
+          "reason": "different product (\"supplements\")"
+        }
+      ],
+      "sponsored_terms": 27,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0BJL68DMK",
+      "parent_asin": "B0BJL68DMK",
+      "title": "Bettervits Omega 3 Fish Oil High Strength - 660mg EPA 440mg DHA | 60 Caps",
+      "family_revenue_30d": 11400,
+      "family_size": 1,
+      "family_revenue_keepa": 12000,
+      "units_30d": 380,
+      "price": 30.0,
+      "list_price": null,
+      "sellers": 2,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Omega-3",
+      "product_type": null,
+      "rating": 4.5,
+      "reviews": 169,
+      "sales_rank": 5555.0,
+      "content": {
+        "score": 62,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "73 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 305 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "170 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 75,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 6 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "6 gallery images"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "warn",
+            "detail": "5 bullet(s) over 250 characters; mobile shows these collapsed"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "bare biology omega 3",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 2875,
+          "organic_rank": 53,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "omega3 high strength",
+          "tier": "category",
+          "status": "push",
+          "volume": 754,
+          "organic_rank": 42,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "halal omega 3 fish oil",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 742,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "omega-3",
+          "tier": "category",
+          "status": "push",
+          "volume": 591,
+          "organic_rank": 41,
+          "sponsored_rank": null,
+          "cpc": 1.63
+        },
+        {
+          "keyword": "epa dha omega 3",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 55,
+          "sponsored_rank": null,
+          "cpc": 0.83
+        },
+        {
+          "keyword": "gelatine free cod liver oil capsules",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": 0.76
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "seven seas omega 3",
+          "volume": 7965,
+          "sponsored_rank": 17,
+          "reason": "different product (\"seven\")"
+        },
+        {
+          "keyword": "omega 3 capsules",
+          "volume": 4235,
+          "sponsored_rank": 15,
+          "reason": "different product (\"capsules\")"
+        },
+        {
+          "keyword": "nutrition geeks omega 3",
+          "volume": 3428,
+          "sponsored_rank": 12,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "3/8 impact socket set",
+          "volume": 1651,
+          "sponsored_rank": 11,
+          "reason": "different product (\"socket\")"
+        },
+        {
+          "keyword": "supplements for women",
+          "volume": 1556,
+          "sponsored_rank": 36,
+          "reason": "different product (\"supplements\")"
+        },
+        {
+          "keyword": "vitabiotics omega 3",
+          "volume": 1145,
+          "sponsored_rank": 45,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "fish oils",
+          "volume": 1057,
+          "sponsored_rank": 12,
+          "reason": "different product (\"oils\")"
+        },
+        {
+          "keyword": "fish oil capsules high strength",
+          "volume": 1005,
+          "sponsored_rank": 38,
+          "reason": "different product (\"capsules\")"
+        }
+      ],
+      "sponsored_terms": 57,
+      "mobile_sheet": null
+    },
+    {
+      "asin": "B0DB2MVGBX",
+      "parent_asin": "B0DB2MVGBX",
+      "title": "Bettervits Vaginal Biotics for Women 11 Strains 50 Billion CFU | 60 Caps",
+      "family_revenue_30d": 7910,
+      "family_size": 1,
+      "family_revenue_keepa": 7000,
+      "units_30d": 226,
+      "price": 35.0,
+      "list_price": null,
+      "sellers": 1,
+      "buy_box_owner": "Bettervits",
+      "sold_by": "Bettervits",
+      "category": "Lactobacillus",
+      "product_type": null,
+      "rating": 4.2,
+      "reviews": 91,
+      "sales_rank": 11349.0,
+      "content": {
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "72 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 122 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "92 reviews"
+          }
+        }
+      },
+      "mobile": {
+        "score": 88,
+        "checks": {
+          "zoom": {
+            "status": "good",
+            "detail": "all 5 images zoomable (2000px+)"
+          },
+          "image_count": {
+            "status": "warn",
+            "detail": "5 gallery images"
+          },
+          "title_on_mobile": {
+            "status": "good",
+            "detail": "first 80 characters carry brand, product and size"
+          },
+          "bullets_on_mobile": {
+            "status": "good",
+            "detail": "5 bullets, first is 143 characters"
+          }
+        }
+      },
+      "flags": [],
+      "targets": [
+        {
+          "keyword": "vaginal probiotics",
+          "tier": "category",
+          "status": "push",
+          "volume": 7949,
+          "organic_rank": 55,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "feminine probiotics for women",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 1186,
+          "organic_rank": 43,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "optibac for women",
+          "tier": "category",
+          "status": "push",
+          "volume": 697,
+          "organic_rank": 47,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "womens intimate probiotics",
+          "tier": "category",
+          "status": "push",
+          "volume": 579,
+          "organic_rank": 21,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "optibac women",
+          "tier": "category",
+          "status": "push",
+          "volume": 532,
+          "organic_rank": 51,
+          "sponsored_rank": null,
+          "cpc": null
+        },
+        {
+          "keyword": "advanced vaginal support",
+          "tier": "long_tail",
+          "status": "push",
+          "volume": 450,
+          "organic_rank": 44,
+          "sponsored_rank": null,
+          "cpc": null
+        }
+      ],
+      "wasted_terms": [
+        {
+          "keyword": "probiotics for gut health",
+          "volume": 11281,
+          "sponsored_rank": 16,
+          "reason": "different product (\"health\")"
+        },
+        {
+          "keyword": "prebiotics",
+          "volume": 2688,
+          "sponsored_rank": 15,
+          "reason": "different product (\"prebiotics\")"
+        },
+        {
+          "keyword": "health supplies",
+          "volume": 1529,
+          "sponsored_rank": 14,
+          "reason": "competitor's brand: worth reviewing"
+        },
+        {
+          "keyword": "intimate flora for women tablets",
+          "volume": 1034,
+          "sponsored_rank": 4,
+          "reason": "different product (\"tablets\")"
+        },
+        {
+          "keyword": "proven probiotics",
+          "volume": 964,
+          "sponsored_rank": 8,
+          "reason": "different product (\"proven\")"
+        },
+        {
+          "keyword": "uti treatment",
+          "volume": 671,
+          "sponsored_rank": 55,
+          "reason": "different product (\"uti\")"
+        },
+        {
+          "keyword": "vitaflora for women",
+          "volume": 658,
+          "sponsored_rank": 14,
+          "reason": "different product (\"vitaflora\")"
+        },
+        {
+          "keyword": "prebiotic",
+          "volume": 573,
+          "sponsored_rank": 15,
+          "reason": "different product (\"prebiotic\")"
+        }
+      ],
+      "sponsored_terms": 32,
+      "mobile_sheet": null
+    }
+  ],
+  "quick_wins": {
+    "duplicates": [],
+    "clutter": [],
+    "mixed_families": []
+  },
+  "asin_map": {
+    "discovered": 46,
+    "fetched": 11,
+    "parents": 10,
+    "categories": {
+      "Health & Personal Care": 11
+    },
+    "asins": [
+      {
+        "asin": "B09W7TBGPH",
+        "parent_asin": "B0GW18GLKR",
+        "title": "Bettervits Triple Magnesium Glycinate Complex, Malate, Citrate | 60 Caps",
+        "price": 35.0,
+        "rating": 4.4,
+        "review_count": 490,
+        "monthly_sold": 1000,
+        "sales_rank": 2199.0,
+        "listed_since": "2022-03-22",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 35000
+      },
+      {
+        "asin": "B0CJ9TZ4V8",
+        "parent_asin": "B0CJ9TZ4V8",
+        "title": "Bettervits Creatine Monohydrate Powder | Ideal for Muscle Growth & Recovery - Unflavoured Creatine 5g | 100% Pure Micronised Creatine Powder | Supports Strength Performance | 60 Servings",
+        "price": 30.0,
+        "rating": 4.5,
+        "review_count": 531,
+        "monthly_sold": 1000,
+        "sales_rank": 1677.0,
+        "listed_since": "2023-09-18",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 30000
+      },
+      {
+        "asin": "B09W82SY2B",
+        "parent_asin": "B09W82SY2B",
+        "title": "Bettervits Marine Collagen Supplements for Women and Men | 60 Capsules",
+        "price": 34.99,
+        "rating": 4.1,
+        "review_count": 655,
+        "monthly_sold": 800,
+        "sales_rank": 4036.0,
+        "listed_since": "2022-03-22",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 27992
+      },
+      {
+        "asin": "B09W7VZJ9Z",
+        "parent_asin": "B0HMJY612V",
+        "title": "Bettervits Glucosamine and Chondroitin High Strength, MSM | 90 Capsules",
+        "price": 35.0,
+        "rating": 4.1,
+        "review_count": 519,
+        "monthly_sold": 600,
+        "sales_rank": 4324.0,
+        "listed_since": "2022-03-22",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 21000
+      },
+      {
+        "asin": "B0HJ2W239T",
+        "parent_asin": "B0HJ2W239T",
+        "title": "Bettervits Metabolic+ Appetite Suppressants For Women & Men | 90 Caps",
+        "price": 34.99,
+        "rating": 4.5,
+        "review_count": 4,
+        "monthly_sold": 500,
+        "sales_rank": 4087.0,
+        "listed_since": "2026-09-07",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 17495
+      },
+      {
+        "asin": "B09W86YYV3",
+        "parent_asin": "B09W86YYV3",
+        "title": "Bettervits Turmeric & Black Pepper Capsules with Boswellia - 60 Ct.",
+        "price": 35.0,
+        "rating": 4.3,
+        "review_count": 318,
+        "monthly_sold": 400,
+        "sales_rank": 7170.0,
+        "listed_since": "2022-03-22",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 14000
+      },
+      {
+        "asin": "B0BJL68DMK",
+        "parent_asin": "B0BJL68DMK",
+        "title": "Bettervits Omega 3 Fish Oil High Strength - 660mg EPA 440mg DHA | 60 Caps",
+        "price": 30.0,
+        "rating": 4.5,
+        "review_count": 170,
+        "monthly_sold": 400,
+        "sales_rank": 5555.0,
+        "listed_since": "2022-10-18",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 12000
+      },
+      {
+        "asin": "B09XJLZYDC",
+        "parent_asin": "B09XJLZYDC",
+        "title": "Bettervits Vitamin D3 4000IU with K2 MK-7 Supplements | 60 Capsules",
+        "price": 30.0,
+        "rating": 4.4,
+        "review_count": 233,
+        "monthly_sold": 400,
+        "sales_rank": 7546.0,
+        "listed_since": "2022-04-08",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 12000
+      },
+      {
+        "asin": "B09W7K2Y6L",
+        "parent_asin": "B0GW1K78W4",
+        "title": "Bettervits Biotics for Gut Health, 30 Billion CFU, 10 Strains | 30 Caps",
+        "price": 35.0,
+        "rating": 4.2,
+        "review_count": 785,
+        "monthly_sold": 300,
+        "sales_rank": 8108.0,
+        "listed_since": "2022-03-22",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 10500
+      },
+      {
+        "asin": "B0DB2MVGBX",
+        "parent_asin": "B0DB2MVGBX",
+        "title": "Bettervits Vaginal Biotics for Women 11 Strains 50 Billion CFU | 60 Caps",
+        "price": 35.0,
+        "rating": 4.2,
+        "review_count": 92,
+        "monthly_sold": 200,
+        "sales_rank": 11349.0,
+        "listed_since": "2024-07-24",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": 7000
+      },
+      {
+        "asin": "B0GW18GLKR",
+        "parent_asin": "B0GW18GLKR",
+        "title": "Bettervits Magnesium Glycinate Complex with Zinc & Vitamin D3, 60 Capsules",
+        "price": null,
+        "rating": null,
+        "review_count": null,
+        "monthly_sold": null,
+        "sales_rank": 2197.0,
+        "listed_since": "2026-04-03",
+        "root_category": "Health & Personal Care",
+        "est_monthly_revenue": null
+      }
+    ]
+  },
+  "catalogue": {
+    "asin_count": 11,
+    "launches_by_quarter": {
+      "2024-Q3": 1,
+      "2026-Q2": 1,
+      "2026-Q3": 1
+    },
+    "launches_last_12m": 2,
+    "revenue_monthly_top_parents": {},
+    "revenue_yoy_pct_last_3m": null,
+    "est_monthly_revenue_keepa": 186987,
+    "top3_revenue_share": 0.5,
+    "bsr_trend_top_parents": {
+      "median_bsr_now": 6468.0,
+      "median_bsr_year_ago": 4422.5,
+      "improved": false,
+      "change_pct": 46
+    },
+    "reviews_gained_12m": 579
+  },
+  "content": {
+    "summary": {
+      "avg_score_top_parents": 63,
+      "share_under_7_images": 0.91,
+      "share_no_video": 0.45,
+      "share_no_aplus": 1.0,
+      "share_under_5_bullets": 0.09,
+      "share_rating_below_4_2": 0.18,
+      "has_brand_store": true
+    },
+    "top_parents": [
+      {
+        "asin": "B0CJ9TZ4V8",
+        "title": "Bettervits Creatine Monohydrate Powder | Ideal for Muscle Growth & Recovery - Unflavoured Creatine 5g | 100% Pure Micronised Creatine Powder | Supports Strength Performance | 60 Servings",
+        "score": 81,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "good",
+            "detail": "186 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 300 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "531 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0GW18GLKR",
+        "title": "Bettervits Magnesium Glycinate Complex with Zinc & Vitamin D3, 60 Capsules",
+        "score": 38,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "74 chars"
+          },
+          "bullets": {
+            "status": "warn",
+            "detail": "bullets not captured"
+          },
+          "bullet_depth": {
+            "status": "warn",
+            "detail": "not captured"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "\u2013\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "0 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09W7VZJ9Z",
+        "title": "Bettervits Glucosamine and Chondroitin High Strength, MSM | 90 Capsules",
+        "score": 69,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "71 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 327 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.1\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "519 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09W82SY2B",
+        "title": "Bettervits Marine Collagen Supplements for Women and Men | 60 Capsules",
+        "score": 56,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "70 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 330 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.1\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "655 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0HJ2W239T",
+        "title": "Bettervits Metabolic+ Appetite Suppressants For Women & Men | 90 Caps",
+        "score": 56,
+        "checks": {
+          "images": {
+            "status": "good",
+            "detail": "8 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "69 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 209 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "fail",
+            "detail": "4 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09W86YYV3",
+        "title": "Bettervits Turmeric & Black Pepper Capsules with Boswellia - 60 Ct.",
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "67 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 307 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.3\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "318 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09XJLZYDC",
+        "title": "Bettervits Vitamin D3 4000IU with K2 MK-7 Supplements | 60 Capsules",
+        "score": 75,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "67 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 174 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.4\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "233 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B09W7K2Y6L",
+        "title": "Bettervits Biotics for Gut Health, 30 Billion CFU, 10 Strains | 30 Caps",
+        "score": 69,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "good",
+            "detail": "1 video"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "71 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 149 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "785 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0BJL68DMK",
+        "title": "Bettervits Omega 3 Fish Oil High Strength - 660mg EPA 440mg DHA | 60 Caps",
+        "score": 62,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "6 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "73 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 305 chars"
+          },
+          "rating": {
+            "status": "good",
+            "detail": "4.5\u2605"
+          },
+          "reviews": {
+            "status": "good",
+            "detail": "170 reviews"
+          }
+        }
+      },
+      {
+        "asin": "B0DB2MVGBX",
+        "title": "Bettervits Vaginal Biotics for Women 11 Strains 50 Billion CFU | 60 Caps",
+        "score": 50,
+        "checks": {
+          "images": {
+            "status": "warn",
+            "detail": "5 images"
+          },
+          "video": {
+            "status": "fail",
+            "detail": "0 videos"
+          },
+          "a_plus": {
+            "status": "fail",
+            "detail": "no A+"
+          },
+          "title": {
+            "status": "warn",
+            "detail": "72 chars"
+          },
+          "bullets": {
+            "status": "good",
+            "detail": "5 bullets"
+          },
+          "bullet_depth": {
+            "status": "good",
+            "detail": "avg 122 chars"
+          },
+          "rating": {
+            "status": "warn",
+            "detail": "4.2\u2605"
+          },
+          "reviews": {
+            "status": "warn",
+            "detail": "92 reviews"
+          }
+        }
+      }
+    ],
+    "variation_consolidation": []
+  },
+  "ads_observed": {
+    "top30_keywords_with_sponsored_rank": 21,
+    "top30_keywords": 30,
+    "sponsored_coverage": 0.7,
+    "est_monthly_spend_on_sampled_terms": {
+      "low": 3434,
+      "high": 8586
+    },
+    "note": "Estimate from share of voice x search volume x assumed ad click rate x CPC benchmark on sampled terms only."
+  },
+  "competitors": {
+    "share_of_voice": [
+      {
+        "brand": "Nutrition Geeks",
+        "avg_sov": 0.219,
+        "avg_sponsored_sov": 0.216,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Solgar",
+        "avg_sov": 0.061,
+        "avg_sponsored_sov": 0.112,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "WeightWorld",
+        "avg_sov": 0.056,
+        "avg_sponsored_sov": 0.028,
+        "keywords_present": 11,
+        "is_prospect": false
+      },
+      {
+        "brand": "Bulk",
+        "avg_sov": 0.035,
+        "avg_sponsored_sov": 0.041,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "EVO NUTRITION",
+        "avg_sov": 0.033,
+        "avg_sponsored_sov": 0.036,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "Bettervits",
+        "avg_sov": 0.033,
+        "avg_sponsored_sov": 0.041,
+        "keywords_present": 12,
+        "is_prospect": true
+      },
+      {
+        "brand": "Nutravita",
+        "avg_sov": 0.031,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 11,
+        "is_prospect": false
+      },
+      {
+        "brand": "NEW LEAF PRODUCTS",
+        "avg_sov": 0.03,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 9,
+        "is_prospect": false
+      },
+      {
+        "brand": "Vitabiotics Ultra",
+        "avg_sov": 0.03,
+        "avg_sponsored_sov": 0.022,
+        "keywords_present": 5,
+        "is_prospect": false
+      },
+      {
+        "brand": "Cellucor",
+        "avg_sov": 0.026,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "Optimum Nutrition",
+        "avg_sov": 0.025,
+        "avg_sponsored_sov": 0.001,
+        "keywords_present": 4,
+        "is_prospect": false
+      },
+      {
+        "brand": "Warrior",
+        "avg_sov": 0.024,
+        "avg_sponsored_sov": 0.022,
+        "keywords_present": 8,
+        "is_prospect": false
+      },
+      {
+        "brand": "Reverse Life",
+        "avg_sov": 0.024,
+        "avg_sponsored_sov": 0.03,
+        "keywords_present": 2,
+        "is_prospect": false
+      },
+      {
+        "brand": "N2 Natural Nutrition",
+        "avg_sov": 0.023,
+        "avg_sponsored_sov": 0.026,
+        "keywords_present": 7,
+        "is_prospect": false
+      },
+      {
+        "brand": "SS Sport Supplies",
+        "avg_sov": 0.022,
+        "avg_sponsored_sov": 0.027,
+        "keywords_present": 6,
+        "is_prospect": false
+      }
+    ],
+    "sov_change_vs_last_run": null,
+    "brand_term_attackers": [
+      {
+        "keyword": "bettervits",
+        "asin": "B07Q6YSGF9",
+        "brand_guess": "Wellgard Pure",
+        "title": "Wellgard Pure Collagen Powder 400g, Collagen Peptides, Halal, Unflavoured | 13g Serving, 3",
+        "position": 39
+      }
+    ],
+    "prospect_sponsored_on_own_brand": true,
+    "positioning_page1": {
+      "our_median_price": null,
+      "competitor_median_price": 9.99,
+      "our_median_rating": null,
+      "competitor_median_rating": 4.6
+    }
+  },
+  "strategy": {
+    "keyword_map": [
+      {
+        "keyword": "magnesium glycinate",
+        "tier": "category",
+        "volume": 265523,
+        "organic_rank": 74,
+        "sponsored_rank": 7,
+        "cpc": 0.18,
+        "status": "sponsored_only",
+        "priority": 371732
+      },
+      {
+        "keyword": "collagen",
+        "tier": "category",
+        "volume": 161213,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": 1.35,
+        "status": "push",
+        "priority": 83592
+      },
+      {
+        "keyword": "vitamin d",
+        "tier": "category",
+        "volume": 199150,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": 1.1,
+        "status": "missing",
+        "priority": 76039
+      },
+      {
+        "keyword": "probiotics",
+        "tier": "category",
+        "volume": 47754,
+        "organic_rank": 93,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 74284
+      },
+      {
+        "keyword": "collagen tablets",
+        "tier": "category",
+        "volume": 25740,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "push",
+        "priority": 62131
+      },
+      {
+        "keyword": "magnesium",
+        "tier": "core",
+        "volume": 127458,
+        "organic_rank": 54,
+        "sponsored_rank": 20,
+        "cpc": 0.74,
+        "status": "sponsored_support",
+        "priority": 51672
+      },
+      {
+        "keyword": "c",
+        "tier": "category",
+        "volume": 120184,
+        "organic_rank": null,
+        "sponsored_rank": 9,
+        "cpc": 0.66,
+        "status": "sponsored_only",
+        "priority": 50987
+      },
+      {
+        "keyword": "creatine",
+        "tier": "category",
+        "volume": 258547,
+        "organic_rank": 32,
+        "sponsored_rank": 4,
+        "cpc": 1.11,
+        "status": "sponsored_support",
+        "priority": 48914
+      },
+      {
+        "keyword": "pre workout",
+        "tier": "category",
+        "volume": 83874,
+        "organic_rank": 84,
+        "sponsored_rank": null,
+        "cpc": 1.01,
+        "status": "missing",
+        "priority": 34878
+      },
+      {
+        "keyword": "collagen supplements for women",
+        "tier": "long_tail",
+        "volume": 53196,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 26598
+      },
+      {
+        "keyword": "creatine monohydrate powder",
+        "tier": "category",
+        "volume": 87357,
+        "organic_rank": 27,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 18345
+      },
+      {
+        "keyword": "weight loss",
+        "tier": "category",
+        "volume": 40613,
+        "organic_rank": 51,
+        "sponsored_rank": 3,
+        "cpc": 0.52,
+        "status": "sponsored_support",
+        "priority": 16401
+      },
+      {
+        "keyword": "mag",
+        "tier": "category",
+        "volume": 16983,
+        "organic_rank": null,
+        "sponsored_rank": 6,
+        "cpc": 0.29,
+        "status": "sponsored_only",
+        "priority": 16397
+      },
+      {
+        "keyword": "magnesium malate",
+        "tier": "category",
+        "volume": 4233,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "push",
+        "priority": 14815
+      },
+      {
+        "keyword": "pre",
+        "tier": "category",
+        "volume": 17428,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": 0.34,
+        "status": "sponsored_only",
+        "priority": 14352
+      },
+      {
+        "keyword": "omega 3",
+        "tier": "core",
+        "volume": 74372,
+        "organic_rank": 42,
+        "sponsored_rank": 17,
+        "cpc": 1.63,
+        "status": "sponsored_support",
+        "priority": 13688
+      },
+      {
+        "keyword": "turmeric",
+        "tier": "category",
+        "volume": 20543,
+        "organic_rank": 106,
+        "sponsored_rank": 12,
+        "cpc": 0.43,
+        "status": "sponsored_only",
+        "priority": 13377
+      },
+      {
+        "keyword": "fish oil",
+        "tier": "category",
+        "volume": 15969,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.51,
+        "status": "missing",
+        "priority": 13151
+      },
+      {
+        "keyword": "preworkout",
+        "tier": "category",
+        "volume": 6852,
+        "organic_rank": 55,
+        "sponsored_rank": null,
+        "cpc": 0.39,
+        "status": "push",
+        "priority": 12298
+      },
+      {
+        "keyword": "glycine",
+        "tier": "category",
+        "volume": 8615,
+        "organic_rank": null,
+        "sponsored_rank": 47,
+        "cpc": 0.19,
+        "status": "sponsored_only",
+        "priority": 12061
+      },
+      {
+        "keyword": "nutrition geeks",
+        "tier": "competitor",
+        "volume": 99091,
+        "organic_rank": null,
+        "sponsored_rank": 64,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 11891
+      },
+      {
+        "keyword": "creatine monohydrate",
+        "tier": "category",
+        "volume": 27309,
+        "organic_rank": 34,
+        "sponsored_rank": 1,
+        "cpc": 0.49,
+        "status": "sponsored_support",
+        "priority": 11704
+      },
+      {
+        "keyword": "collagen capsules",
+        "tier": "category",
+        "volume": 3456,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 10996
+      },
+      {
+        "keyword": "cod liver oil capsules high strength",
+        "tier": "long_tail",
+        "volume": 33981,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 10194
+      },
+      {
+        "keyword": "collagen peptides",
+        "tier": "category",
+        "volume": 8971,
+        "organic_rank": 111,
+        "sponsored_rank": null,
+        "cpc": 0.37,
+        "status": "missing",
+        "priority": 10183
+      },
+      {
+        "keyword": "magnesium glycinate 3-in-1",
+        "tier": "core",
+        "volume": 31584,
+        "organic_rank": 55,
+        "sponsored_rank": 15,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 9475
+      },
+      {
+        "keyword": "probiotics for women",
+        "tier": "core",
+        "volume": 21870,
+        "organic_rank": 51,
+        "sponsored_rank": 15,
+        "cpc": 0.73,
+        "status": "sponsored_support",
+        "priority": 8988
+      },
+      {
+        "keyword": "magnesium bisglycinate",
+        "tier": "category",
+        "volume": 26154,
+        "organic_rank": null,
+        "sponsored_rank": 31,
+        "cpc": 0.83,
+        "status": "sponsored_only",
+        "priority": 8823
+      },
+      {
+        "keyword": "vitamin k2",
+        "tier": "core",
+        "volume": 8080,
+        "organic_rank": 107,
+        "sponsored_rank": 26,
+        "cpc": 0.38,
+        "status": "sponsored_only",
+        "priority": 8505
+      },
+      {
+        "keyword": "collegen",
+        "tier": "category",
+        "volume": 3644,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": 0.3,
+        "status": "push",
+        "priority": 8503
+      },
+      {
+        "keyword": "magnesium citrate",
+        "tier": "category",
+        "volume": 21253,
+        "organic_rank": 89,
+        "sponsored_rank": 53,
+        "cpc": 0.71,
+        "status": "sponsored_only",
+        "priority": 8381
+      },
+      {
+        "keyword": "supplements",
+        "tier": "category",
+        "volume": 8619,
+        "organic_rank": null,
+        "sponsored_rank": 16,
+        "cpc": 0.31,
+        "status": "sponsored_only",
+        "priority": 7785
+      },
+      {
+        "keyword": "zinc supplements",
+        "tier": "category",
+        "volume": 27782,
+        "organic_rank": null,
+        "sponsored_rank": 13,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 7779
+      },
+      {
+        "keyword": "elevate collagen",
+        "tier": "category",
+        "volume": 18198,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 7643
+      },
+      {
+        "keyword": "gut health",
+        "tier": "category",
+        "volume": 10820,
+        "organic_rank": 39,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7574
+      },
+      {
+        "keyword": "turmeric and black pepper capsules",
+        "tier": "long_tail",
+        "volume": 30409,
+        "organic_rank": 20,
+        "sponsored_rank": 32,
+        "cpc": 0.63,
+        "status": "sponsored_support",
+        "priority": 7240
+      },
+      {
+        "keyword": "vitamin d3 k2",
+        "tier": "core",
+        "volume": 56674,
+        "organic_rank": 34,
+        "sponsored_rank": 17,
+        "cpc": 2.37,
+        "status": "sponsored_support",
+        "priority": 7174
+      },
+      {
+        "keyword": "marine collagen capsules",
+        "tier": "category",
+        "volume": 9451,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 6616
+      },
+      {
+        "keyword": "magnesium taurate",
+        "tier": "category",
+        "volume": 3080,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": 0.16,
+        "status": "missing",
+        "priority": 6468
+      },
+      {
+        "keyword": "msm",
+        "tier": "category",
+        "volume": 3340,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 6153
+      },
+      {
+        "keyword": "creatine tablets",
+        "tier": "category",
+        "volume": 21877,
+        "organic_rank": 102,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 6126
+      },
+      {
+        "keyword": "magnesium tablets",
+        "tier": "core",
+        "volume": 15192,
+        "organic_rank": 96,
+        "sponsored_rank": 34,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 6077
+      },
+      {
+        "keyword": "marine collagen",
+        "tier": "category",
+        "volume": 27799,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": 3.22,
+        "status": "push",
+        "priority": 6043
+      },
+      {
+        "keyword": "fish oil omega 3",
+        "tier": "long_tail",
+        "volume": 7913,
+        "organic_rank": 58,
+        "sponsored_rank": 17,
+        "cpc": 0.2,
+        "status": "sponsored_support",
+        "priority": 5935
+      },
+      {
+        "keyword": "vitamin d tablets",
+        "tier": "category",
+        "volume": 14031,
+        "organic_rank": 133,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 5893
+      },
+      {
+        "keyword": "bv treatment ladies",
+        "tier": "category",
+        "volume": 13767,
+        "organic_rank": 62,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 5782
+      },
+      {
+        "keyword": "vaginal probiotics",
+        "tier": "category",
+        "volume": 7949,
+        "organic_rank": 55,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 5564
+      },
+      {
+        "keyword": "weight loss pills",
+        "tier": "core",
+        "volume": 6378,
+        "organic_rank": 11,
+        "sponsored_rank": 1,
+        "cpc": 0.36,
+        "status": "sponsored_support",
+        "priority": 5315
+      },
+      {
+        "keyword": "creatine powder",
+        "tier": "category",
+        "volume": 11865,
+        "organic_rank": 21,
+        "sponsored_rank": 1,
+        "cpc": 0.49,
+        "status": "sponsored_support",
+        "priority": 5085
+      },
+      {
+        "keyword": "cod liver oil capsules",
+        "tier": "long_tail",
+        "volume": 16271,
+        "organic_rank": 130,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4881
+      },
+      {
+        "keyword": "omega",
+        "tier": "core",
+        "volume": 4118,
+        "organic_rank": 20,
+        "sponsored_rank": 16,
+        "cpc": 0.27,
+        "status": "sponsored_support",
+        "priority": 4576
+      },
+      {
+        "keyword": "pre workout powder",
+        "tier": "category",
+        "volume": 10729,
+        "organic_rank": 78,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 4506
+      },
+      {
+        "keyword": "hydrolyzed collagen peptides",
+        "tier": "category",
+        "volume": 2957,
+        "organic_rank": 90,
+        "sponsored_rank": null,
+        "cpc": 0.28,
+        "status": "missing",
+        "priority": 4436
+      },
+      {
+        "keyword": "vit d",
+        "tier": "core",
+        "volume": 7812,
+        "organic_rank": 87,
+        "sponsored_rank": 17,
+        "cpc": 0.71,
+        "status": "sponsored_only",
+        "priority": 4401
+      },
+      {
+        "keyword": "vitamin d3",
+        "tier": "category",
+        "volume": 41490,
+        "organic_rank": null,
+        "sponsored_rank": 33,
+        "cpc": 2.83,
+        "status": "sponsored_only",
+        "priority": 4105
+      },
+      {
+        "keyword": "nordic naturals omega 3",
+        "tier": "long_tail",
+        "volume": 3524,
+        "organic_rank": 129,
+        "sponsored_rank": null,
+        "cpc": 0.26,
+        "status": "missing",
+        "priority": 4066
+      },
+      {
+        "keyword": "k2",
+        "tier": "core",
+        "volume": 6707,
+        "organic_rank": 51,
+        "sponsored_rank": 15,
+        "cpc": 0.5,
+        "status": "sponsored_support",
+        "priority": 4024
+      },
+      {
+        "keyword": "nutrition geeks collagen",
+        "tier": "competitor",
+        "volume": 21845,
+        "organic_rank": 67,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3932
+      },
+      {
+        "keyword": "fitness",
+        "tier": "category",
+        "volume": 12138,
+        "organic_rank": null,
+        "sponsored_rank": 11,
+        "cpc": 0.87,
+        "status": "sponsored_only",
+        "priority": 3906
+      },
+      {
+        "keyword": "glucosamine sulphate",
+        "tier": "core",
+        "volume": 3727,
+        "organic_rank": 54,
+        "sponsored_rank": 12,
+        "cpc": 0.29,
+        "status": "sponsored_support",
+        "priority": 3856
+      },
+      {
+        "keyword": "magnesium threonate",
+        "tier": "category",
+        "volume": 5454,
+        "organic_rank": 113,
+        "sponsored_rank": null,
+        "cpc": 0.6,
+        "status": "missing",
+        "priority": 3818
+      },
+      {
+        "keyword": "omega 3 6 9 capsules",
+        "tier": "long_tail",
+        "volume": 10319,
+        "organic_rank": 117,
+        "sponsored_rank": null,
+        "cpc": 0.87,
+        "status": "missing",
+        "priority": 3558
+      },
+      {
+        "keyword": "elevate multi collagen superblend",
+        "tier": "long_tail",
+        "volume": 11177,
+        "organic_rank": 61,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 3353
+      },
+      {
+        "keyword": "magnesium complex",
+        "tier": "core",
+        "volume": 21335,
+        "organic_rank": 10,
+        "sponsored_rank": 5,
+        "cpc": 1.96,
+        "status": "sponsored_support",
+        "priority": 3266
+      },
+      {
+        "keyword": "glucosamine and chondroitin high strength",
+        "tier": "long_tail",
+        "volume": 21661,
+        "organic_rank": 25,
+        "sponsored_rank": 16,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 3249
+      },
+      {
+        "keyword": "vitabiotics",
+        "tier": "category",
+        "volume": 7344,
+        "organic_rank": null,
+        "sponsored_rank": 9,
+        "cpc": 0.65,
+        "status": "sponsored_only",
+        "priority": 3164
+      },
+      {
+        "keyword": "creapure",
+        "tier": "category",
+        "volume": 5872,
+        "organic_rank": 64,
+        "sponsored_rank": 25,
+        "cpc": 0.53,
+        "status": "sponsored_only",
+        "priority": 3102
+      },
+      {
+        "keyword": "magnesium l threonate",
+        "tier": "category",
+        "volume": 4476,
+        "organic_rank": 141,
+        "sponsored_rank": null,
+        "cpc": 0.63,
+        "status": "missing",
+        "priority": 2984
+      },
+      {
+        "keyword": "fat loss",
+        "tier": "category",
+        "volume": 1517,
+        "organic_rank": 55,
+        "sponsored_rank": null,
+        "cpc": 0.36,
+        "status": "push",
+        "priority": 2950
+      },
+      {
+        "keyword": "melatonin tablets for sleeping",
+        "tier": "long_tail",
+        "volume": 9384,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2815
+      },
+      {
+        "keyword": "tumeric",
+        "tier": "core",
+        "volume": 7817,
+        "organic_rank": 104,
+        "sponsored_rank": 13,
+        "cpc": 1.14,
+        "status": "sponsored_only",
+        "priority": 2743
+      },
+      {
+        "keyword": "turmeric tablets",
+        "tier": "core",
+        "volume": 8920,
+        "organic_rank": 17,
+        "sponsored_rank": 34,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2676
+      },
+      {
+        "keyword": "collagen supplements",
+        "tier": "category",
+        "volume": 3711,
+        "organic_rank": 56,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2598
+      },
+      {
+        "keyword": "revive collagen",
+        "tier": "category",
+        "volume": 3654,
+        "organic_rank": 56,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2558
+      },
+      {
+        "keyword": "creatine capsules",
+        "tier": "category",
+        "volume": 9030,
+        "organic_rank": 92,
+        "sponsored_rank": 47,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 2528
+      },
+      {
+        "keyword": "ag1",
+        "tier": "category",
+        "volume": 3416,
+        "organic_rank": null,
+        "sponsored_rank": 21,
+        "cpc": 0.38,
+        "status": "sponsored_only",
+        "priority": 2517
+      },
+      {
+        "keyword": "medicglp",
+        "tier": "core",
+        "volume": 2486,
+        "organic_rank": 17,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2486
+      },
+      {
+        "keyword": "appetite suppressants women",
+        "tier": "core",
+        "volume": 8178,
+        "organic_rank": 7,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 2453
+      },
+      {
+        "keyword": "based bodyworks",
+        "tier": "category",
+        "volume": 8758,
+        "organic_rank": null,
+        "sponsored_rank": 28,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 2452
+      },
+      {
+        "keyword": "essential amino acids",
+        "tier": "category",
+        "volume": 1667,
+        "organic_rank": 90,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "missing",
+        "priority": 2414
+      },
+      {
+        "keyword": "omega 3 fish oil",
+        "tier": "long_tail",
+        "volume": 15869,
+        "organic_rank": 93,
+        "sponsored_rank": 16,
+        "cpc": 1.32,
+        "status": "sponsored_only",
+        "priority": 2404
+      },
+      {
+        "keyword": "glucosamine",
+        "tier": "core",
+        "volume": 14600,
+        "organic_rank": 33,
+        "sponsored_rank": 4,
+        "cpc": 1.89,
+        "status": "sponsored_support",
+        "priority": 2317
+      },
+      {
+        "keyword": "magnesium supplements",
+        "tier": "core",
+        "volume": 4263,
+        "organic_rank": 54,
+        "sponsored_rank": 35,
+        "cpc": 0.56,
+        "status": "sponsored_support",
+        "priority": 2284
+      },
+      {
+        "keyword": "probiotics for gut health",
+        "tier": "long_tail",
+        "volume": 11281,
+        "organic_rank": 64,
+        "sponsored_rank": 16,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 2256
+      },
+      {
+        "keyword": "nutrition geeks collagen glow up powder",
+        "tier": "competitor",
+        "volume": 12258,
+        "organic_rank": 109,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 2206
+      },
+      {
+        "keyword": "chromium",
+        "tier": "category",
+        "volume": 1495,
+        "organic_rank": 77,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "missing",
+        "priority": 2165
+      },
+      {
+        "keyword": "probiotics for men",
+        "tier": "category",
+        "volume": 3027,
+        "organic_rank": 30,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 2119
+      },
+      {
+        "keyword": "vitamin k2 mk7",
+        "tier": "core",
+        "volume": 2260,
+        "organic_rank": 105,
+        "sponsored_rank": 16,
+        "cpc": 0.43,
+        "status": "sponsored_only",
+        "priority": 2102
+      },
+      {
+        "keyword": "hydrolyzed collagen",
+        "tier": "category",
+        "volume": 1754,
+        "organic_rank": 79,
+        "sponsored_rank": null,
+        "cpc": 0.36,
+        "status": "missing",
+        "priority": 2046
+      },
+      {
+        "keyword": "geeks collagen",
+        "tier": "category",
+        "volume": 4415,
+        "organic_rank": 101,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1854
+      },
+      {
+        "keyword": "optimum nutrition creatine",
+        "tier": "competitor",
+        "volume": 4109,
+        "organic_rank": 40,
+        "sponsored_rank": 4,
+        "cpc": 0.19,
+        "status": "sponsored_support",
+        "priority": 1849
+      },
+      {
+        "keyword": "metabolic balance",
+        "tier": "core",
+        "volume": 1781,
+        "organic_rank": 5,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1781
+      },
+      {
+        "keyword": "cra",
+        "tier": "category",
+        "volume": 6329,
+        "organic_rank": null,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1772
+      },
+      {
+        "keyword": "d3 and k2 vitamin",
+        "tier": "long_tail",
+        "volume": 11798,
+        "organic_rank": 42,
+        "sponsored_rank": 14,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 1770
+      },
+      {
+        "keyword": "fat burners for men",
+        "tier": "long_tail",
+        "volume": 5761,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1728
+      },
+      {
+        "keyword": "biotin and collagen supplements",
+        "tier": "long_tail",
+        "volume": 2167,
+        "organic_rank": 84,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "missing",
+        "priority": 1711
+      },
+      {
+        "keyword": "omega 3 capsules",
+        "tier": "core",
+        "volume": 4235,
+        "organic_rank": 77,
+        "sponsored_rank": 15,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1694
+      },
+      {
+        "keyword": "turmeric capsules",
+        "tier": "category",
+        "volume": 3112,
+        "organic_rank": 27,
+        "sponsored_rank": 25,
+        "cpc": 0.39,
+        "status": "sponsored_support",
+        "priority": 1676
+      },
+      {
+        "keyword": "medic glp metabolic balance",
+        "tier": "long_tail",
+        "volume": 3339,
+        "organic_rank": 9,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1670
+      },
+      {
+        "keyword": "pure collagen",
+        "tier": "category",
+        "volume": 1382,
+        "organic_rank": 91,
+        "sponsored_rank": null,
+        "cpc": 0.35,
+        "status": "missing",
+        "priority": 1658
+      },
+      {
+        "keyword": "magnesium for sleep",
+        "tier": "category",
+        "volume": 3943,
+        "organic_rank": 76,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1656
+      },
+      {
+        "keyword": "collagen complex",
+        "tier": "category",
+        "volume": 932,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": 0.4,
+        "status": "push",
+        "priority": 1631
+      },
+      {
+        "keyword": "collagen tablets for women",
+        "tier": "long_tail",
+        "volume": 3252,
+        "organic_rank": 46,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1626
+      },
+      {
+        "keyword": "vit d3 k2",
+        "tier": "core",
+        "volume": 4043,
+        "organic_rank": 64,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1617
+      },
+      {
+        "keyword": "crea",
+        "tier": "core",
+        "volume": 1077,
+        "organic_rank": 16,
+        "sponsored_rank": 1,
+        "cpc": 0.18,
+        "status": "sponsored_support",
+        "priority": 1615
+      },
+      {
+        "keyword": "dr berg supplements",
+        "tier": "category",
+        "volume": 2299,
+        "organic_rank": 43,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1609
+      },
+      {
+        "keyword": "k2 vitamin supplements",
+        "tier": "core",
+        "volume": 4011,
+        "organic_rank": 85,
+        "sponsored_rank": 15,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1604
+      },
+      {
+        "keyword": "my protein creatine",
+        "tier": "category",
+        "volume": 3576,
+        "organic_rank": 37,
+        "sponsored_rank": 7,
+        "cpc": 0.47,
+        "status": "sponsored_support",
+        "priority": 1598
+      },
+      {
+        "keyword": "seven seas omega 3",
+        "tier": "long_tail",
+        "volume": 7965,
+        "organic_rank": 89,
+        "sponsored_rank": 17,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1593
+      },
+      {
+        "keyword": "zinc and magnesium",
+        "tier": "category",
+        "volume": 904,
+        "organic_rank": 33,
+        "sponsored_rank": null,
+        "cpc": 0.4,
+        "status": "push",
+        "priority": 1582
+      },
+      {
+        "keyword": "vitamin",
+        "tier": "category",
+        "volume": 7388,
+        "organic_rank": null,
+        "sponsored_rank": 16,
+        "cpc": 1.32,
+        "status": "sponsored_only",
+        "priority": 1567
+      },
+      {
+        "keyword": "turmeric curcumin",
+        "tier": "category",
+        "volume": 1595,
+        "organic_rank": 79,
+        "sponsored_rank": null,
+        "cpc": 0.43,
+        "status": "missing",
+        "priority": 1558
+      },
+      {
+        "keyword": "prebiotics",
+        "tier": "core",
+        "volume": 2688,
+        "organic_rank": 63,
+        "sponsored_rank": 7,
+        "cpc": 0.7,
+        "status": "sponsored_only",
+        "priority": 1536
+      },
+      {
+        "keyword": "d3",
+        "tier": "category",
+        "volume": 5369,
+        "organic_rank": 94,
+        "sponsored_rank": null,
+        "cpc": 1.48,
+        "status": "missing",
+        "priority": 1524
+      },
+      {
+        "keyword": "joint",
+        "tier": "category",
+        "volume": 2057,
+        "organic_rank": null,
+        "sponsored_rank": 6,
+        "cpc": 0.38,
+        "status": "sponsored_only",
+        "priority": 1516
+      },
+      {
+        "keyword": "sn",
+        "tier": "category",
+        "volume": 5349,
+        "organic_rank": null,
+        "sponsored_rank": 6,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1498
+      },
+      {
+        "keyword": "fat burner",
+        "tier": "category",
+        "volume": 2981,
+        "organic_rank": null,
+        "sponsored_rank": 17,
+        "cpc": 0.56,
+        "status": "sponsored_only",
+        "priority": 1490
+      },
+      {
+        "keyword": "magnesium and zinc",
+        "tier": "core",
+        "volume": 2234,
+        "organic_rank": 23,
+        "sponsored_rank": 12,
+        "cpc": 0.45,
+        "status": "sponsored_support",
+        "priority": 1489
+      },
+      {
+        "keyword": "glucosamine and chondroitin",
+        "tier": "core",
+        "volume": 4953,
+        "organic_rank": 25,
+        "sponsored_rank": 8,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 1486
+      },
+      {
+        "keyword": "mens vitamins",
+        "tier": "category",
+        "volume": 5279,
+        "organic_rank": null,
+        "sponsored_rank": 36,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1478
+      },
+      {
+        "keyword": "collagen for men",
+        "tier": "category",
+        "volume": 3518,
+        "organic_rank": 63,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1478
+      },
+      {
+        "keyword": "bare biology omega 3",
+        "tier": "long_tail",
+        "volume": 2875,
+        "organic_rank": 53,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1438
+      },
+      {
+        "keyword": "magnesium sleep",
+        "tier": "category",
+        "volume": 3358,
+        "organic_rank": 78,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1410
+      },
+      {
+        "keyword": "geeks magnesium glycinate 3-in-1",
+        "tier": "long_tail",
+        "volume": 7046,
+        "organic_rank": 70,
+        "sponsored_rank": 9,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1409
+      },
+      {
+        "keyword": "bettervits nmn",
+        "tier": "brand",
+        "volume": 1375,
+        "organic_rank": 12,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1375
+      },
+      {
+        "keyword": "d3 k2",
+        "tier": "core",
+        "volume": 3887,
+        "organic_rank": 88,
+        "sponsored_rank": 13,
+        "cpc": 1.14,
+        "status": "sponsored_only",
+        "priority": 1364
+      },
+      {
+        "keyword": "joint care supplements for women",
+        "tier": "long_tail",
+        "volume": 4456,
+        "organic_rank": 122,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1337
+      },
+      {
+        "keyword": "collagen supplement",
+        "tier": "category",
+        "volume": 621,
+        "organic_rank": 59,
+        "sponsored_rank": null,
+        "cpc": 0.33,
+        "status": "push",
+        "priority": 1317
+      },
+      {
+        "keyword": "appetite suppressant",
+        "tier": "core",
+        "volume": 4370,
+        "organic_rank": 12,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 1311
+      },
+      {
+        "keyword": "biomel complete gut powder",
+        "tier": "long_tail",
+        "volume": 4363,
+        "organic_rank": 62,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1309
+      },
+      {
+        "keyword": "vitamin d 400iu",
+        "tier": "category",
+        "volume": 3079,
+        "organic_rank": 134,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1293
+      },
+      {
+        "keyword": "elavate multi collagen powder uk brand",
+        "tier": "long_tail",
+        "volume": 4291,
+        "organic_rank": 65,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1287
+      },
+      {
+        "keyword": "berberine weight loss",
+        "tier": "category",
+        "volume": 4585,
+        "organic_rank": null,
+        "sponsored_rank": 12,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1284
+      },
+      {
+        "keyword": "zinc tablets",
+        "tier": "category",
+        "volume": 4546,
+        "organic_rank": null,
+        "sponsored_rank": 28,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1273
+      },
+      {
+        "keyword": "magnesium glycinate capsule",
+        "tier": "core",
+        "volume": 3153,
+        "organic_rank": 80,
+        "sponsored_rank": 10,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1261
+      },
+      {
+        "keyword": "weight loss tablets",
+        "tier": "core",
+        "volume": 4182,
+        "organic_rank": 18,
+        "sponsored_rank": 1,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 1255
+      },
+      {
+        "keyword": "wellgard collagen powder",
+        "tier": "category",
+        "volume": 2981,
+        "organic_rank": 87,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1252
+      },
+      {
+        "keyword": "bloatburn",
+        "tier": "category",
+        "volume": 2926,
+        "organic_rank": 73,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1229
+      },
+      {
+        "keyword": "chondroitin",
+        "tier": "category",
+        "volume": 752,
+        "organic_rank": 50,
+        "sponsored_rank": null,
+        "cpc": 0.43,
+        "status": "push",
+        "priority": 1224
+      },
+      {
+        "keyword": "tumeric curcumin with organic ginger and organic black pepper",
+        "tier": "long_tail",
+        "volume": 8038,
+        "organic_rank": 26,
+        "sponsored_rank": 13,
+        "cpc": null,
+        "status": "sponsored_support",
+        "priority": 1206
+      },
+      {
+        "keyword": "creapure creatine",
+        "tier": "category",
+        "volume": 2829,
+        "organic_rank": 61,
+        "sponsored_rank": 5,
+        "cpc": 0.66,
+        "status": "sponsored_only",
+        "priority": 1200
+      },
+      {
+        "keyword": "nordic naturals ultimate omega",
+        "tier": "long_tail",
+        "volume": 1037,
+        "organic_rank": 86,
+        "sponsored_rank": null,
+        "cpc": 0.26,
+        "status": "missing",
+        "priority": 1197
+      },
+      {
+        "keyword": "vitamin k",
+        "tier": "core",
+        "volume": 2556,
+        "organic_rank": 104,
+        "sponsored_rank": 17,
+        "cpc": 0.86,
+        "status": "sponsored_only",
+        "priority": 1189
+      },
+      {
+        "keyword": "slim coffee booster for weight loss",
+        "tier": "long_tail",
+        "volume": 3953,
+        "organic_rank": 89,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 1186
+      },
+      {
+        "keyword": "nutrition geeks magnesium",
+        "tier": "competitor",
+        "volume": 9879,
+        "organic_rank": 79,
+        "sponsored_rank": 10,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1185
+      },
+      {
+        "keyword": "revive",
+        "tier": "category",
+        "volume": 1094,
+        "organic_rank": 77,
+        "sponsored_rank": null,
+        "cpc": 0.39,
+        "status": "missing",
+        "priority": 1178
+      },
+      {
+        "keyword": "multi collagen capsules",
+        "tier": "category",
+        "volume": 1680,
+        "organic_rank": 48,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 1176
+      },
+      {
+        "keyword": "algae omega 3",
+        "tier": "category",
+        "volume": 586,
+        "organic_rank": 92,
+        "sponsored_rank": null,
+        "cpc": 0.21,
+        "status": "missing",
+        "priority": 1172
+      },
+      {
+        "keyword": "creatine monohydrate tablets",
+        "tier": "category",
+        "volume": 4177,
+        "organic_rank": 82,
+        "sponsored_rank": 10,
+        "cpc": null,
+        "status": "sponsored_only",
+        "priority": 1170
+      },
+      {
+        "keyword": "vit d spray",
+        "tier": "category",
+        "volume": 2076,
+        "organic_rank": null,
+        "sponsored_rank": 33,
+        "cpc": 0.5,
+        "status": "sponsored_only",
+        "priority": 1163
+      }
+    ],
+    "tiers": {
+      "category": {
+        "keywords": 278,
+        "volume": 2143165,
+        "gaps": 140
+      },
+      "core": {
+        "keywords": 103,
+        "volume": 563386,
+        "gaps": 2
+      },
+      "long_tail": {
+        "keywords": 454,
+        "volume": 754553,
+        "gaps": 188
+      },
+      "competitor": {
+        "keywords": 41,
+        "volume": 212935,
+        "gaps": 14
+      },
+      "brand": {
+        "keywords": 18,
+        "volume": 16422,
+        "gaps": 8
+      }
+    },
+    "focus_keywords": [
+      {
+        "keyword": "collagen",
+        "tier": "category",
+        "volume": 161213,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": 1.35,
+        "status": "push",
+        "priority": 83592
+      },
+      {
+        "keyword": "vitamin d",
+        "tier": "category",
+        "volume": 199150,
+        "organic_rank": 81,
+        "sponsored_rank": null,
+        "cpc": 1.1,
+        "status": "missing",
+        "priority": 76039
+      },
+      {
+        "keyword": "probiotics",
+        "tier": "category",
+        "volume": 47754,
+        "organic_rank": 93,
+        "sponsored_rank": null,
+        "cpc": 0.27,
+        "status": "missing",
+        "priority": 74284
+      },
+      {
+        "keyword": "collagen tablets",
+        "tier": "category",
+        "volume": 25740,
+        "organic_rank": 31,
+        "sponsored_rank": null,
+        "cpc": 0.29,
+        "status": "push",
+        "priority": 62131
+      },
+      {
+        "keyword": "pre workout",
+        "tier": "category",
+        "volume": 83874,
+        "organic_rank": 84,
+        "sponsored_rank": null,
+        "cpc": 1.01,
+        "status": "missing",
+        "priority": 34878
+      },
+      {
+        "keyword": "collagen supplements for women",
+        "tier": "long_tail",
+        "volume": 53196,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 26598
+      },
+      {
+        "keyword": "magnesium malate",
+        "tier": "category",
+        "volume": 4233,
+        "organic_rank": 57,
+        "sponsored_rank": null,
+        "cpc": 0.15,
+        "status": "push",
+        "priority": 14815
+      },
+      {
+        "keyword": "fish oil",
+        "tier": "category",
+        "volume": 15969,
+        "organic_rank": 95,
+        "sponsored_rank": null,
+        "cpc": 0.51,
+        "status": "missing",
+        "priority": 13151
+      },
+      {
+        "keyword": "preworkout",
+        "tier": "category",
+        "volume": 6852,
+        "organic_rank": 55,
+        "sponsored_rank": null,
+        "cpc": 0.39,
+        "status": "push",
+        "priority": 12298
+      },
+      {
+        "keyword": "collagen capsules",
+        "tier": "category",
+        "volume": 3456,
+        "organic_rank": 32,
+        "sponsored_rank": null,
+        "cpc": 0.22,
+        "status": "push",
+        "priority": 10996
+      },
+      {
+        "keyword": "cod liver oil capsules high strength",
+        "tier": "long_tail",
+        "volume": 33981,
+        "organic_rank": 80,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 10194
+      },
+      {
+        "keyword": "collagen peptides",
+        "tier": "category",
+        "volume": 8971,
+        "organic_rank": 111,
+        "sponsored_rank": null,
+        "cpc": 0.37,
+        "status": "missing",
+        "priority": 10183
+      },
+      {
+        "keyword": "collegen",
+        "tier": "category",
+        "volume": 3644,
+        "organic_rank": 60,
+        "sponsored_rank": null,
+        "cpc": 0.3,
+        "status": "push",
+        "priority": 8503
+      },
+      {
+        "keyword": "elevate collagen",
+        "tier": "category",
+        "volume": 18198,
+        "organic_rank": 72,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 7643
+      },
+      {
+        "keyword": "gut health",
+        "tier": "category",
+        "volume": 10820,
+        "organic_rank": 39,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 7574
+      },
+      {
+        "keyword": "marine collagen capsules",
+        "tier": "category",
+        "volume": 9451,
+        "organic_rank": 58,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "push",
+        "priority": 6616
+      },
+      {
+        "keyword": "magnesium taurate",
+        "tier": "category",
+        "volume": 3080,
+        "organic_rank": 64,
+        "sponsored_rank": null,
+        "cpc": 0.16,
+        "status": "missing",
+        "priority": 6468
+      },
+      {
+        "keyword": "msm",
+        "tier": "category",
+        "volume": 3340,
+        "organic_rank": 36,
+        "sponsored_rank": null,
+        "cpc": 0.38,
+        "status": "push",
+        "priority": 6153
+      },
+      {
+        "keyword": "marine collagen",
+        "tier": "category",
+        "volume": 27799,
+        "organic_rank": 47,
+        "sponsored_rank": null,
+        "cpc": 3.22,
+        "status": "push",
+        "priority": 6043
+      },
+      {
+        "keyword": "vitamin d tablets",
+        "tier": "category",
+        "volume": 14031,
+        "organic_rank": 133,
+        "sponsored_rank": null,
+        "cpc": null,
+        "status": "missing",
+        "priority": 5893
+      }
+    ],
+    "budget": {
+      "monthly_by_tier": {
+        "category": 7796
+      },
+      "monthly_by_ad_type": {
+        "SP": 3898,
+        "SB": 1949,
+        "SBV": 1949,
+        "SD (remarketing/retention)": 1376
+      },
+      "monthly_total": 9172,
+      "assumptions": {
+        "clicks_per_search": 0.12,
+        "target_sponsored_sov": {
+          "brand": 0.5,
+          "core": 0.2,
+          "category": 0.1,
+          "long_tail": 0.15,
+          "competitor": 0.05
+        },
+        "ad_type_split": {
+          "brand": {
+            "SP": 0.5,
+            "SB": 0.5
+          },
+          "core": {
+            "SP": 0.6,
+            "SB": 0.2,
+            "SBV": 0.2
+          },
+          "category": {
+            "SP": 0.5,
+            "SB": 0.25,
+            "SBV": 0.25
+          },
+          "long_tail": {
+            "SP": 1.0
+          },
+          "competitor": {
+            "SP": 0.6,
+            "SD": 0.4
+          }
+        },
+        "retention_share": 0.15
+      }
+    },
+    "repeat_signals": {
+      "sns_share": 0.55,
+      "multipack_share": 0.0,
+      "consumable_category": true,
+      "likelihood": "high"
+    }
+  },
+  "amc_benchmark": {
+    "category": "Health & Personal Care",
+    "available": false
+  },
+  "job_ad_present": false
+}

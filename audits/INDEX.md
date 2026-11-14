@@ -11,3 +11,4 @@
 | 2026-11-14 | ManiLife | amazon.co.uk | £47,361 | https://claude.ai/artifact/NaBMR5DKcjmbQrXJQCCkdr | [manilife-uk-2026-11-14](manilife-uk-2026-11-14/) |
 | 2026-11-14 | Shnuggle | amazon.co.uk | £238,392 | https://claude.ai/artifact/VBrLA56WxnAXH9SNg9Kbtp | [shnuggle-uk-2026-11-14](shnuggle-uk-2026-11-14/) |
 | 2026-11-14 | Matchstick Monkey | amazon.co.uk | £136,779 | https://claude.ai/artifact/EJKNFB9hYZLFCBdRhTY5MK | [matchstick-monkey-uk-2026-11-14](matchstick-monkey-uk-2026-11-14/) |
+| 2026-11-14 | Bettervits | amazon.co.uk | £293,069 | https://claude.ai/artifact/NWok3TY1n9qqx17iHw7Dm6 | [bettervits-uk-2026-11-14](bettervits-uk-2026-11-14/) |
